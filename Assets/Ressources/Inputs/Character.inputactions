@@ -1,0 +1,35 @@
+{
+    "version": 1,
+    "name": "Character",
+    "maps": [
+        {
+            "name": "Exploration",
+            "id": "26c24735-a5b0-47b3-b51c-c81578f0b7ab",
+            "actions": [
+                {
+                    "name": "Move",
+                    "type": "Button",
+                    "id": "16112888-24ca-40ab-a839-4ad2e6180cd1",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "7650c79a-5054-45ac-851e-c5d646baa698",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
