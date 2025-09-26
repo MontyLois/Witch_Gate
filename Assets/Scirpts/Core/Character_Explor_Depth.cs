@@ -13,18 +13,27 @@ public class Character_Explor_Depth : MonoBehaviour
     private float zspeed;
     private InputAction moveAction;
 
+    private bool isGrounded;
+
+    private Rigidbody rb;
+    private Animator animator;
+    private SpriteRenderer spriteRenderer;
     private void Awake()
     {
         PlayerInput = GetComponent<PlayerInput>();
+        rb = GetComponent<Rigidbody>();
+        animator = GetComponentInChildren<Animator>();
+        spriteRenderer = GetComponentInChildren<SpriteRenderer>();
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        moveAction = PlayerInput.actions.FindActionMap("Player").FindAction("Move");
+        moveAction = PlayerInput.actions.FindActionMap("Player").FindAction("3DMovement");
         xspeed = 3;
-        yspeed = 0;
+        yspeed = 1;
         zspeed = (float)1.5;
+        isGrounded = true;
     }
 
     private void OnDisable()
@@ -36,22 +45,51 @@ public class Character_Explor_Depth : MonoBehaviour
     void Update()
     {
         Move();
+        FlipSprite();
     }
 
     private void Move()
     {
         transform.DOMove(this.transform.position + (GetMovement()), 1);
     }
-    private Vector2 GetTargetDirection() => new Vector2()
+    private Vector3 GetTargetDirection() => new Vector3()
     {
-        x = moveAction.ReadValue<Vector2>().x,
+        x = moveAction.ReadValue<Vector3>().x,
         y = 0,
     };
 
     private Vector3 GetMovement() => new Vector3()
     {
-        x = moveAction.ReadValue<Vector2>().x*xspeed,
-        y = 0,
-        z = moveAction.ReadValue<Vector2>().y*zspeed,
+        x = moveAction.ReadValue<Vector3>().x*xspeed,
+        y = isGrounded? Mathf.Max(0f,moveAction.ReadValue<Vector3>().y*yspeed):moveAction.ReadValue<Vector3>().y*yspeed,
+        z = moveAction.ReadValue<Vector3>().z*zspeed,
     };
+
+    private void FlipSprite()
+    {
+        float x = moveAction.ReadValue<Vector3>().x;
+        if (x != 0)
+        {
+            spriteRenderer.flipX = (x>0);
+        }
+    }
+        
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Ground"))
+        {
+            isGrounded = true;
+            animator.SetBool("Grounded",isGrounded);
+        }
+    }
+    
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Ground"))
+        {
+            isGrounded = false;
+            animator.SetBool("Grounded",isGrounded);
+        }
+    }
 }
