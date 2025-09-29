@@ -2,11 +2,10 @@ using System;
 using DG.Tweening;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.Controls;
 
 public class Character_Explor_Depth : MonoBehaviour
 {
-    
-    public PlayerInput PlayerInput { get; private set; }
 
     private float xspeed;
     private float yspeed;
@@ -18,9 +17,9 @@ public class Character_Explor_Depth : MonoBehaviour
     private Rigidbody rb;
     private Animator animator;
     private SpriteRenderer spriteRenderer;
+    
     private void Awake()
     {
-        PlayerInput = GetComponent<PlayerInput>();
         rb = GetComponent<Rigidbody>();
         animator = GetComponentInChildren<Animator>();
         spriteRenderer = GetComponentInChildren<SpriteRenderer>();
@@ -29,10 +28,10 @@ public class Character_Explor_Depth : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        moveAction = PlayerInput.actions.FindActionMap("Player").FindAction("3DMovement");
-        xspeed = 3;
-        yspeed = 1;
-        zspeed = (float)1.5;
+        moveAction = InputSystem.actions.FindActionMap("Player").FindAction("3DMovement");
+        xspeed = 150;
+        yspeed = 80;
+        zspeed = 150;
         isGrounded = true;
     }
 
@@ -50,7 +49,8 @@ public class Character_Explor_Depth : MonoBehaviour
 
     private void Move()
     {
-        transform.DOMove(this.transform.position + (GetMovement()), 1);
+        rb.MovePosition(transform.position + (GetMovement()*Time.deltaTime));
+        //transform.DOMove(this.transform.position + (GetMovement()*Time.deltaTime), 1);
     }
     private Vector3 GetTargetDirection() => new Vector3()
     {
