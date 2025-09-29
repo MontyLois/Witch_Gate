@@ -1,27 +1,30 @@
 using DG.Tweening;
 using UnityEngine;
 
-public class Character_Target : MonoBehaviour
+namespace Scripts.Core
 {
+    public class Character_Target : MonoBehaviour
+    {
 
-    [SerializeField] private GameObject character;
+        [SerializeField] private GameObject character;
     
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        character = GameObject.FindWithTag("Player");
-    }
+        // Start is called once before the first execution of Update after the MonoBehaviour is created
+        void Start()
+        {
+            character = GameObject.FindWithTag("Player");
+        }
 
-    // Update is called once per frame
-    void Update()
-    {
-        transform.DOMove(GetMovement(), 0);
-    }
+        // Update is called once per frame
+        void Update()
+        {
+            transform.DOMove(GetMovement(), 0);
+        }
     
-    private Vector3 GetMovement() => new Vector3()
-    {
-        x = character.transform.position.x,
-        y = character.transform.position.y,
-        z = 0
-    };
+        private Vector3 GetMovement() => new Vector3()
+        {
+            x = character.transform.position.x,
+            y = character.transform.position.y,
+            z = 0
+        };
+    }
 }
