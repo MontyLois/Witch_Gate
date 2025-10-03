@@ -24,7 +24,7 @@ namespace Scripts.Core
         {
             x = character.transform.position.x,
             y = character.transform.position.y,
-            z = 0
+            z = this.transform.position.z,
         };
     }
 }
