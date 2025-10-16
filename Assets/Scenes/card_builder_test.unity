@@ -309,10 +309,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3513739738223430453, guid: 5e81fa3d17dd2f6478c49d213ec328b0, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 2.14
-      objectReference: {fileID: 0}
     - target: {fileID: 7048625805859230002, guid: 5e81fa3d17dd2f6478c49d213ec328b0, type: 3}
       propertyPath: m_Name
       value: CollectionManager
@@ -360,6 +356,10 @@ PrefabInstance:
     - target: {fileID: 7048625805859230003, guid: 5e81fa3d17dd2f6478c49d213ec328b0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7827608653124152844, guid: 5e81fa3d17dd2f6478c49d213ec328b0, type: 3}
+      propertyPath: m_CameraType
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -477,7 +477,8 @@ MonoBehaviour:
   m_RequiresDepthTextureOption: 2
   m_RequiresOpaqueTextureOption: 2
   m_CameraType: 0
-  m_Cameras: []
+  m_Cameras:
+  - {fileID: 7827608651752862180}
   m_RendererIndex: -1
   m_VolumeLayerMask:
     serializedVersion: 2
@@ -564,6 +565,11 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+--- !u!20 &7827608651752862180 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 7827608653124152846, guid: 5e81fa3d17dd2f6478c49d213ec328b0, type: 3}
+  m_PrefabInstance: {fileID: 1388175338}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
