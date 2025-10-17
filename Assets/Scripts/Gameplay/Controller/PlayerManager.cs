@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Scripts.Core.Controller
+namespace WitchGate.Gameplay.Controller
 {
     public class PlayerManager : MonoBehaviour
     {

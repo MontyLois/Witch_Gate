@@ -1,7 +1,6 @@
-using System;
 using UnityEngine;
 
-namespace Scripts.Core.Controller
+namespace WitchGate.Gameplay.Controller
 {
     [DefaultExecutionOrder(100)]
     public class PlayerBody : PlayerComponent
