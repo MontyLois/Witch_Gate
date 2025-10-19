@@ -1,8 +1,9 @@
 {
-    "name": "WitchGate.Core",
-    "rootNamespace": "WitchGate",
+    "name": "WitchGate.Prototype",
+    "rootNamespace": "WitchGate.Prototype",
     "references": [
-        ""
+        "GUID:d792930ad3a102646bcada4b0a3e786d",
+        "GUID:21d1eb854b91ade49bc69a263d12bee2"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
