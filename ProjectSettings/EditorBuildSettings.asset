@@ -20,6 +20,15 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Plugins/NueGames/NueDeck/Scenes/2- Combat Scene.unity
     guid: 27c8685eabe409f4fa3d614fc62e702d
+  - enabled: 1
+    path: Assets/Scenes/Prototypes/Night_Exploration.unity
+    guid: 128778eec49f5b647aef802985246c8c
+  - enabled: 1
+    path: Assets/Scenes/Prototypes/Night_Fight.unity
+    guid: 5251d5c7830bf4e4e8a7b80426488976
+  - enabled: 1
+    path: Assets/Scenes/Prototypes/Day_Shop.unity
+    guid: f56dccd6348089c49bc40290ef1ce0d1
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 3812286fd0cdcdb469de2261347916da, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}

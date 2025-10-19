@@ -21,9 +21,19 @@ namespace WitchGate.Gameplay.Controller
         public Vector3 GroundPosition { get; private set; }
         public bool IsGrounded { get; private set; }
         
+        public bool CanMove { get; private set; }
+        
         public void ApplyVelocity(Vector3 currentVelocity)
         {
-            CurrentVelocity += currentVelocity;
+            if (CanMove)
+            {
+                CurrentVelocity += currentVelocity;
+            }
+        }
+
+        public void setCanMove(bool canMove)
+        {
+            CanMove = canMove;
         }
 
         private void FixedUpdate()
