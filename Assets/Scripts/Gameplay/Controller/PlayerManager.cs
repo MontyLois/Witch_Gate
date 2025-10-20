@@ -12,16 +12,6 @@ namespace WitchGate.Gameplay.Controller
 
         private void Start()
         {
-             UnLockMovement();
-        }
-
-        public void LockMovement()
-        {
-            Body.setCanMove(false);
-        }
-        
-        public void UnLockMovement()
-        {
             Body.setCanMove(true);
         }
     }

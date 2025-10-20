@@ -14,17 +14,11 @@ namespace WitchGate.Prototype
 
         private void OnTriggerEnter(Collider other)
         {
-            Debug.Log("ho");
             sprite.SetActive(true);
             ExplorationGameplayManager.Instance.LockPlayerMovement();
             StartCoroutine(WaitToSwapScene());
         }
-
-        private void OnCollisionEnter(Collision other)
-        {
-            Debug.Log("hey");
-            
-        }
+        
 
         private IEnumerator WaitToSwapScene()
         {

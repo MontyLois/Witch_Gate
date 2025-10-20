@@ -26,12 +26,12 @@ namespace WitchGate.Gameplay
 
         public void LockPlayerMovement()
         {
-            playerManager.LockMovement();
+            playerManager.Body.setCanMove(false);
         }
         
         public void UnLockPlayerMovement()
         {
-            playerManager.UnLockMovement();
+            playerManager.Body.setCanMove(true);
         }
     }
 }

@@ -24,15 +24,17 @@ namespace WitchGate.Prototype
         private Vector3 up;
         private Quaternion rotation;
 
-        public void Start()
+        public void Awake()
         {
             cardSpacing = 1f / maxHandSize;
             spline = splineContainer.Spline;
         }
+        
 
         public void AddCardToHand(GameObject card)
         {
             handCards.Add(card);
+            card.transform.SetParent(spawnpoint);
             UpdateCardPosition();
         }
 
@@ -44,16 +46,22 @@ namespace WitchGate.Prototype
         {
             if(handCards.Count ==0) return;
             firstCardPosition = 0.5f - (handCards.Count - 1) * cardSpacing / 2;
-
+            spline = splineContainer.Spline;
+            
             for (int i = 0; i < handCards.Count; i++)
             {
                 float position = firstCardPosition + i * cardSpacing;
                 splinePosition = spline.EvaluatePosition(position);
                 forward = spline.EvaluateTangent(position);
                 up = spline.EvaluateUpVector(position);
+                Vector3 carPosition = handCards[i].transform.position;
                 rotation = Quaternion.LookRotation(up, Vector3.Cross(up, forward).normalized);
-                handCards[i].transform.DOMove(splinePosition, 0.25f);
+                handCards[i].transform.DOLocalMove(splinePosition, 0.25f);
                 handCards[i].transform.DOLocalRotateQuaternion(rotation, 0.25f);
+                
+                //set their base position
+                CardUI cardUI = handCards[i].GetComponent<CardUI>();
+                cardUI.SetPosition(splinePosition);
             }
         }
     }

@@ -9,6 +9,17 @@ namespace WitchGate.Prototype
         
         [SerializeField] private DialogBehaviour _dialogBehaviour;
         [SerializeField] private DialogNodeGraph _dialogGraph;
+        [field: SerializeField] private GameObject interaction;
+
+        private void OnTriggerEnter(Collider other)
+        {
+            interaction.SetActive(true);
+        }
+
+        private void OnTriggerExit(Collider other)
+        {
+            interaction.SetActive(false);
+        }
 
         private void OnTriggerStay(Collider other)
         {
