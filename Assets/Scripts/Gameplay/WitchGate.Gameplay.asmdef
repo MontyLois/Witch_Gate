@@ -3,7 +3,8 @@
     "rootNamespace": "WitchGate.Gameplay",
     "references": [
         "GUID:75469ad4d38634e559750d17036d5f7c",
-        "GUID:d792930ad3a102646bcada4b0a3e786d"
+        "GUID:d792930ad3a102646bcada4b0a3e786d",
+        "GUID:1a67d8fe58b2eca48aa7ff289303663b"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
