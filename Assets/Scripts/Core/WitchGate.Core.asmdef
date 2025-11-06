@@ -1,0 +1,17 @@
+{
+    "name": "WitchGate.Core",
+    "rootNamespace": "WitchGate",
+    "references": [
+        "Helteix.Cards.Core",
+        "Helteix.Tools"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

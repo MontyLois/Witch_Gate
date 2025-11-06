@@ -15,15 +15,15 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 349.99997
-    y: 167.99995
+    x: 323.99997
+    y: 145.99995
     width: 190
     height: 135
   IsDragging: 1
   IsSelected: 0
   Answers:
-  - 'What are you doing ? '
-  - U good sis ?
+  - Velmora
+  - Elaris
   AnswerKeys: []
   ParentNodes:
   - {fileID: 4363065833752978027}
@@ -45,16 +45,16 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 920.6666
-    y: 183.99997
+    x: 892.6666
+    y: 164.99997
     width: 190
     height: 135
   IsDragging: 1
   IsSelected: 0
   _sentence:
     CharacterName: Velmora
-    Text: Anyway, let's get going
-    CharacterSprite: {fileID: 1606731398, guid: 505982c69e204d142872bec4591c979a, type: 3}
+    Text: On doit y aller.
+    CharacterSprite: {fileID: 21300000, guid: c1f2826ffedfe8148929fa4e2f0d7013, type: 3}
   ParentNodes:
   - {fileID: 5789640660060435712}
   - {fileID: 7334688636739828862}
@@ -102,16 +102,16 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 39.333313
-    y: 147.3333
+    x: 66.33331
+    y: 135.3333
     width: 190
     height: 135
   IsDragging: 1
   IsSelected: 0
   _sentence:
-    CharacterName: Velmora
-    Text: Hey first time here ? How cute.
-    CharacterSprite: {fileID: 1606731398, guid: 505982c69e204d142872bec4591c979a, type: 3}
+    CharacterName: Eliotte
+    Text: Hey ! Toi aussi tu aime te balader en pleine nuit ?
+    CharacterSprite: {fileID: 21300000, guid: 56fc10974228ed747b681b2159bd1025, type: 3}
   ParentNodes: []
   ChildNode: {fileID: -6124708266444271294}
   _isExternalFunc: 0
@@ -133,17 +133,17 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 645.3334
-    y: 120.66664
+    x: 623.3334
+    y: 104.66664
     width: 190
     height: 135
   IsDragging: 1
   IsSelected: 0
   _sentence:
     CharacterName: Velmora
-    Text: Just trying to make you feel at ease for work ! It's been a while after
-      all
-    CharacterSprite: {fileID: 1606731398, guid: 505982c69e204d142872bec4591c979a, type: 3}
+    Text: "La nuit \xE0 un c\xF4t\xE9 reposant, mais pense quand m\xEAme \xE0 dormir
+      suffisament"
+    CharacterSprite: {fileID: 21300000, guid: c1f2826ffedfe8148929fa4e2f0d7013, type: 3}
   ParentNodes:
   - {fileID: -6124708266444271294}
   ChildNode: {fileID: -4386200481768620644}
@@ -173,9 +173,9 @@ MonoBehaviour:
   IsDragging: 1
   IsSelected: 0
   _sentence:
-    CharacterName: Velmora
-    Text: 'Don''t be like this ! It''s a good daaay ~ '
-    CharacterSprite: {fileID: 1606731398, guid: 505982c69e204d142872bec4591c979a, type: 3}
+    CharacterName: Elaris
+    Text: Ouais ! il n'y a rien de mieux qu'un peu d'air frais
+    CharacterSprite: {fileID: 21300000, guid: 03c773646f8449b4384d1647eb7cc744, type: 3}
   ParentNodes:
   - {fileID: -6124708266444271294}
   ChildNode: {fileID: -4386200481768620644}
