@@ -38,7 +38,7 @@ namespace WitchGate.Gameplay.Battles
             foreach (var card in PlayedVelmoraHand.Cards)
                 card.Use();
             
-            //PlayedElarisHand.Clear();
+            //PlayedElarisHand.;
         }
 
         void IPhase.OnBegin()

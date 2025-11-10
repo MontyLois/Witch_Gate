@@ -26,7 +26,7 @@ namespace WitchGate.Controllers
         public static void Cancel(this IPhase phase)
         {
             phase.OnCancel();
-            GameController.PhaseController.TriggerListenerForComplete(phase);
+            GameController.PhaseController.TriggerListenerForCancel(phase);
         }
     }
 }
