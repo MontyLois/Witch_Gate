@@ -1,4 +1,8 @@
+using System.Collections.Generic;
 using Helteix.Cards.Collections;
+using UnityEngine;
+using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 using WitchGate.Cards;
 using WitchGate.Controllers;
 using WitchGate.Gameplay.Cards;
@@ -15,8 +19,10 @@ namespace WitchGate.Gameplay.Battles
         public Hand<GameCard> ElarisHand { get; private set; }
         public Hand<GameCard> PlayedVelmoraHand { get; private set; }
         public Hand<GameCard> PlayedElarisHand { get; private set; }
-        
 
+        private List<int> additionalLoadedScenesBeforeBattle;
+        private int mainLoadedSceneBeforeBattle;
+        
         public BattlePhase(IBattleEnemy enemy)
         {
             this.Enemy = enemy;
@@ -41,18 +47,34 @@ namespace WitchGate.Gameplay.Battles
             //PlayedElarisHand.;
         }
 
-        void IPhase.OnBegin()
+        async Awaitable IPhase.OnBegin()
         {
+            additionalLoadedScenesBeforeBattle = new();
+            var activeScene = SceneManager.GetActiveScene();
+            mainLoadedSceneBeforeBattle = activeScene.buildIndex;
+            for (int i = 0; i < SceneManager.loadedSceneCount; i++)
+            {
+                Scene sceneAt = SceneManager.GetSceneAt(i);
+                if(sceneAt == activeScene)
+                    continue;
+                
+                additionalLoadedScenesBeforeBattle.Add(sceneAt.buildIndex);
+            }
             
+            await SceneManager.LoadSceneAsync(GameController.Metrics.BattleScenePath);
         }
 
-        void IPhase.OnComplete()
+        async Awaitable IPhase.Execute()
         {
-            
+            while (!Keyboard.current.spaceKey.wasPressedThisFrame)
+                await Awaitable.NextFrameAsync();
         }
 
-        void IPhase.OnCancel()
+        async Awaitable IPhase.OnEnd()
         {
+            await SceneManager.LoadSceneAsync(mainLoadedSceneBeforeBattle);
+            foreach (var index in additionalLoadedScenesBeforeBattle)
+                await SceneManager.LoadSceneAsync(index, LoadSceneMode.Additive);
             
         }
     }

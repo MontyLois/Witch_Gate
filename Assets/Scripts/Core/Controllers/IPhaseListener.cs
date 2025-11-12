@@ -6,8 +6,6 @@ namespace WitchGate.Controllers
     {
         void OnPhaseBegins(T phase);
 
-        void OnPhaseCompletes(T phase);
-
-        void OnPhaseCanceled(T phase);
+        void OnPhaseEnds(T phase);
     }
 }

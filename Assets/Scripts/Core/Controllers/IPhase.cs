@@ -1,9 +1,11 @@
+using UnityEngine;
+
 namespace WitchGate.Controllers
 {
     public interface IPhase
     {
-        void OnBegin();
-        void OnComplete();
-        void OnCancel();
+        Awaitable OnBegin();
+        Awaitable Execute();
+        Awaitable OnEnd();
     }
 }

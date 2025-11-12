@@ -4,6 +4,7 @@ using Helteix.Cards.UI.Physical;
 using Helteix.Cards.UI.Physical.Drag;
 using UnityEngine;
 using WitchGate.Controllers;
+using WitchGate.Gameplay.Battles.TurnPhases;
 using WitchGate.Gameplay.Cards;
 
 namespace WitchGate.Gameplay.Battles.UI
@@ -38,7 +39,7 @@ namespace WitchGate.Gameplay.Battles.UI
             Connect(hand);
         }
 
-        public void OnPhaseCompletes(BattlePhase phase)
+        public void OnPhaseEnds(BattlePhase phase)
         {
             Disconnect();
         }

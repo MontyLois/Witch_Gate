@@ -12,4 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e72d526b8e43446b897634c8ce0d1361, type: 3}
   m_Name: GameMetrics
   m_EditorClassIdentifier: WitchGate.Core::WitchGate.Controllers.GameMetrics
+  <BattleScenePath>k__BackingField: Night_Fight
   <MaxBattleHandSize>k__BackingField: 5
