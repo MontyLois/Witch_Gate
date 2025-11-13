@@ -9,7 +9,7 @@ namespace WitchGate.Gameplay.Controller.Component
         private void OnEnable()
         {
             base.OnEnable();
-            OnGroundedChanged(true);
+            OnGroundedChanged(Manager.Body.IsGrounded);
         }
         protected override void OnGroundedChanged(bool grounded)
         {
