@@ -6,7 +6,7 @@ using WitchGate.Gameplay.Controller.Component;
 
 namespace WitchGate.VFX
 {
-    public class PlayerVFX : PlayerDirectionListener
+    public class PlayerVFXPositionHandler : PlayerDirectionListener
     {
         [field: SerializeField] public float XOffSet {get; private set; }
 
@@ -15,14 +15,9 @@ namespace WitchGate.VFX
             base.OnEnable();
             OnDirectionChanged(XOffSet);
         }
-        private void Awake()
-        {
-            
-        }
 
         protected override void OnDirectionChanged(float dir)
         {
-            Debug.Log("this is the direction : "+ dir);
             float x = 0;
             if (dir > 0)
             {
@@ -32,8 +27,6 @@ namespace WitchGate.VFX
             {
                 x = XOffSet*-1;
             }
-            Debug.Log("la direction : " + x);
-            //this.transform.DOMoveX(x,0);
             this.transform.DOLocalMoveX(x, 0);
         }
     }
