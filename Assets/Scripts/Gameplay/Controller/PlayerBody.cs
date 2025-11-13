@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace WitchGate.Gameplay.Controller
@@ -22,6 +23,9 @@ namespace WitchGate.Gameplay.Controller
         public bool IsGrounded { get; private set; }
         
         public bool CanMove { get; private set; }
+
+        public event Action<float> OnChangedXDirection;
+        public event Action<bool> OnChangedGrounded;
         
         public void ApplyVelocity(Vector3 currentVelocity)
         {
@@ -38,6 +42,8 @@ namespace WitchGate.Gameplay.Controller
 
         private void FixedUpdate()
         {
+            checkDirectionChange();
+            
             rb.linearVelocity = CurrentVelocity;
             
             CurrentVelocity = Vector3.zero;
@@ -49,6 +55,8 @@ namespace WitchGate.Gameplay.Controller
         {
             if(checkGroundPosition == null)
                 return;
+
+            bool wasGrounded = IsGrounded;
             
             if (Physics.Raycast(checkGroundPosition.position, Vector3.down, out RaycastHit hit, checkGroundDistance,
                     groundLayer))
@@ -61,6 +69,9 @@ namespace WitchGate.Gameplay.Controller
                 GroundPosition = checkGroundPosition.position;
                 IsGrounded = false;
             }
+
+            if (wasGrounded != IsGrounded)
+                OnChangedGrounded?.Invoke(IsGrounded);
         }
 
         private void OnDrawGizmos()
@@ -70,6 +81,12 @@ namespace WitchGate.Gameplay.Controller
             
             Gizmos.color = Color.red;
             Gizmos.DrawRay(checkGroundPosition.position, Vector3.down * checkGroundDistance);
+        }
+
+        private void checkDirectionChange()
+        {
+            if(CurrentVelocity.x!=0 && (Mathf.Sign(CurrentVelocity.x) != Mathf.Sign(rb.linearVelocity.x)||(rb.linearVelocity.x==0)))
+                OnChangedXDirection?.Invoke(CurrentVelocity.x);
         }
     }
 }
