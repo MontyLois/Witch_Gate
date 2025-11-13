@@ -1,44 +1,67 @@
+using System;
 using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.Pool;
 
 namespace WitchGate.Controllers
 {
-    public class PhaseController
+    public static class PhaseController
     {
-        private readonly List<IPhaseListener> listeners = new();
+        static readonly AwaitableCompletionSource CompletionSource = new();
+        public static Awaitable CompletedAwaitable
+        {
+            get
+            {
+                CompletionSource.SetResult();
+                var awaitable = CompletionSource.Awaitable;
+                CompletionSource.Reset();
+                return awaitable;
+            }
+        }
 
-        public void RegisterListener<T>(IPhaseListener<T> listener) where T : IPhase
+        private static readonly List<IPhaseListener> listeners = new();
+
+        public static void Register<T>(this IPhaseListener<T> listener) where T : IPhase
         {
             listeners.Add(listener);
         }
-        public void UnregisterListener<T>(IPhaseListener<T> listener) where T : IPhase
+
+        public static void Unregister<T>(this IPhaseListener<T> listener) where T : IPhase
         {
             listeners.Remove(listener);
         }
-        
-        internal void TriggerListenerForBegin<T>(T phase) where T : IPhase
+
+        public static Awaitable Run<T>(this T phase) where T : IPhase
         {
-            foreach (var listener in listeners)
-            {
-                if(listener is IPhaseListener<T> compatible)
-                    compatible.OnPhaseBegins(phase);
-            }
+            return RunAsync(phase);
         }
-        
-        internal void TriggerListenerForComplete<T>(T phase) where T : IPhase
+
+        public static async Awaitable RunAsync<T>(this T phase) where T : IPhase
         {
-            foreach (var listener in listeners)
+            try
             {
-                if(listener is IPhaseListener<T> compatible)
-                    compatible.OnPhaseCompletes(phase);
+                using (ListPool<IPhaseListener<T>>.Get(out List<IPhaseListener<T>> compatibles))
+                {
+                    foreach (var listener in listeners)
+                        if (listener is IPhaseListener<T> compatible)
+                            compatibles.Add(compatible);
+
+                    await phase.OnBegin();
+
+                    foreach (var compatible in compatibles)
+                        compatible.OnPhaseBegins(phase);
+
+                    await phase.Execute();
+
+                    foreach (var compatible in compatibles)
+                        compatible.OnPhaseEnds(phase);
+
+                    await phase.OnEnd();
+                }
             }
-        }
-        
-        internal void TriggerListenerForCancel<T>(T phase) where T : IPhase
-        {
-            foreach (var listener in listeners)
+            catch (Exception e)
             {
-                if(listener is IPhaseListener<T> compatible)
-                    compatible.OnPhaseCanceled(phase);
+                Debug.LogException(e);
             }
         }
     }

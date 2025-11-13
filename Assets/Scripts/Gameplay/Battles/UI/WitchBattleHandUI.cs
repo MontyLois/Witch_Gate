@@ -31,12 +31,7 @@ namespace WitchGate.Gameplay.Battles.UI
             Connect(hand);
         }
 
-        public void OnPhaseCompletes(BattlePhase phase)
-        {
-            Disconnect();
-        }
-
-        public void OnPhaseCanceled(BattlePhase phase)
+        public void OnPhaseEnds(BattlePhase phase)
         {
             Disconnect();
         }

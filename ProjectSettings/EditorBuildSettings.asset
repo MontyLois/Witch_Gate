@@ -29,6 +29,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Prototypes/Night_Fight.unity
     guid: 5251d5c7830bf4e4e8a7b80426488976
+  - enabled: 1
+    path: Assets/Scenes/Tests/LaunchBattle.unity
+    guid: 7052463112fb85847b5b567172bcb33b
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 3812286fd0cdcdb469de2261347916da, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
