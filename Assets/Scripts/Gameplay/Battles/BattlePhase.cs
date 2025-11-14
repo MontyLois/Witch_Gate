@@ -19,6 +19,8 @@ namespace WitchGate.Gameplay.Battles
         public Hand<GameCard> ElarisHand { get; private set; }
         public Hand<GameCard> PlayedVelmoraHand { get; private set; }
         public Hand<GameCard> PlayedElarisHand { get; private set; }
+        
+        public GameModeLayoutData GameModeLayoutData { get; private set; }
 
         private List<int> additionalLoadedScenesBeforeBattle;
         private int mainLoadedSceneBeforeBattle;
@@ -72,6 +74,9 @@ namespace WitchGate.Gameplay.Battles
 
         async Awaitable IPhase.OnEnd()
         {
+
+            await SceneController.Instance.LoadGameMode(GameMode.Exploration);
+            
             await SceneManager.LoadSceneAsync(mainLoadedSceneBeforeBattle);
             foreach (var index in additionalLoadedScenesBeforeBattle)
                 await SceneManager.LoadSceneAsync(index, LoadSceneMode.Additive);
