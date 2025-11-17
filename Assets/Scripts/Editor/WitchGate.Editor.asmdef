@@ -1,0 +1,19 @@
+{
+    "name": "WitchGate.Editor",
+    "rootNamespace": "WitchGate.Editor",
+    "references": [
+        "GUID:d792930ad3a102646bcada4b0a3e786d",
+        "GUID:f37c9c5cafaaade478aa84b1cda60ef0"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

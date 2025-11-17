@@ -10,10 +10,10 @@ namespace WitchGate.Controllers
 {
     public class SceneController : MonoSingleton<SceneController>
     {
-        private SceneData mainScene;
-        private SceneData currentLocationScene;
+        private SceneData currentGameModeScene;
+        private SceneData currentLocationScene; //For the location : shop, all city part, fight subspace
         private List<SceneData> additiveScenes;
-        private MissionData loadedMissionScene; //For Mission
+        private MissionData loadedMissionScene; // For Mission : to track monster ? and add all 
         
         //Data of all GameModeLayout for each GameMode
         private static Dictionary<GameMode, GameModeLayoutData> gameModeLayouts; 
@@ -50,7 +50,9 @@ namespace WitchGate.Controllers
             }
         }
 
-        public async Awaitable LoadGameMode(GameMode gameMode)
+        public Awaitable LoadGameMode(GameMode gameMode) => LoadGameModeAsync(gameMode);
+
+        public async Awaitable LoadGameModeAsync(GameMode gameMode)
         {
             if (gameModeLayouts.TryGetValue(gameMode, out var gameModeLayout))
             {
@@ -59,21 +61,21 @@ namespace WitchGate.Controllers
                 currentgameMode = gameModeLayout.Mode;
 
                 //load transition scene
-                await SceneManager.LoadSceneAsync(gameModeLayout.TransitionScene.scenePath, LoadSceneMode.Additive);
+                await SceneManager.LoadSceneAsync(gameModeLayout.TransitionScene.ScenePath, LoadSceneMode.Additive);
 
                 //Unload last scene
-                if (mainScene != null)
-                    await SceneManager.UnloadSceneAsync(mainScene.scenePath);
+                if (currentGameModeScene != null)
+                    await SceneManager.UnloadSceneAsync(currentGameModeScene.ScenePath);
 
                 // Load next main scene
-                await SceneManager.LoadSceneAsync(gameModeLayout.MainScene.scenePath, LoadSceneMode.Single);
-                mainScene = gameModeLayout.MainScene;
+                await SceneManager.LoadSceneAsync(gameModeLayout.MainScene.ScenePath, LoadSceneMode.Single);
+                currentGameModeScene = gameModeLayout.MainScene;
 
                 //load additive scenes
                 await LoadAdditiveScenes(gameModeLayout);
 
                 //Unload the transition
-                await SceneManager.UnloadSceneAsync(gameModeLayout.TransitionScene.scenePath);
+                await SceneManager.UnloadSceneAsync(gameModeLayout.TransitionScene.ScenePath);
             }
         }
 
@@ -81,7 +83,7 @@ namespace WitchGate.Controllers
         {
             foreach (var scene in additiveScenes)
             {
-                await SceneManager.UnloadSceneAsync(scene.scenePath);
+                await SceneManager.UnloadSceneAsync(scene.ScenePath);
             }
             additiveScenes.Clear();
         }
@@ -93,7 +95,7 @@ namespace WitchGate.Controllers
             {
                 if (!additiveScenes.Contains(sceneData))
                 {
-                    await SceneManager.LoadSceneAsync(sceneData.scenePath, LoadSceneMode.Additive);
+                    await SceneManager.LoadSceneAsync(sceneData.ScenePath, LoadSceneMode.Additive);
                     TryAddScene(sceneData);
                 }
             }
@@ -107,10 +109,10 @@ namespace WitchGate.Controllers
             if (locationLayouts.TryGetValue(location, out var locationLayout))
             {
                 currentLocation = location;
-                await  SceneManager.UnloadSceneAsync(currentLocationScene.scenePath);
+                await  SceneManager.UnloadSceneAsync(currentLocationScene.ScenePath);
             
                 // Load next main scene
-                await SceneManager.LoadSceneAsync(locationLayout.LocationScene.scenePath, LoadSceneMode.Additive);
+                await SceneManager.LoadSceneAsync(locationLayout.LocationScene.ScenePath, LoadSceneMode.Additive);
                 currentLocationScene = locationLayout.LocationScene;
             
                 if (loadedMissionScene.SceneLocation == location)
@@ -123,7 +125,7 @@ namespace WitchGate.Controllers
         {
             if (loadedMissionScene.SceneLocation == currentLocation)
             {
-                await SceneManager.LoadSceneAsync(loadedMissionScene.MissionScene.scenePath, LoadSceneMode.Additive);
+                await SceneManager.LoadSceneAsync(loadedMissionScene.MissionScene.ScenePath, LoadSceneMode.Additive);
             }
         }
         
@@ -141,7 +143,7 @@ namespace WitchGate.Controllers
         {
             if (loadedMissionScene == missionData)
             {
-                SceneManager.UnloadSceneAsync(loadedMissionScene.MissionScene.scenePath);
+                SceneManager.UnloadSceneAsync(loadedMissionScene.MissionScene.ScenePath);
                 loadedMissionScene = null;
             }
         }
