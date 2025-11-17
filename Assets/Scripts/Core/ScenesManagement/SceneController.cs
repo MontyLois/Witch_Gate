@@ -13,7 +13,7 @@ namespace WitchGate.Controllers
         private SceneData currentGameModeScene;
         private SceneData currentLocationScene; //For the location : shop, all city part, fight subspace
         private List<SceneData> additiveScenes;
-        private MissionData loadedMissionScene; // For Mission : to track monster ? and add all 
+        private MissionSceneData currentMissionScene; // For Mission : only one mission active at a same time
         
         //Data of all GameModeLayout for each GameMode
         private static Dictionary<GameMode, GameModeLayoutData> gameModeLayouts; 
@@ -115,7 +115,7 @@ namespace WitchGate.Controllers
                 await SceneManager.LoadSceneAsync(locationLayout.LocationScene.ScenePath, LoadSceneMode.Additive);
                 currentLocationScene = locationLayout.LocationScene;
             
-                if (loadedMissionScene.SceneLocation == location)
+                if (currentMissionScene.SceneLocation == location)
                     await LoadMissionScene();
             }
         }
@@ -123,28 +123,29 @@ namespace WitchGate.Controllers
 
         private async Awaitable LoadMissionScene()
         {
-            if (loadedMissionScene.SceneLocation == currentLocation)
-            {
-                await SceneManager.LoadSceneAsync(loadedMissionScene.MissionScene.ScenePath, LoadSceneMode.Additive);
-            }
+            if(!currentMissionScene)
+                return;
+            await (currentMissionScene.SceneLocation == currentLocation ? 
+                SceneManager.LoadSceneAsync(currentMissionScene.MissionScene.ScenePath, LoadSceneMode.Additive):
+                SceneManager.UnloadSceneAsync(currentMissionScene.MissionScene.ScenePath));
         }
         
-        public async Awaitable AddMissionScene(MissionData missionData)
+        public async Awaitable AddMissionScene(MissionSceneData missionSceneData)
         {
-            if (loadedMissionScene)
+            if (currentMissionScene)
             {
-                RemoveMissionScene(loadedMissionScene);
+                RemoveMissionScene(currentMissionScene);
                 await LoadMissionScene();
-                loadedMissionScene = missionData;
+                currentMissionScene = missionSceneData;
             }
         }
         
-        public void RemoveMissionScene(MissionData missionData)
+        public void RemoveMissionScene(MissionSceneData missionSceneData)
         {
-            if (loadedMissionScene == missionData)
+            if (currentMissionScene == missionSceneData)
             {
-                SceneManager.UnloadSceneAsync(loadedMissionScene.MissionScene.ScenePath);
-                loadedMissionScene = null;
+                SceneManager.UnloadSceneAsync(currentMissionScene.MissionScene.ScenePath);
+                currentMissionScene = null;
             }
         }
         
@@ -156,7 +157,7 @@ namespace WitchGate.Controllers
             additiveScenes.Add(data);
             return true;
         }
-
+        
     }
     
 }

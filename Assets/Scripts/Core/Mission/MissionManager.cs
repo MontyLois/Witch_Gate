@@ -5,14 +5,14 @@ namespace WitchGate.Mission
 {
     public class MissionManager
     {
-        public void StartMission(MissionData mission)
+        public void StartMission(MissionSceneData missionScene)
         {
-            SceneController.Instance.AddMissionScene(mission);
+            SceneController.Instance.AddMissionScene(missionScene);
         }
 
-        public void CompleteMission(MissionData mission)
+        public void CompleteMission(MissionSceneData missionScene)
         {
-            SceneController.Instance.RemoveMissionScene(mission);
+            SceneController.Instance.RemoveMissionScene(missionScene);
         }
     }
 }
