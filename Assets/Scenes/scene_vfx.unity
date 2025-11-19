@@ -119,6 +119,178 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &271964344
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 271964346}
+  - component: {fileID: 271964345}
+  m_Layer: 0
+  m_Name: Spline
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &271964345
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 271964344}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dab5c7d4c32e743048dfca98e2d5914f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.Splines::UnityEngine.Splines.SplineContainer
+  m_Spline:
+    m_EditModeType: 1
+    m_Knots: []
+    m_MetaData: []
+    m_Closed: 0
+    m_IntData:
+      m_Data: []
+    m_FloatData:
+      m_Data: []
+    m_Float4Data:
+      m_Data: []
+    m_ObjectData:
+      m_Data: []
+  m_Splines:
+  - m_EditModeType: 1
+    m_Knots:
+    - Position:
+        x: 0
+        y: 0
+        z: 0
+      TangentIn:
+        x: -0
+        y: -0
+        z: -0.7044945
+      TangentOut:
+        x: 0
+        y: 0
+        z: 0.7044945
+      Rotation:
+        value:
+          x: 0
+          y: -0.20810685
+          z: -0
+          w: 0.9781062
+    - Position:
+        x: -2.8680048
+        y: 0
+        z: 6.4347334
+      TangentIn:
+        x: -0
+        y: -0
+        z: -2.1569226
+      TangentOut:
+        x: 0
+        y: 0
+        z: 2.4898608
+      Rotation:
+        value:
+          x: 0.000000029401132
+          y: 0.06092593
+          z: -0.0000000046800497
+          w: 0.99814224
+    - Position:
+        x: 2.9109497
+        y: -0.0000009536743
+        z: 13.832866
+      TangentIn:
+        x: -0
+        y: -0
+        z: -3.224241
+      TangentOut:
+        x: 0
+        y: 0
+        z: 5.011133
+      Rotation:
+        value:
+          x: 0.000000017555717
+          y: 0.05098186
+          z: -8.961888e-10
+          w: 0.9986996
+    - Position:
+        x: -7.13828
+        y: 0
+        z: 34.16106
+      TangentIn:
+        x: -0
+        y: -0
+        z: -4.794256
+      TangentOut:
+        x: 0
+        y: 0
+        z: 2.8221283
+      Rotation:
+        value:
+          x: -0.000000012481479
+          y: 0.042209506
+          z: -0.0000000044044612
+          w: 0.9991088
+    - Position:
+        x: -2.5217266
+        y: 0
+        z: 40.51939
+      TangentIn:
+        x: -0
+        y: -0
+        z: -0.7857539
+      TangentOut:
+        x: 0
+        y: 0
+        z: 0.7857539
+      Rotation:
+        value:
+          x: 0
+          y: 0.308868
+          z: 0
+          w: 0.95110494
+    m_MetaData:
+    - Mode: 0
+      Tension: 0.5
+    - Mode: 0
+      Tension: 0.5
+    - Mode: 0
+      Tension: 0.5
+    - Mode: 0
+      Tension: 0.5
+    - Mode: 0
+      Tension: 0.5
+    m_Closed: 0
+    m_IntData:
+      m_Data: []
+    m_FloatData:
+      m_Data: []
+    m_Float4Data:
+      m_Data: []
+    m_ObjectData:
+      m_Data: []
+  m_Knots:
+    m_KnotsLink: []
+--- !u!4 &271964346
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 271964344}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.13636684, y: 0, z: -12.3904295}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &277848406
 GameObject:
   m_ObjectHideFlags: 0
@@ -145,13 +317,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 277848406}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 6.11, z: -0.24}
+  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1865276233}
-  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!199 &277848408
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -487,8 +659,8 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 3
-      minScalar: 1
+      scalar: 0.3
+      minScalar: 0.1
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -864,7 +1036,7 @@ ParticleSystem:
   ShapeModule:
     serializedVersion: 6
     enabled: 1
-    type: 6
+    type: 12
     angle: 25
     length: 5
     boxThickness: {x: 0, y: 0, z: 0}
@@ -872,7 +1044,7 @@ ParticleSystem:
     donutRadius: 0.2
     m_Position: {x: 0, y: 0, z: 0}
     m_Rotation: {x: 0, y: 0, z: 0}
-    m_Scale: {x: 1, y: 1, z: 1}
+    m_Scale: {x: 0, y: 0, z: 0}
     placementMode: 0
     m_MeshMaterialIndex: 0
     m_MeshNormalOffset: 0
@@ -949,11 +1121,11 @@ ParticleSystem:
     m_TextureBilinearFiltering: 0
     randomDirectionAmount: 0
     sphericalDirectionAmount: 0
-    randomPositionAmount: 0
+    randomPositionAmount: 3
     radius:
-      value: 1
+      value: 3
       mode: 0
-      spread: 0
+      spread: 1
       speed:
         serializedVersion: 2
         minMaxState: 0
@@ -4206,8 +4378,8 @@ ParticleSystem:
     colorOverLifetime:
       serializedVersion: 2
       minMaxState: 0
-      minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 0.029369853, g: 0.2830189, b: 0.08560256, a: 1}
+      minColor: {r: 0, g: 0.9245283, b: 0.08410548, a: 1}
+      maxColor: {r: 0, g: 1, b: 0.23333335, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -4271,7 +4443,7 @@ ParticleSystem:
     widthOverTrail:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1
+      scalar: 0.1
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -4323,39 +4495,39 @@ ParticleSystem:
         m_RotationOrder: 4
     colorOverTrail:
       serializedVersion: 2
-      minMaxState: 0
-      minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 0.2950397, g: 0.29280877, b: 0.29559743, a: 1}
+      minMaxState: 1
+      minColor: {r: 0, g: 0, b: 0, a: 1}
+      maxColor: {r: 0.20754719, g: 0.20754719, b: 0.20754719, a: 1}
       maxGradient:
         serializedVersion: 2
-        key0: {r: 1, g: 1, b: 1, a: 1}
-        key1: {r: 1, g: 1, b: 1, a: 1}
-        key2: {r: 0, g: 0, b: 0, a: 0}
-        key3: {r: 0, g: 0, b: 0, a: 0}
-        key4: {r: 0, g: 0, b: 0, a: 0}
-        key5: {r: 0, g: 0, b: 0, a: 0}
-        key6: {r: 0, g: 0, b: 0, a: 0}
+        key0: {r: 0, g: 0, b: 0, a: 0}
+        key1: {r: 0.19496846, g: 0.19496846, b: 0.19496846, a: 1}
+        key2: {r: 0.091830574, g: 0.091830574, b: 0.091830574, a: 1}
+        key3: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+        key4: {r: 0.027450982, g: 0.027450982, b: 0.027450982, a: 0}
+        key5: {r: 0.027450982, g: 0.027450982, b: 0.027450982, a: 0}
+        key6: {r: 0.027450982, g: 0.027450982, b: 0.027450982, a: 0}
         key7: {r: 0, g: 0, b: 0, a: 0}
         ctime0: 0
-        ctime1: 65535
-        ctime2: 0
-        ctime3: 0
-        ctime4: 0
-        ctime5: 0
-        ctime6: 0
+        ctime1: 16384
+        ctime2: 32768
+        ctime3: 49151
+        ctime4: 65535
+        ctime5: 65535
+        ctime6: 65535
         ctime7: 0
         atime0: 0
-        atime1: 65535
-        atime2: 0
-        atime3: 0
-        atime4: 0
+        atime1: 4112
+        atime2: 31997
+        atime3: 61038
+        atime4: 65535
         atime5: 0
         atime6: 0
         atime7: 0
         m_Mode: 0
-        m_ColorSpace: -1
-        m_NumColorKeys: 2
-        m_NumAlphaKeys: 2
+        m_ColorSpace: 0
+        m_NumColorKeys: 5
+        m_NumAlphaKeys: 5
       minGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -5942,3 +6114,4 @@ SceneRoots:
   - {fileID: 1959970853}
   - {fileID: 932055149}
   - {fileID: 1865276233}
+  - {fileID: 271964346}
