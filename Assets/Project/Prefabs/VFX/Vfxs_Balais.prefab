@@ -3996,7 +3996,7 @@ ParticleSystem:
         m_RotationOrder: 4
     maxLights: 20
   TrailModule:
-    enabled: 1
+    enabled: 0
     mode: 1
     ratio: 1
     lifetime:
@@ -4844,7 +4844,6 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 254
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 0}
   - {fileID: 2100000, guid: 6117f21e1a2d7c94496f92197ac17ff5, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
@@ -4867,7 +4866,7 @@ ParticleSystemRenderer:
   m_SortingLayerID: 2096053001
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_RenderMode: 5
+  m_RenderMode: 0
   m_MeshDistribution: 0
   m_SortMode: 0
   m_MinParticleSize: 0
