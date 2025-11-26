@@ -175,7 +175,7 @@ ParticleSystem:
   m_GameObject: {fileID: 3944957588850970266}
   serializedVersion: 8
   lengthInSec: 1
-  simulationSpeed: 0.2
+  simulationSpeed: 0.1
   stopAction: 2
   cullingMode: 0
   ringBufferMode: 0
@@ -685,7 +685,7 @@ ParticleSystem:
     startRotation:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0
+      scalar: 1.5707963
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -735,7 +735,7 @@ ParticleSystem:
         m_PreInfinity: 2
         m_PostInfinity: 2
         m_RotationOrder: 4
-    randomizeRotationDirection: 0.16
+    randomizeRotationDirection: 1
     gravitySource: 1
     maxNumParticles: 2000
     customEmitterVelocity: {x: 0, y: 0, z: 0}
@@ -1003,7 +1003,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 70
+      scalar: 100
       minScalar: 10
       maxCurve:
         serializedVersion: 2
@@ -1280,11 +1280,11 @@ ParticleSystem:
         m_RotationOrder: 4
     separateAxes: 0
   RotationModule:
-    enabled: 0
+    enabled: 1
     x:
       serializedVersion: 2
-      minMaxState: 0
-      scalar: 0
+      minMaxState: 3
+      scalar: 1
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -1336,8 +1336,8 @@ ParticleSystem:
         m_RotationOrder: 4
     y:
       serializedVersion: 2
-      minMaxState: 0
-      scalar: 0
+      minMaxState: 3
+      scalar: 1
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -1389,9 +1389,9 @@ ParticleSystem:
         m_RotationOrder: 4
     curve:
       serializedVersion: 2
-      minMaxState: 0
-      scalar: 0.7853982
-      minScalar: 0.7853982
+      minMaxState: 3
+      scalar: 3.1415925
+      minScalar: 0
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -4924,7 +4924,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a44114728cfa68647891e9ac31f51dee, type: 2}
+  - {fileID: 2100000, guid: 155d4f73f55d8c84182d2a13fd7ce984, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4992,7 +4992,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.Splines::UnityEngine.Splines.SplineAnimate
   m_Target: {fileID: 1962446615191925324}
   m_PlayOnAwake: 1
-  m_LoopMode: 1
+  m_LoopMode: 2
   m_Method: 0
   m_Duration: 3
   m_MaxSpeed: 5.5900645
@@ -5078,7 +5078,7 @@ ParticleSystem:
   m_GameObject: {fileID: 6473617372881194472}
   serializedVersion: 8
   lengthInSec: 1
-  simulationSpeed: 0.2
+  simulationSpeed: 0.1
   stopAction: 2
   cullingMode: 0
   ringBufferMode: 0
@@ -5588,7 +5588,7 @@ ParticleSystem:
     startRotation:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0
+      scalar: 1.5707963
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -5638,7 +5638,7 @@ ParticleSystem:
         m_PreInfinity: 2
         m_PostInfinity: 2
         m_RotationOrder: 4
-    randomizeRotationDirection: 0.16
+    randomizeRotationDirection: 1
     gravitySource: 1
     maxNumParticles: 2000
     customEmitterVelocity: {x: 0, y: 0, z: 0}
@@ -5906,7 +5906,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 70
+      scalar: 100
       minScalar: 10
       maxCurve:
         serializedVersion: 2
@@ -6183,10 +6183,10 @@ ParticleSystem:
         m_RotationOrder: 4
     separateAxes: 0
   RotationModule:
-    enabled: 0
+    enabled: 1
     x:
       serializedVersion: 2
-      minMaxState: 0
+      minMaxState: 3
       scalar: 0
       minScalar: 0
       maxCurve:
@@ -6239,7 +6239,7 @@ ParticleSystem:
         m_RotationOrder: 4
     y:
       serializedVersion: 2
-      minMaxState: 0
+      minMaxState: 3
       scalar: 0
       minScalar: 0
       maxCurve:
@@ -6292,9 +6292,9 @@ ParticleSystem:
         m_RotationOrder: 4
     curve:
       serializedVersion: 2
-      minMaxState: 0
-      scalar: 0.7853982
-      minScalar: 0.7853982
+      minMaxState: 3
+      scalar: 3.1415925
+      minScalar: 0
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -9827,7 +9827,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a44114728cfa68647891e9ac31f51dee, type: 2}
+  - {fileID: 2100000, guid: 155d4f73f55d8c84182d2a13fd7ce984, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -9895,7 +9895,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.Splines::UnityEngine.Splines.SplineAnimate
   m_Target: {fileID: 1962446615191925324}
   m_PlayOnAwake: 1
-  m_LoopMode: 1
+  m_LoopMode: 2
   m_Method: 0
   m_Duration: 3
   m_MaxSpeed: 5.5900645
