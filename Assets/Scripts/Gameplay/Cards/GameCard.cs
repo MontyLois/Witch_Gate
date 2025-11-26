@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Helteix.Cards;
 using UnityEngine;
 using WitchGate.Cards;
+using WitchGate.Controllers;
 using WitchGate.Gameplay.Cards.Effects;
 
 namespace WitchGate.Gameplay.Cards
@@ -21,9 +22,9 @@ namespace WitchGate.Gameplay.Cards
         public IEnumerable<CardEffect> Effects => CardManager.GetEffectsFor(Data);
 
 
-        public void Use()
+        public async Awaitable Use()
         {
-            //TODO
+            await PhaseController.CompletedAwaitable;
         }
     }
 }

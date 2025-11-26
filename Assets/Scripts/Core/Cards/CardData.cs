@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace WitchGate.Cards
@@ -16,5 +17,13 @@ namespace WitchGate.Cards
         [field: SerializeField]
         public Sprite Icon { get; private set; }
         
+        [field: SerializeField, HideInInspector]
+        public string ID { get; private set; }
+
+        public void OnValidate()
+        {
+            if (string.IsNullOrEmpty(ID))
+                ID = Guid.NewGuid().ToString();
+        }
     }
 }

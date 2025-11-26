@@ -1,50 +1,33 @@
 using System.Collections.Generic;
+using Helteix.Cards;
 using Helteix.Cards.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 using WitchGate.Cards;
 using WitchGate.Controllers;
+using WitchGate.Gameplay.Battles.TurnPhases;
 using WitchGate.Gameplay.Cards;
+using WitchGate.Players;
 
 namespace WitchGate.Gameplay.Battles
 {
     public class BattlePhase : IPhase
     {
         public readonly IBattleEnemy Enemy;
+        public readonly BattleWitch Velmora;
+        public readonly BattleWitch Elaris;
         
-        public Deck<GameCard> VelmoraDeck { get; private set; }
-        public Deck<GameCard> ElarisDeck { get; private set; }
-        public Hand<GameCard> VelmoraHand { get; private set; }
-        public Hand<GameCard> ElarisHand { get; private set; }
-        public Hand<GameCard> PlayedVelmoraHand { get; private set; }
-        public Hand<GameCard> PlayedElarisHand { get; private set; }
+        public GameModeLayoutData GameModeLayoutData { get; private set; }
 
         private List<int> additionalLoadedScenesBeforeBattle;
         private int mainLoadedSceneBeforeBattle;
         
-        public BattlePhase(IBattleEnemy enemy)
+        public BattlePhase(IBattleEnemy enemy, PlayerProfile playerProfile)
         {
             this.Enemy = enemy;
-            VelmoraHand = new Hand<GameCard>(GameController.Metrics.MaxBattleHandSize);
-            ElarisHand = new Hand<GameCard>(GameController.Metrics.MaxBattleHandSize);
-
-            VelmoraDeck = new Deck<GameCard>();
-            ElarisDeck = new Deck<GameCard>();
-
-            PlayedElarisHand = new Hand<GameCard>(1);
-            PlayedVelmoraHand = new Hand<GameCard>();
-        }
-
-        public void PlayerTurn()
-        {
-            foreach (var card in PlayedElarisHand.Cards)
-                card.Use();
-            
-            foreach (var card in PlayedVelmoraHand.Cards)
-                card.Use();
-            
-            //PlayedElarisHand.;
+            Velmora = new BattleWitch(playerProfile.VelmoraProfile);
+            Elaris = new BattleWitch(playerProfile.ElarisProfile);
         }
 
         async Awaitable IPhase.OnBegin()
@@ -66,12 +49,31 @@ namespace WitchGate.Gameplay.Battles
 
         async Awaitable IPhase.Execute()
         {
-            while (!Keyboard.current.spaceKey.wasPressedThisFrame)
-                await Awaitable.NextFrameAsync();
+            while (true)
+            {
+                PlayerTurnPhase playerTurnPhase = new PlayerTurnPhase(this);
+
+                await playerTurnPhase.RunAsync();
+                if(!AreAllAlive())
+                    break;
+
+                EnemyTurnPhase enemyTurnPhase = new EnemyTurnPhase(this);
+                await enemyTurnPhase.RunAsync();
+                
+                if(!AreAllAlive())
+                    break;
+            }
         }
+
+        private bool AreAllAlive() => Enemy.CurrentHealth > 0 && 
+                                      Elaris.CurrentHealth > 0 && 
+                                      Velmora.CurrentHealth > 0;
 
         async Awaitable IPhase.OnEnd()
         {
+
+            await SceneController.Instance.LoadGameModeAsync(GameMode.Exploration);
+            
             await SceneManager.LoadSceneAsync(mainLoadedSceneBeforeBattle);
             foreach (var index in additionalLoadedScenesBeforeBattle)
                 await SceneManager.LoadSceneAsync(index, LoadSceneMode.Additive);

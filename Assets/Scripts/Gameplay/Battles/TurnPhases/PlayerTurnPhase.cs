@@ -1,22 +1,49 @@
 using UnityEngine;
+using WitchGate.Controllers;
 
 namespace WitchGate.Gameplay.Battles.TurnPhases
 {
     public class PlayerTurnPhase : TurnPhase
     {
+        public bool IsReady { get; private set; }
+
+        public BattleWitch Velmora => BattlePhase.Velmora;
+        public BattleWitch Elaris => BattlePhase.Elaris;
+        
+        public PlayerTurnPhase(BattlePhase battlePhase) : base(battlePhase)
+        {
+            
+        }
+        
         protected override async Awaitable OnBegin()
         {
-            throw new System.NotImplementedException();
+            IsReady = false;
+            Velmora.DrawMissingCards();
+            Elaris.DrawMissingCards();
         }
 
-        protected override async Awaitable Execute()
+        protected override async Awaitable<ITurnAction[]> Execute()
         {
-            throw new System.NotImplementedException();
+            while (!IsReady)
+                await Awaitable.NextFrameAsync();
+
+            ITurnAction[] turnActions = {
+                new PlayCardAction(Velmora),
+                new PlayCardAction(Elaris),
+            };
+
+            return turnActions;
         }
 
         protected override async Awaitable OnEnd()
         {
-            throw new System.NotImplementedException();
+            await PhaseController.CompletedAwaitable;
+        }
+
+
+        public void SetReady()
+        {
+            IsReady = true;
         }
     }
 }

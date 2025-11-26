@@ -23,8 +23,8 @@ namespace WitchGate.Gameplay.Battles.UI
         {
             var hand = witch switch
             {
-                Witch.Elaris => phase.ElarisHand,
-                Witch.Velmora => phase.VelmoraHand,
+                Witch.Elaris => phase.Elaris.Hand,
+                Witch.Velmora => phase.Velmora.Hand,
                 _ => null,
             };
             

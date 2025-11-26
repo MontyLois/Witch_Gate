@@ -3,7 +3,8 @@
     "rootNamespace": "WitchGate",
     "references": [
         "Helteix.Cards.Core",
-        "Helteix.Tools"
+        "Helteix.Tools",
+        "Helteix.Singletons.Runtime"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
