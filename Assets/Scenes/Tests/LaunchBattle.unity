@@ -225,6 +225,47 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7856c527c87040578c8a2714ae567d2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: WitchGate.Gameplay::WitchGate.Gameplay.Battles.LaunchDebugBattle
+  playerProfile:
+    <VelmoraProfile>k__BackingField:
+      <Health>k__BackingField: 50
+      <MaxHealth>k__BackingField: 50
+      <Deck>k__BackingField:
+      - <Level>k__BackingField: 1
+        <CardID>k__BackingField: a3fd81de-d6bb-47ef-907f-6d8b09e36ddd
+      - <Level>k__BackingField: 1
+        <CardID>k__BackingField: a3fd81de-d6bb-47ef-907f-6d8b09e36ddd
+      - <Level>k__BackingField: 1
+        <CardID>k__BackingField: a3fd81de-d6bb-47ef-907f-6d8b09e36ddd
+      - <Level>k__BackingField: 1
+        <CardID>k__BackingField: a3fd81de-d6bb-47ef-907f-6d8b09e36ddd
+      - <Level>k__BackingField: 1
+        <CardID>k__BackingField: a3fd81de-d6bb-47ef-907f-6d8b09e36ddd
+      - <Level>k__BackingField: 1
+        <CardID>k__BackingField: a3fd81de-d6bb-47ef-907f-6d8b09e36ddd
+      - <Level>k__BackingField: 1
+        <CardID>k__BackingField: a3fd81de-d6bb-47ef-907f-6d8b09e36ddd
+      - <Level>k__BackingField: 1
+        <CardID>k__BackingField: a3fd81de-d6bb-47ef-907f-6d8b09e36ddd
+    <ElarisProfile>k__BackingField:
+      <Health>k__BackingField: 50
+      <MaxHealth>k__BackingField: 50
+      <Deck>k__BackingField:
+      - <Level>k__BackingField: 1
+        <CardID>k__BackingField: be47d3a5-d5ce-4d15-991d-da71f6366939
+      - <Level>k__BackingField: 1
+        <CardID>k__BackingField: be47d3a5-d5ce-4d15-991d-da71f6366939
+      - <Level>k__BackingField: 1
+        <CardID>k__BackingField: be47d3a5-d5ce-4d15-991d-da71f6366939
+      - <Level>k__BackingField: 1
+        <CardID>k__BackingField: be47d3a5-d5ce-4d15-991d-da71f6366939
+      - <Level>k__BackingField: 1
+        <CardID>k__BackingField: be47d3a5-d5ce-4d15-991d-da71f6366939
+      - <Level>k__BackingField: 1
+        <CardID>k__BackingField: be47d3a5-d5ce-4d15-991d-da71f6366939
+      - <Level>k__BackingField: 1
+        <CardID>k__BackingField: be47d3a5-d5ce-4d15-991d-da71f6366939
+      - <Level>k__BackingField: 1
+        <CardID>k__BackingField: be47d3a5-d5ce-4d15-991d-da71f6366939
 --- !u!114 &210312428
 MonoBehaviour:
   m_ObjectHideFlags: 0

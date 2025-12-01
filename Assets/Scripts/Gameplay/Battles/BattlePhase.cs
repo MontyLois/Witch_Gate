@@ -32,6 +32,7 @@ namespace WitchGate.Gameplay.Battles
 
         async Awaitable IPhase.OnBegin()
         {
+            /*
             additionalLoadedScenesBeforeBattle = new();
             var activeScene = SceneManager.GetActiveScene();
             mainLoadedSceneBeforeBattle = activeScene.buildIndex;
@@ -44,7 +45,9 @@ namespace WitchGate.Gameplay.Battles
                 additionalLoadedScenesBeforeBattle.Add(sceneAt.buildIndex);
             }
             
-            await SceneManager.LoadSceneAsync(GameController.Metrics.BattleScenePath);
+            await SceneManager.LoadSceneAsync(GameController.Metrics.BattleScenePath);*/
+
+            await SceneController.Instance.LoadGameMode(GameMode.Fight);
         }
 
         async Awaitable IPhase.Execute()
@@ -73,10 +76,11 @@ namespace WitchGate.Gameplay.Battles
         {
 
             await SceneController.Instance.LoadGameModeAsync(GameMode.Exploration);
-            
+            /*
             await SceneManager.LoadSceneAsync(mainLoadedSceneBeforeBattle);
             foreach (var index in additionalLoadedScenesBeforeBattle)
                 await SceneManager.LoadSceneAsync(index, LoadSceneMode.Additive);
+                */
             
         }
     }

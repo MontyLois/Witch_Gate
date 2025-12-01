@@ -55,7 +55,6 @@ namespace WitchGate.Gameplay.Battles
                         return;
                     }
                 }
-
                 Hand.TryAddCard(card);
             }
         }
