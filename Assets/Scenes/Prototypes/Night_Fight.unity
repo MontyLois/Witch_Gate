@@ -254,6 +254,7 @@ GameObject:
   - component: {fileID: 74368849}
   - component: {fileID: 74368848}
   - component: {fileID: 74368847}
+  - component: {fileID: 74368850}
   m_Layer: 5
   m_Name: 'ElarisPlayedCard '
   m_TagString: Untagged
@@ -337,6 +338,32 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 74368845}
   m_CullTransparentMesh: 1
+--- !u!114 &74368850
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 74368845}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30649d3a9faa99c48a7b1166b86bf2a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.HorizontalLayoutGroup
+  m_Padding:
+    m_Left: 0
+    m_Right: 0
+    m_Top: 0
+    m_Bottom: 0
+  m_ChildAlignment: 0
+  m_Spacing: 0
+  m_ChildForceExpandWidth: 1
+  m_ChildForceExpandHeight: 1
+  m_ChildControlWidth: 1
+  m_ChildControlHeight: 1
+  m_ChildScaleWidth: 0
+  m_ChildScaleHeight: 0
+  m_ReverseArrangement: 0
 --- !u!1 &82312081
 GameObject:
   m_ObjectHideFlags: 0
@@ -574,6 +601,128 @@ Transform:
   m_Children: []
   m_Father: {fileID: 256310211}
   m_LocalEulerAnglesHint: {x: 15, y: 0, z: 0}
+--- !u!1 &413706341
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 413706342}
+  - component: {fileID: 413706346}
+  - component: {fileID: 413706345}
+  - component: {fileID: 413706344}
+  - component: {fileID: 413706343}
+  m_Layer: 5
+  m_Name: AnyCard
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &413706342
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 413706341}
+  m_LocalRotation: {x: 0.000000013038514, y: -9.3132246e-10, z: -7.2759565e-10, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1524742353}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 459.78784, y: -230.52106}
+  m_SizeDelta: {x: 256.52524, y: 461.0421}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &413706343
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 413706341}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30649d3a9faa99c48a7b1166b86bf2a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.HorizontalLayoutGroup
+  m_Padding:
+    m_Left: 0
+    m_Right: 0
+    m_Top: 0
+    m_Bottom: 0
+  m_ChildAlignment: 0
+  m_Spacing: 0
+  m_ChildForceExpandWidth: 1
+  m_ChildForceExpandHeight: 1
+  m_ChildControlWidth: 1
+  m_ChildControlHeight: 1
+  m_ChildScaleWidth: 0
+  m_ChildScaleHeight: 0
+  m_ReverseArrangement: 0
+--- !u!114 &413706344
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 413706341}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcf7110dfbe74846bf70c29e9bbb88aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: WitchGate.Gameplay::WitchGate.Gameplay.Battles.UI.WitchPlayedHandUI
+  factory: {fileID: 250814172}
+  holderPrefab: {fileID: 543346472712950553, guid: c81eeb505fc35514c8224f52e2d4beeb, type: 3}
+  containerRoot: {fileID: 413706342}
+  cardDamping: 15
+  draggingParent: {fileID: 1439019609}
+  dragDampingMultiplier: 2
+  witch: -1
+--- !u!114 &413706345
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 413706341}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &413706346
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 413706341}
+  m_CullTransparentMesh: 1
 --- !u!1 &457943059
 GameObject:
   m_ObjectHideFlags: 0
@@ -1093,6 +1242,7 @@ GameObject:
   - component: {fileID: 1285922389}
   - component: {fileID: 1285922388}
   - component: {fileID: 1285922390}
+  - component: {fileID: 1285922391}
   m_Layer: 5
   m_Name: VelmoraPlayedCard
   m_TagString: Untagged
@@ -1176,6 +1326,32 @@ MonoBehaviour:
   draggingParent: {fileID: 1439019609}
   dragDampingMultiplier: 2
   witch: 1
+--- !u!114 &1285922391
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1285922386}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30649d3a9faa99c48a7b1166b86bf2a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.HorizontalLayoutGroup
+  m_Padding:
+    m_Left: 0
+    m_Right: 0
+    m_Top: 0
+    m_Bottom: 0
+  m_ChildAlignment: 0
+  m_Spacing: 0
+  m_ChildForceExpandWidth: 1
+  m_ChildForceExpandHeight: 1
+  m_ChildControlWidth: 1
+  m_ChildControlHeight: 1
+  m_ChildScaleWidth: 0
+  m_ChildScaleHeight: 0
+  m_ReverseArrangement: 0
 --- !u!1 &1429042338
 GameObject:
   m_ObjectHideFlags: 0
@@ -1383,13 +1559,14 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1285922387}
+  - {fileID: 413706342}
   - {fileID: 74368846}
   m_Father: {fileID: 82312082}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -1100.2, y: -619}
+  m_SizeDelta: {x: -1000, y: -619}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1524742354
 MonoBehaviour:
@@ -1451,8 +1628,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 10.000122, y: 10}
-  m_SizeDelta: {x: -20, y: 191.7867}
+  m_AnchoredPosition: {x: 75.00006, y: 10}
+  m_SizeDelta: {x: -149.99988, y: 191.7867}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!1 &1815309554
 GameObject:
@@ -1857,7 +2034,7 @@ Canvas:
   m_VertexColorAlwaysGammaSpace: 0
   m_AdditionalShaderChannelsFlag: 0
   m_UpdateRectTransformForStandalone: 0
-  m_SortingLayerID: 0
+  m_SortingLayerID: 1515122667
   m_SortingOrder: 0
   m_TargetDisplay: 0
 --- !u!224 &2121758538
@@ -1984,8 +2161,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 10}
-  m_SizeDelta: {x: -20, y: 191.7867}
+  m_AnchoredPosition: {x: -70, y: 10}
+  m_SizeDelta: {x: -160, y: 191.7867}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!1 &4261224265317709441
 GameObject:

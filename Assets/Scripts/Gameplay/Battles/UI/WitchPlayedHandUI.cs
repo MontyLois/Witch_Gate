@@ -3,6 +3,7 @@ using Helteix.Cards.Collections;
 using Helteix.Cards.UI.Physical;
 using Helteix.Cards.UI.Physical.Drag;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using WitchGate.Controllers;
 using WitchGate.Gameplay.Battles.TurnPhases;
 using WitchGate.Gameplay.Cards;
@@ -17,6 +18,7 @@ namespace WitchGate.Gameplay.Battles.UI
         private int priority;
 
         private Hand<GameCard> hand;
+        private BattlePhase battlePhase;
         private void OnEnable()
         {
             this.Register();
@@ -29,6 +31,7 @@ namespace WitchGate.Gameplay.Battles.UI
 
         public void OnPhaseBegins(BattlePhase phase)
         {
+            battlePhase = phase;
             hand = witch switch
             {
                 Witch.Elaris => phase.Elaris.PlayedHand,
@@ -59,7 +62,7 @@ namespace WitchGate.Gameplay.Battles.UI
 
         bool ICardDropTarget<GameCard>.Accepts(GameCard card)
         {
-            var accepts = (card.Data.WitchDeck & witch) != 0;
+            var accepts = (card.Data.WitchDeck & witch)!= 0 && (hand.CurrentSize==0) ;
             Debug.Log(accepts, gameObject);
             return accepts;
         }
@@ -85,6 +88,26 @@ namespace WitchGate.Gameplay.Battles.UI
 
         void ICardDropTarget<GameCard>.OnCardHover(GameCard cardUICurrent)
         {
+        }
+        
+        protected override bool CanCardBeClicked(ICard card)
+        {
+            return true;
+        }
+
+        protected override void OnCardPointerDown(CardHolderUI holder, PointerEventData eventData)
+        {
+            base.OnCardPointerDown(holder, eventData);
+            if (holder.CardUI is WitchGameCardUI cardUI)
+            {
+                var targetHand = witch switch
+                {
+                    Witch.Elaris => battlePhase.Elaris.Hand,
+                    Witch.Velmora => battlePhase.Velmora.Hand,
+                    _ => null,
+                };
+                targetHand?.TryAddCard(cardUI.Current);
+            }
         }
     }
 }

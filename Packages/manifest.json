@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "com.helteix.cards": "0.0.10",
+    "com.helteix.cards": "0.0.12",
     "com.helteix.singletons": "1.3.3",
     "com.unity.2d.sprite": "1.0.0",
     "com.unity.ai.navigation": "2.0.9",
