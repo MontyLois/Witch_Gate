@@ -26,7 +26,8 @@ namespace WitchGate.Gameplay.Battles
             PlayedHand = new Hand<GameCard>();
             foreach (var cardProfile in profile.Deck)
             {
-                GameCard gameCard = new GameCard(cardProfile.CardData);
+                var data = cardProfile.CardData;
+                GameCard gameCard = new GameCard(data);
                 Deck.TryAddCard(gameCard);
             }
             

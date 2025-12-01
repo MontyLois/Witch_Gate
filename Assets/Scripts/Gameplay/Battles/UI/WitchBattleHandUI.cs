@@ -35,5 +35,7 @@ namespace WitchGate.Gameplay.Battles.UI
         {
             Disconnect();
         }
+        
+        
     }
 }

@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b21abdfb0b1456c9877fa40e36c001b, type: 3}
   m_Name: Card 2
   m_EditorClassIdentifier: 
-  <WitchDeck>k__BackingField: 1
+  <WitchDeck>k__BackingField: -1
   <Name>k__BackingField: Defense
   <Description>k__BackingField: This card grant a shield
   <CardRarity>k__BackingField: 0
   <Icon>k__BackingField: {fileID: 0}
+  <ID>k__BackingField: cc0034b9-2ece-4f0a-a78d-5f2544c56167

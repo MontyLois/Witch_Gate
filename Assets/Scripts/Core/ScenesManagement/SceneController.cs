@@ -27,6 +27,14 @@ namespace WitchGate.Controllers
         
         private void Start()
         {
+            LoadGameModeLayouts();
+            LoadLocationLayouts();
+        }
+
+        protected override void OnAwake()
+        {
+            base.OnAwake();
+            gameModeLayouts = new Dictionary<GameMode, GameModeLayoutData>();
             additiveScenes = new List<SceneData>();
             LoadGameModeLayouts();
             LoadLocationLayouts();
@@ -68,7 +76,12 @@ namespace WitchGate.Controllers
                     await SceneManager.UnloadSceneAsync(currentGameModeScene.ScenePath);
 
                 // Load next main scene
-                await SceneManager.LoadSceneAsync(gameModeLayout.MainScene.ScenePath, LoadSceneMode.Single);
+                var operation = SceneManager.LoadSceneAsync(gameModeLayout.MainScene.ScenePath, LoadSceneMode.Additive);
+                await operation;
+
+                Scene mainScene = SceneManager.GetSceneByPath(gameModeLayout.MainScene.ScenePath);
+                SceneManager.SetActiveScene(mainScene);
+                
                 currentGameModeScene = gameModeLayout.MainScene;
 
                 //load additive scenes
@@ -76,6 +89,8 @@ namespace WitchGate.Controllers
 
                 //Unload the transition
                 await SceneManager.UnloadSceneAsync(gameModeLayout.TransitionScene.ScenePath);
+                
+                
             }
         }
 

@@ -46,7 +46,7 @@ namespace WitchGate.Gameplay.Battles
             }
             
             await SceneManager.LoadSceneAsync(GameController.Metrics.BattleScenePath);*/
-
+            
             await SceneController.Instance.LoadGameMode(GameMode.Fight);
         }
 

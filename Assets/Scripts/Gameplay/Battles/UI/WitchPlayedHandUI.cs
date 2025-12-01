@@ -57,19 +57,30 @@ namespace WitchGate.Gameplay.Battles.UI
 
         int ICardDropTarget<GameCard>.Priority => priority;
 
-        bool ICardDropTarget<GameCard>.Accepts(GameCard card) => (card.Data.WitchDeck & witch) != 0;
+        bool ICardDropTarget<GameCard>.Accepts(GameCard card)
+        {
+            var accepts = (card.Data.WitchDeck & witch) != 0;
+            Debug.Log(accepts, gameObject);
+            return accepts;
+        }
 
         void ICardDropTarget<GameCard>.OnCardEnter(GameCard cardUI)
         {
+            Debug.Log("Enter");
+            transform.localScale = Vector3.one * 1.2f;
         }
 
         void ICardDropTarget<GameCard>.OnCardExit(GameCard cardUI)
         {
+            
+            transform.localScale = Vector3.one ;
+            Debug.Log("Exit");
         }
 
         void ICardDropTarget<GameCard>.OnCardDrop(GameCard card)
         {
             hand.TryAddCard(card);
+            transform.localScale = Vector3.one;
         }
 
         void ICardDropTarget<GameCard>.OnCardHover(GameCard cardUICurrent)

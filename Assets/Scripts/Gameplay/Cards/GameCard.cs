@@ -16,6 +16,8 @@ namespace WitchGate.Gameplay.Cards
 
         public GameCard(CardData data)
         {
+            if(data == null)
+                Debug.LogError("No data was given to the card");
             Data = data;
         }
 

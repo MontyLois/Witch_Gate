@@ -42,17 +42,15 @@ namespace WitchGate.Controllers
             {
                 using (ListPool<IPhaseListener<T>>.Get(out List<IPhaseListener<T>> compatibles))
                 {
-                    foreach (var listener in listeners)
-                        if (listener is IPhaseListener<T> compatible)
-                            compatibles.Add(compatible);
-
                     await phase.OnBegin();
+                    GetListeners(compatibles);
 
                     foreach (var compatible in compatibles)
                         compatible.OnPhaseBegins(phase);
 
                     await phase.Execute();
 
+                    GetListeners(compatibles);
                     foreach (var compatible in compatibles)
                         compatible.OnPhaseEnds(phase);
 
@@ -63,6 +61,14 @@ namespace WitchGate.Controllers
             {
                 Debug.LogException(e);
             }
+        }
+
+        private static void GetListeners<T>(List<IPhaseListener<T>> compatibles) where T : IPhase
+        {
+            compatibles.Clear();
+            foreach (var listener in listeners)
+                if (listener is IPhaseListener<T> compatible)
+                    compatibles.Add(compatible);
         }
     }
 }
