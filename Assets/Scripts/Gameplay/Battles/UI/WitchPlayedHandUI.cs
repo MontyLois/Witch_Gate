@@ -15,6 +15,9 @@ namespace WitchGate.Gameplay.Battles.UI
         ICardDropTarget<GameCard>
     {
         [SerializeField] private Witch witch;
+        
+        [field : SerializeField] public int PlayedHandIndex { get; private set; }
+        
         private int priority;
 
         private Hand<GameCard> hand;
@@ -32,12 +35,14 @@ namespace WitchGate.Gameplay.Battles.UI
         public void OnPhaseBegins(BattlePhase phase)
         {
             battlePhase = phase;
-            hand = witch switch
+            hand = phase.PlayedHands[PlayedHandIndex];
+            /*
+            hand = PlayedHandIndex switch
             {
-                Witch.Elaris => phase.Elaris.PlayedHand,
-                Witch.Velmora => phase.Velmora.PlayedHand,
+                0 => phase.Elaris.PlayedHand,
+                1 => phase.Velmora.PlayedHand,
                 _ => null,
-            };
+            };*/
             
             Connect(hand);
         }
@@ -63,13 +68,11 @@ namespace WitchGate.Gameplay.Battles.UI
         bool ICardDropTarget<GameCard>.Accepts(GameCard card)
         {
             var accepts = (card.Data.WitchDeck & witch)!= 0 && (hand.CurrentSize==0) ;
-            Debug.Log(accepts, gameObject);
             return accepts;
         }
 
         void ICardDropTarget<GameCard>.OnCardEnter(GameCard cardUI)
         {
-            Debug.Log("Enter");
             transform.localScale = Vector3.one * 1.2f;
         }
 
@@ -77,7 +80,6 @@ namespace WitchGate.Gameplay.Battles.UI
         {
             
             transform.localScale = Vector3.one ;
-            Debug.Log("Exit");
         }
 
         void ICardDropTarget<GameCard>.OnCardDrop(GameCard card)
@@ -100,7 +102,7 @@ namespace WitchGate.Gameplay.Battles.UI
             base.OnCardPointerDown(holder, eventData);
             if (holder.CardUI is WitchGameCardUI cardUI)
             {
-                var targetHand = witch switch
+                var targetHand = cardUI.Current.Data.WitchDeck switch
                 {
                     Witch.Elaris => battlePhase.Elaris.Hand,
                     Witch.Velmora => battlePhase.Velmora.Hand,

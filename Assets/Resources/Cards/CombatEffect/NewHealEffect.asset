@@ -12,4 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1af454f5b39f448d9697901ee4388937, type: 3}
   m_Name: NewHealEffect
   m_EditorClassIdentifier: 
-  <CardData>k__BackingField: {fileID: 0}
+  <CardData>k__BackingField: {fileID: 11400000, guid: 62504452a42d0e54991bfe71b5f87edf, type: 2}
+  <SelfAffected>k__BackingField: 0
+  <AlliesAffected>k__BackingField: 1
+  <EnemiesAffected>k__BackingField: 0
+  <Heal>k__BackingField: 5

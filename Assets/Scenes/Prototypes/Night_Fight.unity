@@ -300,6 +300,7 @@ MonoBehaviour:
   draggingParent: {fileID: 1439019609}
   dragDampingMultiplier: 2
   witch: 2
+  <PlayedHandIndex>k__BackingField: 2
 --- !u!114 &74368848
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -374,7 +375,7 @@ GameObject:
   m_Component:
   - component: {fileID: 82312082}
   m_Layer: 5
-  m_Name: Collection
+  m_Name: Board
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -620,7 +621,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &413706342
 RectTransform:
   m_ObjectHideFlags: 0
@@ -635,10 +636,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1524742353}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 459.78784, y: -230.52106}
-  m_SizeDelta: {x: 256.52524, y: 461.0421}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &413706343
 MonoBehaviour:
@@ -685,6 +686,7 @@ MonoBehaviour:
   draggingParent: {fileID: 1439019609}
   dragDampingMultiplier: 2
   witch: -1
+  <PlayedHandIndex>k__BackingField: 1
 --- !u!114 &413706345
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1326,6 +1328,7 @@ MonoBehaviour:
   draggingParent: {fileID: 1439019609}
   dragDampingMultiplier: 2
   witch: 1
+  <PlayedHandIndex>k__BackingField: 0
 --- !u!114 &1285922391
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -7,27 +7,28 @@ namespace WitchGate.Gameplay.Battles.TurnPhases
 {
     public class PlayCardAction : ITurnAction
     {
-        private readonly BattleWitch battleWitch;
+        private readonly BattlePhase battlePhase;
 
 
-        public PlayCardAction(BattleWitch battleWitch)
+        public PlayCardAction(BattlePhase battlePhase)
         {
-            this.battleWitch = battleWitch;
+            this.battlePhase = battlePhase;
         }
 
         public async Awaitable Execute()
         {
+            /*
             using (ListPool<GameCard>.Get(out List<GameCard> cards))
             {
-                cards.AddRange(battleWitch.PlayedHand.Cards);
+                cards.AddRange(battlePhase.PlayedHand.Cards);
                 foreach (var card in cards)
                 {
                     await card.Use();
-                    battleWitch.Discard.TryAddCard(card);
+                    battlePhase.Discard.TryAddCard(card);
                 }
             }
             
-            battleWitch.PlayedHand.Clear();
+            battleWitch.PlayedHand.Clear();*/
         }
     }
 }

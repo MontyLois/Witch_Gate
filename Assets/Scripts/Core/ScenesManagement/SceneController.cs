@@ -90,7 +90,6 @@ namespace WitchGate.Controllers
                 //Unload the transition
                 await SceneManager.UnloadSceneAsync(gameModeLayout.TransitionScene.ScenePath);
                 
-                
             }
         }
 

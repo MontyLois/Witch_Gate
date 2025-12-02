@@ -22,12 +22,12 @@ namespace WitchGate.Gameplay.Cards
                 CardEffect effect = loadedEffects[i];
                 if (effect!=null)
                 {
-                   /* if (!effects.TryGetValue(effect.CardData, out List<CardEffect> list))
+                   if (!effects.TryGetValue(effect.CardData, out List<CardEffect> list))
                     {
                         list = new List<CardEffect>();
                         effects.Add(effect.CardData, list);
                     }
-                    list.Add(effect);*/
+                    list.Add(effect);
                 }
             }
         }

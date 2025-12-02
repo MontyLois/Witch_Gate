@@ -9,11 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 872af9a9bae44eee96d04f1c689f1bb3, type: 3}
-  m_Name: NewDamageEffect
-  m_EditorClassIdentifier: 
+  m_Script: {fileID: 11500000, guid: 115a360a28d9471d9a74db2fd32e376a, type: 3}
+  m_Name: NewShieldEffect
+  m_EditorClassIdentifier: WitchGate.Gameplay::WitchGate.Gameplay.Cards.Effects.ShieldCardEffect
   <CardData>k__BackingField: {fileID: 11400000, guid: 4772268cf867a8c41b0cd5ea29e9c033, type: 2}
-  <SelfAffected>k__BackingField: 0
+  <SelfAffected>k__BackingField: 1
   <AlliesAffected>k__BackingField: 0
-  <EnemiesAffected>k__BackingField: 1
-  <Damage>k__BackingField: 10
+  <EnemiesAffected>k__BackingField: 0
+  <Shield>k__BackingField: 2

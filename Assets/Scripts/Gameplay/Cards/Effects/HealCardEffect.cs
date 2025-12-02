@@ -1,4 +1,6 @@
+using System.Collections.Generic;
 using UnityEngine;
+using WitchGate.Gameplay.Battles.Entities.Interface;
 
 namespace WitchGate.Gameplay.Cards.Effects
 {
@@ -7,5 +9,11 @@ namespace WitchGate.Gameplay.Cards.Effects
     {
         [field: SerializeField]
         public int Heal { get; private set; }
+
+
+        protected override void ApplyEffect(ICanFight target)
+        {
+            target.HealHealth(Heal);
+        }
     }
 }
