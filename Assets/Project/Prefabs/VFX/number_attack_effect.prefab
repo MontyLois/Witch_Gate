@@ -870,7 +870,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1
+      scalar: 10
       minScalar: 10
       maxCurve:
         serializedVersion: 2
@@ -9682,7 +9682,7 @@ GameObject:
   m_Component:
   - component: {fileID: 321653604049586192}
   m_Layer: 0
-  m_Name: attack_effect
+  m_Name: number_attack_effect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
