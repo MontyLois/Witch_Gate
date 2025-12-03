@@ -28,10 +28,12 @@ namespace WitchGate.Gameplay.Battles.TurnPhases
             while (!IsReady)
                 await Awaitable.NextFrameAsync();
 
-            ITurnAction[] turnActions = {
-                new PlayCardAction(BattlePhase),
-                new PlayCardAction(BattlePhase),
-            };
+            ITurnAction[] turnActions = new ITurnAction[BattlePhase.PlayedHands.Length];
+            for (int i = 0; i < BattlePhase.PlayedHands.Length; i++)
+            {
+                //turnActions[i] = new PlayCardAction(BattlePhase.PlayedHands[i]);
+            }
+
 
             return turnActions;
         }

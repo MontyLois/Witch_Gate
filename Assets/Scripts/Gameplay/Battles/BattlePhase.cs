@@ -22,11 +22,6 @@ namespace WitchGate.Gameplay.Battles
         public Hand<GameCard>[] PlayedHands { get; private set; }
         
         
-        public GameModeLayoutData GameModeLayoutData { get; private set; }
-
-        private List<int> additionalLoadedScenesBeforeBattle;
-        private int mainLoadedSceneBeforeBattle;
-        
         public BattlePhase(BattleEnemy enemy, PlayerProfile playerProfile)
         {
             this.Enemy = enemy;
