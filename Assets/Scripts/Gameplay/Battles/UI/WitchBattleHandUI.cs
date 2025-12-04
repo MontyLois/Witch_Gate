@@ -1,5 +1,7 @@
+using Helteix.Cards;
 using Helteix.Cards.UI.Physical;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using WitchGate.Controllers;
 using WitchGate.Gameplay.Cards;
 
@@ -35,5 +37,20 @@ namespace WitchGate.Gameplay.Battles.UI
         {
             Disconnect();
         }
+
+        protected override void OnCardPointerEnter(CardHolderUI holder, PointerEventData eventData)
+        {
+            base.OnCardPointerDown(holder, eventData);
+            if (holder.CardUI is WitchGameCardUI cardUI)
+            {
+                
+            }
+        }
+        
+        protected override void OnCardPointerExit(CardHolderUI holder, PointerEventData eventData)
+        {
+            
+        }
+
     }
 }

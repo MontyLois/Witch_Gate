@@ -8,6 +8,9 @@ namespace WitchGate.Players
     [System.Serializable]
     public struct WitchProfile
     {
+        [field: SerializeField]
+        public Witch Witch { get; private set; }
+        
         [field: SerializeField, Min(0)]
         public int Health { get; private set; }
         [field: SerializeField, Min(0)]

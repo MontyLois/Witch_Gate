@@ -28,6 +28,9 @@ namespace WitchGate
         }
 
 
-        public bool TryGetCard(string id, out CardData cardData) => cards.TryGetValue(id, out cardData);
+        public bool TryGetCard(string id, out CardData cardData)
+        {
+            return cards.TryGetValue(id, out cardData);
+        }
     }
 }

@@ -8,7 +8,7 @@
       "url": "https://packages.unity.com"
     },
     "com.helteix.cards": {
-      "version": "0.0.3",
+      "version": "0.0.12",
       "depth": 0,
       "source": "registry",
       "dependencies": {
@@ -17,16 +17,16 @@
       "url": "https://upm.pckgs.io"
     },
     "com.helteix.singletons": {
-      "version": "1.3.2",
+      "version": "1.3.3",
       "depth": 0,
       "source": "registry",
       "dependencies": {
-        "com.helteix.tools": "1.4.0"
+        "com.helteix.tools": "1.5.0"
       },
       "url": "https://upm.pckgs.io"
     },
     "com.helteix.tools": {
-      "version": "1.4.0",
+      "version": "1.5.0",
       "depth": 1,
       "source": "registry",
       "dependencies": {},

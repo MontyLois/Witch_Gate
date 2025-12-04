@@ -4,7 +4,8 @@
     "references": [
         "Helteix.Cards.Core",
         "Helteix.Tools",
-        "Helteix.Singletons.Runtime"
+        "Helteix.Singletons.Runtime",
+        "Unity.TextMeshPro"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

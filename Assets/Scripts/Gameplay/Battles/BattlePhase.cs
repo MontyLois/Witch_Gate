@@ -6,6 +6,7 @@ using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 using WitchGate.Cards;
 using WitchGate.Controllers;
+using WitchGate.Gameplay.Battles.Entities;
 using WitchGate.Gameplay.Battles.TurnPhases;
 using WitchGate.Gameplay.Cards;
 using WitchGate.Players;
@@ -14,37 +15,29 @@ namespace WitchGate.Gameplay.Battles
 {
     public class BattlePhase : IPhase
     {
-        public readonly IBattleEnemy Enemy;
+        public readonly BattleEnemy Enemy;
         public readonly BattleWitch Velmora;
         public readonly BattleWitch Elaris;
         
-        public GameModeLayoutData GameModeLayoutData { get; private set; }
-
-        private List<int> additionalLoadedScenesBeforeBattle;
-        private int mainLoadedSceneBeforeBattle;
+        public Hand<GameCard>[] PlayedHands { get; private set; }
         
-        public BattlePhase(IBattleEnemy enemy, PlayerProfile playerProfile)
+        
+        public BattlePhase(BattleEnemy enemy, PlayerProfile playerProfile)
         {
             this.Enemy = enemy;
             Velmora = new BattleWitch(playerProfile.VelmoraProfile);
             Elaris = new BattleWitch(playerProfile.ElarisProfile);
+
+            PlayedHands = new Hand<GameCard>[GameController.Metrics.MaxPlayedHandSize];
+            for (int i = 0; i < GameController.Metrics.MaxPlayedHandSize; i++)
+            {
+                PlayedHands[i] = new Hand<GameCard>();
+            }
         }
 
         async Awaitable IPhase.OnBegin()
         {
-            additionalLoadedScenesBeforeBattle = new();
-            var activeScene = SceneManager.GetActiveScene();
-            mainLoadedSceneBeforeBattle = activeScene.buildIndex;
-            for (int i = 0; i < SceneManager.loadedSceneCount; i++)
-            {
-                Scene sceneAt = SceneManager.GetSceneAt(i);
-                if(sceneAt == activeScene)
-                    continue;
-                
-                additionalLoadedScenesBeforeBattle.Add(sceneAt.buildIndex);
-            }
-            
-            await SceneManager.LoadSceneAsync(GameController.Metrics.BattleScenePath);
+            await SceneController.Instance.LoadGameMode(GameMode.Fight);
         }
 
         async Awaitable IPhase.Execute()
@@ -71,13 +64,7 @@ namespace WitchGate.Gameplay.Battles
 
         async Awaitable IPhase.OnEnd()
         {
-
             await SceneController.Instance.LoadGameModeAsync(GameMode.Exploration);
-            
-            await SceneManager.LoadSceneAsync(mainLoadedSceneBeforeBattle);
-            foreach (var index in additionalLoadedScenesBeforeBattle)
-                await SceneManager.LoadSceneAsync(index, LoadSceneMode.Additive);
-            
         }
     }
 }

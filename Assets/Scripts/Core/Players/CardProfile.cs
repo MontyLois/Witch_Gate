@@ -13,8 +13,15 @@ namespace WitchGate.Players
         [field: SerializeField]
         public string CardID { get; private set; }
 
-        public CardData CardData => GameController.GameDatabase.TryGetCard(CardID, out CardData data) ? 
-            data : 
-            null;
+        public CardData CardData
+        {
+            get
+            {
+                if (GameController.GameDatabase.TryGetCard(CardID, out CardData data))
+                    return data;
+                
+                return null;
+            }
+        }
     }
 }

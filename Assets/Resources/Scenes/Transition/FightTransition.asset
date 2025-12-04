@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 144d6dbbc32a4f0286be16996f803667, type: 3}
   m_Name: FightTransition
   m_EditorClassIdentifier: WitchGate.Core::WitchGate.Controllers.SceneData
-  <SceneName>k__BackingField: Transition
-  <GameMode>k__BackingField: 3
+  sceneAsset: {fileID: 102900000, guid: bac7795d9a9e906469eec6b9fcb41841, type: 3}
+  <ScenePath>k__BackingField: Assets/Scenes/Transitions/STransition_Fight.unity

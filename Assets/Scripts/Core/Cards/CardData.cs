@@ -17,6 +17,9 @@ namespace WitchGate.Cards
         [field: SerializeField]
         public Sprite Icon { get; private set; }
         
+        [field: SerializeField]
+        public int Priority { get; private set; }
+        
         [field: SerializeField, HideInInspector]
         public string ID { get; private set; }
 

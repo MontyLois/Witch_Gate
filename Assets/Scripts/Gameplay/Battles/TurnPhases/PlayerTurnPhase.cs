@@ -9,10 +9,11 @@ namespace WitchGate.Gameplay.Battles.TurnPhases
 
         public BattleWitch Velmora => BattlePhase.Velmora;
         public BattleWitch Elaris => BattlePhase.Elaris;
+  
         
         public PlayerTurnPhase(BattlePhase battlePhase) : base(battlePhase)
         {
-            
+           
         }
         
         protected override async Awaitable OnBegin()
@@ -27,10 +28,12 @@ namespace WitchGate.Gameplay.Battles.TurnPhases
             while (!IsReady)
                 await Awaitable.NextFrameAsync();
 
-            ITurnAction[] turnActions = {
-                new PlayCardAction(Velmora),
-                new PlayCardAction(Elaris),
-            };
+            ITurnAction[] turnActions = new ITurnAction[BattlePhase.PlayedHands.Length];
+            for (int i = 0; i < BattlePhase.PlayedHands.Length; i++)
+            {
+                //turnActions[i] = new PlayCardAction(BattlePhase.PlayedHands[i]);
+            }
+
 
             return turnActions;
         }

@@ -1,6 +1,7 @@
 using System;
 using UnityEngine;
 using WitchGate.Controllers;
+using WitchGate.Gameplay.Battles.Entities;
 using WitchGate.Players;
 
 namespace WitchGate.Gameplay.Battles
@@ -11,13 +12,8 @@ namespace WitchGate.Gameplay.Battles
         private PlayerProfile playerProfile;
         private void Start()
         {
-            BattlePhase phase = new BattlePhase(new DebugEnemy(), playerProfile);
+            BattlePhase phase = new BattlePhase(new BattleEnemy(10), playerProfile);
             phase.Run();
         }
-    }
-
-    internal class DebugEnemy : IBattleEnemy
-    {
-        public int CurrentHealth => 10;
     }
 }

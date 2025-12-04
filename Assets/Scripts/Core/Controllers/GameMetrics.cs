@@ -11,5 +11,8 @@ namespace WitchGate.Controllers
         
         [field: SerializeField, Range(1, 10)]
         public int MaxBattleHandSize { get; private set; } = 5;
+        
+        [field: SerializeField, Range(1, 10)]
+        public int MaxPlayedHandSize { get; private set; } = 3;
     }
 }

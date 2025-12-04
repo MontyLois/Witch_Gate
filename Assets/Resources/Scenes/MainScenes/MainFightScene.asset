@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 144d6dbbc32a4f0286be16996f803667, type: 3}
   m_Name: MainFightScene
   m_EditorClassIdentifier: WitchGate.Core::WitchGate.Controllers.SceneData
-  <SceneName>k__BackingField: Night_Fight
-  <GameMode>k__BackingField: 3
+  sceneAsset: {fileID: 102900000, guid: 5251d5c7830bf4e4e8a7b80426488976, type: 3}
+  <ScenePath>k__BackingField: Assets/Scenes/Prototypes/Night_Fight.unity
