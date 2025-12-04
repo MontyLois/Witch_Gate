@@ -92,6 +92,7 @@ namespace WitchGate.Gameplay.Battles.UI
         {
         }
         
+        
         protected override bool CanCardBeClicked(ICard card)
         {
             return true;

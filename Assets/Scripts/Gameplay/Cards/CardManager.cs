@@ -11,7 +11,6 @@ namespace WitchGate.Gameplay.Cards
     {
         private static Dictionary<CardData, List<CardEffect>> effects;
         
-        
         [RuntimeInitializeOnLoadMethod]
         private static void Load()
         {

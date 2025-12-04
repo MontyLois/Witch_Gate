@@ -38,6 +38,19 @@ namespace WitchGate.Gameplay.Battles.UI
             Disconnect();
         }
 
-       
+        protected override void OnCardPointerEnter(CardHolderUI holder, PointerEventData eventData)
+        {
+            base.OnCardPointerDown(holder, eventData);
+            if (holder.CardUI is WitchGameCardUI cardUI)
+            {
+                
+            }
+        }
+        
+        protected override void OnCardPointerExit(CardHolderUI holder, PointerEventData eventData)
+        {
+            
+        }
+
     }
 }
