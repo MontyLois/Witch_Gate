@@ -9,15 +9,25 @@ using WitchGate.Cards;
 
 namespace WitchGate
 {
-    public class CardDescriptionUI : CardUIComponent<IGameCard>
+    public class CardDescriptionUI : CardUIComponent<IGameCard>, ICardPointerHoverHandler
     {
         [field: SerializeField] public GameObject CardDescriptionGameObject { get; private set; }
         [field: SerializeField] public TMP_Text DescritpionText { get; private set; }
+        
 
-
-        public void Start()
+        private void OnEnable()
         {
             CardDescriptionGameObject.SetActive(false);
+        }
+        
+        private void OnDisable()
+        {
+            CardDescriptionGameObject.SetActive(false);
+        }
+
+        void Update()
+        {
+            CardDescriptionGameObject.transform.rotation = Camera.main.transform.rotation;
         }
 
         public override void Connect(IGameCard current)
@@ -31,10 +41,8 @@ namespace WitchGate
             base.Disconnect(current);
             DescritpionText.text = "";
         }
-
-
-        /*
-        public  void OnPointerEnter(PointerEventData eventData)
+        
+        public void OnPointerEnter(PointerEventData eventData)
         {
             CardDescriptionGameObject.SetActive(true);
         }
@@ -42,6 +50,11 @@ namespace WitchGate
         public void OnPointerExit(PointerEventData eventData)
         {
             CardDescriptionGameObject.SetActive(false);
-        }*/
+        }
+
+        public void OnPointerMove(PointerEventData eventData)
+        {
+            
+        }
     }
 }
