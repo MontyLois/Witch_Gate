@@ -1,3 +1,4 @@
+using DG.Tweening;
 using Helteix.Cards;
 using Helteix.Cards.UI.Physical;
 using UnityEngine;
@@ -40,16 +41,22 @@ namespace WitchGate.Gameplay.Battles.UI
 
         protected override void OnCardPointerEnter(CardHolderUI holder, PointerEventData eventData)
         {
-            base.OnCardPointerDown(holder, eventData);
+            base.OnCardPointerEnter(holder, eventData);
             if (holder.CardUI is WitchGameCardUI cardUI)
             {
-                
+                holder.transform.DOLocalMoveY( 3,0);
+                holder.transform.localScale = Vector3.one * 1.2f;
             }
         }
         
         protected override void OnCardPointerExit(CardHolderUI holder, PointerEventData eventData)
         {
-            
+            base.OnCardPointerExit(holder, eventData);
+            if (holder.CardUI is WitchGameCardUI cardUI)
+            {
+                holder.transform.DOLocalMoveY(0,0);
+                holder.transform.localScale = Vector3.one;
+            }
         }
 
     }
