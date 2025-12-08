@@ -6,7 +6,8 @@ namespace WitchGate.Gameplay.Battles.TurnPhases
     public class ResolutionPhase : IPhase
     {
         public readonly ITurnAction[] Actions;
-
+        
+        
         public ResolutionPhase(ITurnAction[] actions)
         {
             Actions = actions;

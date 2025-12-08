@@ -8,7 +8,7 @@
       "url": "https://packages.unity.com"
     },
     "com.helteix.cards": {
-      "version": "0.0.12",
+      "version": "0.0.13",
       "depth": 0,
       "source": "registry",
       "dependencies": {

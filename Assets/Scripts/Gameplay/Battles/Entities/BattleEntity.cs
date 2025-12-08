@@ -12,7 +12,7 @@ namespace WitchGate.Gameplay.Battles.Entities
 
         public event Action<int> OnShieldHurt;
         public event Action OnShieldDown;
-        public event Action<int> OnDamageTaken;
+        public event Action<float> OnDamageTaken;
         public event Action OnDeath;
 
         protected BattleEntity(int maxHealth, int currentHealth)
@@ -34,7 +34,7 @@ namespace WitchGate.Gameplay.Battles.Entities
                 CurrentHealth -= damages;
                 CurrentHealth = Mathf.Max(CurrentHealth, 0);
 
-                OnDamageTaken?.Invoke(CurrentHealth);
+                OnDamageTaken?.Invoke(CurrentHealth/MaxHealth);
 
                 if (CurrentHealth == 0)
                     OnDeath?.Invoke();

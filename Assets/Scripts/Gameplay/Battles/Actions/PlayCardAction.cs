@@ -8,29 +8,21 @@ namespace WitchGate.Gameplay.Battles.TurnPhases
     public class PlayCardAction : ITurnAction
     {
         private readonly BattlePhase battlePhase;
-
         private readonly GameCard gameCard;
+        public int Priority { get; set;}
 
-        public PlayCardAction(GameCard gameCard)
+        public PlayCardAction(GameCard gameCard, BattlePhase battlePhase)
         {
             this.gameCard = gameCard;
+            this.battlePhase = battlePhase;
+            Priority = gameCard.Data.Priority;
         }
 
         // For player : need to use card, discard it and then draw a new one.
         // For monster : in monster turn we already decide wich will be played hehe,
-        // so only need to remove first "card" and use the other one. And ! uh yes make it null;
+
         public async Awaitable Execute()
         {
-            using (ListPool<GameCard>.Get(out List<GameCard> cards))
-            {
-                var discard = gameCard.Data.WitchDeck switch
-                {
-                    Witch.Elaris => battlePhase.Elaris.Discard,
-                    Witch.Velmora => battlePhase.Velmora.Discard,
-                    Witch.All => battlePhase.Elaris.Discard,
-                    _ => null,
-                };
-                
                 var witch = gameCard.Data.WitchDeck switch
                 {
                     Witch.Elaris => battlePhase.Elaris,
@@ -46,7 +38,6 @@ namespace WitchGate.Gameplay.Battles.TurnPhases
                     witch.Discard.TryAddCard(gameCard);
                     witch.DrawCard();
                 }
-            }
         }
     }
 }

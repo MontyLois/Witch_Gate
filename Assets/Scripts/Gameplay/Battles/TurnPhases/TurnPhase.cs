@@ -15,7 +15,6 @@ namespace WitchGate.Gameplay.Battles.TurnPhases
         Awaitable IPhase.OnBegin()
         {
             return OnBegin();
-            Debug.Log("starting a turn");
         }
 
         async Awaitable IPhase.Execute()
