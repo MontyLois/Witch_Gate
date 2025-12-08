@@ -36,14 +36,6 @@ namespace WitchGate.Gameplay.Battles.UI
         {
             battlePhase = phase;
             hand = phase.PlayedHands[PlayedHandIndex];
-            /*
-            hand = PlayedHandIndex switch
-            {
-                0 => phase.Elaris.PlayedHand,
-                1 => phase.Velmora.PlayedHand,
-                _ => null,
-            };*/
-            
             Connect(hand);
         }
 

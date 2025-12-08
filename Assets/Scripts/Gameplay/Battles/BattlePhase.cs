@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using Helteix.Cards;
 using Helteix.Cards.Collections;
 using UnityEngine;
@@ -65,6 +66,19 @@ namespace WitchGate.Gameplay.Battles
         async Awaitable IPhase.OnEnd()
         {
             await SceneController.Instance.LoadGameModeAsync(GameMode.Exploration);
+        }
+
+        public List<GameCard> GetAllPlayedCards()
+        {
+            List<GameCard> playedCards = new List<GameCard>();
+            foreach (var playedHand in PlayedHands)
+            {
+                if (playedHand.TryGetCard(0, out GameCard card))
+                {
+                    playedCards.Add(card);
+                }
+            }
+            return playedCards;
         }
     }
 }

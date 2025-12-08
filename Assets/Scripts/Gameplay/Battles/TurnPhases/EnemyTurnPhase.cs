@@ -4,23 +4,27 @@ namespace WitchGate.Gameplay.Battles.TurnPhases
 {
     public class EnemyTurnPhase : TurnPhase
     {
+        public bool IsReady { get; private set; }
         public EnemyTurnPhase(BattlePhase battlePhase) : base(battlePhase)
         {
             
         }
         protected override async Awaitable OnBegin()
         {
-            throw new System.NotImplementedException();
+            
         }
 
         protected override async Awaitable<ITurnAction[]> Execute()
         {
-            throw new System.NotImplementedException();
+            while (!IsReady)
+                await Awaitable.NextFrameAsync();
+            
+            return null;
         }
 
         protected override async Awaitable OnEnd()
         {
-            throw new System.NotImplementedException();
+            
         }
 
     }

@@ -1,5 +1,7 @@
+using System.Collections.Generic;
 using UnityEngine;
 using WitchGate.Controllers;
+using WitchGate.Gameplay.Cards;
 
 namespace WitchGate.Gameplay.Battles.TurnPhases
 {
@@ -27,14 +29,13 @@ namespace WitchGate.Gameplay.Battles.TurnPhases
         {
             while (!IsReady)
                 await Awaitable.NextFrameAsync();
-
-            ITurnAction[] turnActions = new ITurnAction[BattlePhase.PlayedHands.Length];
-            for (int i = 0; i < BattlePhase.PlayedHands.Length; i++)
+            
+            List<GameCard> playedCards = BattlePhase.GetAllPlayedCards();
+            ITurnAction[] turnActions = new ITurnAction[playedCards.Count];
+            for (int i = 0; i < playedCards.Count; i++)
             {
-                //turnActions[i] = new PlayCardAction(BattlePhase.PlayedHands[i]);
+                turnActions[i] = new PlayCardAction(playedCards[i], BattlePhase);
             }
-
-
             return turnActions;
         }
 
