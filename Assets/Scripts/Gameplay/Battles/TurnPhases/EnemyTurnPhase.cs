@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace WitchGate.Gameplay.Battles.TurnPhases
@@ -14,7 +15,7 @@ namespace WitchGate.Gameplay.Battles.TurnPhases
             
         }
 
-        protected override async Awaitable<ITurnAction[]> Execute()
+        protected override async Awaitable<List<ITurnAction>> Execute()
         {
             while (!IsReady)
                 await Awaitable.NextFrameAsync();

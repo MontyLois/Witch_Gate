@@ -4,6 +4,8 @@ using Helteix.Cards;
 using UnityEngine;
 using WitchGate.Cards;
 using WitchGate.Controllers;
+using WitchGate.Gameplay.Battles;
+using WitchGate.Gameplay.Battles.Entities.Interface;
 using WitchGate.Gameplay.Cards.Effects;
 
 namespace WitchGate.Gameplay.Cards
@@ -24,8 +26,12 @@ namespace WitchGate.Gameplay.Cards
         public IEnumerable<CardEffect> Effects => CardManager.GetEffectsFor(Data);
 
 
-        public async Awaitable Use()
+        public async Awaitable Use(IReadOnlyList<ICanFight> targets, BattleWitch caster)
         {
+            foreach (var effect in Effects)
+            {
+                effect.AffectTargets(targets, caster);
+            }
             await PhaseController.CompletedAwaitable;
         }
     }

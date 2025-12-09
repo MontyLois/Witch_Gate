@@ -7,16 +7,26 @@ namespace WitchGate.Gameplay.Battles.TurnPhases
     {
 
         private PlayerTurnPhase playerTurnPhase;
-        
+
+        protected override void OnEnable()
+        {
+            base.OnEnable();
+            this.Register();
+        }
+
+        protected override void OnDisable()
+        {
+            base.OnDisable();
+            this.Unregister();
+        }
+
         protected override void OnPhaseBegins(PlayerTurnPhase phase)
         {
-            this.Register();
             playerTurnPhase = phase;
         }
 
         protected override void OnPhaseEnds(PlayerTurnPhase phase)
         {
-            this.Unregister();
             playerTurnPhase = null;
         }
 

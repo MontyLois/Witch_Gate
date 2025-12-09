@@ -25,16 +25,16 @@ namespace WitchGate.Gameplay.Battles.TurnPhases
             Elaris.DrawMissingCards();
         }
 
-        protected override async Awaitable<ITurnAction[]> Execute()
+        protected override async Awaitable<List<ITurnAction>> Execute()
         {
             while (!IsReady)
                 await Awaitable.NextFrameAsync();
             
             List<GameCard> playedCards = BattlePhase.GetAllPlayedCards();
-            ITurnAction[] turnActions = new ITurnAction[playedCards.Count];
+            List<ITurnAction> turnActions = new List<ITurnAction>();
             for (int i = 0; i < playedCards.Count; i++)
             {
-                turnActions[i] = new PlayCardAction(playedCards[i], BattlePhase);
+                turnActions.Add(new PlayCardAction(playedCards[i], BattlePhase));
             }
             return turnActions;
         }

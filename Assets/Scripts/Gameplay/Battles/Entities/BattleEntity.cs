@@ -20,6 +20,7 @@ namespace WitchGate.Gameplay.Battles.Entities
             MaxHealth = maxHealth;
             CurrentHealth = currentHealth;
             CurrentShield = 0;
+            TargetRegistry.Register(this);
         }
 
         public void TakeDamages(int damages)
@@ -65,6 +66,11 @@ namespace WitchGate.Gameplay.Battles.Entities
         public void AddShield(int shield)
         {
             CurrentShield += shield;
+        }
+
+        public void ResetShield()
+        {
+            CurrentShield = 0;
         }
     }
 }

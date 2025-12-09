@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 using WitchGate.Controllers;
 
@@ -19,11 +20,8 @@ namespace WitchGate.Gameplay.Battles.TurnPhases
 
         async Awaitable IPhase.Execute()
         {
-            ITurnAction[] turnActions = await Execute();
-
-            ResolutionPhase resolutionPhase = new ResolutionPhase(turnActions);
-
-            await resolutionPhase.RunAsync();
+            List<ITurnAction> turnActions = await Execute();
+            BattlePhase.AddTurnActions(turnActions);
         }
 
         Awaitable IPhase.OnEnd()
@@ -32,7 +30,7 @@ namespace WitchGate.Gameplay.Battles.TurnPhases
         }
 
         protected abstract Awaitable OnBegin();
-        protected abstract Awaitable<ITurnAction[]> Execute();
+        protected abstract Awaitable<List<ITurnAction>> Execute();
         protected abstract Awaitable OnEnd();
     }
 }

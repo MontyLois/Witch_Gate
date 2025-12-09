@@ -12,7 +12,6 @@ namespace WitchGate.Gameplay.Cards.Effects
         [field: SerializeField]
         public CardData CardData { get; private set; }
         
-        
         [field: SerializeField]
         public bool SelfAffected { get; private set; }
         
@@ -22,7 +21,7 @@ namespace WitchGate.Gameplay.Cards.Effects
         [field: SerializeField]
         public bool EnemiesAffected { get; private set; }
 
-        protected void AffectTargets(List<ICanFight> targets, BattleWitch caster)
+        public void AffectTargets(IReadOnlyList<ICanFight> targets, BattleWitch caster)
         {
             foreach (var target in targets)
             {

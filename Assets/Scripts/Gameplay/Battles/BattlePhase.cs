@@ -8,6 +8,7 @@ using UnityEngine.SceneManagement;
 using WitchGate.Cards;
 using WitchGate.Controllers;
 using WitchGate.Gameplay.Battles.Entities;
+using WitchGate.Gameplay.Battles.Entities.Interface;
 using WitchGate.Gameplay.Battles.TurnPhases;
 using WitchGate.Gameplay.Cards;
 using WitchGate.Players;
@@ -21,6 +22,7 @@ namespace WitchGate.Gameplay.Battles
         public readonly BattleWitch Elaris;
         
         public Hand<GameCard>[] PlayedHands { get; private set; }
+        public List<ITurnAction> TurnActions { get; private set; }
         
         
         public BattlePhase(BattleEnemy enemy, PlayerProfile playerProfile)
@@ -28,6 +30,7 @@ namespace WitchGate.Gameplay.Battles
             this.Enemy = enemy;
             Velmora = new BattleWitch(playerProfile.VelmoraProfile);
             Elaris = new BattleWitch(playerProfile.ElarisProfile);
+            TurnActions = new List<ITurnAction>();
 
             PlayedHands = new Hand<GameCard>[GameController.Metrics.MaxPlayedHandSize];
             for (int i = 0; i < GameController.Metrics.MaxPlayedHandSize; i++)
@@ -45,23 +48,29 @@ namespace WitchGate.Gameplay.Battles
         {
             while (true)
             {
-                PlayerTurnPhase playerTurnPhase = new PlayerTurnPhase(this);
-
-                await playerTurnPhase.RunAsync();
-                if(!AreAllAlive())
-                    break;
-
-                EnemyTurnPhase enemyTurnPhase = new EnemyTurnPhase(this);
-                await enemyTurnPhase.RunAsync();
+                TurnActions.Clear();
                 
-                if(!AreAllAlive())
+                /*
+                EnemyTurnPhase enemyTurnPhase = new EnemyTurnPhase(this);
+                await enemyTurnPhase.RunAsync();*/
+                
+                PlayerTurnPhase playerTurnPhase = new PlayerTurnPhase(this);
+                await playerTurnPhase.RunAsync();
+                
+                ResolutionPhase resolutionPhase = new ResolutionPhase(TurnActions);
+                await resolutionPhase.RunAsync();
+                
+                if(IsASideDefeated())
                     break;
             }
         }
 
-        private bool AreAllAlive() => Enemy.CurrentHealth > 0 && 
-                                      Elaris.CurrentHealth > 0 && 
-                                      Velmora.CurrentHealth > 0;
+        private bool IsASideDefeated() => EnemiesDefeated()||PlayerDefeated();
+
+        private bool EnemiesDefeated() => Enemy.CurrentHealth <= 0;
+
+        private bool PlayerDefeated() => Elaris.CurrentHealth <= 0 &&
+                                         Velmora.CurrentHealth <= 0;
 
         async Awaitable IPhase.OnEnd()
         {
@@ -79,6 +88,11 @@ namespace WitchGate.Gameplay.Battles
                 }
             }
             return playedCards;
+        }
+
+        public void AddTurnActions(List<ITurnAction> turnActions)
+        {
+            TurnActions.AddRange(turnActions);
         }
     }
 }

@@ -36485,8 +36485,12 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2479208652137105733, guid: 82c3222e8d465114996ce7643d28d0eb, type: 3}
+      propertyPath: m_FlipX
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2479208652137105733, guid: 82c3222e8d465114996ce7643d28d0eb, type: 3}
       propertyPath: m_SortingLayer
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2479208652137105733, guid: 82c3222e8d465114996ce7643d28d0eb, type: 3}
       propertyPath: m_SortingLayerID

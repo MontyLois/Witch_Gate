@@ -12,7 +12,7 @@ namespace WitchGate.Gameplay.Battles
         private PlayerProfile playerProfile;
         private void Start()
         {
-            BattlePhase phase = new BattlePhase(new BattleEnemy(10), playerProfile);
+            BattlePhase phase = new BattlePhase(new BattleEnemy(20), playerProfile);
             phase.Run();
         }
     }
