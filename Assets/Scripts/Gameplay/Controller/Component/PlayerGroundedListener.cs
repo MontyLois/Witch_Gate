@@ -2,12 +2,12 @@ namespace WitchGate.Gameplay.Controller.Component
 {
     public abstract class PlayerGroundedListener : PlayerComponent
     {
-        protected void OnEnable()
+        protected virtual void OnEnable()
         {
             Manager.Body.OnChangedGrounded += OnGroundedChanged;
         }
 
-        protected void OnDisable()
+        protected virtual void OnDisable()
         {
             Manager.Body.OnChangedGrounded -= OnGroundedChanged;
         }

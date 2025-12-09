@@ -13,6 +13,7 @@ namespace WitchGate.Gameplay.Cards.Effects
 
         protected override void ApplyEffect(ICanFight target)
         {
+            Debug.Log("we are dealing damages with this card");
             target.TakeDamages(Damage);
         }
     }

@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Pool;
+using WitchGate.Gameplay.Battles.Entities;
 using WitchGate.Gameplay.Cards;
 
 namespace WitchGate.Gameplay.Battles.TurnPhases
@@ -23,6 +24,7 @@ namespace WitchGate.Gameplay.Battles.TurnPhases
 
         public async Awaitable Execute()
         {
+            Debug.Log("we are applying a card wow");
                 var witch = gameCard.Data.WitchDeck switch
                 {
                     Witch.Elaris => battlePhase.Elaris,
@@ -31,7 +33,7 @@ namespace WitchGate.Gameplay.Battles.TurnPhases
                     _ => null,
                 };
 
-                await gameCard.Use();
+                await gameCard.Use(TargetRegistry.Targets, witch);
 
                 if (witch is not null)
                 {

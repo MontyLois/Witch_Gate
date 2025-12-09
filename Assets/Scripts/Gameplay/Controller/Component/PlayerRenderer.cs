@@ -10,7 +10,7 @@ namespace WitchGate.Gameplay.Controller
         
         protected override void OnDirectionChanged(float dir)
         {
-            spriteRenderer.flipX = dir > 0;
+            spriteRenderer.flipX = dir < 0;
         }
     }
 }

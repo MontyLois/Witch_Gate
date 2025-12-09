@@ -30,7 +30,6 @@ namespace WitchGate.Gameplay.Battles.UI
                 Witch.Velmora => phase.Velmora.Hand,
                 _ => null,
             };
-            
             Connect(hand);
         }
 

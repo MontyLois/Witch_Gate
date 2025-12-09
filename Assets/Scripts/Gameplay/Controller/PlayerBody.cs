@@ -7,7 +7,7 @@ namespace WitchGate.Gameplay.Controller
     public class PlayerBody : PlayerComponent
     {
         [SerializeField] 
-        private Rigidbody rb;
+        public Rigidbody rb;
 
         [field: SerializeField]
         public Vector3 CurrentVelocity { get; private set; }
