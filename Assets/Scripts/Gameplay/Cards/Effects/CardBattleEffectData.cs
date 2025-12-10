@@ -7,7 +7,7 @@ using WitchGate.Gameplay.Battles.Entities.Interface;
 
 namespace WitchGate.Gameplay.Cards.Effects
 {
-    public abstract class CardEffect : ScriptableObject
+    public abstract class CardBattleEffectData : ScriptableObject
     {
         [field: SerializeField]
         public CardData CardData { get; private set; }
@@ -21,13 +21,13 @@ namespace WitchGate.Gameplay.Cards.Effects
         [field: SerializeField]
         public bool EnemiesAffected { get; private set; }
 
-        public void AffectTargets(IReadOnlyList<ICanFight> targets, BattleWitch caster)
+        public void AffectTargets(IReadOnlyList<ICanFight> targets, ICanFight caster)
         {
             foreach (var target in targets)
             {
                 if ((IsSelf(target, caster)&& SelfAffected)||
                     (IsAlly(target, caster)&& AlliesAffected)||
-                    (IsEnemy(target)&& EnemiesAffected))
+                    (IsEnemy(target, caster)&& EnemiesAffected))
                 {
                     ApplyEffect(target);
                 }
@@ -35,8 +35,8 @@ namespace WitchGate.Gameplay.Cards.Effects
         }
 
         private bool IsSelf(ICanFight target, ICanFight caster) => ReferenceEquals(target, caster);
-        private bool IsAlly(ICanFight target, ICanFight caster) => target is BattleWitch && !IsSelf(target, caster);
-        private bool IsEnemy(ICanFight target) => target is BattleEnemy;
+        private bool IsAlly(ICanFight target, ICanFight caster) => target.Faction == caster.Faction && !IsSelf(target, caster);
+        private bool IsEnemy(ICanFight target, ICanFight caster) => target.Faction != caster.Faction;
                                                           
         
         protected abstract void ApplyEffect(ICanFight target);

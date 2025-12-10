@@ -600,7 +600,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 468243982}
-  - component: {fileID: 468243983}
   m_Layer: 0
   m_Name: Monster
   m_TagString: Untagged
@@ -625,19 +624,6 @@ Transform:
   - {fileID: 595995592}
   m_Father: {fileID: 1999800339}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &468243983
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 468243981}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d2a8d345730b0dd46932c9a890528b97, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprite: {fileID: 125782120}
 --- !u!1 &595995591
 GameObject:
   m_ObjectHideFlags: 0
@@ -37516,7 +37502,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1999800339
 Transform:
   m_ObjectHideFlags: 0
@@ -37599,7 +37585,70 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2a8d345730b0dd46932c9a890528b97, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sprite: {fileID: 595995591}
+  sprite: {fileID: 125782120}
+  playerProfile:
+    <VelmoraProfile>k__BackingField:
+      <Witch>k__BackingField: 1
+      <Health>k__BackingField: 20
+      <MaxHealth>k__BackingField: 20
+      <Deck>k__BackingField:
+      - <Level>k__BackingField: 1
+        <CardID>k__BackingField: bad6bc94-50ab-4f89-9fa8-08df42b2a52f
+      - <Level>k__BackingField: 1
+        <CardID>k__BackingField: bad6bc94-50ab-4f89-9fa8-08df42b2a52f
+      - <Level>k__BackingField: 1
+        <CardID>k__BackingField: bad6bc94-50ab-4f89-9fa8-08df42b2a52f
+      - <Level>k__BackingField: 1
+        <CardID>k__BackingField: bad6bc94-50ab-4f89-9fa8-08df42b2a52f
+      - <Level>k__BackingField: 1
+        <CardID>k__BackingField: bad6bc94-50ab-4f89-9fa8-08df42b2a52f
+      - <Level>k__BackingField: 1
+        <CardID>k__BackingField: bad6bc94-50ab-4f89-9fa8-08df42b2a52f
+      - <Level>k__BackingField: 1
+        <CardID>k__BackingField: bad6bc94-50ab-4f89-9fa8-08df42b2a52f
+      - <Level>k__BackingField: 1
+        <CardID>k__BackingField: bad6bc94-50ab-4f89-9fa8-08df42b2a52f
+    <ElarisProfile>k__BackingField:
+      <Witch>k__BackingField: 2
+      <Health>k__BackingField: 20
+      <MaxHealth>k__BackingField: 20
+      <Deck>k__BackingField:
+      - <Level>k__BackingField: 1
+        <CardID>k__BackingField: cc0034b9-2ece-4f0a-a78d-5f2544c56167
+      - <Level>k__BackingField: 1
+        <CardID>k__BackingField: cc0034b9-2ece-4f0a-a78d-5f2544c56167
+      - <Level>k__BackingField: 1
+        <CardID>k__BackingField: cc0034b9-2ece-4f0a-a78d-5f2544c56167
+      - <Level>k__BackingField: 1
+        <CardID>k__BackingField: cc0034b9-2ece-4f0a-a78d-5f2544c56167
+      - <Level>k__BackingField: 1
+        <CardID>k__BackingField: cc0034b9-2ece-4f0a-a78d-5f2544c56167
+      - <Level>k__BackingField: 1
+        <CardID>k__BackingField: cc0034b9-2ece-4f0a-a78d-5f2544c56167
+      - <Level>k__BackingField: 1
+        <CardID>k__BackingField: cc0034b9-2ece-4f0a-a78d-5f2544c56167
+      - <Level>k__BackingField: 1
+        <CardID>k__BackingField: cc0034b9-2ece-4f0a-a78d-5f2544c56167
+  enemyProfile:
+    <Health>k__BackingField: 30
+    <MaxHealth>k__BackingField: 30
+    <Deck>k__BackingField:
+    - <Level>k__BackingField: 1
+      <CardID>k__BackingField: 06065e9d-f0d3-44c5-88b3-d3997a6da0ad
+    - <Level>k__BackingField: 1
+      <CardID>k__BackingField: 06065e9d-f0d3-44c5-88b3-d3997a6da0ad
+    - <Level>k__BackingField: 1
+      <CardID>k__BackingField: 06065e9d-f0d3-44c5-88b3-d3997a6da0ad
+    - <Level>k__BackingField: 1
+      <CardID>k__BackingField: 06065e9d-f0d3-44c5-88b3-d3997a6da0ad
+    - <Level>k__BackingField: 1
+      <CardID>k__BackingField: 06065e9d-f0d3-44c5-88b3-d3997a6da0ad
+    - <Level>k__BackingField: 1
+      <CardID>k__BackingField: 06065e9d-f0d3-44c5-88b3-d3997a6da0ad
+    - <Level>k__BackingField: 1
+      <CardID>k__BackingField: 06065e9d-f0d3-44c5-88b3-d3997a6da0ad
+    - <Level>k__BackingField: 1
+      <CardID>k__BackingField: 06065e9d-f0d3-44c5-88b3-d3997a6da0ad
 --- !u!1001 &2026942600
 PrefabInstance:
   m_ObjectHideFlags: 0

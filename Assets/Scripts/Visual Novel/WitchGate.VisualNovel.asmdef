@@ -2,7 +2,8 @@
     "name": "WitchGate.VisualNovel",
     "rootNamespace": "WitchGate.VisualNovel",
     "references": [
-        "GUID:d792930ad3a102646bcada4b0a3e786d"
+        "GUID:d792930ad3a102646bcada4b0a3e786d",
+        "GUID:7f6fdd18b438ff245b7f869ddfb77b44"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

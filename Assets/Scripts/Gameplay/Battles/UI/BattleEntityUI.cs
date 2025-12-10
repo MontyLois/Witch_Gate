@@ -13,7 +13,6 @@ namespace WitchGate.Gameplay.Battles.Entities
         
         private void OnLifeUpdate(float percent)
         {
-            Debug.Log(percent);
             HpBar.fillAmount = percent;
             CurrentHp.text = battleEntity.CurrentHealth.ToString();
         }
