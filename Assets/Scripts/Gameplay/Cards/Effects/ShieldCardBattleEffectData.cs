@@ -4,16 +4,15 @@ using WitchGate.Gameplay.Battles.Entities.Interface;
 
 namespace WitchGate.Gameplay.Cards.Effects
 {
-    [CreateAssetMenu(fileName = "NewHealEffect", menuName = "WitchGate/Cards/Effects/Heal", order = 0)]
-    public class HealCardEffect : CardEffect
+    [CreateAssetMenu(fileName = "NewShieldEffect", menuName = "WitchGate/Cards/Effects/Shield", order = 0)]
+    public class ShieldCardBattleEffectData : CardBattleEffectData
     {
         [field: SerializeField]
-        public int Heal { get; private set; }
-
-
+        public int Shield { get; private set; }
+        
         protected override void ApplyEffect(ICanFight target)
         {
-            target.HealHealth(Heal);
+           target.AddShield(Shield);
         }
     }
 }

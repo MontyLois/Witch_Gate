@@ -23,7 +23,7 @@ namespace WitchGate.Gameplay.Cards
             Data = data;
         }
 
-        public IEnumerable<CardEffect> Effects => CardManager.GetEffectsFor(Data);
+        public IEnumerable<CardBattleEffectData> Effects => CardManager.GetEffectsFor(Data);
 
 
         public async Awaitable Use(IReadOnlyList<ICanFight> targets, BattleWitch caster)

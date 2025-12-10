@@ -9,5 +9,7 @@ namespace WitchGate
         None = 0,
         Velmora = 1,
         Elaris = 2,
+        Voidrath = 3,
+        WitchHunter = 4,
     }
 }

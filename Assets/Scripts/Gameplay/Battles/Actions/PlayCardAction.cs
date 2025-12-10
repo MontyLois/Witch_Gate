@@ -33,10 +33,9 @@ namespace WitchGate.Gameplay.Battles.TurnPhases
                     _ => null,
                 };
 
-                await gameCard.Use(TargetRegistry.Targets, witch);
-
                 if (witch is not null)
                 {
+                    await gameCard.Use(TargetRegistry.Targets, witch);
                     witch.Discard.TryAddCard(gameCard);
                     witch.DrawCard();
                 }

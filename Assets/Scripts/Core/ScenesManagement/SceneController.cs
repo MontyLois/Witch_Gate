@@ -2,7 +2,6 @@ using System;
 using System.Collections.Generic;
 using Helteix.Singletons.MonoSingletons;
 using UnityEngine;
-using UnityEngine.Pool;
 using UnityEngine.SceneManagement;
 using WitchGate.Controllers.LocationLayouts;
 
@@ -10,7 +9,7 @@ namespace WitchGate.Controllers
 {
     public class SceneController : MonoSingleton<SceneController>
     {
-        private SceneData currentGameModeScene;
+        public SceneData currentGameModeScene;
         private SceneData currentLocationScene; //For the location : shop, all city part, fight subspace
         private List<SceneData> additiveScenes;
         private MissionSceneData currentMissionScene; // For Mission : only one mission active at a same time

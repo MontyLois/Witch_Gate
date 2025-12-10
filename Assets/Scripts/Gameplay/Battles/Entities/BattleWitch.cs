@@ -11,6 +11,7 @@ namespace WitchGate.Gameplay.Battles
     public class BattleWitch : BattleEntity
     {
         public Witch WitchName { get; private set; }
+        public override Faction Faction { get; } = Faction.Witch;
         public Hand<GameCard> Hand { get; private set; }
         public Deck<GameCard> Deck { get; private set; }
         public Deck<GameCard> Discard { get; private set; }
@@ -22,6 +23,7 @@ namespace WitchGate.Gameplay.Battles
             Discard = new Deck<GameCard>();
             WitchName = profile.Witch;
             
+            Debug.Log("deck profil count :" +profile.Deck.Length);
             //remplissage du deck
             foreach (var cardProfile in profile.Deck)
             {
