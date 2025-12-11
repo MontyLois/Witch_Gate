@@ -1,11 +1,14 @@
 using System.Collections.Generic;
 using UnityEngine;
+using WitchGate.Gameplay.Battles.Entities;
 
 namespace WitchGate.Gameplay.Battles.TurnPhases
 {
     public class EnemyTurnPhase : TurnPhase
     {
         public bool IsReady { get; private set; }
+        public BattleEnemy Enemy => BattlePhase.Enemy;
+        
         public EnemyTurnPhase(BattlePhase battlePhase) : base(battlePhase)
         {
             
@@ -19,6 +22,8 @@ namespace WitchGate.Gameplay.Battles.TurnPhases
         {
             while (!IsReady)
                 await Awaitable.NextFrameAsync();
+            
+            List<ITurnAction> turnActions = new List<ITurnAction>();
             
             return null;
         }

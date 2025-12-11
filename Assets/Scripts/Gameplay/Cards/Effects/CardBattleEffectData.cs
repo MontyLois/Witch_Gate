@@ -25,12 +25,17 @@ namespace WitchGate.Gameplay.Cards.Effects
         {
             foreach (var target in targets)
             {
-                if ((IsSelf(target, caster)&& SelfAffected)||
-                    (IsAlly(target, caster)&& AlliesAffected)||
-                    (IsEnemy(target, caster)&& EnemiesAffected))
-                {
-                    ApplyEffect(target);
-                }
+                AffectTargets(target, caster);
+            }
+        }
+
+        public void AffectTargets(ICanFight target, ICanFight caster)
+        {
+            if ((IsSelf(target, caster)&& SelfAffected)||
+                (IsAlly(target, caster)&& AlliesAffected)||
+                (IsEnemy(target, caster)&& EnemiesAffected))
+            {
+                ApplyEffect(target);
             }
         }
 

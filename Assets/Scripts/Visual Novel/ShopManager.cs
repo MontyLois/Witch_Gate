@@ -1,5 +1,7 @@
 using System;
 using System.Collections;
+using System.Collections.Generic;
+using cherrydev;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using WitchGate.Controllers;
@@ -10,28 +12,52 @@ namespace WitchGate.Prototype
     public class ShopManager : MonoBehaviour
     {
         
-        [field: SerializeField]
-        public GameObject Map_UI { get; private set; }
+        [field: SerializeField] public GameObject Map_UI { get; private set; }
+        [field: SerializeField] public GameObject CloseButton { get; private set; }
+        [field: SerializeField] public GameObject DialogueUI { get; private set; }
         
-        [field: SerializeField]
-        public SceneData SceneData { get; private set; }
+        [field: SerializeField] public SceneData SceneData { get; private set; }
+        
+        [SerializeField] private DialogBehaviour dialogBehaviour;
+        [SerializeField] private DialogNodeGraph[] dialogGraph;
+
+        private int currentClientIndex;
 
         private void Start()
         {
             SceneController.Instance.currentGameModeScene = SceneData;
+            currentClientIndex = 0;
+            NextClient();
         }
 
         public void EndDay()
         {
             ShowMap();
-            //StartCoroutine(WaitToSwapScene());
         }
-        
+
+        public void NextClient()
+        {
+            if (currentClientIndex < dialogGraph.Length)
+            {
+                dialogBehaviour.StartDialog(dialogGraph[currentClientIndex]);
+                DialogueUI.SetActive(true);
+                currentClientIndex++;
+            }
+            else
+            {
+                DialogueUI.SetActive(false);
+                ShowCloseButton();
+            }
+        }
         private void OnTriggerEnter(Collider other)
         {
            // StartCoroutine(WaitToSwapScene());
         }
 
+        private void ShowCloseButton()
+        {
+            CloseButton.SetActive(true);
+        }
 
         private void ShowMap()
         {
@@ -40,8 +66,9 @@ namespace WitchGate.Prototype
 
         private IEnumerator WaitToSwapScene()
         {
-            yield return new WaitForSeconds(1); ;
-            SceneManager.LoadScene("Night_Exploration");
+            yield return new WaitForSeconds(1);
+            SceneController.Instance.LoadGameMode(GameMode.Exploration);
+            //SceneManager.LoadScene("Night_Exploration");
         }
     }
 }

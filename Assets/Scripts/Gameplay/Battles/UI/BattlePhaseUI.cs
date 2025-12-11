@@ -27,6 +27,9 @@ namespace WitchGate.Gameplay.Battles.UI
         {
             this.Unregister();
             battlePhase = null;
+            EnemyUI.Disconnect();
+            VelmoraUI.Disconnect();
+            ElarisUI.Disconnect();
         }
     }
 }
