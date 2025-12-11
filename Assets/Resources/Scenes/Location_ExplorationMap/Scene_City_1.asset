@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 144d6dbbc32a4f0286be16996f803667, type: 3}
   m_Name: Scene_City_1
   m_EditorClassIdentifier: WitchGate.Core::WitchGate.Controllers.SceneData
-  sceneAsset: {fileID: 102900000, guid: 128778eec49f5b647aef802985246c8c, type: 3}
-  <ScenePath>k__BackingField: Assets/Scenes/Prototypes/Night_Exploration.unity
+  sceneAsset: {fileID: 102900000, guid: 01e358256a3d2ad41b46a5dc6b7255c1, type: 3}
+  <ScenePath>k__BackingField: Assets/Scenes/City Night/City_Quartier_1.unity

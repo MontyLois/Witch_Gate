@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 0bc15f1d342f0514e9e93a05ab274b0a
+guid: 109e489ee8cfb834a9d68d8329b1ec84
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -97,13 +97,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: perso 1_0
+      name: SpritesheetVelVole2_0
       rect:
         serializedVersion: 2
-        x: 304
-        y: 645
-        width: 873
-        height: 1370
+        x: 0
+        y: 1048
+        width: 512
+        height: 1000
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -112,20 +112,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e182693a728d794419bb83373f3d35db
-      internalID: 326062847
+      spriteID: 71c46f92342b58845bea4aef716ffddc
+      internalID: -592326194
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: perso 1_1
+      name: SpritesheetVelVole2_1
       rect:
         serializedVersion: 2
-        x: 1352
-        y: 820
-        width: 1460
-        height: 1176
+        x: 0
+        y: 48
+        width: 512
+        height: 1000
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -134,8 +134,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7c67de9fdfda3854fb75ae746861e78b
-      internalID: -1235216293
+      spriteID: 749b7766f2c121845b08850b1e9feaa4
+      internalID: 204220604
       vertices: []
       indices: 
       edges: []
@@ -144,7 +144,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: c5b393116667cb34db2affc4bbfffd87
+    spriteID: c1dc7a39d52b218489b339aa02e157dc
     internalID: 0
     vertices: []
     indices: 
@@ -152,10 +152,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":512.0,"y":1000.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      perso 1_0: 326062847
-      perso 1_1: -1235216293
+      SpritesheetVelVole2_0: -592326194
+      SpritesheetVelVole2_1: 204220604
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

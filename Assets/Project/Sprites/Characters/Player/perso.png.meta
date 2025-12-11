@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 0bc15f1d342f0514e9e93a05ab274b0a
+guid: e0320251c16a7b64dbe993f8d73cc4ae
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -97,12 +97,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: perso 1_0
+      name: perso_0
       rect:
         serializedVersion: 2
-        x: 304
-        y: 645
-        width: 873
+        x: 696
+        y: 638
+        width: 1460
         height: 1370
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -112,20 +112,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e182693a728d794419bb83373f3d35db
-      internalID: 326062847
+      spriteID: 5a10edc57f080944b97c36979bd2bb33
+      internalID: 304766712
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: perso 1_1
+      name: perso_1
       rect:
         serializedVersion: 2
-        x: 1352
-        y: 820
-        width: 1460
-        height: 1176
+        x: 2363
+        y: 645
+        width: 778
+        height: 1370
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -134,8 +134,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7c67de9fdfda3854fb75ae746861e78b
-      internalID: -1235216293
+      spriteID: b1f3b4638e2d4624992a299897b0b81d
+      internalID: 2082755027
       vertices: []
       indices: 
       edges: []
@@ -144,7 +144,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: c5b393116667cb34db2affc4bbfffd87
+    spriteID: 121495a25e993c342a34e87ee9d304ee
     internalID: 0
     vertices: []
     indices: 
@@ -152,10 +152,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      perso 1_0: 326062847
-      perso 1_1: -1235216293
+      perso_0: 304766712
+      perso_1: 2082755027
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 0bc15f1d342f0514e9e93a05ab274b0a
+guid: 38c081121e11ee849a7a92683e711d14
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -97,13 +97,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: perso 1_0
+      name: SpritesheetElaIddle1_0
       rect:
         serializedVersion: 2
-        x: 304
-        y: 645
-        width: 873
-        height: 1370
+        x: 0
+        y: 5144
+        width: 512
+        height: 1000
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -112,20 +112,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e182693a728d794419bb83373f3d35db
-      internalID: 326062847
+      spriteID: d2016d2650c9f404ba6c418e75a5db7c
+      internalID: 1671581788
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: perso 1_1
+      name: SpritesheetElaIddle1_1
       rect:
         serializedVersion: 2
-        x: 1352
-        y: 820
-        width: 1460
-        height: 1176
+        x: 0
+        y: 4144
+        width: 512
+        height: 1000
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -134,8 +134,96 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7c67de9fdfda3854fb75ae746861e78b
-      internalID: -1235216293
+      spriteID: 17c221b6f53dee443b0f0231414b7c40
+      internalID: -125456351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetElaIddle1_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3144
+        width: 512
+        height: 1000
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e9129d336afaa842acf30f4408a20a1
+      internalID: -114023745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetElaIddle1_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2144
+        width: 512
+        height: 1000
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c87f229962e84be479d74b05f4edeb5e
+      internalID: -890866450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetElaIddle1_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1144
+        width: 512
+        height: 1000
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59fb90af9eb467840bf29c2ba69a3bd3
+      internalID: 1471177058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetElaIddle1_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 144
+        width: 512
+        height: 1000
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 891c0f0247daa1041a09622d0ee38133
+      internalID: 1248886713
       vertices: []
       indices: 
       edges: []
@@ -144,7 +232,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: c5b393116667cb34db2affc4bbfffd87
+    spriteID: 31e4016534039a04a8a72d308db34574
     internalID: 0
     vertices: []
     indices: 
@@ -152,10 +240,16 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":512.0,"y":1000.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      perso 1_0: 326062847
-      perso 1_1: -1235216293
+      SpritesheetElaIddle1_0: 1671581788
+      SpritesheetElaIddle1_1: -125456351
+      SpritesheetElaIddle1_2: -114023745
+      SpritesheetElaIddle1_3: -890866450
+      SpritesheetElaIddle1_4: 1471177058
+      SpritesheetElaIddle1_5: 1248886713
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
