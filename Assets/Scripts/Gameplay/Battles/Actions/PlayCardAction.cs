@@ -20,8 +20,6 @@ namespace WitchGate.Gameplay.Battles.TurnPhases
         }
 
         // For player : need to use card, discard it and then draw a new one.
-        // For monster : in monster turn we already decide wich will be played hehe,
-
         public async Awaitable Execute()
         {
             Debug.Log("we are applying a card wow");

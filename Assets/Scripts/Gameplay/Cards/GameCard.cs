@@ -26,7 +26,7 @@ namespace WitchGate.Gameplay.Cards
         public IEnumerable<CardBattleEffectData> Effects => CardManager.GetEffectsFor(Data);
 
 
-        public async Awaitable Use(IReadOnlyList<ICanFight> targets, BattleWitch caster)
+        public async Awaitable Use(IReadOnlyList<ICanFight> targets, ICanFight caster)
         {
             foreach (var effect in Effects)
             {

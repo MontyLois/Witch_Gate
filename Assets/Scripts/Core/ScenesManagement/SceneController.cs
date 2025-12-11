@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using Helteix.Singletons.MonoSingletons;
 using UnityEngine;
+using UnityEngine.Pool;
 using UnityEngine.SceneManagement;
 using WitchGate.Controllers.LocationLayouts;
 
@@ -34,6 +35,7 @@ namespace WitchGate.Controllers
         {
             base.OnAwake();
             gameModeLayouts = new Dictionary<GameMode, GameModeLayoutData>();
+            locationLayouts = new Dictionary<Location, LocationLayoutData>();
             additiveScenes = new List<SceneData>();
             LoadGameModeLayouts();
             LoadLocationLayouts();
