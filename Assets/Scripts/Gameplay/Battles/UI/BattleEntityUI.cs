@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 namespace WitchGate.Gameplay.Battles.Entities
 {
-    public abstract class BattleEntityUI : MonoBehaviour
+    public class BattleEntityUI : MonoBehaviour
     {
         [field: SerializeField] public Image HpBar;
         [field: SerializeField] public TMP_Text HpMax;

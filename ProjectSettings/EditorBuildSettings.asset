@@ -23,7 +23,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Plugins/NueGames/NueDeck/Scenes/2- Combat Scene.unity
     guid: 27c8685eabe409f4fa3d614fc62e702d
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Prototypes/Night_Exploration.unity
     guid: 128778eec49f5b647aef802985246c8c
   - enabled: 1
@@ -35,6 +35,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Transitions/STransition_Fight.unity
     guid: bac7795d9a9e906469eec6b9fcb41841
+  - enabled: 1
+    path: Assets/Scenes/City Night/City_Quartier_1.unity
+    guid: 01e358256a3d2ad41b46a5dc6b7255c1
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 3812286fd0cdcdb469de2261347916da, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
