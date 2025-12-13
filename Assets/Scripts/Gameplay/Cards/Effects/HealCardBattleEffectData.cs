@@ -11,7 +11,7 @@ namespace WitchGate.Gameplay.Cards.Effects
         public int Heal { get; private set; }
 
 
-        protected override void ApplyEffect(ICanFight target)
+        protected override void ApplyEffect(ICanFight target, ICanFight caster)
         {
             target.HealHealth(Heal);
         }

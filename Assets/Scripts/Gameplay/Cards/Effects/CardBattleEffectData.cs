@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Pool;
 using WitchGate.Cards;
 using WitchGate.Gameplay.Battles;
 using WitchGate.Gameplay.Battles.Entities;
@@ -23,9 +24,13 @@ namespace WitchGate.Gameplay.Cards.Effects
 
         public void AffectTargets(IReadOnlyList<ICanFight> targets, ICanFight caster)
         {
-            foreach (var target in targets)
+            using (ListPool<ICanFight>.Get(out List<ICanFight> iCanFights))
             {
-                AffectTargets(target, caster);
+                iCanFights.AddRange(targets);
+                foreach (var target in iCanFights)
+                {
+                    AffectTargets(target, caster);
+                }
             }
         }
 
@@ -35,7 +40,7 @@ namespace WitchGate.Gameplay.Cards.Effects
                 (IsAlly(target, caster)&& AlliesAffected)||
                 (IsEnemy(target, caster)&& EnemiesAffected))
             {
-                ApplyEffect(target);
+                ApplyEffect(target, caster);
             }
         }
 
@@ -44,6 +49,6 @@ namespace WitchGate.Gameplay.Cards.Effects
         private bool IsEnemy(ICanFight target, ICanFight caster) => target.Faction != caster.Faction;
                                                           
         
-        protected abstract void ApplyEffect(ICanFight target);
+        protected abstract void ApplyEffect(ICanFight target, ICanFight caster);
     }
 }

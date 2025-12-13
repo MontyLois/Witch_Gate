@@ -10,5 +10,6 @@ namespace WitchGate.Gameplay.Battles.Entities
 
         public static void Register(ICanFight entity) => targets.Add(entity);
         public static void Unregister(ICanFight entity) => targets.Remove(entity);
+        public static void ClearRegistry() => targets.Clear();
     }
 }

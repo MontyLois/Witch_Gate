@@ -15,17 +15,18 @@ namespace WitchGate.Gameplay.Battles.TurnPhases
         }
         protected override async Awaitable OnBegin()
         {
-            
+            Enemy.DiscardHand();
         }
 
         protected override async Awaitable<List<ITurnAction>> Execute()
         {
-            while (!IsReady)
-                await Awaitable.NextFrameAsync();
-            
+            Enemy.DrawMissingCards();
+            await Awaitable.NextFrameAsync();
             List<ITurnAction> turnActions = new List<ITurnAction>();
-            
-            return null;
+            Debug.Log("nb of monster action before choosing : "+turnActions.Count);
+            turnActions.Add(new EnemyAction(Enemy.SelectRandomCardInHand(),BattlePhase));
+            Debug.Log("nb of monster action after choosing : "+turnActions.Count);
+            return turnActions;
         }
 
         protected override async Awaitable OnEnd()

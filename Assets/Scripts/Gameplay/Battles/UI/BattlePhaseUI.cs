@@ -10,7 +10,7 @@ namespace WitchGate.Gameplay.Battles.UI
     {
         private BattlePhase battlePhase;
 
-        [field : SerializeField] public BattleEntityUI EnemyUI { get; private set; }
+        [field : SerializeField] public BattleEnemyUI EnemyUI { get; private set; }
         [field : SerializeField] public BattleEntityUI VelmoraUI { get; private set; }
         [field : SerializeField] public BattleEntityUI ElarisUI { get; private set; }
         

@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using WitchGate.Gameplay.Battles.Entities;
 using WitchGate.Gameplay.Battles.Entities.Interface;
 
 namespace WitchGate.Gameplay.Cards.Effects
@@ -11,10 +12,16 @@ namespace WitchGate.Gameplay.Cards.Effects
         public int Damage { get; private set; }
 
 
-        protected override void ApplyEffect(ICanFight target)
+        protected override void ApplyEffect(ICanFight target, ICanFight caster)
         {
-            Debug.Log("we are dealing damages with this card");
-            target.TakeDamages(Damage);
+            var context = new DamageContext
+            {
+                Source = caster,
+                Target = target,
+                Amount = Damage
+            };
+            
+            target.TakeDamages(context);
         }
     }
 }

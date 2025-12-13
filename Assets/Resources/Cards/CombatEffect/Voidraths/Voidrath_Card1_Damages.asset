@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: WitchGate.Gameplay::WitchGate.Gameplay.Cards.Effects.DamageCardEffect
   <CardData>k__BackingField: {fileID: 11400000, guid: d05f183d50c35d54b8c221c4b0d5c27b, type: 2}
   <SelfAffected>k__BackingField: 0
-  <AlliesAffected>k__BackingField: 1
-  <EnemiesAffected>k__BackingField: 0
+  <AlliesAffected>k__BackingField: 0
+  <EnemiesAffected>k__BackingField: 1
   <Damage>k__BackingField: 2

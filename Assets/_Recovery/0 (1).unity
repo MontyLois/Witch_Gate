@@ -179,33 +179,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 3572607490663941363, guid: cc835538a7833994aa398b3852a8fc29, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 847632412867087086, guid: cc835538a7833994aa398b3852a8fc29, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 26103260}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cc835538a7833994aa398b3852a8fc29, type: 3}
---- !u!1 &26103259 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 847632412867087086, guid: cc835538a7833994aa398b3852a8fc29, type: 3}
-  m_PrefabInstance: {fileID: 26103258}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &26103260
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 26103259}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7dfd980c001dad441921fb8b38c0fb02, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: WitchGate.Gameplay::WitchGate.Gameplay.ExplorationGameplayManager
-  <playerManager>k__BackingField: {fileID: 1507258183}
 --- !u!1 &33465847
 GameObject:
   m_ObjectHideFlags: 0
@@ -785,11 +763,11 @@ Transform:
   m_GameObject: {fileID: 386768857}
   serializedVersion: 2
   m_LocalRotation: {x: 0.5997362, y: -0, z: -0, w: 0.80019784}
-  m_LocalPosition: {x: 10.15, y: 5.573, z: -2.0640001}
+  m_LocalPosition: {x: -7.16, y: 9.54, z: 5.11}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1693848119}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 73.702, y: 0, z: 0}
 --- !u!1001 &439196186
 PrefabInstance:
@@ -852,6 +830,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 5895261659806849502, guid: 36ebea56e86f7954282092f26530e632, type: 3}
   m_PrefabInstance: {fileID: 439196186}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &483393651 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4539015061503845239, guid: 82c3222e8d465114996ce7643d28d0eb, type: 3}
+  m_PrefabInstance: {fileID: 1507258182}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &487609456
 GameObject:
@@ -19759,6 +19742,24 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 09e5c2ba26ec32a44af7e47e5a9c295c, type: 3}
+--- !u!1 &976591949 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5905809613790611869, guid: 82c3222e8d465114996ce7643d28d0eb, type: 3}
+  m_PrefabInstance: {fileID: 1507258182}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &976591952
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 976591949}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5951050303291d4cbb1e0f3094314c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: WitchGate.Gameplay::WitchGate.Gameplay.Character_Target
+  character: {fileID: 483393651}
 --- !u!1001 &993499282
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20580,14 +20581,13 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 900071786}
-    m_RemovedComponents:
-    - {fileID: 9083281182927387937, guid: 82c3222e8d465114996ce7643d28d0eb, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 5905809613790611869, guid: 82c3222e8d465114996ce7643d28d0eb, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1507258186}
+      addedObject: {fileID: 976591952}
   m_SourcePrefab: {fileID: 100100000, guid: 82c3222e8d465114996ce7643d28d0eb, type: 3}
 --- !u!114 &1507258183 stripped
 MonoBehaviour:
@@ -20600,29 +20600,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 010ab32da8164f2e96a2f9a8bdae69fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &1507258184 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5905809613790611869, guid: 82c3222e8d465114996ce7643d28d0eb, type: 3}
-  m_PrefabInstance: {fileID: 1507258182}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1507258185 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4539015061503845239, guid: 82c3222e8d465114996ce7643d28d0eb, type: 3}
-  m_PrefabInstance: {fileID: 1507258182}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1507258186
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1507258184}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b5951050303291d4cbb1e0f3094314c4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: WitchGate.Gameplay::WitchGate.Gameplay.Character_Target
-  character: {fileID: 1507258185}
 --- !u!1 &1542341882
 GameObject:
   m_ObjectHideFlags: 0
@@ -21086,45 +21063,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1653523717}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 20.53545, y: 0.03, z: -15.19}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2135650093}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1693848118
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1693848119}
-  m_Layer: 0
-  m_Name: Lights
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1693848119
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1693848118}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -17.31, y: 3.967, z: 7.1740003}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1847690733}
-  - {fileID: 1970532223}
-  - {fileID: 386768860}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1847690732
@@ -21151,15 +21094,15 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1847690732}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -17.31, y: 3.967, z: 7.1740003}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 150974143}
   - {fileID: 240478705}
   - {fileID: 1074485252}
-  m_Father: {fileID: 1693848119}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1970532220
 GameObject:
@@ -21281,12 +21224,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1970532220}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.9382364, y: 0.09819899, z: 0.19276218, w: 0.27002263}
-  m_LocalPosition: {x: 15.139999, y: 2.573, z: -8.684}
+  m_LocalRotation: {x: 0.93823636, y: 0.09819899, z: 0.19276217, w: 0.27002263}
+  m_LocalPosition: {x: -2.17, y: 6.54, z: -1.51}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1693848119}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 27.959, y: 871.995, z: 160.945}
 --- !u!1001 &1972143925
 PrefabInstance:
@@ -21532,7 +21475,6 @@ Transform:
   - {fileID: 846458379}
   - {fileID: 19441274888581436}
   - {fileID: 163994525}
-  - {fileID: 1653523720}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2140828552
@@ -22688,13 +22630,16 @@ Transform:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
+  - {fileID: 1653523720}
+  - {fileID: 1970532223}
   - {fileID: 643712501}
   - {fileID: 2044962568}
   - {fileID: 1507258182}
   - {fileID: 775423552}
-  - {fileID: 1693848119}
+  - {fileID: 1847690733}
   - {fileID: 2135650093}
   - {fileID: 487609458}
+  - {fileID: 386768860}
   - {fileID: 5989913915980425314}
   - {fileID: 952664758}
   - {fileID: 866178672}

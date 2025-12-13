@@ -527,7 +527,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a07962808144cecaaae6d911f3de8e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: WitchGate.Gameplay::WitchGate.Gameplay.Battles.UI.BattlePhaseUI
-  <EnemyUI>k__BackingField: {fileID: 5251483516453848198}
+  <EnemyUI>k__BackingField: {fileID: 5251483516453848202}
   <VelmoraUI>k__BackingField: {fileID: 1764211100}
   <ElarisUI>k__BackingField: {fileID: 2030221274}
 --- !u!1 &412358638
@@ -2737,7 +2737,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -70.000015, y: 10}
+  m_AnchoredPosition: {x: -70, y: 10}
   m_SizeDelta: {x: -160, y: 191.7867}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!1 &4261224265317709441
@@ -2931,19 +2931,65 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1530590663924619540, guid: 5f6470e9ec0ff2046a9eb4733ab5fab7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5251483516453848202}
   m_SourcePrefab: {fileID: 100100000, guid: 5f6470e9ec0ff2046a9eb4733ab5fab7, type: 3}
 --- !u!114 &5251483516453848198 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7491636515219768204, guid: 5f6470e9ec0ff2046a9eb4733ab5fab7, type: 3}
+  m_CorrespondingSourceObject: {fileID: 3672812175392331947, guid: 5f6470e9ec0ff2046a9eb4733ab5fab7, type: 3}
   m_PrefabInstance: {fileID: 5251483516453848197}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8254081c903641e08d3f12b1c7a1c7d0, type: 3}
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: WitchGate.Gameplay::WitchGate.Gameplay.Battles.Entities.BattleEntityUI
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+--- !u!114 &5251483516453848199 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2614552198332186527, guid: 5f6470e9ec0ff2046a9eb4733ab5fab7, type: 3}
+  m_PrefabInstance: {fileID: 5251483516453848197}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
+--- !u!114 &5251483516453848200 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7518693831260366745, guid: 5f6470e9ec0ff2046a9eb4733ab5fab7, type: 3}
+  m_PrefabInstance: {fileID: 5251483516453848197}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
+--- !u!1 &5251483516453848201 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1530590663924619540, guid: 5f6470e9ec0ff2046a9eb4733ab5fab7, type: 3}
+  m_PrefabInstance: {fileID: 5251483516453848197}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &5251483516453848202
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5251483516453848201}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 207bddcf51234d88bcf51d0a567a6e38, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: WitchGate.Gameplay::WitchGate.Gameplay.Battles.UI.BattleEnemyUI
+  HpBar: {fileID: 5251483516453848198}
+  HpMax: {fileID: 5251483516453848199}
+  CurrentHp: {fileID: 5251483516453848200}
+  somethinglikeintentions: {fileID: 0}
 --- !u!1 &5261130956529674122
 GameObject:
   m_ObjectHideFlags: 0
