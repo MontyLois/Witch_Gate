@@ -21,6 +21,7 @@ namespace WitchGate.Gameplay.Battles.TurnPhases
         public async Awaitable Execute()
         {
             await gameCard.Use(GetTargetedWitch(), battlePhase.Enemy);
+            battlePhase.Enemy.Discard.TryAddCard(gameCard);
         }
 
         private List<ICanFight> GetTargetedWitch()

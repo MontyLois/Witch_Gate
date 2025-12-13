@@ -6,7 +6,7 @@ namespace WitchGate.Gameplay.Battles.UI
 {
     public class BattleEnemyUI : BattleEntityUI
     {
-        [field: SerializeField] public Image HpBar;
+        [field: SerializeField] public Image somethinglikeintentions;
         
         public void Connect(BattleEnemy battleEnemy)
         {

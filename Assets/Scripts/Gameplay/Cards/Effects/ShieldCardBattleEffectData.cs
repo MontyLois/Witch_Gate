@@ -10,7 +10,7 @@ namespace WitchGate.Gameplay.Cards.Effects
         [field: SerializeField]
         public int Shield { get; private set; }
         
-        protected override void ApplyEffect(ICanFight target)
+        protected override void ApplyEffect(ICanFight target, ICanFight caster)
         {
            target.AddShield(Shield);
         }

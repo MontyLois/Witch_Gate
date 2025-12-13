@@ -23,7 +23,6 @@ namespace WitchGate.Gameplay.Battles
             Discard = new Deck<GameCard>();
             WitchName = profile.Witch;
             
-            Debug.Log("deck profil count :" +profile.Deck.Length);
             //remplissage du deck
             foreach (var cardProfile in profile.Deck)
             {

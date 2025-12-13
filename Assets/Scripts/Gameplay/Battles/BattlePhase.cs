@@ -50,9 +50,9 @@ namespace WitchGate.Gameplay.Battles
             {
                 TurnActions.Clear();
                 
-                /*
+                
                 EnemyTurnPhase enemyTurnPhase = new EnemyTurnPhase(this);
-                await enemyTurnPhase.RunAsync();*/
+                await enemyTurnPhase.RunAsync();
                 
                 PlayerTurnPhase playerTurnPhase = new PlayerTurnPhase(this);
                 await playerTurnPhase.RunAsync();
@@ -62,6 +62,11 @@ namespace WitchGate.Gameplay.Battles
                 
                 if(IsASideDefeated())
                     break;
+                
+                foreach (var target in TargetRegistry.Targets)
+                {
+                    target.OnEndTurn();
+                }
             }
         }
 
@@ -74,6 +79,7 @@ namespace WitchGate.Gameplay.Battles
 
         async Awaitable IPhase.OnEnd()
         {
+            TargetRegistry.ClearRegistry();
             await SceneController.Instance.LoadGameModeAsync(GameMode.Exploration);
         }
 

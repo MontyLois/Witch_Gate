@@ -23,6 +23,7 @@ namespace WitchGate.Gameplay.Battles.TurnPhases
         {
             for (int i = 0; i < Actions.Count; i++)
                 await Actions[i].Execute();
+            
             await Awaitable.WaitForSecondsAsync(2f);
         }
 

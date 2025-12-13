@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b21abdfb0b1456c9877fa40e36c001b, type: 3}
   m_Name: Voidrath_Card_1
   m_EditorClassIdentifier: WitchGate.Core::WitchGate.Cards.CardData
-  <WitchDeck>k__BackingField: 3
+  <WitchDeck>k__BackingField: -1
   <Name>k__BackingField: Payback
-  <Description>k__BackingField: Deals 2 damages
+  <Description>k__BackingField: Deals 2 damages to both sister
   <CardRarity>k__BackingField: 0
   <Icon>k__BackingField: {fileID: 0}
   <Priority>k__BackingField: 0
