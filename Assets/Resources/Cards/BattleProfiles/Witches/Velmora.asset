@@ -16,12 +16,19 @@ MonoBehaviour:
   <MaxHealth>k__BackingField: 20
   <Deck>k__BackingField:
   - <Level>k__BackingField: 0
-    <CardID>k__BackingField: 08b37319-1e47-43c3-82cc-4031f777ae23
-    <CardData>k__BackingField: {fileID: 0}
+    <CardID>k__BackingField: 65120b6b-8cca-4a86-8728-901f54af8907
+  - <Level>k__BackingField: 0
+    <CardID>k__BackingField: 65120b6b-8cca-4a86-8728-901f54af8907
+  - <Level>k__BackingField: 0
+    <CardID>k__BackingField: 65120b6b-8cca-4a86-8728-901f54af8907
+  - <Level>k__BackingField: 0
+    <CardID>k__BackingField: 15d97fee-6635-4bcb-af2e-e6e1100b6869
+  - <Level>k__BackingField: 0
+    <CardID>k__BackingField: 15d97fee-6635-4bcb-af2e-e6e1100b6869
+  - <Level>k__BackingField: 0
+    <CardID>k__BackingField: 15d97fee-6635-4bcb-af2e-e6e1100b6869
   - <Level>k__BackingField: 0
     <CardID>k__BackingField: 08b37319-1e47-43c3-82cc-4031f777ae23
-    <CardData>k__BackingField: {fileID: 0}
   - <Level>k__BackingField: 0
     <CardID>k__BackingField: 08b37319-1e47-43c3-82cc-4031f777ae23
-    <CardData>k__BackingField: {fileID: 0}
   <Witch>k__BackingField: 1

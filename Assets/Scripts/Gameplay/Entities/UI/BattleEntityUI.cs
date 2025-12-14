@@ -20,6 +20,7 @@ namespace WitchGate.Gameplay.Battles.Entities
         public virtual void Connect(BattleEntity battleEntity)
         {
             battleEntity.OnDamageTaken += OnLifeUpdate;
+            battleEntity.OnHealReceived += OnLifeUpdate;
             this.battleEntity = battleEntity;
             HpMax.text = battleEntity.MaxHealth.ToString();
             CurrentHp.text = battleEntity.CurrentHealth.ToString();
@@ -28,6 +29,7 @@ namespace WitchGate.Gameplay.Battles.Entities
         public void Disconnect()
         {
             battleEntity.OnDamageTaken -= OnLifeUpdate;
+            battleEntity.OnHealReceived -= OnLifeUpdate;
         }
     }
 }

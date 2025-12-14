@@ -3,6 +3,8 @@ using WitchGate.Controllers;
 using UnityEngine;
 using WitchGate.Cards;
 using WitchGate.Controllers.LocationLayouts;
+using WitchGate.Gameplay.Entities;
+using WitchGate.Players;
 
 namespace WitchGate
 {
@@ -13,6 +15,9 @@ namespace WitchGate
 
         private readonly Dictionary<string, CardData> cards;
         public IReadOnlyDictionary<string, CardData> Cards => cards;
+        
+        public PlayerProfile PlayerProfile { get; private set; }
+       
 
         public GameDatabase()
         {
@@ -25,6 +30,10 @@ namespace WitchGate
                 var data = c[i];
                 cards.TryAdd(data.ID, data);
             }
+
+            BattleWitchProfile Elaris = Resources.Load<BattleWitchProfile>("Cards/BattleProfiles/Witches/Elaris");
+            BattleWitchProfile Velmora = Resources.Load<BattleWitchProfile>("Cards/BattleProfiles/Witches/Velmora");
+            PlayerProfile = new PlayerProfile(Velmora, Elaris);
         }
 
 

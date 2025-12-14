@@ -32,9 +32,9 @@ namespace WitchGate.Gameplay.Battles.Entities
         public void TakeDamages(DamageContext context)
         {
             foreach (var modifier in DamageModifiers)
-                modifier.Modify(context);
-
-            context.Target.ApplyDamage(context.Amount);
+                modifier.Modify(ref context);
+            
+            ApplyDamage(context.Amount);
         }
 
         public void ApplyDamage(int damages)
@@ -103,7 +103,12 @@ namespace WitchGate.Gameplay.Battles.Entities
             {
                 list.AddRange(DamageModifiers);
                 foreach (var damageModifier in list)
-                    RemoveModifier(damageModifier);
+                {
+                    if (damageModifier.Tick())
+                    {
+                        RemoveModifier(damageModifier);
+                    }
+                }
             }
         }
     }

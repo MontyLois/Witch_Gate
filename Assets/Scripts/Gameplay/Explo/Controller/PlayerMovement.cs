@@ -65,8 +65,6 @@ namespace WitchGate.Gameplay.Controller
             CurrentVelocity = velocity;
 
             Manager.Body.ApplyVelocity(CurrentVelocity);
-            
-            Debug.Log("Movement Update");
         }
 
         private void ReadInput()

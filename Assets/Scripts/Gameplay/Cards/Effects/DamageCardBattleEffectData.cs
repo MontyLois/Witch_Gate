@@ -21,6 +21,7 @@ namespace WitchGate.Gameplay.Cards.Effects
                 Amount = Damage
             };
             
+            Debug.Log("deal damages");
             target.TakeDamages(context);
         }
     }

@@ -95,12 +95,7 @@ namespace WitchGate.Gameplay.Battles.UI
             base.OnCardPointerDown(holder, eventData);
             if (holder.CardUI is WitchGameCardUI cardUI)
             {
-                var targetHand = cardUI.Current.Data.WitchDeck switch
-                {
-                    Witch.Elaris => battlePhase.Elaris.Hand,
-                    Witch.Velmora => battlePhase.Velmora.Hand,
-                    _ => null,
-                };
+                var targetHand = battlePhase.GetBattleWich(cardUI.Current.Data.WitchDeck).Hand;
                 targetHand?.TryAddCard(cardUI.Current);
             }
         }

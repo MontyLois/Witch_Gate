@@ -18,18 +18,22 @@ namespace WitchGate.Gameplay.Battles
     public class BattlePhase : IPhase
     {
         public readonly BattleEnemy Enemy;
-        public readonly BattleWitch Velmora;
-        public readonly BattleWitch Elaris;
-        
+
+        public readonly Dictionary<Witch, BattleWitch> BattleWitches;
         public Hand<GameCard>[] PlayedHands { get; private set; }
         public List<ITurnAction> TurnActions { get; private set; }
-        
         
         public BattlePhase(BattleEnemy enemy, PlayerProfile playerProfile)
         {
             this.Enemy = enemy;
-            Velmora = new BattleWitch(playerProfile.VelmoraProfile);
-            Elaris = new BattleWitch(playerProfile.ElarisProfile);
+            BattleWitches = new Dictionary<Witch, BattleWitch>();
+
+            
+            foreach (var witchProfile in GameController.GameDatabase.PlayerProfile.WitchProfiles)
+            {
+                BattleWitches.Add(witchProfile.Key, new BattleWitch(witchProfile.Value));
+            }
+            
             TurnActions = new List<ITurnAction>();
 
             PlayedHands = new Hand<GameCard>[GameController.Metrics.MaxPlayedHandSize];
@@ -37,6 +41,15 @@ namespace WitchGate.Gameplay.Battles
             {
                 PlayedHands[i] = new Hand<GameCard>();
             }
+        }
+
+        public BattleWitch GetBattleWich(Witch witch)
+        {
+            if (BattleWitches.ContainsKey(witch))
+            {
+                return BattleWitches[witch];
+            }
+            return BattleWitches.Values.FirstOrDefault();
         }
 
         async Awaitable IPhase.OnBegin()
@@ -74,8 +87,8 @@ namespace WitchGate.Gameplay.Battles
 
         private bool EnemiesDefeated() => Enemy.CurrentHealth <= 0;
 
-        private bool PlayerDefeated() => Elaris.CurrentHealth <= 0 &&
-                                         Velmora.CurrentHealth <= 0;
+        private bool PlayerDefeated() => GetBattleWich(Witch.Elaris).CurrentHealth <= 0 &&
+                                         GetBattleWich(Witch.Velmora).CurrentHealth <= 0;
 
         async Awaitable IPhase.OnEnd()
         {

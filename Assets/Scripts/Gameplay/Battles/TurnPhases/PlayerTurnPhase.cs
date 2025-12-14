@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using WitchGate.Controllers;
+using WitchGate.Gameplay.Battles.Entities.Interface;
 using WitchGate.Gameplay.Cards;
 
 namespace WitchGate.Gameplay.Battles.TurnPhases
@@ -8,10 +9,6 @@ namespace WitchGate.Gameplay.Battles.TurnPhases
     public class PlayerTurnPhase : TurnPhase
     {
         public bool IsReady { get; private set; }
-
-        public BattleWitch Velmora => BattlePhase.Velmora;
-        public BattleWitch Elaris => BattlePhase.Elaris;
-  
         
         public PlayerTurnPhase(BattlePhase battlePhase) : base(battlePhase)
         {
@@ -21,8 +18,10 @@ namespace WitchGate.Gameplay.Battles.TurnPhases
         protected override async Awaitable OnBegin()
         {
             IsReady = false;
-            Velmora.DrawMissingCards();
-            Elaris.DrawMissingCards();
+            foreach (var battleWitch in BattlePhase.BattleWitches)
+            {
+                battleWitch.Value.DrawMissingCards();
+            }
         }
 
         protected override async Awaitable<List<ITurnAction>> Execute()

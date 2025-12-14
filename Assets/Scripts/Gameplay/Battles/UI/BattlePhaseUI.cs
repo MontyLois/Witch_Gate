@@ -19,8 +19,8 @@ namespace WitchGate.Gameplay.Battles.UI
             this.Register();
             battlePhase = phase;
             EnemyUI.Connect(phase.Enemy);
-            VelmoraUI.Connect(phase.Velmora);
-            ElarisUI.Connect(phase.Elaris);
+            VelmoraUI.Connect(phase.GetBattleWich(Witch.Velmora));
+            ElarisUI.Connect(phase.GetBattleWich(Witch.Elaris));
         }
 
         protected override void OnPhaseEnds(BattlePhase phase)

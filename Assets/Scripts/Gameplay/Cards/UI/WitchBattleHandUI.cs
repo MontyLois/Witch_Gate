@@ -11,6 +11,8 @@ namespace WitchGate.Gameplay.Battles.UI
     public class WitchBattleHandUI : PhysicalCardCollectionUI<GameCard>, IPhaseListener<BattlePhase>
     {
         [SerializeField] private Witch witch;
+
+        private BattleWitch battleWitch;
         
         private void OnEnable()
         {
@@ -24,18 +26,15 @@ namespace WitchGate.Gameplay.Battles.UI
 
         public void OnPhaseBegins(BattlePhase phase)
         {
-            var hand = witch switch
-            {
-                Witch.Elaris => phase.Elaris.Hand,
-                Witch.Velmora => phase.Velmora.Hand,
-                _ => null,
-            };
-            Connect(hand);
+            battleWitch = phase.GetBattleWich(witch);
+            Connect(battleWitch.Hand);
+            battleWitch.OnDeath += OnBattleWitchDeath;
         }
 
         public void OnPhaseEnds(BattlePhase phase)
         {
             Disconnect();
+            battleWitch.OnDeath -= OnBattleWitchDeath;
         }
 
         protected override void OnCardPointerEnter(CardHolderUI holder, PointerEventData eventData)
@@ -56,6 +55,11 @@ namespace WitchGate.Gameplay.Battles.UI
                 holder.transform.DOLocalMoveY(0,0);
                 holder.transform.localScale = Vector3.one;
             }
+        }
+
+        private void OnBattleWitchDeath()
+        {
+            this.gameObject.SetActive(false);
         }
 
     }

@@ -30,16 +30,16 @@ namespace WitchGate.Gameplay.Battles.TurnPhases
             switch (gameCard.Data.WitchDeck)
             {
                 case Witch.Elaris:
-                    target.Add(battlePhase.Elaris);
+                    target.Add(battlePhase.GetBattleWich(Witch.Elaris));
                     break;
 
                 case Witch.Velmora:
-                    target.Add(battlePhase.Velmora);
+                    target.Add(battlePhase.GetBattleWich(Witch.Velmora));
                     break;
 
                 case Witch.All:
-                    target.Add(battlePhase.Elaris);
-                    target.Add(battlePhase.Velmora);
+                    target.Add(battlePhase.GetBattleWich(Witch.Elaris));
+                    target.Add(battlePhase.GetBattleWich(Witch.Velmora));
                     break;
             }
             target.Add(battlePhase.Enemy);

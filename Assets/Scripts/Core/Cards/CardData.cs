@@ -1,5 +1,8 @@
 using System;
 using UnityEngine;
+#if UNITY_EDITOR
+using UnityEditor;
+#endif 
 
 namespace WitchGate.Cards
 {
@@ -23,10 +26,33 @@ namespace WitchGate.Cards
         [field: SerializeField, HideInInspector]
         public string ID { get; private set; }
 
+#if UNITY_EDITOR
         public void OnValidate()
         {
-            if (string.IsNullOrEmpty(ID))
+            if (string.IsNullOrEmpty(ID)|| IsDuplicate(ID))
                 ID = Guid.NewGuid().ToString();
+            EditorUtility.SetDirty(this);
         }
+        
+        private bool IsDuplicate(string currentId)
+        {
+            string path = AssetDatabase.GetAssetPath(this);
+            string[] guids = AssetDatabase.FindAssets($"t:{nameof(CardData)}");
+
+            foreach (string guid in guids)
+            {
+                string otherPath = AssetDatabase.GUIDToAssetPath(guid);
+                if (otherPath == path)
+                    continue;
+
+                CardData other = AssetDatabase.LoadAssetAtPath<CardData>(otherPath);
+                if (other != null && other.ID == currentId)
+                    return true;
+            }
+
+            return false;
+        }
+#endif   
+        
     }
 }

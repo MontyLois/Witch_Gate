@@ -4,6 +4,7 @@ using UnityEngine;
 using WitchGate.Controllers;
 using WitchGate.Gameplay.Battles.Entities;
 using WitchGate.Gameplay.Cards;
+using WitchGate.Gameplay.Entities;
 using WitchGate.Players;
 
 namespace WitchGate.Gameplay.Battles
@@ -46,7 +47,6 @@ namespace WitchGate.Gameplay.Battles
         {
             if(!Deck.TryGet(out GameCard card))
             {
-                Debug.Log("Rebuilding deck from discard...");
                 while (Discard.TryGet(out var discardCard))
                     Deck.TryAddCard(discardCard);
                 Deck.Shuffle();

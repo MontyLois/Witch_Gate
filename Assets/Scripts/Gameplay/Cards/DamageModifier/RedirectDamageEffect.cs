@@ -16,9 +16,10 @@ namespace WitchGate.Gameplay.Cards.DamageModifier
             RemainingTurns = life;
         }
 
-        public void Modify(DamageContext context)
+        public void Modify(ref DamageContext context)
         {
-            if (!TryRedirect(ref context))
+            Debug.Log("wtf");
+            if (TryRedirect(ref context))
                 return;
             
             var targetContext = new DamageContext()
@@ -27,8 +28,8 @@ namespace WitchGate.Gameplay.Cards.DamageModifier
                 Target = context.Target,
                 Amount = GetNewDamageAmount(context),
             };
-            target.TakeDamages(targetContext);
             
+            target.TakeDamages(targetContext);
             context.Amount -= targetContext.Amount;
         }
 
@@ -38,7 +39,7 @@ namespace WitchGate.Gameplay.Cards.DamageModifier
             return RemainingTurns <= 0;
         }
 
-        private bool TryRedirect(ref DamageContext context) => target != context.Target;
+        private bool TryRedirect(ref DamageContext context) => ReferenceEquals(target,context.Target);
 
         private int GetNewDamageAmount(DamageContext context) =>  Mathf.RoundToInt(context.Amount * damagePercent);
         

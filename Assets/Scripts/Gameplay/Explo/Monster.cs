@@ -7,6 +7,7 @@ using WitchGate.Gameplay;
 using WitchGate.Gameplay.Battles;
 using WitchGate.Gameplay.Battles.Entities;
 using WitchGate.Gameplay.Controller;
+using WitchGate.Gameplay.Entities;
 using WitchGate.Players;
 
 namespace WitchGate.Prototype
@@ -19,7 +20,7 @@ namespace WitchGate.Prototype
         [field: SerializeField]
         private PlayerProfile playerProfile;
         [field: SerializeField]
-        private EnemyProfile enemyProfile;
+        private BattleProfile enemyProfile;
         
         private void OnTriggerEnter(Collider other)
         {

@@ -19373,6 +19373,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Monster
       objectReference: {fileID: 0}
+    - target: {fileID: 8520743424773491193, guid: 7ee7dc858150bd94e88131b014e7cfe8, type: 3}
+      propertyPath: enemyProfile
+      value: 
+      objectReference: {fileID: 11400000, guid: e39c0dfb258e9724db25c7068e129699, type: 2}
+    - target: {fileID: 8520743424773491193, guid: 7ee7dc858150bd94e88131b014e7cfe8, type: 3}
+      propertyPath: playerProfile.<ElarisBattleProfile>k__BackingField
+      value: 
+      objectReference: {fileID: 11400000, guid: 19cdb5a4469eb2a4ab50e73834802f35, type: 2}
+    - target: {fileID: 8520743424773491193, guid: 7ee7dc858150bd94e88131b014e7cfe8, type: 3}
+      propertyPath: playerProfile.<VelmoraBattleProfile>k__BackingField
+      value: 
+      objectReference: {fileID: 11400000, guid: 374a3cf8a15fabf45b1279d662b7cbb1, type: 2}
     - target: {fileID: 8647305952695828121, guid: 7ee7dc858150bd94e88131b014e7cfe8, type: 3}
       propertyPath: m_IsActive
       value: 0

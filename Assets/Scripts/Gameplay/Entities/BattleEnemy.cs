@@ -5,6 +5,7 @@ using Helteix.Cards.Collections;
 using UnityEngine;
 using UnityEngine.Pool;
 using WitchGate.Gameplay.Cards;
+using WitchGate.Gameplay.Entities;
 using WitchGate.Players;
 using Random = UnityEngine.Random;
 
@@ -19,7 +20,7 @@ namespace WitchGate.Gameplay.Battles.Entities
         public Deck<GameCard> Deck { get; private set; }
         public Deck<GameCard> Discard { get; private set; }
         
-        public BattleEnemy(EnemyProfile enemyProfile) : base(enemyProfile.MaxHealth, enemyProfile.Health)
+        public BattleEnemy(BattleProfile enemyProfile) : base(enemyProfile.MaxHealth, enemyProfile.Health)
         {
             Hand = new Hand<GameCard>(2);
             Deck = new Deck<GameCard>();
@@ -53,7 +54,6 @@ namespace WitchGate.Gameplay.Battles.Entities
         {
             if(!Deck.TryGet(out GameCard card))
             {
-                Debug.Log("Rebuilding deck from discard...");
                 while (Discard.TryGet(out var discardCard))
                     Deck.TryAddCard(discardCard);
                 Deck.Shuffle();

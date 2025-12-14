@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Pool;
 using WitchGate.Controllers;
 
 namespace WitchGate.Gameplay.Battles.TurnPhases
@@ -21,15 +22,19 @@ namespace WitchGate.Gameplay.Battles.TurnPhases
 
         async Awaitable IPhase.Execute()
         {
+            SortByPriority();
             for (int i = 0; i < Actions.Count; i++)
                 await Actions[i].Execute();
-            
-            await Awaitable.WaitForSecondsAsync(2f);
         }
 
         async Awaitable IPhase.OnEnd()
         {
             await PhaseController.CompletedAwaitable;
+        }
+
+        private void SortByPriority()
+        {
+            Actions.Sort((a, b) => a.Priority.CompareTo(b.Priority));
         }
     }
 }

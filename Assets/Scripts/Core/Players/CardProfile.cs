@@ -23,5 +23,11 @@ namespace WitchGate.Players
                 return null;
             }
         }
+        
+        public CardProfile(CardProfile other)
+        {
+            Level = other.Level;
+            CardID = other.CardID;
+        }
     }
 }
