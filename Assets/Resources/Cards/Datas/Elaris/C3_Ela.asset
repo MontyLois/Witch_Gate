@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4b21abdfb0b1456c9877fa40e36c001b, type: 3}
-  m_Name: Card 2
-  m_EditorClassIdentifier: 
+  m_Name: C3_Ela
+  m_EditorClassIdentifier: WitchGate.Core::WitchGate.Cards.CardData
   <WitchDeck>k__BackingField: 2
-  <Name>k__BackingField: Defense
-  <Description>k__BackingField: This card grant a shield
+  <Name>k__BackingField: 1
+  <Description>k__BackingField: "Attaque de 8 mais se blesse de 3 d\xE9g\xE2ts"
   <CardRarity>k__BackingField: 0
   <Icon>k__BackingField: {fileID: -1156602589, guid: 85efd2be411177a479ee49053483be9e, type: 3}
-  <Priority>k__BackingField: 0
-  <ID>k__BackingField: cc0034b9-2ece-4f0a-a78d-5f2544c56167
+  <Priority>k__BackingField: 1
+  <ID>k__BackingField: 623fe9f9-50a8-4be4-926a-a553e00c3869

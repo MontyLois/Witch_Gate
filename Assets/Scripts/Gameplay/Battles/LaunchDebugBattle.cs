@@ -10,13 +10,11 @@ namespace WitchGate.Gameplay.Battles
     public class LaunchDebugBattle : MonoBehaviour
     {
         [SerializeField]
-        private PlayerProfile playerProfile;
-        [SerializeField]
         private BattleProfile enemyProfile;
         
         private void Start()
         {
-            BattlePhase phase = new BattlePhase(new BattleEnemy(enemyProfile), playerProfile);
+            BattlePhase phase = new BattlePhase(new BattleEnemy(enemyProfile));
             phase.Run();
         }
     }

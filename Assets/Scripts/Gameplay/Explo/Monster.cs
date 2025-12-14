@@ -16,9 +16,7 @@ namespace WitchGate.Prototype
     {
         [field: SerializeField]
         private GameObject sprite;
-
-        [field: SerializeField]
-        private PlayerProfile playerProfile;
+        
         [field: SerializeField]
         private BattleProfile enemyProfile;
         
@@ -30,7 +28,6 @@ namespace WitchGate.Prototype
             StartBattle();
         }
         
-
         private IEnumerator WaitToSwapScene()
         {
             yield return new WaitForSeconds(1);
@@ -38,7 +35,7 @@ namespace WitchGate.Prototype
 
         private void StartBattle()
         {
-            BattlePhase phase = new BattlePhase(new BattleEnemy(enemyProfile), playerProfile);
+            BattlePhase phase = new BattlePhase(new BattleEnemy(enemyProfile));
             phase.Run();
         }
     }

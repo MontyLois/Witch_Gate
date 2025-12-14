@@ -24,7 +24,8 @@ namespace WitchGate.Gameplay.Battles
         public Hand<GameCard>[] PlayedHands { get; private set; }
         public List<ITurnAction> TurnActions { get; private set; }
         
-        public BattlePhase(BattleEnemy enemy, PlayerProfile playerProfile)
+        
+        public BattlePhase(BattleEnemy enemy)
         {
             this.Enemy = enemy;
             BattleWitches = new Dictionary<Witch, BattleWitch>();
@@ -101,7 +102,6 @@ namespace WitchGate.Gameplay.Battles
         async Awaitable IPhase.OnEnd()
         {
             TargetRegistry.ClearRegistry();
-            await SceneController.Instance.LoadGameModeAsync(GameMode.Exploration);
         }
 
         public List<GameCard> GetAllPlayedCards()
@@ -121,5 +121,6 @@ namespace WitchGate.Gameplay.Battles
         {
             TurnActions.AddRange(turnActions);
         }
+        
     }
 }

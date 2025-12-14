@@ -4,14 +4,16 @@ using WitchGate.Gameplay.Cards.DamageModifier;
 
 namespace WitchGate.Gameplay.Cards.Effects
 {
-    [CreateAssetMenu(fileName = "NewRedirectDamageEffect", menuName = "WitchGate/Cards/Effects/RedirectDamage", order = 0)]
-    public class RedirectDamageToSelfEffectData : CardBattleEffectData
+    [CreateAssetMenu(fileName = "NewMitigateDamagesEffectData", menuName = "WitchGate/Cards/Effects/MitigateDamages", order = 0)]
+    public class MitigateDamagesEffectData : CardBattleEffectData
     {
+        
         [field: SerializeField, Range(0f, 1f)] public float DamagePercent { get; private set; }
         [field: SerializeField] public int LifeCycle { get; private set; }
+        
         protected override void ApplyEffect(ICanFight target, ICanFight caster)
         {
-            IDamageModifier damageModifier = new RedirectDamageEffect(caster, DamagePercent,LifeCycle);
+            IDamageModifier damageModifier = new MitigateDamagesEffect(DamagePercent,LifeCycle);
             target.AddModifier(damageModifier);
         }
     }

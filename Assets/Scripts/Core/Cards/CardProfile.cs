@@ -6,7 +6,7 @@ using WitchGate.Controllers;
 namespace WitchGate.Players
 {
     [Serializable]
-    public struct CardProfile
+    public class CardProfile
     {
         [field: SerializeField]
         public int Level { get; private set; }

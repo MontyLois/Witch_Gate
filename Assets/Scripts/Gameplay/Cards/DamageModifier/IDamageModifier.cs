@@ -2,9 +2,14 @@ namespace WitchGate.Gameplay.Battles.Entities.Interface
 {
     public interface IDamageModifier
     {
-        int RemainingTurns { get; }
+        int RemainingTurns { get; set; }
         void Modify(ref DamageContext context);
-        bool Tick();
+
+        bool Tick()
+        {
+            RemainingTurns--;
+            return RemainingTurns <= 0;
+        }
 
     }
 }

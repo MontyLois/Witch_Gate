@@ -8,7 +8,7 @@ namespace WitchGate.Gameplay.Cards.DamageModifier
     {
         private ICanFight target;
         private float damagePercent;
-        public int RemainingTurns { get; private set; }
+        public int RemainingTurns { get; set; }
         public RedirectDamageEffect(ICanFight target, float damagePercent, int life)
         {
             this.target = target;
@@ -31,12 +31,7 @@ namespace WitchGate.Gameplay.Cards.DamageModifier
             target.TakeDamages(targetContext);
             context.Amount -= targetContext.Amount;
         }
-
-        public bool Tick()
-        {
-            RemainingTurns--;
-            return RemainingTurns <= 0;
-        }
+        
 
         private bool TryRedirect(ref DamageContext context) => ReferenceEquals(target,context.Target);
 
