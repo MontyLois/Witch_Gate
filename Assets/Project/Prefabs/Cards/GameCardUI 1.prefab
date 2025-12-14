@@ -66,8 +66,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -442071693, guid: 1b1ad2d9bc77b8444a2b8ce5691ea4ac, type: 3}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: dad77a384d4928d4e9adb33e92d19787, type: 3}
+  m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
@@ -162,8 +162,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -442071693, guid: 1b1ad2d9bc77b8444a2b8ce5691ea4ac, type: 3}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 9166714753906e348887800a0a647d0d, type: 3}
+  m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
@@ -538,7 +538,7 @@ GameObject:
   - component: {fileID: 6872996693155206931}
   - component: {fileID: 2446841187469606339}
   m_Layer: 5
-  m_Name: GameCardUI
+  m_Name: GameCardUI 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

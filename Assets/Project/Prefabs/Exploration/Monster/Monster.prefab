@@ -254,42 +254,42 @@ MonoBehaviour:
       <MaxHealth>k__BackingField: 20
       <Deck>k__BackingField:
       - <Level>k__BackingField: 1
-        <CardID>k__BackingField: bad6bc94-50ab-4f89-9fa8-08df42b2a52f
+        <CardID>k__BackingField: 08b37319-1e47-43c3-82cc-4031f777ae23
       - <Level>k__BackingField: 1
-        <CardID>k__BackingField: bad6bc94-50ab-4f89-9fa8-08df42b2a52f
+        <CardID>k__BackingField: 08b37319-1e47-43c3-82cc-4031f777ae23
       - <Level>k__BackingField: 1
-        <CardID>k__BackingField: bad6bc94-50ab-4f89-9fa8-08df42b2a52f
+        <CardID>k__BackingField: 08b37319-1e47-43c3-82cc-4031f777ae23
       - <Level>k__BackingField: 1
-        <CardID>k__BackingField: bad6bc94-50ab-4f89-9fa8-08df42b2a52f
+        <CardID>k__BackingField: 08b37319-1e47-43c3-82cc-4031f777ae23
       - <Level>k__BackingField: 1
-        <CardID>k__BackingField: bad6bc94-50ab-4f89-9fa8-08df42b2a52f
+        <CardID>k__BackingField: 08b37319-1e47-43c3-82cc-4031f777ae23
       - <Level>k__BackingField: 1
-        <CardID>k__BackingField: bad6bc94-50ab-4f89-9fa8-08df42b2a52f
+        <CardID>k__BackingField: 08b37319-1e47-43c3-82cc-4031f777ae23
       - <Level>k__BackingField: 1
-        <CardID>k__BackingField: bad6bc94-50ab-4f89-9fa8-08df42b2a52f
+        <CardID>k__BackingField: 08b37319-1e47-43c3-82cc-4031f777ae23
       - <Level>k__BackingField: 1
-        <CardID>k__BackingField: bad6bc94-50ab-4f89-9fa8-08df42b2a52f
+        <CardID>k__BackingField: 08b37319-1e47-43c3-82cc-4031f777ae23
     <ElarisProfile>k__BackingField:
       <Witch>k__BackingField: 2
       <Health>k__BackingField: 20
       <MaxHealth>k__BackingField: 20
       <Deck>k__BackingField:
       - <Level>k__BackingField: 1
-        <CardID>k__BackingField: cc0034b9-2ece-4f0a-a78d-5f2544c56167
+        <CardID>k__BackingField: 500490b8-7ebe-40fc-a90f-8cc0006305df
       - <Level>k__BackingField: 1
-        <CardID>k__BackingField: cc0034b9-2ece-4f0a-a78d-5f2544c56167
+        <CardID>k__BackingField: 500490b8-7ebe-40fc-a90f-8cc0006305df
       - <Level>k__BackingField: 1
-        <CardID>k__BackingField: cc0034b9-2ece-4f0a-a78d-5f2544c56167
+        <CardID>k__BackingField: 500490b8-7ebe-40fc-a90f-8cc0006305df
       - <Level>k__BackingField: 1
-        <CardID>k__BackingField: cc0034b9-2ece-4f0a-a78d-5f2544c56167
+        <CardID>k__BackingField: 500490b8-7ebe-40fc-a90f-8cc0006305df
       - <Level>k__BackingField: 1
-        <CardID>k__BackingField: cc0034b9-2ece-4f0a-a78d-5f2544c56167
+        <CardID>k__BackingField: 500490b8-7ebe-40fc-a90f-8cc0006305df
       - <Level>k__BackingField: 1
-        <CardID>k__BackingField: cc0034b9-2ece-4f0a-a78d-5f2544c56167
+        <CardID>k__BackingField: 500490b8-7ebe-40fc-a90f-8cc0006305df
       - <Level>k__BackingField: 1
-        <CardID>k__BackingField: cc0034b9-2ece-4f0a-a78d-5f2544c56167
+        <CardID>k__BackingField: 500490b8-7ebe-40fc-a90f-8cc0006305df
       - <Level>k__BackingField: 1
-        <CardID>k__BackingField: cc0034b9-2ece-4f0a-a78d-5f2544c56167
+        <CardID>k__BackingField: 500490b8-7ebe-40fc-a90f-8cc0006305df
   enemyProfile:
     <Health>k__BackingField: 30
     <MaxHealth>k__BackingField: 30
@@ -309,7 +309,7 @@ MonoBehaviour:
     - <Level>k__BackingField: 1
       <CardID>k__BackingField: 06065e9d-f0d3-44c5-88b3-d3997a6da0ad
     - <Level>k__BackingField: 1
-      <CardID>k__BackingField: 06065e9d-f0d3-44c5-88b3-d3997a6da0ad
+      <CardID>k__BackingField: cc0034b9-2ece-4f0a-a78d-5f2544c56167
 --- !u!1 &3618564566373262351
 GameObject:
   m_ObjectHideFlags: 0

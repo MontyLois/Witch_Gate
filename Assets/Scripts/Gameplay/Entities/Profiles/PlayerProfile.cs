@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using WitchGate.Gameplay.Entities;
 
 namespace WitchGate.Players
 {
@@ -10,6 +11,11 @@ namespace WitchGate.Players
         public WitchProfile VelmoraProfile { get; private set; }
         [field: SerializeField]
         public WitchProfile ElarisProfile { get; private set; }
+        
+        [field: SerializeField]
+        public BattleWitchProfile VelmoraBattleProfile { get; private set; }
+        [field: SerializeField]
+        public BattleWitchProfile ElarisBattleProfile { get; private set; }
         
     }
 }

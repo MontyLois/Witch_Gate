@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 872af9a9bae44eee96d04f1c689f1bb3, type: 3}
-  m_Name: Voidrath_Card1_Damages
-  m_EditorClassIdentifier: WitchGate.Gameplay::WitchGate.Gameplay.Cards.Effects.DamageCardEffect
-  <CardData>k__BackingField: {fileID: 11400000, guid: d05f183d50c35d54b8c221c4b0d5c27b, type: 2}
+  m_Name: CE_Ela_C1_E1
+  m_EditorClassIdentifier: WitchGate.Gameplay::WitchGate.Gameplay.Cards.Effects.DamageCardBattleEffectData
+  <CardData>k__BackingField: {fileID: 11400000, guid: 2f8c249896c5ebf4c995cb84188863bf, type: 2}
   <SelfAffected>k__BackingField: 0
   <AlliesAffected>k__BackingField: 0
   <EnemiesAffected>k__BackingField: 1
-  <Damage>k__BackingField: 2
+  <Damage>k__BackingField: 4
