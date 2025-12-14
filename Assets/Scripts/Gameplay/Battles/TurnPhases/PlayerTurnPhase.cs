@@ -18,10 +18,7 @@ namespace WitchGate.Gameplay.Battles.TurnPhases
         protected override async Awaitable OnBegin()
         {
             IsReady = false;
-            foreach (var battleWitch in BattlePhase.BattleWitches)
-            {
-                battleWitch.Value.DrawMissingCards();
-            }
+            
         }
 
         protected override async Awaitable<List<ITurnAction>> Execute()

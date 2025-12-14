@@ -30,7 +30,7 @@ namespace WitchGate.Gameplay.Battles.Entities
             foreach (var cardProfile in enemyProfile.Deck)
             {
                 var data = cardProfile.CardData;
-                GameCard gameCard = new GameCard(data);
+                GameCard gameCard = new GameCard(data, cardProfile.Level);
                 Deck.TryAddCard(gameCard);
             }
             Deck.Shuffle();
@@ -76,6 +76,18 @@ namespace WitchGate.Gameplay.Battles.Entities
                 {
                     Discard.TryAddCard(card);
                 }
+            }
+        }
+        
+        public override void OnEndTurn()
+        {
+            base.OnEndTurn();
+            if (CurrentHealth == 0)
+            {
+                DamageModifiers.Clear();
+                DiscardHand();
+                
+                TargetRegistry.Unregister(this);
             }
         }
     }

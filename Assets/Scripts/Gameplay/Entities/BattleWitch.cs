@@ -1,6 +1,8 @@
+using System.Collections.Generic;
 using Helteix.Cards;
 using Helteix.Cards.Collections;
 using UnityEngine;
+using UnityEngine.Pool;
 using WitchGate.Controllers;
 using WitchGate.Gameplay.Battles.Entities;
 using WitchGate.Gameplay.Cards;
@@ -28,7 +30,7 @@ namespace WitchGate.Gameplay.Battles
             foreach (var cardProfile in profile.Deck)
             {
                 var data = cardProfile.CardData;
-                GameCard gameCard = new GameCard(data);
+                GameCard gameCard = new GameCard(data, cardProfile.Level);
                 Deck.TryAddCard(gameCard);
             }
             Deck.Shuffle();
@@ -58,6 +60,32 @@ namespace WitchGate.Gameplay.Battles
                 }
             }
             Hand.TryAddCard(card);
+        }
+        
+        public void DiscardHand()
+        {
+            using (ListPool<GameCard>.Get(out List<GameCard> cards))
+            {
+                cards.AddRange(Hand.Cards);
+                Debug.Log(cards.Count);
+                foreach (var card in cards)
+                {
+                    Debug.Log(card.ToString());
+                    Discard.TryAddCard(card);
+                }
+            }
+        }
+
+        public override void OnEndTurn()
+        {
+            base.OnEndTurn();
+            if (CurrentHealth == 0)
+            {
+                Debug.Log("we are deadge");
+                DamageModifiers.Clear();
+                DiscardHand();
+                TargetRegistry.Unregister(this);
+            }
         }
     }
 }

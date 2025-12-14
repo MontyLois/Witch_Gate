@@ -59,7 +59,7 @@ namespace WitchGate.Gameplay.Battles.UI
 
         private void OnBattleWitchDeath()
         {
-            this.gameObject.SetActive(false);
+            //this.gameObject.SetActive(false);
         }
 
     }

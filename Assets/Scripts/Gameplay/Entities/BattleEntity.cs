@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Pool;
+using UnityEngine.XR;
 using WitchGate.Gameplay.Battles.Entities.Interface;
 
 namespace WitchGate.Gameplay.Battles.Entities
@@ -54,7 +55,6 @@ namespace WitchGate.Gameplay.Battles.Entities
                 if (CurrentHealth == 0)
                 {
                     OnDeath?.Invoke();
-                    TargetRegistry.Unregister(this);
                 }
             }
         }
@@ -96,7 +96,7 @@ namespace WitchGate.Gameplay.Battles.Entities
             OnShieldDown?.Invoke();
         }
 
-        public void OnEndTurn()
+        public virtual void OnEndTurn()
         {
             ResetShield();
             using (ListPool<IDamageModifier>.Get(out var list))

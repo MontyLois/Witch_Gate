@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using WitchGate.Cards;
 using WitchGate.Gameplay.Entities;
+using Random = System.Random;
 
 namespace WitchGate.Players
 {
-    [System.Serializable]
-    public struct WitchProfile
+    public class WitchProfile
     {
         [field: SerializeField]
         public Witch Witch { get; private set; }
@@ -27,7 +27,27 @@ namespace WitchGate.Players
             
             Deck = new List<CardProfile>(battleWitchProfile.Deck.Length);
             foreach (var card in battleWitchProfile.Deck)
-                Deck.Add(new CardProfile(card));
+                Deck.Add(card);
+        }
+
+        public void AddCard(CardData cardData)
+        {
+            Deck.Add(new CardProfile(cardData));
+        }
+
+        public void RemoveCard(CardProfile cardProfile)
+        {
+            Deck.Remove(cardProfile);
+        }
+        
+        public void LevelUpCard(CardProfile cardProfile)
+        {
+            cardProfile.LevelUp();
+        }
+
+        public CardProfile GetRandomCardFromDeck()
+        {
+            return Deck[UnityEngine.Random.Range(0, Deck.Count)];
         }
     }
 }

@@ -4,6 +4,7 @@ using Helteix.Cards;
 using Helteix.Cards.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Pool;
 using UnityEngine.SceneManagement;
 using WitchGate.Cards;
 using WitchGate.Controllers;
@@ -59,11 +60,14 @@ namespace WitchGate.Gameplay.Battles
 
         async Awaitable IPhase.Execute()
         {
+            foreach (var battleWitch in BattleWitches)
+            {
+                battleWitch.Value.DrawMissingCards();
+            }
+            
             while (true)
             {
                 TurnActions.Clear();
-                
-                
                 EnemyTurnPhase enemyTurnPhase = new EnemyTurnPhase(this);
                 await enemyTurnPhase.RunAsync();
                 
@@ -75,10 +79,14 @@ namespace WitchGate.Gameplay.Battles
                 
                 if(IsASideDefeated())
                     break;
-                
-                foreach (var target in TargetRegistry.Targets)
+
+                using (ListPool<ICanFight>.Get(out List<ICanFight> list))
                 {
-                    target.OnEndTurn();
+                    list.AddRange(TargetRegistry.Targets);
+                    foreach (var target in list)
+                    {
+                        target.OnEndTurn();
+                    }
                 }
             }
         }

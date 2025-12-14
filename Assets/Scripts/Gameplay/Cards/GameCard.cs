@@ -15,12 +15,15 @@ namespace WitchGate.Gameplay.Cards
     {
         [field: SerializeField]
         public CardData Data { get; private set; }
+        
+        public int Level { get; private set; }
 
-        public GameCard(CardData data)
+        public GameCard(CardData data, int level)
         {
             if(data == null)
                 Debug.LogError("No data was given to the card");
             Data = data;
+            this.Level = level;
         }
 
         public IEnumerable<CardBattleEffectData> Effects => CardManager.GetEffectsFor(Data);

@@ -24,10 +24,15 @@ namespace WitchGate.Players
             }
         }
         
-        public CardProfile(CardProfile other)
+        public CardProfile(CardData other)
         {
-            Level = other.Level;
-            CardID = other.CardID;
+            Level = 0;
+            CardID = other.ID;
+        }
+
+        public void LevelUp()
+        {
+            Level++;
         }
     }
 }

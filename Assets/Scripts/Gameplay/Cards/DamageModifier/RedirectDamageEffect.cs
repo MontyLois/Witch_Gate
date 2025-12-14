@@ -18,7 +18,6 @@ namespace WitchGate.Gameplay.Cards.DamageModifier
 
         public void Modify(ref DamageContext context)
         {
-            Debug.Log("wtf");
             if (TryRedirect(ref context))
                 return;
             
