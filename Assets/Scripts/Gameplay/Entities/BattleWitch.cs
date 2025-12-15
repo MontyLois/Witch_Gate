@@ -81,7 +81,6 @@ namespace WitchGate.Gameplay.Battles
             base.OnEndTurn();
             if (CurrentHealth == 0)
             {
-                Debug.Log("we are deadge");
                 DamageModifiers.Clear();
                 DiscardHand();
                 TargetRegistry.Unregister(this);

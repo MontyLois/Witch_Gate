@@ -18,7 +18,6 @@ namespace WitchGate.Gameplay.Battles.TurnPhases
         protected override async Awaitable OnBegin()
         {
             IsReady = false;
-            
         }
 
         protected override async Awaitable<List<ITurnAction>> Execute()

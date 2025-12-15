@@ -1,18 +1,15 @@
 using DG.Tweening;
-using Helteix.Cards;
 using Helteix.Cards.UI.Physical;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using WitchGate.Controllers;
-using WitchGate.Gameplay.Cards;
+using WitchGate.Prototype;
+using WitchGate.VisualNovel.Visual_Novel.Cards.UI;
 
-namespace WitchGate.Gameplay.Battles.UI
+namespace WitchGate.VisualNovel.Visual_Novel.Cards
 {
-    public class WitchBattleHandUI : PhysicalCardCollectionUI<GameCard>, IPhaseListener<BattlePhase>
+    public class VNHandUI : PhysicalCardCollectionUI<VNCard>, IPhaseListener<TestimonyPhase>
     {
-        [SerializeField] private Witch witch;
-
-        private BattleWitch battleWitch;
         
         private void OnEnable()
         {
@@ -23,24 +20,22 @@ namespace WitchGate.Gameplay.Battles.UI
         {
             this.Unregister();
         }
-
-        public void OnPhaseBegins(BattlePhase phase)
+        
+        
+        public void OnPhaseBegins(TestimonyPhase phase)
         {
-            battleWitch = phase.GetBattleWich(witch);
-            Connect(battleWitch.Hand);
-            battleWitch.OnDeath += OnBattleWitchDeath;
+            Connect(phase.VnWitch.Hand);
         }
 
-        public void OnPhaseEnds(BattlePhase phase)
+        public void OnPhaseEnds(TestimonyPhase phase)
         {
             Disconnect();
-            battleWitch.OnDeath -= OnBattleWitchDeath;
         }
-
+        
         protected override void OnCardPointerEnter(CardHolderUI holder, PointerEventData eventData)
         {
             base.OnCardPointerEnter(holder, eventData);
-            if (holder.CardUI is WitchGameCardUI cardUI)
+            if (holder.CardUI is VNCardUI cardUI)
             {
                 holder.transform.DOLocalMoveY( 3,0);
                 holder.transform.localScale = Vector3.one * 1.2f;
@@ -50,17 +45,11 @@ namespace WitchGate.Gameplay.Battles.UI
         protected override void OnCardPointerExit(CardHolderUI holder, PointerEventData eventData)
         {
             base.OnCardPointerExit(holder, eventData);
-            if (holder.CardUI is WitchGameCardUI cardUI)
+            if (holder.CardUI is VNCardUI cardUI)
             {
                 holder.transform.DOLocalMoveY(0,0);
                 holder.transform.localScale = Vector3.one;
             }
         }
-
-        private void OnBattleWitchDeath()
-        {
-            
-        }
-
     }
 }

@@ -29,5 +29,14 @@ namespace WitchGate.VisualNovel.Visual_Novel.Cards
                 }
             }
         }
+        
+        public static IEnumerable<CardVNEffectData> GetEffectsFor(CardData data)
+        {
+            if (!effects.TryGetValue(data, out var list)) 
+                yield break;
+            
+            foreach (var item in list)
+                yield return item;
+        }
     }
 }
