@@ -1,0 +1,20 @@
+{
+    "name": "WitchGate.VisualNovel",
+    "rootNamespace": "WitchGate.VisualNovel",
+    "references": [
+        "GUID:d792930ad3a102646bcada4b0a3e786d",
+        "GUID:7f6fdd18b438ff245b7f869ddfb77b44",
+        "GUID:d5d90aefd06ff4d489510cac44d1cc23",
+        "GUID:1a67d8fe58b2eca48aa7ff289303663b",
+        "GUID:6055be8ebefd69e48b49212b09b47b2f"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

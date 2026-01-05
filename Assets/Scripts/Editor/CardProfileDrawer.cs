@@ -18,6 +18,7 @@ namespace WitchGate.Editor
         [InitializeOnLoadMethod]
         private static void Load()
         {
+            
             string[] assetsGuids = AssetDatabase.FindAssets($"t:{nameof(CardData)}");
             for (int i = 0; i < assetsGuids.Length; i++)
             {
@@ -25,8 +26,10 @@ namespace WitchGate.Editor
                 string path = AssetDatabase.GUIDToAssetPath(guid);
 
                 CardData cardData = AssetDatabase.LoadAssetAtPath<CardData>(path);
-                Cards.Add(cardData.ID, cardData);
+                Cards[cardData.ID] = cardData;
+                //Cards.Add(cardData.ID, cardData);
             }
+            
         }
         
         public override VisualElement CreatePropertyGUI(SerializedProperty property)
@@ -50,8 +53,9 @@ namespace WitchGate.Editor
             };
             string currentID = idProperty.stringValue;
             if (Cards.TryGetValue(currentID, out CardData cardData))
-                dataField.value = cardData;
-
+                dataField.SetValueWithoutNotify(cardData);
+            
+            
             dataField.RegisterValueChangedCallback(changeEvent =>
             {
                 Object newValue = changeEvent.newValue;
@@ -62,6 +66,25 @@ namespace WitchGate.Editor
                     idProperty.serializedObject.ApplyModifiedProperties();
                 }
             });
+            
+            
+            
+            // Track external changes (undo / prefab)
+            root.TrackPropertyValue(idProperty, prop =>
+            {
+                if (!string.IsNullOrEmpty(prop.stringValue) &&
+                    Cards.TryGetValue(prop.stringValue, out var cd))
+                {
+                    dataField.SetValueWithoutNotify(cd);
+                }
+                else
+                {
+                    dataField.SetValueWithoutNotify(null);
+                }
+            });
+            
+            
+            
             root.Add(propertyField);
             root.Add(dataField);
             return root;

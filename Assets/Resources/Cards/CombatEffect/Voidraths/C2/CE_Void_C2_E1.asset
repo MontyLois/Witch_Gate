@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff5fbb4c79464cf19383faf726f1871a, type: 3}
+  m_Name: CE_Void_C2_E1
+  m_EditorClassIdentifier: WitchGate.Gameplay::WitchGate.Gameplay.Cards.Effects.MitigateDamagesEffectData
+  <CardData>k__BackingField: {fileID: 11400000, guid: 22b83a1c05569f7458d1896e7e0c6c12, type: 2}
+  <SelfAffected>k__BackingField: 1
+  <AlliesAffected>k__BackingField: 0
+  <EnemiesAffected>k__BackingField: 0
+  <DamagePercent>k__BackingField: 1
+  <LifeCycle>k__BackingField: 1

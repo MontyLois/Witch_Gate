@@ -10,7 +10,7 @@ namespace WitchGate.Controllers
 {
     public class SceneController : MonoSingleton<SceneController>
     {
-        private SceneData currentGameModeScene;
+        public SceneData currentGameModeScene;
         private SceneData currentLocationScene; //For the location : shop, all city part, fight subspace
         private List<SceneData> additiveScenes;
         private MissionSceneData currentMissionScene; // For Mission : only one mission active at a same time
@@ -35,6 +35,7 @@ namespace WitchGate.Controllers
         {
             base.OnAwake();
             gameModeLayouts = new Dictionary<GameMode, GameModeLayoutData>();
+            locationLayouts = new Dictionary<Location, LocationLayoutData>();
             additiveScenes = new List<SceneData>();
             LoadGameModeLayouts();
             LoadLocationLayouts();

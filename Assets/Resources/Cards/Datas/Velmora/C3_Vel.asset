@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b21abdfb0b1456c9877fa40e36c001b, type: 3}
+  m_Name: C3_Vel
+  m_EditorClassIdentifier: WitchGate.Core::WitchGate.Cards.CardData
+  <WitchDeck>k__BackingField: 1
+  <Name>k__BackingField: Quartz
+  <Description>k__BackingField: "Prendre d\xE9g\xE2ts \xE0 la place d'Elaris"
+  <CardRarity>k__BackingField: 0
+  <Icon>k__BackingField: {fileID: -442071693, guid: 1b1ad2d9bc77b8444a2b8ce5691ea4ac, type: 3}
+  <Priority>k__BackingField: 0
+  <ID>k__BackingField: 08b37319-1e47-43c3-82cc-4031f777ae23

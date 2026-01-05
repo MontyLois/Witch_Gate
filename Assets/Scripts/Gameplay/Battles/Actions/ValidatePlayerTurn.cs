@@ -3,21 +3,30 @@ using WitchGate.Controllers;
 
 namespace WitchGate.Gameplay.Battles.TurnPhases
 {
-    public class ValidatePlayerTurn : MonoBehaviour, IPhaseListener<PlayerTurnPhase>
+    public class ValidatePlayerTurn : MonoPhaseListener<PlayerTurnPhase>
     {
 
-
         private PlayerTurnPhase playerTurnPhase;
-        
-        public void OnPhaseBegins(PlayerTurnPhase phase)
+
+        protected override void OnEnable()
         {
+            base.OnEnable();
             this.Register();
+        }
+
+        protected override void OnDisable()
+        {
+            base.OnDisable();
+            this.Unregister();
+        }
+
+        protected override void OnPhaseBegins(PlayerTurnPhase phase)
+        {
             playerTurnPhase = phase;
         }
 
-        public void OnPhaseEnds(PlayerTurnPhase phase)
+        protected override void OnPhaseEnds(PlayerTurnPhase phase)
         {
-            this.Unregister();
             playerTurnPhase = null;
         }
 

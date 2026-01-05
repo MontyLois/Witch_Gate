@@ -150,6 +150,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: WitchGate.Gameplay::WitchGate.Gameplay.Battles.LaunchDebugBattle
   playerProfile:
     <VelmoraProfile>k__BackingField:
+      <Witch>k__BackingField: 1
       <Health>k__BackingField: 50
       <MaxHealth>k__BackingField: 50
       <Deck>k__BackingField:
@@ -170,6 +171,7 @@ MonoBehaviour:
       - <Level>k__BackingField: 1
         <CardID>k__BackingField: bad6bc94-50ab-4f89-9fa8-08df42b2a52f
     <ElarisProfile>k__BackingField:
+      <Witch>k__BackingField: 2
       <Health>k__BackingField: 50
       <MaxHealth>k__BackingField: 50
       <Deck>k__BackingField:
@@ -189,6 +191,14 @@ MonoBehaviour:
         <CardID>k__BackingField: cc0034b9-2ece-4f0a-a78d-5f2544c56167
       - <Level>k__BackingField: 1
         <CardID>k__BackingField: cc0034b9-2ece-4f0a-a78d-5f2544c56167
+  enemyProfile:
+    <Health>k__BackingField: 30
+    <MaxHealth>k__BackingField: 30
+    <Deck>k__BackingField:
+    - <Level>k__BackingField: 1
+      <CardID>k__BackingField: 06065e9d-f0d3-44c5-88b3-d3997a6da0ad
+    - <Level>k__BackingField: 1
+      <CardID>k__BackingField: 06065e9d-f0d3-44c5-88b3-d3997a6da0ad
 --- !u!4 &1740569831
 Transform:
   m_ObjectHideFlags: 0

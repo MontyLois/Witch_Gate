@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62cee93cabcb4ca89b21597549320cd5, type: 3}
+  m_Name: Velmora
+  m_EditorClassIdentifier: WitchGate.Gameplay::WitchGate.Gameplay.Entities.BattleWitchProfile
+  <Health>k__BackingField: 20
+  <MaxHealth>k__BackingField: 20
+  <Deck>k__BackingField:
+  - <Level>k__BackingField: 0
+    <CardID>k__BackingField: 65120b6b-8cca-4a86-8728-901f54af8907
+  - <Level>k__BackingField: 0
+    <CardID>k__BackingField: 65120b6b-8cca-4a86-8728-901f54af8907
+  - <Level>k__BackingField: 0
+    <CardID>k__BackingField: 65120b6b-8cca-4a86-8728-901f54af8907
+  - <Level>k__BackingField: 0
+    <CardID>k__BackingField: 15d97fee-6635-4bcb-af2e-e6e1100b6869
+  - <Level>k__BackingField: 0
+    <CardID>k__BackingField: 15d97fee-6635-4bcb-af2e-e6e1100b6869
+  - <Level>k__BackingField: 0
+    <CardID>k__BackingField: 15d97fee-6635-4bcb-af2e-e6e1100b6869
+  - <Level>k__BackingField: 0
+    <CardID>k__BackingField: 08b37319-1e47-43c3-82cc-4031f777ae23
+  - <Level>k__BackingField: 0
+    <CardID>k__BackingField: 08b37319-1e47-43c3-82cc-4031f777ae23
+  <Witch>k__BackingField: 1
