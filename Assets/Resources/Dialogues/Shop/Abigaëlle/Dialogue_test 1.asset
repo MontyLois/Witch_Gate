@@ -377,14 +377,14 @@ MonoBehaviour:
   Rect:
     serializedVersion: 2
     x: 127.33325
-    y: 124.33331
+    y: 123.66666
     width: 190
     height: 135
   IsDragging: 1
   IsSelected: 0
   _sentence:
     CharacterName: Velmora
-    Text: "Abiga\xEBlle ! Elle tombe \xE0 pic occupes toi d'elle!"
+    Text: "<Wave> Abiga\xEBlle ! Elle tombe \xE0 pic occupes toi d'elle!"
     CharacterSprite: {fileID: 21300000, guid: c1f2826ffedfe8148929fa4e2f0d7013, type: 3}
   ParentNodes: []
   ChildNode: {fileID: 7802839746416187205}

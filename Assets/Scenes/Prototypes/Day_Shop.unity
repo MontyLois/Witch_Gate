@@ -4263,10 +4263,46 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1038328149}
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6821968762670316558, guid: 879326d0dfdacb745b716969bb3ca54d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7501590162873142774}
     - targetCorrespondingSourceObject: {fileID: 2453119021924848896, guid: 879326d0dfdacb745b716969bb3ca54d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 28604838}
   m_SourcePrefab: {fileID: 100100000, guid: 879326d0dfdacb745b716969bb3ca54d, type: 3}
+--- !u!1 &7501590162873142773 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6821968762670316558, guid: 879326d0dfdacb745b716969bb3ca54d, type: 3}
+  m_PrefabInstance: {fileID: 7501590162873142772}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7501590162873142774
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7501590162873142773}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8ace8ced0e81c847968cdca0aeda757, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Febucci.TextAnimatorForUnity.TMP.Runtime::Febucci.TextAnimatorForUnity.TextMeshPro.TextAnimator_TMP
+  localSettings:
+    isResettingTimeOnNewText: 1
+    defaultEffectsMode: 1
+    timeScale: 0
+    defaultBehaviorTags: []
+    defaultAppearanceTags: []
+    defaultDisappearanceTags: []
+    isAnimatingBehaviors: 1
+    isAnimatingAppearances: 1
+    isAnimatingDisappearances: 1
+    useDynamicScaling: 1
+    referenceFontSize: 12
+  sharedSettings: {fileID: 0}
+  animationLoop: 0
+  databaseEffects: {fileID: 0}
+  styleSheet: {fileID: 0}
 --- !u!1 &8342631969711494549
 GameObject:
   m_ObjectHideFlags: 0
