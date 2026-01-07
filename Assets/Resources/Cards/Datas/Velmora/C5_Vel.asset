@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4b21abdfb0b1456c9877fa40e36c001b, type: 3}
-  m_Name: Card 1
+  m_Name: C5_Vel
   m_EditorClassIdentifier: 
   <WitchDeck>k__BackingField: 1
   <Name>k__BackingField: Attack
