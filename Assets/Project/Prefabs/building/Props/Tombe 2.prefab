@@ -14,7 +14,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &846650646769910850
 Transform:
@@ -85,6 +85,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pied_tombe
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1d5382bcd0239d74482afa54c29d313a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -146,6 +150,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: c31623c6d910fda4a9b50fdd68b37c05, type: 3}
       propertyPath: m_Name
       value: Tombe_Ex3
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c31623c6d910fda4a9b50fdd68b37c05, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
