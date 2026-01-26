@@ -126,7 +126,7 @@ Material:
     - _BumpScale: 1
     - _CameraDistanceImpact: 0
     - _CelExtraEnabled: 0
-    - _CelNumSteps: 4
+    - _CelNumSteps: 2
     - _CelPrimaryMode: 2
     - _ClearCoatMask: 0
     - _ClearCoatSmoothness: 0
@@ -140,12 +140,12 @@ Material:
     - _DstBlendAlpha: 0
     - _EnvironmentReflections: 1
     - _FlatRimEdgeSmoothness: 0
-    - _FlatRimLightAlign: 0.222
-    - _FlatRimSize: 0.304
+    - _FlatRimLightAlign: 0.022
+    - _FlatRimSize: 0
     - _FlatSpecularEdgeSmoothness: 0
-    - _FlatSpecularSize: 0
+    - _FlatSpecularSize: 0.898
     - _Flatness: 1
-    - _FlatnessExtra: 1
+    - _FlatnessExtra: 0.708
     - _GlossMapScale: 0
     - _Glossiness: 0
     - _GlossinessSource: 0
@@ -154,7 +154,7 @@ Material:
     - _GradientCenterX: 0
     - _GradientCenterY: 0
     - _GradientEnabled: 0
-    - _GradientSize: 10
+    - _GradientSize: 7.63
     - _GradientSpace: 0
     - _LightContribution: 1
     - _LightFalloffSize: 0.655
@@ -165,18 +165,18 @@ Material:
     - _OcclusionStrength: 1
     - _OutlineDepthOffset: 0
     - _OutlineEnabled: 0
-    - _OutlineScale: 1
+    - _OutlineScale: 1.08
     - _OutlineSpace: 1
-    - _OutlineWidth: 250
+    - _OutlineWidth: 0.72
     - _OverrideLightmapDir: 0
     - _Parallax: 0.005
     - _QueueOffset: 0
     - _ReceiveShadows: 1
     - _RimEnabled: 0
     - _SelfShadingSize: 0.515
-    - _SelfShadingSizeExtra: 0.6
+    - _SelfShadingSizeExtra: 0.085
     - _ShadowEdgeSize: 0.127
-    - _ShadowEdgeSizeExtra: 0.05
+    - _ShadowEdgeSizeExtra: 0
     - _Shininess: 0
     - _Smoothness: 0
     - _SmoothnessSource: 0
@@ -204,9 +204,9 @@ Material:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _ColorDim: {r: 1, g: 1, b: 1, a: 1}
     - _ColorDimCurve: {r: 0.85023, g: 0.85034, b: 0.8504499, a: 0.85056}
-    - _ColorDimExtra: {r: 0.85023, g: 0.85034, b: 0.8504499, a: 0.85056}
+    - _ColorDimExtra: {r: 1, g: 1, b: 1, a: 1}
     - _ColorDimSteps: {r: 0, g: 0, b: 0, a: 1}
-    - _ColorGradient: {r: 0.85023, g: 0.85034, b: 0.85045, a: 0.85056}
+    - _ColorGradient: {r: 1, g: 1, b: 1, a: 1}
     - _DetailMapColor: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 512, g: 22.086275, b: 0, a: 1}
     - _FlatRimColor: {r: 4, g: 4, b: 4, a: 1}
@@ -214,6 +214,6 @@ Material:
     - _LightmapDirection: {r: 0, g: 1, b: 0, a: 0}
     - _OutlineColor: {r: 0, g: 0, b: 0, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
-    - _UnityShadowColor: {r: 0.85023, g: 0.85034, b: 0.8504499, a: 0.85056}
+    - _UnityShadowColor: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
