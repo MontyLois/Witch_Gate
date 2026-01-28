@@ -27,14 +27,14 @@ Material:
   m_ValidKeywords:
   - DR_OUTLINE_ON
   - DR_OUTLINE_SMOOTH_NORMALS
+  - _CELPRIMARYMODE_STEPS
   - _DETAILMAPBLENDINGMODE_MULTIPLY
   - _EMISSION
   - _GRADIENTSPACE_WORLD
   - _OUTLINESPACE_OBJECT
   - _TEXTUREBLENDINGMODE_MULTIPLY
   - _UNITYSHADOWMODE_MULTIPLY
-  m_InvalidKeywords:
-  - _CELPRIMARYMODE_NONE
+  m_InvalidKeywords: []
   m_LightmapFlags: 2
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -61,7 +61,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _CelStepTexture:
-        m_Texture: {fileID: 2800000, guid: e14650e56983ba24095c9c2feb6c0186, type: 3}
+        m_Texture: {fileID: 2800000, guid: ed05ff27a1f7aa6409b350dcc5ca0cf1, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DetailAlbedoMap:
@@ -127,8 +127,8 @@ Material:
     - _BumpScale: 1
     - _CameraDistanceImpact: 0
     - _CelExtraEnabled: 0
-    - _CelNumSteps: 4
-    - _CelPrimaryMode: 0
+    - _CelNumSteps: 2
+    - _CelPrimaryMode: 2
     - _ClearCoatMask: 0
     - _ClearCoatSmoothness: 0
     - _Cull: 2

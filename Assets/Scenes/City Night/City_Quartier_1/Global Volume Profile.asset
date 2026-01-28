@@ -24,7 +24,7 @@ MonoBehaviour:
     m_Value: 0.73
   scatter:
     m_OverrideState: 1
-    m_Value: 0.445
+    m_Value: 0.55
   clamp:
     m_OverrideState: 0
     m_Value: 65474.6
@@ -117,10 +117,10 @@ MonoBehaviour:
     m_Value: {r: 1, g: 1, b: 1, a: 1}
   hueShift:
     m_OverrideState: 0
-    m_Value: -122
+    m_Value: -106
   saturation:
-    m_OverrideState: 0
-    m_Value: -21
+    m_OverrideState: 1
+    m_Value: 1.8
 --- !u!114 &6119058807302230960
 MonoBehaviour:
   m_ObjectHideFlags: 3
