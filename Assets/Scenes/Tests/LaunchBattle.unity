@@ -148,57 +148,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7856c527c87040578c8a2714ae567d2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: WitchGate.Gameplay::WitchGate.Gameplay.Battles.LaunchDebugBattle
-  playerProfile:
-    <VelmoraProfile>k__BackingField:
-      <Witch>k__BackingField: 1
-      <Health>k__BackingField: 50
-      <MaxHealth>k__BackingField: 50
-      <Deck>k__BackingField:
-      - <Level>k__BackingField: 1
-        <CardID>k__BackingField: bad6bc94-50ab-4f89-9fa8-08df42b2a52f
-      - <Level>k__BackingField: 1
-        <CardID>k__BackingField: bad6bc94-50ab-4f89-9fa8-08df42b2a52f
-      - <Level>k__BackingField: 1
-        <CardID>k__BackingField: bad6bc94-50ab-4f89-9fa8-08df42b2a52f
-      - <Level>k__BackingField: 1
-        <CardID>k__BackingField: bad6bc94-50ab-4f89-9fa8-08df42b2a52f
-      - <Level>k__BackingField: 1
-        <CardID>k__BackingField: bad6bc94-50ab-4f89-9fa8-08df42b2a52f
-      - <Level>k__BackingField: 1
-        <CardID>k__BackingField: bad6bc94-50ab-4f89-9fa8-08df42b2a52f
-      - <Level>k__BackingField: 1
-        <CardID>k__BackingField: bad6bc94-50ab-4f89-9fa8-08df42b2a52f
-      - <Level>k__BackingField: 1
-        <CardID>k__BackingField: bad6bc94-50ab-4f89-9fa8-08df42b2a52f
-    <ElarisProfile>k__BackingField:
-      <Witch>k__BackingField: 2
-      <Health>k__BackingField: 50
-      <MaxHealth>k__BackingField: 50
-      <Deck>k__BackingField:
-      - <Level>k__BackingField: 1
-        <CardID>k__BackingField: cc0034b9-2ece-4f0a-a78d-5f2544c56167
-      - <Level>k__BackingField: 1
-        <CardID>k__BackingField: cc0034b9-2ece-4f0a-a78d-5f2544c56167
-      - <Level>k__BackingField: 1
-        <CardID>k__BackingField: cc0034b9-2ece-4f0a-a78d-5f2544c56167
-      - <Level>k__BackingField: 1
-        <CardID>k__BackingField: cc0034b9-2ece-4f0a-a78d-5f2544c56167
-      - <Level>k__BackingField: 1
-        <CardID>k__BackingField: cc0034b9-2ece-4f0a-a78d-5f2544c56167
-      - <Level>k__BackingField: 1
-        <CardID>k__BackingField: cc0034b9-2ece-4f0a-a78d-5f2544c56167
-      - <Level>k__BackingField: 1
-        <CardID>k__BackingField: cc0034b9-2ece-4f0a-a78d-5f2544c56167
-      - <Level>k__BackingField: 1
-        <CardID>k__BackingField: cc0034b9-2ece-4f0a-a78d-5f2544c56167
-  enemyProfile:
-    <Health>k__BackingField: 30
-    <MaxHealth>k__BackingField: 30
-    <Deck>k__BackingField:
-    - <Level>k__BackingField: 1
-      <CardID>k__BackingField: 06065e9d-f0d3-44c5-88b3-d3997a6da0ad
-    - <Level>k__BackingField: 1
-      <CardID>k__BackingField: 06065e9d-f0d3-44c5-88b3-d3997a6da0ad
+  enemyProfile: {fileID: 11400000, guid: e39c0dfb258e9724db25c7068e129699, type: 2}
 --- !u!4 &1740569831
 Transform:
   m_ObjectHideFlags: 0

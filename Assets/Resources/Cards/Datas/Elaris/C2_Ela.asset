@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: C2_Ela
   m_EditorClassIdentifier: 
   <WitchDeck>k__BackingField: 2
-  <Name>k__BackingField: Defense
-  <Description>k__BackingField: This card grant a shield
-  <CardRarity>k__BackingField: 0
-  <Icon>k__BackingField: {fileID: -1832146589, guid: 7120ec20faf46ec4a986dcd1689b0054, type: 3}
+  <Name>k__BackingField: 5
+  <Description>k__BackingField: Attaque de 7
+  <CardRarity>k__BackingField: 1
+  <Icon>k__BackingField: {fileID: -1156602589, guid: 85efd2be411177a479ee49053483be9e, type: 3}
   <Priority>k__BackingField: 0
   <ID>k__BackingField: cc0034b9-2ece-4f0a-a78d-5f2544c56167
