@@ -12,6 +12,9 @@ namespace cherrydev
         [SerializeField] private SentencePanel _dialogSentencePanel_2;
         [SerializeField] private AnswerPanel _dialogAnswerPanel;
 
+
+        [Header("set up")] [SerializeField] private GameObject SentenceDefaultPrefab;
+
         
         private void OnEnable()
         {
