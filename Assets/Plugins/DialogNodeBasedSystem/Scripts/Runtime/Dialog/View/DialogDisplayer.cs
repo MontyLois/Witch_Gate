@@ -1,3 +1,4 @@
+using DialogNodeBaseSystem.Plugins.DialogNodeBasedSystem.Scripts.Runtime.Enums;
 using UnityEngine;
 
 namespace cherrydev
@@ -6,10 +7,11 @@ namespace cherrydev
     {
         [Header("MAIN COMPONENT")]
         [SerializeField] private DialogBehaviour _dialogBehaviour;
+        [SerializeField] private SlotName slotName;
 
-        [Header("NODE PANELS")]
+        [Header("PANELS")]
         [SerializeField] private SentencePanel _dialogSentencePanel;
-        [SerializeField] private SentencePanel _dialogSentencePanel_2;
+        [SerializeField] private SentencePanel[] _dialogSentencePanels;
         [SerializeField] private AnswerPanel _dialogAnswerPanel;
 
 
@@ -32,7 +34,7 @@ namespace cherrydev
             _dialogBehaviour.SentenceNodeActivatedWithParameter += _dialogSentencePanel.Setup;
 
             _dialogBehaviour.AnswerNodeActivated += EnableDialogAnswerPanel;
-            _dialogBehaviour.AnswerNodeActivated += DisableDialogSentencePanel;
+            //_dialogBehaviour.AnswerNodeActivated += DisableDialogSentencePanel;
 
             _dialogBehaviour.AnswerNodeActivatedWithParameter += _dialogAnswerPanel.EnableCertainAmountOfButtons;
             _dialogBehaviour.MaxAmountOfAnswerButtonsCalculated += _dialogAnswerPanel.SetUpButtons;
