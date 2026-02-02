@@ -21,8 +21,8 @@ namespace WitchGate
 
         public GameDatabase()
         {
-            GameModeLayouts = Resources.LoadAll<GameModeLayoutData>("GameModeLayouts");
-            LocationLayouts = Resources.LoadAll<LocationLayoutData>("LocationLayouts");
+            GameModeLayouts = Resources.LoadAll<GameModeLayoutData>("SceneManagment/GameModeLayouts");
+            LocationLayouts = Resources.LoadAll<LocationLayoutData>("SceneManagment/LocationLayouts");
             CardData[] c = Resources.LoadAll<CardData>("Cards/Datas");
             cards = new Dictionary<string, CardData>(c.Length);
             for (int i = 0; i < c.Length; i++)
