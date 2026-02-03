@@ -1,6 +1,8 @@
 using System.Collections.Generic;
+using Febucci.TextAnimatorCore.Text;
 using UnityEditor;
 using UnityEngine;
+using WitchGate.VisualNovel.Visual_Novel.Dialog;
 #if UNITY_LOCALIZATION
 using UnityEngine.Localization.Settings;
 #endif
@@ -113,6 +115,12 @@ namespace cherrydev
         /// <returns></returns>
         public bool IsExternalFunc() => _isExternalFunc;
 
+        /// <summary>
+        /// Returning sentence character data
+        /// </summary>
+        /// <returns></returns>
+        public VNCharacterData GetCharacterData() => _sentence.CharacterData;
+
 #if UNITY_EDITOR
 
         /// <summary>
@@ -147,9 +155,10 @@ namespace cherrydev
             }
             else
             {
-                DrawCharacterNameFieldHorizontal();
+                DrawCharacterDataFieldHorizontal();
+               // DrawCharacterNameFieldHorizontal();
                 DrawSentenceTextFieldHorizontal();
-                DrawCharacterSpriteHorizontal();
+                //DrawCharacterSpriteHorizontal();
 
                 DrawExternalFunctionTextField();
 
@@ -183,6 +192,7 @@ namespace cherrydev
                 EditorGUILayout.TextField(_sentence.CharacterName, GUILayout.Width(TextFieldWidth));
             EditorGUILayout.EndHorizontal();
         }
+        
 
         /// <summary>
         /// Draw label and text fields for sentence text
@@ -204,6 +214,15 @@ namespace cherrydev
             EditorGUILayout.LabelField($"Sprite ", GUILayout.Width(LabelFieldSpace));
             _sentence.CharacterSprite = (Sprite)EditorGUILayout.ObjectField(_sentence.CharacterSprite,
                 typeof(Sprite), false, GUILayout.Width(TextFieldWidth));
+            EditorGUILayout.EndHorizontal();
+        }
+        
+        private void DrawCharacterDataFieldHorizontal()
+        {
+            EditorGUILayout.BeginHorizontal();
+            EditorGUILayout.LabelField($"VN Character Data ", GUILayout.Width(LabelFieldSpace));
+            _sentence.CharacterData = (VNCharacterData)EditorGUILayout.ObjectField(_sentence.CharacterData,
+                typeof(VNCharacterData), false, GUILayout.Width(TextFieldWidth));
             EditorGUILayout.EndHorizontal();
         }
 
@@ -295,7 +314,8 @@ namespace cherrydev
         public override bool AddToParentConnectedNode(Node nodeToAdd)
         {
             
-            if (nodeToAdd.GetType() == typeof(AnswerNode))
+            if (nodeToAdd.GetType() == typeof(AnswerNode)||
+                nodeToAdd.GetType() == typeof(StageNode))
             {
                 if (ParentNodes.Contains(nodeToAdd))
                     return false;

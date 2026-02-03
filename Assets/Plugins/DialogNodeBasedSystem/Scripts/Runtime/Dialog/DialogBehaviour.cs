@@ -2,8 +2,12 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using DialogNodeBaseSystem.Plugins.DialogNodeBasedSystem.Scripts.Runtime.Enums;
+using Febucci.TextAnimatorCore.Text;
 using UnityEngine;
 using UnityEngine.Events;
+using WitchGate.Visual_Novel.Enums;
+using WitchGate.VisualNovel.Visual_Novel.Dialog;
 #if UNITY_LOCALIZATION
 using UnityEngine.Localization;
 using UnityEngine.Localization.Settings;
@@ -30,6 +34,7 @@ namespace cherrydev
 
         public AnswerNode CurrentAnswerNode { get; private set; }
         public SentenceNode CurrentSentenceNode { get; private set; }
+        public StageNode CurrentStageNode { get; private set; }
         public ModifyVariableNode CurrentModifyVariableNode { get; private set; }
         public VariableConditionNode CurrentVariableConditionNode { get; private set; }
         public ExternalFunctionNode CurrentExternalFunctionNode { get; private set; }
@@ -61,6 +66,12 @@ namespace cherrydev
         public event Action SentenceEnded;
         public event Action SentenceNodeActivated;
         public event Action<string, string, Sprite> SentenceNodeActivatedWithParameter;
+        public event Action<VNCharacterData, string> SentenceNodeActivatedWithParameter_2;
+        
+        public event Action StageNodeActivated;
+        public event Action<VNCharacterData, bool, Expression, SlotName> StageNodeActivatedWithParameter;
+        
+        
         public event Action AnswerNodeActivated;
         public event Action<int, AnswerNode> AnswerButtonSetUp;
         public event Action<int> MaxAmountOfAnswerButtonsCalculated;
@@ -342,7 +353,8 @@ namespace cherrydev
             CurrentSentenceNode = sentenceNode;
             SentenceNodeActivated?.Invoke();
 
-            string charName = sentenceNode.GetCharacterName();
+            //string charName = sentenceNode.GetCharacterName();
+            string charName = sentenceNode.GetCharacterData().name;
             string fullText = sentenceNode.GetText();
             Sprite charSprite = sentenceNode.GetCharacterSprite();
 
@@ -353,7 +365,8 @@ namespace cherrydev
             }
 
             SentenceNodeActivatedWithParameter?.Invoke(charName, fullText, charSprite);
-
+            SentenceNodeActivatedWithParameter_2?.Invoke(sentenceNode.GetCharacterData(), fullText);
+            
             if (!string.IsNullOrEmpty(fullText))
             {
                 int charsToShow = Mathf.CeilToInt(fullText.Length * progress);
@@ -371,10 +384,31 @@ namespace cherrydev
         {
             StopAllCoroutines();
 
+            /*
+            switch (currentNode)
+            {
+                case SentenceNode : HandleSentenceNode(currentNode);
+                    break;
+                case AnswerNode : HandleAnswerNode(currentNode);
+                    break;
+                case StageNode : HandleStageNode(currentNode);
+                    break;
+                case ModifyVariableNode : HandleModifyVariableNode(currentNode);
+                    break;
+                case VariableConditionNode : HandleVariableConditionNode(currentNode);
+                    break;
+                case ExternalFunctionNode : HandleExternalFunctionNode(currentNode);
+                    break;
+                default: break;
+            }*/
+
+            
             if (currentNode.GetType() == typeof(SentenceNode))
                 HandleSentenceNode(currentNode);
             else if (currentNode.GetType() == typeof(AnswerNode))
                 HandleAnswerNode(currentNode);
+            else if (currentNode.GetType() == typeof(StageNode))
+                HandleStageNode(currentNode);
             else if (currentNode.GetType() == typeof(ModifyVariableNode))
                 HandleModifyVariableNode(currentNode);
             else if (currentNode.GetType() == typeof(VariableConditionNode))
@@ -407,11 +441,38 @@ namespace cherrydev
 
             SentenceNodeActivatedWithParameter?.Invoke(localizedCharName, localizedText,
                 sentenceNode.GetCharacterSprite());
+            
+            SentenceNodeActivatedWithParameter_2?.Invoke(sentenceNode.GetCharacterData(),localizedText);
 
             if (sentenceNode.IsExternalFunc())
                 CallExternalFunction(sentenceNode.GetExternalFunctionName());
 
             WriteDialogText(localizedText);
+        }
+
+        /// <summary>
+        /// Processing sentence node
+        /// </summary>
+        /// <param name="currentNode"></param>
+        private void HandleStageNode(Node currentNode)
+        {
+            StageNode sentenceNode = (StageNode)currentNode;
+            CurrentStageNode = sentenceNode;
+
+            StageNodeActivated?.Invoke();
+            
+            Stage stage = sentenceNode.Stage;
+            
+            StageNodeActivatedWithParameter?.Invoke(stage.CharacterData, stage.visibility, 
+                stage.expression, stage.slotName);
+            
+            if (sentenceNode.ChildNode != null)
+            {
+                _currentNode = sentenceNode.ChildNode;
+                HandleDialogGraphCurrentNode(_currentNode);
+            }
+            else
+                EndDialog();
         }
 
         /// <summary>
@@ -584,6 +645,12 @@ namespace cherrydev
                     SentenceNode sentenceNode = (SentenceNode)node;
                     hasParents = sentenceNode.ParentNodes.Count > 0;
                     hasChildren = sentenceNode.ChildNode != null;
+                }
+                else if (node.GetType() == typeof(StageNode))
+                {
+                    StageNode stageNode = (StageNode)node;
+                    hasParents = stageNode.ParentNodes.Count > 0;
+                    hasChildren = stageNode.ChildNode != null;
                 }
                 else if (node.GetType() == typeof(AnswerNode))
                 {

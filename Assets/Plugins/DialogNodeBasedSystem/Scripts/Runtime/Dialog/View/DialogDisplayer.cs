@@ -1,5 +1,8 @@
+using System;
+using System.Collections.Generic;
 using DialogNodeBaseSystem.Plugins.DialogNodeBasedSystem.Scripts.Runtime.Enums;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace cherrydev
 {
@@ -7,17 +10,27 @@ namespace cherrydev
     {
         [Header("MAIN COMPONENT")]
         [SerializeField] private DialogBehaviour _dialogBehaviour;
-        [SerializeField] private SlotName slotName;
-
+        
         [Header("PANELS")]
-        [SerializeField] private SentencePanel _dialogSentencePanel;
-        [SerializeField] private SentencePanel[] _dialogSentencePanels;
+        //[SerializeField] private SlotPanel _dialogSentencePanel;
+        [SerializeField] private SlotPanel[] _dialogSlotPanels;
         [SerializeField] private AnswerPanel _dialogAnswerPanel;
+
+        //private Dictionary<SlotName, SlotPanel> SlotPanelsByName;
 
 
         [Header("set up")] [SerializeField] private GameObject SentenceDefaultPrefab;
 
-        
+
+        private void Awake()
+        {
+            //SlotPanelsByName = new Dictionary<SlotName, SlotPanel>();
+            foreach (var dialogSlotPanel in _dialogSlotPanels)
+            {
+               // SlotPanelsByName.Add(dialogSlotPanel.SlotName, dialogSlotPanel);
+            }
+        }
+
         private void OnEnable()
         {
             _dialogBehaviour.AddListenerToDialogFinishedEvent(DisableDialogPanel);
@@ -25,13 +38,24 @@ namespace cherrydev
             _dialogBehaviour.DialogDisabled += DisableDialogPanel;
             _dialogBehaviour.AnswerButtonSetUp += SetUpAnswerButtonsClickEvent;
 
+            /*
             _dialogBehaviour.DialogTextCharWrote += _dialogSentencePanel.IncreaseMaxVisibleCharacters;
             _dialogBehaviour.DialogTextSkipped += _dialogSentencePanel.ShowFullDialogText;
+            _dialogBehaviour.SentenceNodeActivated += _dialogSentencePanel.ResetDialogText;
+            _dialogBehaviour.SentenceNodeActivatedWithParameter += _dialogSentencePanel.Setup;*/
+
+            foreach (var dialogSlotPanel in _dialogSlotPanels)
+            {
+                _dialogBehaviour.DialogTextCharWrote += dialogSlotPanel.IncreaseMaxVisibleCharacters;
+                _dialogBehaviour.DialogTextSkipped += dialogSlotPanel.ShowFullDialogText;
+                _dialogBehaviour.SentenceNodeActivated += dialogSlotPanel.ResetDialogText;
+                _dialogBehaviour.SentenceNodeActivatedWithParameter_2 += dialogSlotPanel.OnDialogNode;
+                _dialogBehaviour.AnswerNodeActivated += dialogSlotPanel.OnAnswerNode;
+                _dialogBehaviour.StageNodeActivatedWithParameter += dialogSlotPanel.OnStageNode;
+            }
 
             _dialogBehaviour.SentenceNodeActivated += EnableDialogSentencePanel;
             _dialogBehaviour.SentenceNodeActivated += DisableDialogAnswerPanel;
-            _dialogBehaviour.SentenceNodeActivated += _dialogSentencePanel.ResetDialogText;
-            _dialogBehaviour.SentenceNodeActivatedWithParameter += _dialogSentencePanel.Setup;
 
             _dialogBehaviour.AnswerNodeActivated += EnableDialogAnswerPanel;
             //_dialogBehaviour.AnswerNodeActivated += DisableDialogSentencePanel;
@@ -47,19 +71,30 @@ namespace cherrydev
 
         private void OnDisable()
         {
+            foreach (var dialogSlotPanel in _dialogSlotPanels)
+            {
+                _dialogBehaviour.DialogTextCharWrote -= dialogSlotPanel.IncreaseMaxVisibleCharacters;
+                _dialogBehaviour.DialogTextSkipped -= dialogSlotPanel.ShowFullDialogText;
+                _dialogBehaviour.SentenceNodeActivated -= dialogSlotPanel.ResetDialogText;
+                _dialogBehaviour.SentenceNodeActivatedWithParameter_2 -= dialogSlotPanel.OnDialogNode;
+                _dialogBehaviour.AnswerNodeActivated -= dialogSlotPanel.OnAnswerNode;
+                _dialogBehaviour.StageNodeActivatedWithParameter -= dialogSlotPanel.OnStageNode;
+            }
+            
             _dialogBehaviour.DialogDisabled -= DisableDialogPanel;
             _dialogBehaviour.AnswerButtonSetUp -= SetUpAnswerButtonsClickEvent;
 
+            /*
             _dialogBehaviour.DialogTextCharWrote -= _dialogSentencePanel.IncreaseMaxVisibleCharacters;
             _dialogBehaviour.DialogTextSkipped -= _dialogSentencePanel.ShowFullDialogText;
+            _dialogBehaviour.SentenceNodeActivated += _dialogSentencePanel.ResetDialogText;
+            _dialogBehaviour.SentenceNodeActivatedWithParameter -= _dialogSentencePanel.Setup;*/
 
             _dialogBehaviour.SentenceNodeActivated -= EnableDialogSentencePanel;
             _dialogBehaviour.SentenceNodeActivated -= DisableDialogAnswerPanel;
-            _dialogBehaviour.SentenceNodeActivated += _dialogSentencePanel.ResetDialogText;
-            _dialogBehaviour.SentenceNodeActivatedWithParameter -= _dialogSentencePanel.Setup;
 
             _dialogBehaviour.AnswerNodeActivated -= EnableDialogAnswerPanel;
-            _dialogBehaviour.AnswerNodeActivated -= DisableDialogSentencePanel;
+            //_dialogBehaviour.AnswerNodeActivated -= DisableDialogSentencePanel;
 
             _dialogBehaviour.AnswerNodeActivatedWithParameter -= _dialogAnswerPanel.EnableCertainAmountOfButtons;
             _dialogBehaviour.MaxAmountOfAnswerButtonsCalculated -= _dialogAnswerPanel.SetUpButtons;
@@ -98,14 +133,28 @@ namespace cherrydev
         /// </summary>
         public void EnableDialogSentencePanel()
         {
-            _dialogSentencePanel.ResetDialogText();
-            ActiveGameObject(_dialogSentencePanel.gameObject, true);
+            foreach (var dialogSlotPanel in _dialogSlotPanels)
+            {
+                dialogSlotPanel.ResetDialogText();
+                ActiveGameObject(dialogSlotPanel.gameObject, true);
+            }
+            
+            //_dialogSentencePanel.ResetDialogText();
+            //ActiveGameObject(_dialogSentencePanel.gameObject, true);
         }
 
         /// <summary>
         /// Disable dialog sentence panel
         /// </summary>
-        public void DisableDialogSentencePanel() => ActiveGameObject(_dialogSentencePanel.gameObject, false);
+        public void DisableDialogSentencePanel()
+        {
+
+            foreach (var dialogSlotPanel in _dialogSlotPanels)
+            {
+                ActiveGameObject(dialogSlotPanel.gameObject, false);
+            }
+            //ActiveGameObject(_dialogSentencePanel.gameObject, false);
+        } 
 
         /// <summary>
         /// Enable or disable game object depends on isActive bool flag

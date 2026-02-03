@@ -3,7 +3,8 @@
     "rootNamespace": "DialogNodeBaseSystem",
     "references": [
         "GUID:6055be8ebefd69e48b49212b09b47b2f",
-        "GUID:f06555f75b070af458a003d92f9efb00"
+        "GUID:f06555f75b070af458a003d92f9efb00",
+        "GUID:d792930ad3a102646bcada4b0a3e786d"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
