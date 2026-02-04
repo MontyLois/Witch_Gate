@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using Febucci.TextAnimatorCore.Text;
 using UnityEditor;
 using UnityEngine;
+using WitchGate.Visual_Novel.Enums;
 using WitchGate.VisualNovel.Visual_Novel.Dialog;
 #if UNITY_LOCALIZATION
 using UnityEngine.Localization.Settings;
@@ -120,6 +121,12 @@ namespace cherrydev
         /// </summary>
         /// <returns></returns>
         public VNCharacterData GetCharacterData() => _sentence.CharacterData;
+        
+        /// <summary>
+        /// Returning sentence expression
+        /// </summary>
+        /// <returns></returns>
+        public Expression GetExpression() => _sentence.expression;
 
 #if UNITY_EDITOR
 
@@ -159,6 +166,7 @@ namespace cherrydev
                // DrawCharacterNameFieldHorizontal();
                 DrawSentenceTextFieldHorizontal();
                 //DrawCharacterSpriteHorizontal();
+                DrawExpressionFieldHorizontal();
 
                 DrawExternalFunctionTextField();
 
@@ -202,6 +210,14 @@ namespace cherrydev
             EditorGUILayout.BeginHorizontal();
             EditorGUILayout.LabelField($"Text ", GUILayout.Width(LabelFieldSpace));
             _sentence.Text = EditorGUILayout.TextField(_sentence.Text, GUILayout.Width(TextFieldWidth));
+            EditorGUILayout.EndHorizontal();
+        }
+        
+        private void DrawExpressionFieldHorizontal()
+        {
+            EditorGUILayout.BeginHorizontal();
+            EditorGUILayout.LabelField($"Expression", GUILayout.Width(LabelFieldSpace));
+            _sentence.expression = (Expression)EditorGUILayout.EnumPopup(_sentence.expression,GUILayout.Width(TextFieldWidth));
             EditorGUILayout.EndHorizontal();
         }
 

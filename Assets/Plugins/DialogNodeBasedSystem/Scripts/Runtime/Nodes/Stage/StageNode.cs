@@ -162,6 +162,7 @@ namespace cherrydev
                 return false;
 
             if (nodeToAdd.GetType() == typeof(SentenceNode) 
+                || nodeToAdd.GetType() == typeof(AnswerNode) 
                 || nodeToAdd.GetType() == typeof(ModifyVariableNode)
                 || nodeToAdd.GetType() == typeof(VariableConditionNode)
                 || nodeToAdd.GetType() == typeof(ExternalFunctionNode)

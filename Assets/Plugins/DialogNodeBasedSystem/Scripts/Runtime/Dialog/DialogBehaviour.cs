@@ -66,7 +66,7 @@ namespace cherrydev
         public event Action SentenceEnded;
         public event Action SentenceNodeActivated;
         public event Action<string, string, Sprite> SentenceNodeActivatedWithParameter;
-        public event Action<VNCharacterData, string> SentenceNodeActivatedWithParameter_2;
+        public event Action<VNCharacterData, string, Expression> SentenceNodeActivatedWithParameter_2;
         
         public event Action StageNodeActivated;
         public event Action<VNCharacterData, bool, Expression, SlotName> StageNodeActivatedWithParameter;
@@ -365,7 +365,7 @@ namespace cherrydev
             }
 
             SentenceNodeActivatedWithParameter?.Invoke(charName, fullText, charSprite);
-            SentenceNodeActivatedWithParameter_2?.Invoke(sentenceNode.GetCharacterData(), fullText);
+            SentenceNodeActivatedWithParameter_2?.Invoke(sentenceNode.GetCharacterData(), fullText,sentenceNode.GetExpression());
             
             if (!string.IsNullOrEmpty(fullText))
             {
@@ -442,7 +442,7 @@ namespace cherrydev
             SentenceNodeActivatedWithParameter?.Invoke(localizedCharName, localizedText,
                 sentenceNode.GetCharacterSprite());
             
-            SentenceNodeActivatedWithParameter_2?.Invoke(sentenceNode.GetCharacterData(),localizedText);
+            SentenceNodeActivatedWithParameter_2?.Invoke(sentenceNode.GetCharacterData(),localizedText,sentenceNode.GetExpression() );
 
             if (sentenceNode.IsExternalFunc())
                 CallExternalFunction(sentenceNode.GetExternalFunctionName());

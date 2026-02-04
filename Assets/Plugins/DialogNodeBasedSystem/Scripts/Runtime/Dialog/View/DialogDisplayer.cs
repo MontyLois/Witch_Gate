@@ -56,6 +56,8 @@ namespace cherrydev
 
             _dialogBehaviour.SentenceNodeActivated += EnableDialogSentencePanel;
             _dialogBehaviour.SentenceNodeActivated += DisableDialogAnswerPanel;
+            
+            _dialogBehaviour.StageNodeActivated += DisableDialogAnswerPanel;
 
             _dialogBehaviour.AnswerNodeActivated += EnableDialogAnswerPanel;
             //_dialogBehaviour.AnswerNodeActivated += DisableDialogSentencePanel;
@@ -83,6 +85,8 @@ namespace cherrydev
             
             _dialogBehaviour.DialogDisabled -= DisableDialogPanel;
             _dialogBehaviour.AnswerButtonSetUp -= SetUpAnswerButtonsClickEvent;
+            
+            _dialogBehaviour.StageNodeActivated -= DisableDialogAnswerPanel;
 
             /*
             _dialogBehaviour.DialogTextCharWrote -= _dialogSentencePanel.IncreaseMaxVisibleCharacters;
@@ -119,8 +123,10 @@ namespace cherrydev
         /// </summary>
         public void EnableDialogAnswerPanel()
         {
-            ActiveGameObject(_dialogAnswerPanel.gameObject, true);
+            
+            //ActiveGameObject(_dialogAnswerPanel.gameObject, true);
             _dialogAnswerPanel.DisableAllButtons();
+            _dialogAnswerPanel.gameObject.SetActive(true);
         }
 
         /// <summary>

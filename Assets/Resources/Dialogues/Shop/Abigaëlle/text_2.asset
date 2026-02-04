@@ -15,8 +15,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 1554.6669
-    y: 192.66667
+    x: 2228
+    y: 183.33331
     width: 190
     height: 135
   IsDragging: 1
@@ -26,6 +26,7 @@ MonoBehaviour:
     Text: Heeeuuu je cherches un vinyle magueule
     CharacterSprite: {fileID: 0}
     CharacterData: {fileID: 11400000, guid: 4f59aac53de14b04ebea0ad618a25c9f, type: 2}
+    expression: 0
   ParentNodes:
   - {fileID: -7631732187988042295}
   ChildNode: {fileID: 0}
@@ -48,8 +49,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 1275.3334
-    y: 190.66661
+    x: 1948.6665
+    y: 181.33325
     width: 190
     height: 135
   IsDragging: 1
@@ -59,6 +60,7 @@ MonoBehaviour:
     Text: hiiii
     CharacterSprite: {fileID: 0}
     CharacterData: {fileID: 11400000, guid: f76c2a6ccc23d354c9ec8e55ebcbff8f, type: 2}
+    expression: 0
   ParentNodes:
   - {fileID: -7289943932777381529}
   ChildNode: {fileID: -8351590753040026807}
@@ -81,8 +83,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 1011.3334
-    y: 179.99995
+    x: 1684.6665
+    y: 170.6666
     width: 190
     height: 135
   IsDragging: 1
@@ -92,6 +94,7 @@ MonoBehaviour:
     Text: Helllooo
     CharacterSprite: {fileID: 0}
     CharacterData: {fileID: 11400000, guid: 4f59aac53de14b04ebea0ad618a25c9f, type: 2}
+    expression: 0
   ParentNodes:
   - {fileID: -3000875547220476858}
   ChildNode: {fileID: -7631732187988042295}
@@ -114,8 +117,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 179.99988
-    y: 177.99995
+    x: 853.33325
+    y: 168.6666
     width: 190
     height: 135
   IsDragging: 1
@@ -125,6 +128,7 @@ MonoBehaviour:
     Text: je parles
     CharacterSprite: {fileID: 0}
     CharacterData: {fileID: 11400000, guid: 4f59aac53de14b04ebea0ad618a25c9f, type: 2}
+    expression: 0
   ParentNodes:
   - {fileID: 4778475169229961721}
   ChildNode: {fileID: 5250840760658136374}
@@ -147,8 +151,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 736.6667
-    y: 174.66664
+    x: 1410
+    y: 165.33328
     width: 190
     height: 135
   IsDragging: 1
@@ -202,8 +206,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -98.66669
-    y: 147.33333
+    x: 574.6666
+    y: 137.99997
     width: 190
     height: 135
   IsDragging: 1
@@ -230,8 +234,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 477.33337
-    y: 169.99992
+    x: 1150.6667
+    y: 160.66656
     width: 190
     height: 135
   IsDragging: 1

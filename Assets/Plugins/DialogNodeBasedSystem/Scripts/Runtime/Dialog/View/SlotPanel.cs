@@ -108,7 +108,6 @@ namespace cherrydev
             
             if (SlotName == slotName)
             {
-                Debug.Log("we are in the right slot");
                 if (!_charactersInSlot.ContainsKey(characterData))
                 {
                     AddCharacterToSlot(characterData);
@@ -119,26 +118,29 @@ namespace cherrydev
             }
             else
             {
-                Debug.Log("we are NOT in the right slot");
                 if (_charactersInSlot.ContainsKey(characterData))
                 {
                     RemoveCharacterToSlot(characterData);
                 }
             }
+            
+            if (hideTextOneNextDialog)
+            {
+                _textSlot.SetActive(false);
+            }
         }
 
-        public void OnDialogNode(VNCharacterData characterData, string text)
+        public void OnDialogNode(VNCharacterData characterData, string text, Expression expression)
         {
             if (_charactersInSlot.ContainsKey(characterData))
             {
-                Debug.Log("character here");
                 _textSlot.SetActive(true);
                 _characterSlot.SetActive(true);
                 ChangeText(characterData, text);
+                ChangeCharacterExpression(characterData, expression);
             }
             else
             {
-                Debug.Log("character not here");
                 if (hideCharOnNextDialog)
                 {
                     _characterSlot.SetActive(false);
@@ -172,7 +174,6 @@ namespace cherrydev
             if(_charactersInSlot.ContainsKey(characterData))
                 return;
             
-            Debug.Log("we are adding the character to this slot");
             GameObject characterImage = Instantiate(_characterPrefab, _characterSlot.transform);
             SetSprite(characterImage, characterData.GetSprite(Expression.Neutral));
             _charactersInSlot.Add(characterData, characterImage);

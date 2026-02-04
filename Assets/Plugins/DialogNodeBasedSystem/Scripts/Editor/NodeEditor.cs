@@ -1045,6 +1045,7 @@ namespace cherrydev
             {
                 Node node = GetHighlightedNode(currentEvent.mousePosition);
 
+                Debug.Log("the node is "+node);
                 if (node != null)
                     NodeConnectionHelper.CreateConnection(_currentNodeGraph.NodeToDrawLineFrom, node);
             }
