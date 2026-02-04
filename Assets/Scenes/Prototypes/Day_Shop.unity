@@ -2112,6 +2112,7 @@ MonoBehaviour:
   dialogGraph:
   - {fileID: 11400000, guid: f81dfce18a6f9c14095ed63df199c034, type: 2}
   - {fileID: 11400000, guid: a82ac5686a7a31541bfa253c23ddc75b, type: 2}
+  - {fileID: 11400000, guid: 8afc7b36f2f1b9647b32d9720f6ac121, type: 2}
 --- !u!114 &640197240
 MonoBehaviour:
   m_ObjectHideFlags: 0
