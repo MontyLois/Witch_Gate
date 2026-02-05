@@ -13,6 +13,7 @@ namespace cherrydev
 
         private readonly List<Button> _buttons = new();
         private readonly List<TextMeshProUGUI> _buttonTexts = new();
+        private GameObject answerPanel;
 
         /// <summary>
         /// Returns the total number of buttons

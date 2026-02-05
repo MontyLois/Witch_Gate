@@ -5,6 +5,7 @@ using WitchGate.Cards;
 using WitchGate.Controllers.LocationLayouts;
 using WitchGate.Gameplay.Entities;
 using WitchGate.Players;
+using WitchGate.VisualNovel.Visual_Novel.Dialog;
 
 namespace WitchGate
 {
@@ -12,6 +13,7 @@ namespace WitchGate
     {
         public GameModeLayoutData[] GameModeLayouts { get; private set; }
         public LocationLayoutData[] LocationLayouts { get; private set; }
+        public VNCharacterData[] VNCharacters { get; private set; }
 
         private readonly Dictionary<string, CardData> cards;
         public IReadOnlyDictionary<string, CardData> Cards => cards;
@@ -21,8 +23,9 @@ namespace WitchGate
 
         public GameDatabase()
         {
-            GameModeLayouts = Resources.LoadAll<GameModeLayoutData>("GameModeLayouts");
-            LocationLayouts = Resources.LoadAll<LocationLayoutData>("LocationLayouts");
+            VNCharacters = Resources.LoadAll<VNCharacterData>("Characters");
+            GameModeLayouts = Resources.LoadAll<GameModeLayoutData>("SceneManagment/GameModeLayouts");
+            LocationLayouts = Resources.LoadAll<LocationLayoutData>("SceneManagment/LocationLayouts");
             CardData[] c = Resources.LoadAll<CardData>("Cards/Datas");
             cards = new Dictionary<string, CardData>(c.Length);
             for (int i = 0; i < c.Length; i++)

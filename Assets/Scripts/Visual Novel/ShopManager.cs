@@ -32,7 +32,7 @@ namespace WitchGate.Prototype
 
         private void Start()
         {
-            SceneController.Instance.currentGameModeScene = SceneData;
+            //SceneController.Instance.currentGameModeScene = SceneData;
             currentClientIndex = 0;
             NextClient();
             Hand.SetActive(false);
@@ -54,6 +54,7 @@ namespace WitchGate.Prototype
                 currentTestimonyphase.Run();
                 
                 dialogBehaviour.StartDialog(dialogGraph[currentClientIndex]);
+                Debug.Log("we should have started a dialog");
                 DialogueUI.SetActive(true);
                 currentClientIndex++;
             }

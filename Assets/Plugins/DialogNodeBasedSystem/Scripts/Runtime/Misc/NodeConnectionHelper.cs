@@ -31,9 +31,13 @@ namespace cherrydev
 
             bool parentAccepted = parent.AddToChildConnectedNode(child);
             
+            
             if (parentAccepted)
             {
                 bool childAccepted = child.AddToParentConnectedNode(parent);
+                
+                
+                Debug.Log("is child accepted ? "+ childAccepted);
                 
                 if (!childAccepted)
                 {
@@ -138,6 +142,11 @@ namespace cherrydev
                     if (sentenceParent.ChildNode == child)
                         sentenceParent.ChildNode = null;
                     break;
+                
+                case StageNode stageParent:
+                    if (stageParent.ChildNode == child)
+                        stageParent.ChildNode = null;
+                    break;
 
                 case ExternalFunctionNode externalFunctionParent:
                     if (externalFunctionParent.ChildNode == child)
@@ -165,6 +174,10 @@ namespace cherrydev
             {
                 case SentenceNode sentenceChild:
                     sentenceChild.RemoveFromParentConnectedNode(parent);
+                    break;
+                
+                case StageNode stageChild:
+                    stageChild.RemoveFromParentConnectedNode(parent);
                     break;
 
                 case ExternalFunctionNode externalFunctionChild:
@@ -213,6 +226,11 @@ namespace cherrydev
                         if (sentenceNode.ChildNode == node)
                             sentenceNode.ChildNode = null;
                         break;
+                    
+                    case StageNode stageNode:
+                        if (stageNode.ChildNode == node)
+                            stageNode.ChildNode = null;
+                        break;
 
                     case ExternalFunctionNode externalFunctionNode:
                         if (externalFunctionNode.ChildNode == node)
@@ -252,6 +270,10 @@ namespace cherrydev
                     case SentenceNode sentenceNode:
                         sentenceNode.RemoveFromParentConnectedNode(node);
                         break;
+                    
+                    case StageNode stageeNode:
+                        stageeNode.RemoveFromParentConnectedNode(node);
+                        break;
 
                     case ExternalFunctionNode externalFunctionNode:
                         externalFunctionNode.RemoveFromParentConnectedNode(node);
@@ -280,6 +302,7 @@ namespace cherrydev
             return node switch
             {
                 SentenceNode sentenceNode => new List<Node>(sentenceNode.ParentNodes),
+                StageNode stageNode => new List<Node>(stageNode.ParentNodes),
                 ExternalFunctionNode externalFunctionNode => new List<Node>(externalFunctionNode.ParentNodes),
                 AnswerNode answerNode => new List<Node>(answerNode.ParentNodes),
                 ModifyVariableNode modifyVariableNode => new List<Node>(modifyVariableNode.ParentNodes),
@@ -300,6 +323,11 @@ namespace cherrydev
                 case SentenceNode sentenceNode:
                     if (sentenceNode.ChildNode != null)
                         children.Add(sentenceNode.ChildNode);
+                    break;
+                
+                case StageNode stageNode:
+                    if (stageNode.ChildNode != null)
+                        children.Add(stageNode.ChildNode);
                     break;
 
                 case ExternalFunctionNode externalFunctionNode:

@@ -119,6 +119,51 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &458445770
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 458445772}
+  - component: {fileID: 458445771}
+  m_Layer: 0
+  m_Name: SceneController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &458445771
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 458445770}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fa85a4791a84744a0050868c4a32ecf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: WitchGate.Core::WitchGate.Controllers.SceneController
+  currentGameModeScene: {fileID: 11400000, guid: 0c142ab0ec26b1349828ce02d661d7db, type: 2}
+--- !u!4 &458445772
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 458445770}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -44.46742, y: 0, z: 16.28479}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1740569829
 GameObject:
   m_ObjectHideFlags: 0
@@ -148,57 +193,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7856c527c87040578c8a2714ae567d2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: WitchGate.Gameplay::WitchGate.Gameplay.Battles.LaunchDebugBattle
-  playerProfile:
-    <VelmoraProfile>k__BackingField:
-      <Witch>k__BackingField: 1
-      <Health>k__BackingField: 50
-      <MaxHealth>k__BackingField: 50
-      <Deck>k__BackingField:
-      - <Level>k__BackingField: 1
-        <CardID>k__BackingField: bad6bc94-50ab-4f89-9fa8-08df42b2a52f
-      - <Level>k__BackingField: 1
-        <CardID>k__BackingField: bad6bc94-50ab-4f89-9fa8-08df42b2a52f
-      - <Level>k__BackingField: 1
-        <CardID>k__BackingField: bad6bc94-50ab-4f89-9fa8-08df42b2a52f
-      - <Level>k__BackingField: 1
-        <CardID>k__BackingField: bad6bc94-50ab-4f89-9fa8-08df42b2a52f
-      - <Level>k__BackingField: 1
-        <CardID>k__BackingField: bad6bc94-50ab-4f89-9fa8-08df42b2a52f
-      - <Level>k__BackingField: 1
-        <CardID>k__BackingField: bad6bc94-50ab-4f89-9fa8-08df42b2a52f
-      - <Level>k__BackingField: 1
-        <CardID>k__BackingField: bad6bc94-50ab-4f89-9fa8-08df42b2a52f
-      - <Level>k__BackingField: 1
-        <CardID>k__BackingField: bad6bc94-50ab-4f89-9fa8-08df42b2a52f
-    <ElarisProfile>k__BackingField:
-      <Witch>k__BackingField: 2
-      <Health>k__BackingField: 50
-      <MaxHealth>k__BackingField: 50
-      <Deck>k__BackingField:
-      - <Level>k__BackingField: 1
-        <CardID>k__BackingField: cc0034b9-2ece-4f0a-a78d-5f2544c56167
-      - <Level>k__BackingField: 1
-        <CardID>k__BackingField: cc0034b9-2ece-4f0a-a78d-5f2544c56167
-      - <Level>k__BackingField: 1
-        <CardID>k__BackingField: cc0034b9-2ece-4f0a-a78d-5f2544c56167
-      - <Level>k__BackingField: 1
-        <CardID>k__BackingField: cc0034b9-2ece-4f0a-a78d-5f2544c56167
-      - <Level>k__BackingField: 1
-        <CardID>k__BackingField: cc0034b9-2ece-4f0a-a78d-5f2544c56167
-      - <Level>k__BackingField: 1
-        <CardID>k__BackingField: cc0034b9-2ece-4f0a-a78d-5f2544c56167
-      - <Level>k__BackingField: 1
-        <CardID>k__BackingField: cc0034b9-2ece-4f0a-a78d-5f2544c56167
-      - <Level>k__BackingField: 1
-        <CardID>k__BackingField: cc0034b9-2ece-4f0a-a78d-5f2544c56167
-  enemyProfile:
-    <Health>k__BackingField: 30
-    <MaxHealth>k__BackingField: 30
-    <Deck>k__BackingField:
-    - <Level>k__BackingField: 1
-      <CardID>k__BackingField: 06065e9d-f0d3-44c5-88b3-d3997a6da0ad
-    - <Level>k__BackingField: 1
-      <CardID>k__BackingField: 06065e9d-f0d3-44c5-88b3-d3997a6da0ad
+  enemyProfile: {fileID: 11400000, guid: e39c0dfb258e9724db25c7068e129699, type: 2}
 --- !u!4 &1740569831
 Transform:
   m_ObjectHideFlags: 0
@@ -219,3 +214,4 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 1740569831}
+  - {fileID: 458445772}

@@ -619,6 +619,22 @@ namespace cherrydev
                         DrawConnectionLine(parentNode, childNode, new Color(0.8f, 0.2f, 0.2f), "F");
                     }
                 }
+                else if (node.GetType() == typeof(StageNode))
+                {
+                    StageNode stageNode = (StageNode)node;
+
+                    if (stageNode.ChildNode != null)
+                    {
+                        parentNode = node;
+                        childNode = stageNode.ChildNode;
+
+                        Color connectionColor = Color.white;
+                        if (childNode is ExternalFunctionNode)
+                            connectionColor = new Color(0.2f, 0.8f, 0.6f);
+
+                        DrawConnectionLine(parentNode, childNode, connectionColor);
+                    }
+                }
             }
         }
 
@@ -1029,6 +1045,7 @@ namespace cherrydev
             {
                 Node node = GetHighlightedNode(currentEvent.mousePosition);
 
+                Debug.Log("the node is "+node);
                 if (node != null)
                     NodeConnectionHelper.CreateConnection(_currentNodeGraph.NodeToDrawLineFrom, node);
             }
@@ -1120,6 +1137,7 @@ namespace cherrydev
 
             contextMenu.AddItem(new GUIContent("Create Sentence Node"), false, CreateSentenceNode, mousePosition);
             contextMenu.AddItem(new GUIContent("Create Answer Node"), false, CreateAnswerNode, mousePosition);
+            contextMenu.AddItem(new GUIContent("Create Stage Node"), false, CreateStageNode, mousePosition);
             contextMenu.AddItem(new GUIContent("Create External Function Node"), false, CreateExternalFunctionNode,
                 mousePosition);
             contextMenu.AddItem(new GUIContent("Create Modify Variable Node"), false, CreateModifyVariableNode,
@@ -1187,6 +1205,13 @@ namespace cherrydev
         {
             AnswerNode answerNode = CreateInstance<AnswerNode>();
             InitializeNode(mousePositionObject, answerNode, "Answer Node");
+        }
+        
+        
+        private void CreateStageNode(object mousePositionObject)
+        {
+            StageNode stageNode = CreateInstance<StageNode>();
+            InitializeNode(mousePositionObject, stageNode, "Stage Node");
         }
 
         /// <summary>
