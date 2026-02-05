@@ -174,8 +174,7 @@ namespace cherrydev
 
             return false;
         }
-        
+#endif 
     }
     
-#endif 
 }
