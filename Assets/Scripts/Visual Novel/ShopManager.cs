@@ -19,6 +19,7 @@ namespace WitchGate.Prototype
         [field: SerializeField] public GameObject CloseButton { get; private set; }
         [field: SerializeField] public GameObject DialogueUI { get; private set; }
         [field: SerializeField] public GameObject VinylePanel { get; private set; }
+        private bool IsVinyleSelected;
         
         [field: SerializeField] public VNPlayedHandUI CardDropZone { get; private set; }
         
@@ -39,7 +40,7 @@ namespace WitchGate.Prototype
             currentClientIndex = 0;
             NextClient();
             Hand.SetActive(false);
-            dialogBehaviour.BindExternalFunction("ChooseVinyle", ToogleVinylePanel);
+            dialogBehaviour.BindExternalFunction("ChooseVinyle", WaitForVinyleChoice);
             
         }
 
@@ -95,7 +96,14 @@ namespace WitchGate.Prototype
         public void SelectMusic(Vinyle vinyle)
         {
             dialogBehaviour.SetVariableValue("Vinyl_Number",vinyle.VinyleNumber);
+            dialogBehaviour.SetVariableValue("IsFunctionCompleted",true);
             ToogleVinylePanel();
+        }
+
+        public void WaitForVinyleChoice()
+        {
+            ToogleVinylePanel();
+            dialogBehaviour.SetVariableValue("IsFunctionCompleted",false);
         }
 
         public void ToogleVinylePanel()

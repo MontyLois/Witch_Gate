@@ -595,6 +595,7 @@ namespace cherrydev
             CurrentExternalFunctionNode = externalFunctionNode;
 
             ExternalFunctionsHandler.CallExternalFunction(externalFunctionNode.GetExternalFunctionName());
+            
 
             if (externalFunctionNode.ChildNode != null)
             {
