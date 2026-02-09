@@ -9,6 +9,9 @@ namespace WitchGate.Cards
         public void OnSelect();
         public void Connect(T card);
         public T getCard();
+        
+        public void SelectWitch(Witch witch);
+        public Witch selectedWitch { get; set; }
     
     }
 }

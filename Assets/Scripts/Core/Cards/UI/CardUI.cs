@@ -9,6 +9,7 @@ namespace WitchGate.Cards.UI
     public class CardUI : MonoBehaviour
     {
         [field: SerializeField] public Image CardIllustration;
+        [field: SerializeField] public Image CardBackground;
         [field: SerializeField] public TMP_Text CardName;
         
         [field: SerializeField] public GameObject CardDescriptionGameObject { get; private set; }
@@ -20,6 +21,7 @@ namespace WitchGate.Cards.UI
             this.cardData = cardData;
             this.CardIllustration.sprite = this.cardData.Icon;
             this.CardName.text = this.cardData.Name;
+            this.CardBackground.sprite = this.cardData.BG;
         }
         
         public void ConnectCard(CardProfile cardProfile)

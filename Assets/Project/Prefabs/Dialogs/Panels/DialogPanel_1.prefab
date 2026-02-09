@@ -450,6 +450,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CharacterSlot
       objectReference: {fileID: 0}
+    - target: {fileID: 1725222255083372918, guid: 328159f32e4bd7b4681f919cd2c5bc06, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3278411069250363038, guid: 328159f32e4bd7b4681f919cd2c5bc06, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5

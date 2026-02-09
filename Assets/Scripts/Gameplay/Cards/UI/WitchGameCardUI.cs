@@ -12,12 +12,14 @@ namespace WitchGate.Gameplay
 
         [field : SerializeField] private Image cardIllustration;
         [field: SerializeField] private TMP_Text CardName;
+        [field: SerializeField] private Image cardBackground;
         
 
         protected override void ConnectWithCurrent()
         {
             cardIllustration.sprite = Current.Data.Icon;
             CardName.text = Current.Data.Name;
+            cardBackground.sprite = Current.Data.BG;
         }
         
         protected override void DisconnectWithCurrent()

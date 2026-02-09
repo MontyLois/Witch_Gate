@@ -16,6 +16,7 @@ MonoBehaviour:
   <Name>k__BackingField: Quartz
   <Description>k__BackingField: "Prendre d\xE9g\xE2ts \xE0 la place d'Elaris"
   <CardRarity>k__BackingField: 0
-  <Icon>k__BackingField: {fileID: -442071693, guid: 1b1ad2d9bc77b8444a2b8ce5691ea4ac, type: 3}
+  <Icon>k__BackingField: {fileID: -824580149, guid: a1140f2a22e4ae645aaa0d4ba9c1f8bc, type: 3}
+  <BG>k__BackingField: {fileID: -1160992765, guid: 596afeac36aea4e4e8c162d5d70e3afb, type: 3}
   <Priority>k__BackingField: 0
   <ID>k__BackingField: 08b37319-1e47-43c3-82cc-4031f777ae23

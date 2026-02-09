@@ -25,8 +25,6 @@ namespace WitchGate.Prototype
         
         [field: SerializeField] public GameObject Hand { get; private set; }
         
-        [field: SerializeField] public SceneData SceneData { get; private set; }
-        
         [SerializeField] private DialogBehaviour dialogBehaviour;
         [SerializeField] private DialogNodeGraph[] dialogGraph;
 
@@ -36,7 +34,6 @@ namespace WitchGate.Prototype
 
         private void Start()
         {
-            //SceneController.Instance.currentGameModeScene = SceneData;
             currentClientIndex = 0;
             NextClient();
             Hand.SetActive(false);
@@ -108,7 +105,6 @@ namespace WitchGate.Prototype
 
         public void ToogleVinylePanel()
         {
-            Debug.Log("we did it the dialog did it");
             VinylePanel.SetActive(!VinylePanel.activeSelf);
             DialogueUI.SetActive(!VinylePanel.activeSelf);
         }

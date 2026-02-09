@@ -16,6 +16,7 @@ MonoBehaviour:
   <Name>k__BackingField: "Am\xE9thyste"
   <Description>k__BackingField: Velmora gagne 3 points de vie
   <CardRarity>k__BackingField: 0
-  <Icon>k__BackingField: {fileID: -442071693, guid: 1b1ad2d9bc77b8444a2b8ce5691ea4ac, type: 3}
+  <Icon>k__BackingField: {fileID: 2036449607, guid: df5422cfa11bcdd4c83ca35a8186afd4, type: 3}
+  <BG>k__BackingField: {fileID: -1160992765, guid: 596afeac36aea4e4e8c162d5d70e3afb, type: 3}
   <Priority>k__BackingField: 0
   <ID>k__BackingField: 65120b6b-8cca-4a86-8728-901f54af8907
