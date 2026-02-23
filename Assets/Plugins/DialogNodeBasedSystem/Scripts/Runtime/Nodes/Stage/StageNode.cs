@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using cherrydev.Interface;
 using DialogNodeBaseSystem.Plugins.DialogNodeBasedSystem.Scripts.Runtime.Enums;
 using UnityEditor;
 using UnityEngine;
@@ -8,14 +9,14 @@ using WitchGate.VisualNovel.Visual_Novel.Dialog;
 namespace cherrydev
 {
     [CreateAssetMenu(menuName = "Scriptable Objects/Node Graph/Nodes/Stage Node", fileName = "New Stage Node")]
-    public class StageNode : Node
+    public class StageNode : OneChildNode
     {
         
         [SerializeField] private Stage _stage;
         
         [Space(10)] 
         public List<Node> ParentNodes = new();
-        public Node ChildNode;
+        //public Node ChildNode;
         
         
         private const float LabelFieldSpace = 47f;
@@ -24,7 +25,9 @@ namespace cherrydev
         
         public Stage Stage => _stage;
         
+        
 #if UNITY_EDITOR
+        
 
         /// <summary>
         /// Draw Sentence Node method
@@ -174,7 +177,8 @@ namespace cherrydev
 
             return false;
         }
-#endif 
+#endif
+        
     }
     
 }

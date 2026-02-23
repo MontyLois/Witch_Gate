@@ -95,6 +95,8 @@ namespace WitchGate.Prototype
             dialogBehaviour.SetVariableValue("Vinyl_Number",vinyle.VinyleNumber);
             dialogBehaviour.SetVariableValue("IsFunctionCompleted",true);
             ToogleVinylePanel();
+            dialogBehaviour.NextNode();
+            
         }
 
         public void WaitForVinyleChoice()

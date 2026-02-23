@@ -15,12 +15,13 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -270.33447
-    y: 253.33334
+    x: -2237.0005
+    y: 288.66687
     width: 190
     height: 135
   IsDragging: 1
   IsSelected: 0
+  ChildNode: {fileID: -5493066075146875532}
   _stage:
     CharacterData: {fileID: 11400000, guid: f76c2a6ccc23d354c9ec8e55ebcbff8f, type: 2}
     visibility: 0
@@ -28,7 +29,6 @@ MonoBehaviour:
     slotName: 0
   ParentNodes:
   - {fileID: 4363065833752978027}
-  ChildNode: {fileID: -5493066075146875532}
 --- !u!114 &-7618630702935728943
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -44,12 +44,13 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 2930.6655
-    y: 264.9999
+    x: 963.99927
+    y: 300.33344
     width: 190
-    height: 0
+    height: 135
   IsDragging: 1
   IsSelected: 0
+  ChildNode: {fileID: -2903131574548789527}
   _sentence:
     CharacterName: "Abiga\xEBlle"
     Text: "Non, \xE7a va. Je pense seulement \xE0 beaucoup de chose perso ence moment."
@@ -58,7 +59,6 @@ MonoBehaviour:
     expression: 2
   ParentNodes:
   - {fileID: 4236113218215929049}
-  ChildNode: {fileID: -2903131574548789527}
   _isExternalFunc: 0
   _externalFunctionName: 
   CharacterNameKey: 
@@ -78,12 +78,13 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 3006.9993
-    y: 2.6666412
+    x: 1040.3333
+    y: 38.000053
     width: 190
-    height: 0
+    height: 135
   IsDragging: 1
   IsSelected: 0
+  ChildNode: {fileID: -6187970471002876859}
   _sentence:
     CharacterName: "Abiga\xEBlle"
     Text: "\xE7a se voit tant que \xE7a ? "
@@ -92,7 +93,6 @@ MonoBehaviour:
     expression: 1
   ParentNodes:
   - {fileID: 4236113218215929049}
-  ChildNode: {fileID: -6187970471002876859}
   _isExternalFunc: 0
   _externalFunctionName: 
   CharacterNameKey: 
@@ -112,12 +112,13 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 3223.6667
-    y: -69.33329
+    x: 1256.9993
+    y: -33.999863
     width: 190
-    height: 0
+    height: 135
   IsDragging: 1
   IsSelected: 0
+  ChildNode: {fileID: 4840767897152959162}
   _sentence:
     CharacterName: 
     Text: "Pour \xEAtre honn\xEAte, je suis un peu anxieuse ces dernier temps \xE0
@@ -127,7 +128,6 @@ MonoBehaviour:
     expression: 2
   ParentNodes:
   - {fileID: -7432550522449624314}
-  ChildNode: {fileID: 4840767897152959162}
   _isExternalFunc: 0
   _externalFunctionName: 
   CharacterNameKey: 
@@ -147,12 +147,13 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 694.66833
-    y: 170.33328
+    x: -1271.9976
+    y: 205.66673
     width: 190
-    height: 0
+    height: 135
   IsDragging: 1
   IsSelected: 0
+  ChildNode: {fileID: 7334688636739828862}
   _sentence:
     CharacterName: Elaris
     Text: Hey ! Dis moi, tu viens pour quoi?
@@ -161,7 +162,6 @@ MonoBehaviour:
     expression: 1
   ParentNodes:
   - {fileID: 8464188962346203594}
-  ChildNode: {fileID: 7334688636739828862}
   _isExternalFunc: 0
   _externalFunctionName: 
   CharacterNameKey: 
@@ -181,12 +181,13 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 714.66833
-    y: 387.33325
+    x: -1251.9976
+    y: 422.6668
     width: 190
-    height: 0
+    height: 135
   IsDragging: 1
   IsSelected: 0
+  ChildNode: {fileID: 9204177260375245009}
   _sentence:
     CharacterName: Elaris
     Text: Sup, tu veux quoi?
@@ -195,7 +196,6 @@ MonoBehaviour:
     expression: 2
   ParentNodes:
   - {fileID: 8464188962346203594}
-  ChildNode: {fileID: 9204177260375245009}
   _isExternalFunc: 0
   _externalFunctionName: 
   CharacterNameKey: 
@@ -215,12 +215,13 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -9.668457
-    y: 254.00003
+    x: -1976.3345
+    y: 289.33356
     width: 190
     height: 135
   IsDragging: 1
   IsSelected: 0
+  ChildNode: {fileID: 8464188962346203594}
   _stage:
     CharacterData: {fileID: 11400000, guid: 4f59aac53de14b04ebea0ad618a25c9f, type: 2}
     visibility: 1
@@ -228,7 +229,6 @@ MonoBehaviour:
     slotName: 0
   ParentNodes:
   - {fileID: -9136480394919025530}
-  ChildNode: {fileID: 8464188962346203594}
 --- !u!114 &-4826624818468476582
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -244,12 +244,13 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 2053.001
-    y: 125.333405
+    x: 86.33505
+    y: 160.66682
     width: 190
-    height: 0
+    height: 135
   IsDragging: 1
   IsSelected: 0
+  ChildNode: {fileID: 4944146430908420812}
   _sentence:
     CharacterName: "Abiga\xEBlle"
     Text: "Oui ! Pourquoi pas ! Pour tout avouer, j'\xE9coute souvent le m\xEAme
@@ -259,7 +260,6 @@ MonoBehaviour:
     expression: 1
   ParentNodes:
   - {fileID: -858738700121652252}
-  ChildNode: {fileID: 4944146430908420812}
   _isExternalFunc: 0
   _externalFunctionName: 
   CharacterNameKey: 
@@ -279,19 +279,19 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -1016.334
-    y: 245.99997
+    x: -2983.001
+    y: 281.33344
     width: 190
     height: 135
   IsDragging: 1
   IsSelected: 0
+  ChildNode: {fileID: 1179389955632101922}
   _stage:
     CharacterData: {fileID: 11400000, guid: e5c897c26a297814f9bd24ce66295ca9, type: 2}
     visibility: 1
     expression: 0
     slotName: 1
   ParentNodes: []
-  ChildNode: {fileID: 1179389955632101922}
 --- !u!114 &-3152575183784730798
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -307,12 +307,13 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 3663.6665
-    y: 117.333374
+    x: 1696.9983
+    y: 152.6668
     width: 190
-    height: 0
+    height: 135
   IsDragging: 1
   IsSelected: 0
+  ChildNode: {fileID: -2903131574548789527}
   _sentence:
     CharacterName: 
     Text: "Oui.. enfin non pas vraiment.... c'est juste qu'il y a eu une disparition
@@ -323,7 +324,6 @@ MonoBehaviour:
     expression: 0
   ParentNodes:
   - {fileID: 4840767897152959162}
-  ChildNode: {fileID: -2903131574548789527}
   _isExternalFunc: 0
   _externalFunctionName: 
   CharacterNameKey: 
@@ -343,12 +343,13 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 3928.331
-    y: 108.99997
+    x: 1961.6636
+    y: 144.33339
     width: 190
-    height: 0
+    height: 135
   IsDragging: 1
   IsSelected: 0
+  ChildNode: {fileID: 0}
   _sentence:
     CharacterName: "Abiga\xEBlle"
     Text: "Enfin bon, Je vais y aller \xE0 bient\xF4t"
@@ -358,7 +359,6 @@ MonoBehaviour:
   ParentNodes:
   - {fileID: -7618630702935728943}
   - {fileID: -3152575183784730798}
-  ChildNode: {fileID: 0}
   _isExternalFunc: 0
   _externalFunctionName: 
   CharacterNameKey: 
@@ -378,12 +378,13 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 1846.3356
-    y: 128.00003
+    x: -120.33035
+    y: 163.33345
     width: 190
-    height: 0
+    height: 135
   IsDragging: 1
   IsSelected: 0
+  ChildNode: {fileID: -4826624818468476582}
   _sentence:
     CharacterName: Elaris
     Text: "Nan, d\xE9sol\xE9e, il est en rupture de stock. Mais si t'aimes la musique
@@ -394,7 +395,6 @@ MonoBehaviour:
     expression: 0
   ParentNodes:
   - {fileID: 2128725466365093873}
-  ChildNode: {fileID: -4826624818468476582}
   _isExternalFunc: 0
   _externalFunctionName: 
   CharacterNameKey: 
@@ -458,12 +458,13 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -764.3345
-    y: 251.3334
+    x: -2729.001
+    y: 278.66687
     width: 190
     height: 135
   IsDragging: 1
   IsSelected: 0
+  ChildNode: {fileID: 4363065833752978027}
   _stage:
     CharacterData: {fileID: 11400000, guid: f76c2a6ccc23d354c9ec8e55ebcbff8f, type: 2}
     visibility: 1
@@ -471,7 +472,6 @@ MonoBehaviour:
     slotName: 0
   ParentNodes:
   - {fileID: -3808618171546961752}
-  ChildNode: {fileID: 4363065833752978027}
 --- !u!114 &2128725466365093873
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -487,10 +487,10 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 1530.9991
-    y: 300.3331
+    x: -435.66672
+    y: 335.66663
     width: 190
-    height: 115
+    height: 135
   IsDragging: 1
   IsSelected: 0
   Answers:
@@ -502,6 +502,7 @@ MonoBehaviour:
   ChildNodes:
   - {fileID: -858738700121652252}
   - {fileID: 6687558246318772947}
+  nextNodeIndex: 0
 --- !u!114 &4236113218215929049
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -517,8 +518,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 2709
-    y: 31.333359
+    x: 742.3341
+    y: 66.66678
     width: 240
     height: 160
   IsDragging: 1
@@ -548,12 +549,13 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -504.33545
-    y: 247.00003
+    x: -2471.002
+    y: 282.3335
     width: 190
-    height: 0
+    height: 135
   IsDragging: 1
   IsSelected: 0
+  ChildNode: {fileID: -9136480394919025530}
   _sentence:
     CharacterName: Velmora
     Text: "<Wave> Abiga\xEBlle</> ! Elle tombe \xE0 pic occupes toi d'elle!"
@@ -562,7 +564,6 @@ MonoBehaviour:
     expression: 1
   ParentNodes:
   - {fileID: 1179389955632101922}
-  ChildNode: {fileID: -9136480394919025530}
   _isExternalFunc: 0
   _externalFunctionName: 
   CharacterNameKey: 
@@ -582,12 +583,13 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 3400.3337
-    y: 108.66666
+    x: 1433.6653
+    y: 144.00008
     width: 190
-    height: 0
+    height: 135
   IsDragging: 1
   IsSelected: 0
+  ChildNode: {fileID: -3152575183784730798}
   _sentence:
     CharacterName: 
     Text: "Il s'est pass\xE9 quelque chose au cimeti\xE8re ? "
@@ -596,7 +598,6 @@ MonoBehaviour:
     expression: 0
   ParentNodes:
   - {fileID: -6187970471002876859}
-  ChildNode: {fileID: -3152575183784730798}
   _isExternalFunc: 0
   _externalFunctionName: 
   CharacterNameKey: 
@@ -616,12 +617,13 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 2317.001
-    y: 280.66647
+    x: 350.3352
+    y: 316.00006
     width: 190
-    height: 0
+    height: 135
   IsDragging: 1
   IsSelected: 0
+  ChildNode: {fileID: 7815391446416710835}
   _sentence:
     CharacterName: Elaris
     Text: Ok, alors pour rester dans ton style mais en mieux je te dirais...
@@ -631,7 +633,6 @@ MonoBehaviour:
   ParentNodes:
   - {fileID: -4826624818468476582}
   - {fileID: 7125346346369537327}
-  ChildNode: {fileID: 7815391446416710835}
   _isExternalFunc: 0
   _externalFunctionName: 
   CharacterNameKey: 
@@ -651,12 +652,13 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 1331.6647
-    y: 296.99973
+    x: -635.0012
+    y: 332.3333
     width: 190
-    height: 0
+    height: 135
   IsDragging: 1
   IsSelected: 0
+  ChildNode: {fileID: 2128725466365093873}
   _sentence:
     CharacterName: Elaris
     Text: "Je regarde \xE7a tout de suite...Alors"
@@ -666,7 +668,6 @@ MonoBehaviour:
   ParentNodes:
   - {fileID: 7334688636739828862}
   - {fileID: 9204177260375245009}
-  ChildNode: {fileID: 2128725466365093873}
   _isExternalFunc: 0
   _externalFunctionName: 
   CharacterNameKey: 
@@ -686,12 +687,13 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 1836.0022
-    y: 366.33316
+    x: -130.66336
+    y: 401.6667
     width: 190
-    height: 0
+    height: 135
   IsDragging: 1
   IsSelected: 0
+  ChildNode: {fileID: 7125346346369537327}
   _sentence:
     CharacterName: Elaris
     Text: "Cette daube ? Nan, d\xE9so j'ai pas. Par contre, si tu veux je peux te
@@ -701,7 +703,6 @@ MonoBehaviour:
     expression: 2
   ParentNodes:
   - {fileID: 2128725466365093873}
-  ChildNode: {fileID: 7125346346369537327}
   _isExternalFunc: 0
   _externalFunctionName: 
   CharacterNameKey: 
@@ -721,12 +722,13 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 2051.6675
-    y: 364.00003
+    x: 85.00156
+    y: 399.33356
     width: 190
-    height: 0
+    height: 135
   IsDragging: 1
   IsSelected: 0
+  ChildNode: {fileID: 4944146430908420812}
   _sentence:
     CharacterName: "Abiga\xEBlle"
     Text: Euh... Ouais, pourquoi pas...
@@ -735,7 +737,6 @@ MonoBehaviour:
     expression: 2
   ParentNodes:
   - {fileID: 6687558246318772947}
-  ChildNode: {fileID: 4944146430908420812}
   _isExternalFunc: 0
   _externalFunctionName: 
   CharacterNameKey: 
@@ -755,12 +756,13 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 1011.66614
-    y: 164.66666
+    x: -954.99976
+    y: 200.0001
     width: 190
-    height: 0
+    height: 135
   IsDragging: 1
   IsSelected: 0
+  ChildNode: {fileID: 5789640660060435712}
   _sentence:
     CharacterName: "Abiga\xEBlle"
     Text: Bonjour ! Je voulais savoir si vous aviez l'album de Tessa?
@@ -769,7 +771,6 @@ MonoBehaviour:
     expression: 1
   ParentNodes:
   - {fileID: -5701140139791209159}
-  ChildNode: {fileID: 5789640660060435712}
   _isExternalFunc: 0
   _externalFunctionName: 
   CharacterNameKey: 
@@ -789,17 +790,17 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 2481.6665
-    y: 75.33331
+    x: 515.00073
+    y: 110.66673
     width: 190
     height: 80
   IsDragging: 1
   IsSelected: 0
+  ChildNode: {fileID: 4236113218215929049}
   _functionName: ChooseVinyle
   _description: 
   ParentNodes:
   - {fileID: 4944146430908420812}
-  ChildNode: {fileID: 4236113218215929049}
 --- !u!114 &8464188962346203594
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -815,10 +816,10 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 257.66406
-    y: 259.99997
+    x: -1709.0024
+    y: 295.3335
     width: 190
-    height: 115
+    height: 135
   IsDragging: 1
   IsSelected: 0
   Answers:
@@ -829,6 +830,7 @@ MonoBehaviour:
   ChildNodes:
   - {fileID: -5701140139791209159}
   - {fileID: -5686625207268807504}
+  nextNodeIndex: 0
 --- !u!114 &9204177260375245009
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -844,12 +846,13 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 1023.99915
-    y: 383.99982
+    x: -942.66675
+    y: 419.33337
     width: 190
-    height: 0
+    height: 135
   IsDragging: 1
   IsSelected: 0
+  ChildNode: {fileID: 5789640660060435712}
   _sentence:
     CharacterName: "Abiga\xEBlle"
     Text: "S...Sup? Euh...Je..Je.. Vous avez, um, l'album de Tessaa, Nuit argent\xE9e?
@@ -859,7 +862,6 @@ MonoBehaviour:
     expression: 2
   ParentNodes:
   - {fileID: -5686625207268807504}
-  ChildNode: {fileID: 5789640660060435712}
   _isExternalFunc: 0
   _externalFunctionName: 
   CharacterNameKey: 

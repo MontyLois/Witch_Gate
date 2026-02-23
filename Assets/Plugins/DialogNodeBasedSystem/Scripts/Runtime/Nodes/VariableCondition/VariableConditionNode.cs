@@ -12,7 +12,9 @@ namespace cherrydev
     {
         [SerializeField] private string _variableName = "";
         [SerializeField] private ConditionType _conditionType = ConditionType.Equal;
+        private bool conditionResult;
         
+        [Header("Target Values")]
         [SerializeField] private bool _boolTargetValue;
         [SerializeField] private int _intTargetValue;
         [SerializeField] private float _floatTargetValue;
@@ -57,24 +59,32 @@ namespace cherrydev
 
         private bool EvaluateConditionForType(Variable variable)
         {
+            bool conditionEvaluation = false;
+            
             switch (variable.Type)
             {
                 case VariableType.Bool:
-                    return EvaluateBoolCondition(variable.GetBoolValue());
+                    conditionEvaluation = EvaluateBoolCondition(variable.GetBoolValue());
+                    break;
                     
                 case VariableType.Int:
-                    return EvaluateIntCondition(variable.GetIntValue());
+                    conditionEvaluation = EvaluateIntCondition(variable.GetIntValue());
+                    break;
                     
                 case VariableType.Float:
-                    return EvaluateFloatCondition(variable.GetFloatValue());
+                    conditionEvaluation =  EvaluateFloatCondition(variable.GetFloatValue());
+                    break;
                     
                 case VariableType.String:
-                    return EvaluateStringCondition(variable.GetStringValue());
+                    conditionEvaluation = EvaluateStringCondition(variable.GetStringValue());
+                    break;
                     
                 default:
                     Debug.LogWarning($"Unsupported variable type: {variable.Type}");
-                    return false;
+                    break;
             }
+            conditionResult = conditionEvaluation;
+            return conditionEvaluation;
         }
 
         private bool EvaluateBoolCondition(bool variableValue)
@@ -163,12 +173,23 @@ namespace cherrydev
 
             return $"{_variableName} {conditionSymbol} {targetValue}";
         }
+        
 
+        public override Node GetNextNode()
+        {
+            if (conditionResult)
+                return TrueChildNode;
+            else
+                return FalseChildNode;
+        }
+
+        
 #if UNITY_EDITOR
         private const float LabelWidth = 80f;
         private const float FieldWidth = 90f;
         private const float NodeWidth = 240f;
         private const float NodeHeight = 160f;
+        
 
         public override void Draw(GUIStyle nodeStyle, GUIStyle labelStyle)
         {

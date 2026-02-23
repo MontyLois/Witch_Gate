@@ -316,6 +316,26 @@ namespace cherrydev
             _currentNode = node;
             HandleDialogGraphCurrentNode(_currentNode);
         }
+        
+        
+        /// <summary>
+        /// Passing to the current node child
+        /// </summary>
+        public void NextNode()
+        {
+            //_currentNode.NextNode(this);
+
+            _currentNode = _currentNode.GetNextNode();
+            if (_currentNode != null)
+            {
+                HandleDialogGraphCurrentNode(_currentNode);
+            }
+            else
+            {
+                EndDialog();
+            }
+        }
+
 
         /// <summary>
         /// Setting currentNode field to Node and call HandleDialogGraphCurrentNode method
@@ -415,6 +435,10 @@ namespace cherrydev
                 HandleVariableConditionNode(currentNode);
             else if (currentNode.GetType() == typeof(ExternalFunctionNode))
                 HandleExternalFunctionNode(currentNode);
+            
+            Debug.Log(currentNode + " " + currentNode.automaticSkip);
+            if(currentNode.automaticSkip)
+                NextNode();
         }
 
         /// <summary>
@@ -466,15 +490,16 @@ namespace cherrydev
             StageNodeActivatedWithParameter?.Invoke(stage.CharacterData, stage.visibility, 
                 stage.expression, stage.slotName);
             
-            if (sentenceNode.ChildNode != null)
+            /*if (sentenceNode.ChildNode != null)
             {
                 _currentNode = sentenceNode.ChildNode;
                 HandleDialogGraphCurrentNode(_currentNode);
             }
             else
-                EndDialog();
+                EndDialog();*/
         }
 
+        
         /// <summary>
         /// Processing answer node
         /// </summary>
@@ -529,13 +554,13 @@ namespace cherrydev
             else
                 Debug.LogWarning("Variables handler is null, cannot execute ModifyVariableNode");
 
-            if (modifyVariableNode.ChildNode != null)
+            /*if (modifyVariableNode.ChildNode != null)
             {
                 _currentNode = modifyVariableNode.ChildNode;
                 HandleDialogGraphCurrentNode(_currentNode);
             }
             else
-                EndDialog();
+                EndDialog();*/
         }
 
         /// <summary>
@@ -572,7 +597,7 @@ namespace cherrydev
                 Debug.Log($"Variable condition '{variableConditionNode.VariableName}' evaluated to FALSE");
             }
 
-            if (nextNode != null)
+            /*if (nextNode != null)
             {
                 _currentNode = nextNode;
                 HandleDialogGraphCurrentNode(_currentNode);
@@ -582,7 +607,7 @@ namespace cherrydev
                 Debug.LogWarning(
                     $"No {(conditionResult ? "TRUE" : "FALSE")} path connected for variable condition node");
                 EndDialog();
-            }
+            }*/
         }
 
         /// <summary>
@@ -595,21 +620,20 @@ namespace cherrydev
             CurrentExternalFunctionNode = externalFunctionNode;
 
             ExternalFunctionsHandler.CallExternalFunction(externalFunctionNode.GetExternalFunctionName());
-            
 
-            if (externalFunctionNode.ChildNode != null)
+            /*if (externalFunctionNode.ChildNode != null)
             {
                 _currentNode = externalFunctionNode.ChildNode;
                 HandleDialogGraphCurrentNode(_currentNode);
             }
             else
-                EndDialog();
+                EndDialog();*/
         }
 
         /// <summary>
         /// Ends the dialog and unbinds all tracked external functions
         /// </summary>
-        private void EndDialog()
+        public void EndDialog()
         {
             _isDialogStarted = false;
 
@@ -728,51 +752,9 @@ namespace cherrydev
 
             yield return new WaitUntil(() => CheckNextSentenceKeyCodes() && IsActive);
 
-            CheckForDialogNextNode();
+            NextNode();
         }
-
-        /// <summary>
-        /// Checking is next dialog node has a child node
-        /// </summary>
-        private void CheckForDialogNextNode()
-        {
-            if (_currentNode.GetType() == typeof(SentenceNode))
-            {
-                SentenceNode sentenceNode = (SentenceNode)_currentNode;
-
-                if (sentenceNode.ChildNode != null)
-                {
-                    _currentNode = sentenceNode.ChildNode;
-                    HandleDialogGraphCurrentNode(_currentNode);
-                }
-                else
-                    EndDialog();
-            }
-            else if (_currentNode.GetType() == typeof(ExternalFunctionNode))
-            {
-                ExternalFunctionNode externalFunctionNode = (ExternalFunctionNode)_currentNode;
-
-                if (externalFunctionNode.ChildNode != null)
-                {
-                    _currentNode = externalFunctionNode.ChildNode;
-                    HandleDialogGraphCurrentNode(_currentNode);
-                }
-                else
-                    EndDialog();
-            }
-            else if (_currentNode.GetType() == typeof(ModifyVariableNode))
-            {
-                ModifyVariableNode modifyVariableNode = (ModifyVariableNode)_currentNode;
-
-                if (modifyVariableNode.ChildNode != null)
-                {
-                    _currentNode = modifyVariableNode.ChildNode;
-                    HandleDialogGraphCurrentNode(_currentNode);
-                }
-                else
-                    EndDialog();
-            }
-        }
+        
 
         /// <summary>
         /// Calculate max amount of answer buttons
@@ -818,6 +800,16 @@ namespace cherrydev
             }
 
             return false;
+        }
+
+        /// <summary>
+        /// Skip the text (manual event) 
+        /// </summary>
+        /// <returns></returns>
+        public void SkipText()
+        {
+            if(!_isCurrentSentenceSkipped)
+                _isCurrentSentenceSkipped = true;
         }
     }
 }

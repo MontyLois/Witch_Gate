@@ -11,13 +11,13 @@ using UnityEngine.Localization.Settings;
 namespace cherrydev
 {
     [CreateAssetMenu(menuName = "Scriptable Objects/Node Graph/Nodes/Sentence Node", fileName = "New Sentence Node")]
-    public class SentenceNode : Node
+    public class SentenceNode : OneChildNode
     {
         [SerializeField] private Sentence _sentence;
 
         [Space(10)] 
         public List<Node> ParentNodes = new();
-        public Node ChildNode;
+        //public Node ChildNode;
 
         [Space(7)] 
         [SerializeField] private bool _isExternalFunc;
@@ -34,7 +34,18 @@ namespace cherrydev
         private const float LabelFieldSpace = 47f;
         private const float TextFieldWidth = 100f;
         private const float ExternalNodeHeight = 155f;
+        
+        public override bool automaticSkip { get; protected set; } = false;
 
+        
+        
+        public override void Initialize(Rect rect, string nodeName, DialogNodeGraph nodeGraph)
+        {
+            base.Initialize(rect, nodeName, nodeGraph);
+            automaticSkip = false;
+        }
+        
+        
         /// <summary>
         /// Returns character name, using localization if available
         /// </summary>

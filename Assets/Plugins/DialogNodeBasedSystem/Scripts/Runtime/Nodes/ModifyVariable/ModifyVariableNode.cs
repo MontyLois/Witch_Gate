@@ -9,7 +9,7 @@ namespace cherrydev
 {
     [CreateAssetMenu(menuName = "Scriptable Objects/Node Graph/Nodes/Modify Variable Node",
         fileName = "New Modify Variable Node")]
-    public class ModifyVariableNode : Node
+    public class ModifyVariableNode : OneChildNode
     {
         [SerializeField] private string _variableName = "";
         [SerializeField] private ModificationType _modifyType = ModificationType.Set;
@@ -21,7 +21,7 @@ namespace cherrydev
 
         [Space(10)]
         public List<Node> ParentNodes = new();
-        public Node ChildNode;
+        //public Node ChildNode;
 
         public string VariableName => _variableName;
         public ModificationType Modification => _modifyType;

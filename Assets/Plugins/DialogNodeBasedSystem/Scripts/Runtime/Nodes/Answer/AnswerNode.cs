@@ -28,6 +28,9 @@ namespace cherrydev
         private float _currentAnswerNodeHeight = 115f;
         private const float AdditionalAnswerNodeHeight = 20f;
 
+        public int nextNodeIndex;
+       
+
         public string GetAnswerText(int index)
         {
             if (index < 0 || index >= Answers.Count)
@@ -62,6 +65,13 @@ namespace cherrydev
 
 #if UNITY_EDITOR
 
+       
+
+        public override Node GetNextNode()
+        {
+            return ChildNodes[nextNodeIndex];
+        }
+
         /// <summary>
         /// Answer node initialisation method
         /// </summary>
@@ -74,6 +84,7 @@ namespace cherrydev
 
             CalculateAmountOfAnswers();
             ChildNodes = new List<Node>(_amountOfAnswers);
+            automaticSkip = false;
         }
 
         /// <summary>
