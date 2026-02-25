@@ -88,6 +88,8 @@ namespace cherrydev
             EditorGUILayout.LabelField($"AutomaticSkip ", GUILayout.Width(LabelFieldSpace));
             automaticSkip = EditorGUILayout.Toggle(automaticSkip, GUILayout.Width(TextFieldWidth));
             EditorGUILayout.EndHorizontal();
+            
+            EditorUtility.SetDirty(this);
         }
 
         /// <summary>

@@ -51,6 +51,7 @@ namespace cherrydev
         private bool _isDialogStarted;
         private bool _isCurrentSentenceSkipped;
         private bool _isCurrentSentenceTyping;
+        private bool _isCurrentSentenceNext;
 
         private readonly List<string> _boundFunctionNames = new();
 
@@ -436,7 +437,6 @@ namespace cherrydev
             else if (currentNode.GetType() == typeof(ExternalFunctionNode))
                 HandleExternalFunctionNode(currentNode);
             
-            Debug.Log(currentNode + " " + currentNode.automaticSkip);
             if(currentNode.automaticSkip)
                 NextNode();
         }
@@ -451,6 +451,7 @@ namespace cherrydev
             CurrentSentenceNode = sentenceNode;
 
             _isCurrentSentenceSkipped = false;
+            _isCurrentSentenceNext = false;
 
             SentenceNodeActivated?.Invoke();
 
@@ -750,7 +751,7 @@ namespace cherrydev
             _isCurrentSentenceTyping = false;
             SentenceEnded?.Invoke();
 
-            yield return new WaitUntil(() => CheckNextSentenceKeyCodes() && IsActive);
+            yield return new WaitUntil(() => _isCurrentSentenceNext && IsActive);
 
             NextNode();
         }
@@ -783,8 +784,18 @@ namespace cherrydev
             if (!_isDialogStarted || !_isCanSkippingText)
                 return;
 
-            if (CheckNextSentenceKeyCodes() && !_isCurrentSentenceSkipped)
-                _isCurrentSentenceSkipped = true;
+            if (CheckNextSentenceKeyCodes())
+            {
+                if (_isCurrentSentenceTyping)
+                {
+                    _isCurrentSentenceSkipped = true;
+                }
+                else
+                {
+                    _isCurrentSentenceNext = true;
+                }
+            }
+                
         }
 
         /// <summary>
@@ -808,8 +819,17 @@ namespace cherrydev
         /// <returns></returns>
         public void SkipText()
         {
-            if(!_isCurrentSentenceSkipped)
+            Debug.Log(_isCurrentSentenceSkipped);
+            if (_isCurrentSentenceTyping)
+            {
                 _isCurrentSentenceSkipped = true;
+            }
+            else
+            {
+                _isCurrentSentenceNext = true;
+            }
+                
+            
         }
     }
 }

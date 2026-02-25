@@ -16,7 +16,7 @@ namespace WitchGate.Cards
         
         public Witch selectedWitch  { get; set; } = Witch.None;
 
-        private void OnEnable()
+        private void Start()
         {
             playerProfile = GameController.GameDatabase.PlayerProfile;
             card = getCard();
@@ -38,8 +38,10 @@ namespace WitchGate.Cards
 
         public void SelectWitch(Witch witch)
         {
+            playerProfile = GameController.GameDatabase.PlayerProfile;
+            Debug.Log(playerProfile);
             selectedWitch = witch;
-            card = playerProfile.GetRandomCardProfile(selectedWitch);
+            card = getCard();
             Connect(card);
         }
 

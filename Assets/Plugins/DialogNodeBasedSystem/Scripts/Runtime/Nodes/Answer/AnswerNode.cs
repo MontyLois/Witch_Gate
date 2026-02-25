@@ -30,6 +30,23 @@ namespace cherrydev
 
         public int nextNodeIndex;
        
+        protected virtual void OnEnable()
+        {
+            // Only set default if it's a new asset or uninitialized
+            if (!hasInitialized)
+            {
+                automaticSkip = false;
+                hasInitialized = true;
+            }
+        }
+
+        [SerializeField, HideInInspector]
+        private bool hasInitialized = false;
+        
+        public override Node GetNextNode()
+        {
+            return ChildNodes[nextNodeIndex];
+        }
 
         public string GetAnswerText(int index)
         {
@@ -65,12 +82,7 @@ namespace cherrydev
 
 #if UNITY_EDITOR
 
-       
-
-        public override Node GetNextNode()
-        {
-            return ChildNodes[nextNodeIndex];
-        }
+        
 
         /// <summary>
         /// Answer node initialisation method

@@ -15,19 +15,20 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -415
-    y: 227
+    x: -741.6666
+    y: 174.33331
     width: 190
     height: 135
   IsDragging: 1
   IsSelected: 0
+  automaticSkip: 1
+  ChildNode: {fileID: -1664910696392004440}
   _stage:
     CharacterData: {fileID: 11400000, guid: dd9a0ea30a397c84aa0a9d14eb18eb5a, type: 2}
     visibility: 1
     expression: 1
     slotName: 0
   ParentNodes: []
-  ChildNode: {fileID: -1664910696392004440}
 --- !u!114 &-5423085267946182857
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -43,12 +44,14 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 334
-    y: 228
+    x: 7.3333435
+    y: 175.33331
     width: 190
     height: 135
   IsDragging: 1
   IsSelected: 0
+  automaticSkip: 0
+  ChildNode: {fileID: -463986552070027615}
   _sentence:
     CharacterName: 
     Text: "Salut ! Alors laquelle d'entre vous veux am\xE9liorer ses pouvoirs ce
@@ -58,11 +61,11 @@ MonoBehaviour:
     expression: 1
   ParentNodes:
   - {fileID: -75272685267230350}
-  ChildNode: {fileID: -463986552070027615}
   _isExternalFunc: 0
   _externalFunctionName: 
   CharacterNameKey: 
   SentenceTextKey: 
+  hasInitialized: 1
 --- !u!114 &-4323434133699250750
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -78,12 +81,14 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 1561
-    y: 155
+    x: 1234.3334
+    y: 102.33331
     width: 190
     height: 135
   IsDragging: 1
   IsSelected: 0
+  automaticSkip: 0
+  ChildNode: {fileID: -733480723795796557}
   _sentence:
     CharacterName: 
     Text: Montre moi ce que tu sais faire
@@ -92,11 +97,11 @@ MonoBehaviour:
     expression: 1
   ParentNodes:
   - {fileID: -4317924674020854482}
-  ChildNode: {fileID: -733480723795796557}
   _isExternalFunc: 0
   _externalFunctionName: 
   CharacterNameKey: 
   SentenceTextKey: 
+  hasInitialized: 1
 --- !u!114 &-4317924674020854482
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -112,12 +117,14 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 1313
-    y: 146
+    x: 986.3335
+    y: 93.33332
     width: 190
     height: 135
   IsDragging: 1
   IsSelected: 0
+  automaticSkip: 1
+  ChildNode: {fileID: -4323434133699250750}
   _stage:
     CharacterData: {fileID: 11400000, guid: f76c2a6ccc23d354c9ec8e55ebcbff8f, type: 2}
     visibility: 0
@@ -125,7 +132,6 @@ MonoBehaviour:
     slotName: 1
   ParentNodes:
   - {fileID: -3239751729797214764}
-  ChildNode: {fileID: -4323434133699250750}
 --- !u!114 &-3239751729797214764
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -141,17 +147,18 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 1094
-    y: 180
+    x: 767.3335
+    y: 127.33332
     width: 190
     height: 80
   IsDragging: 1
   IsSelected: 0
+  automaticSkip: 1
+  ChildNode: {fileID: -4317924674020854482}
   _functionName: SelectWitch
   _description: 
   ParentNodes:
   - {fileID: 3286905096141416239}
-  ChildNode: {fileID: -4317924674020854482}
 --- !u!114 &-1664910696392004440
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -167,12 +174,14 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -136
-    y: 230
+    x: -462.66666
+    y: 177.33331
     width: 190
     height: 135
   IsDragging: 1
   IsSelected: 0
+  automaticSkip: 1
+  ChildNode: {fileID: -75272685267230350}
   _stage:
     CharacterData: {fileID: 11400000, guid: e5c897c26a297814f9bd24ce66295ca9, type: 2}
     visibility: 1
@@ -180,7 +189,6 @@ MonoBehaviour:
     slotName: 1
   ParentNodes:
   - {fileID: -9168931535832667767}
-  ChildNode: {fileID: -75272685267230350}
 --- !u!114 &-921276460245668631
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -196,17 +204,18 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 1103
-    y: 391
+    x: 776.3335
+    y: 338.33328
     width: 190
     height: 80
   IsDragging: 1
   IsSelected: 0
+  automaticSkip: 1
+  ChildNode: {fileID: 7735071931362991249}
   _functionName: SelectWitch
   _description: 
   ParentNodes:
   - {fileID: 816631323725408308}
-  ChildNode: {fileID: 7735071931362991249}
 --- !u!114 &-733480723795796557
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -222,12 +231,14 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 1849
-    y: 226
+    x: 1522.3334
+    y: 173.33331
     width: 190
     height: 135
   IsDragging: 1
   IsSelected: 0
+  automaticSkip: 0
+  ChildNode: {fileID: 6434443676949277372}
   _sentence:
     CharacterName: 
     Text: Ok, c'est partie !
@@ -237,11 +248,11 @@ MonoBehaviour:
   ParentNodes:
   - {fileID: -4323434133699250750}
   - {fileID: 7247160318944855385}
-  ChildNode: {fileID: 6434443676949277372}
   _isExternalFunc: 0
   _externalFunctionName: 
   CharacterNameKey: 
   SentenceTextKey: 
+  hasInitialized: 1
 --- !u!114 &-463986552070027615
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -257,12 +268,13 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 600
-    y: 237
+    x: 273.33337
+    y: 184.33331
     width: 190
     height: 135
   IsDragging: 1
   IsSelected: 0
+  automaticSkip: 0
   Answers:
   - Elaris
   - Velmora
@@ -272,6 +284,8 @@ MonoBehaviour:
   ChildNodes:
   - {fileID: 3286905096141416239}
   - {fileID: 816631323725408308}
+  nextNodeIndex: 0
+  hasInitialized: 1
 --- !u!114 &-75272685267230350
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -287,12 +301,14 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 74
-    y: 229
+    x: -252.66666
+    y: 176.33331
     width: 190
     height: 135
   IsDragging: 1
   IsSelected: 0
+  automaticSkip: 1
+  ChildNode: {fileID: -5423085267946182857}
   _stage:
     CharacterData: {fileID: 11400000, guid: f76c2a6ccc23d354c9ec8e55ebcbff8f, type: 2}
     visibility: 1
@@ -300,7 +316,6 @@ MonoBehaviour:
     slotName: 1
   ParentNodes:
   - {fileID: -1664910696392004440}
-  ChildNode: {fileID: -5423085267946182857}
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -350,12 +365,14 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 865
-    y: 353
+    x: 538.3334
+    y: 300.33328
     width: 210
     height: 155
   IsDragging: 1
   IsSelected: 0
+  automaticSkip: 1
+  ChildNode: {fileID: -921276460245668631}
   _variableName: WitchIndex
   _modifyType: 0
   _boolValue: 0
@@ -364,7 +381,6 @@ MonoBehaviour:
   _stringValue: 
   ParentNodes:
   - {fileID: -463986552070027615}
-  ChildNode: {fileID: -921276460245668631}
 --- !u!114 &3286905096141416239
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -380,12 +396,14 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 858
-    y: 149
+    x: 531.3334
+    y: 96.33331
     width: 210
     height: 155
   IsDragging: 1
   IsSelected: 0
+  automaticSkip: 1
+  ChildNode: {fileID: -3239751729797214764}
   _variableName: WitchIndex
   _modifyType: 0
   _boolValue: 0
@@ -394,7 +412,6 @@ MonoBehaviour:
   _stringValue: 
   ParentNodes:
   - {fileID: -463986552070027615}
-  ChildNode: {fileID: -3239751729797214764}
 --- !u!114 &6434443676949277372
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -410,17 +427,18 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 2083
-    y: 234
+    x: 1756.3334
+    y: 181.33331
     width: 190
     height: 80
   IsDragging: 1
   IsSelected: 0
+  automaticSkip: 1
+  ChildNode: {fileID: 0}
   _functionName: ToogleShop
   _description: 
   ParentNodes:
   - {fileID: -733480723795796557}
-  ChildNode: {fileID: 0}
 --- !u!114 &7247160318944855385
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -436,12 +454,14 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 1558
-    y: 354
+    x: 1231.3334
+    y: 301.33328
     width: 190
     height: 135
   IsDragging: 1
   IsSelected: 0
+  automaticSkip: 0
+  ChildNode: {fileID: -733480723795796557}
   _sentence:
     CharacterName: 
     Text: Pour cette fois ce sera moi
@@ -450,11 +470,11 @@ MonoBehaviour:
     expression: 1
   ParentNodes:
   - {fileID: 7735071931362991249}
-  ChildNode: {fileID: -733480723795796557}
   _isExternalFunc: 0
   _externalFunctionName: 
   CharacterNameKey: 
   SentenceTextKey: 
+  hasInitialized: 1
 --- !u!114 &7735071931362991249
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -470,12 +490,14 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 1331
-    y: 366
+    x: 1004.3334
+    y: 313.33328
     width: 190
     height: 135
   IsDragging: 1
   IsSelected: 0
+  automaticSkip: 1
+  ChildNode: {fileID: 7247160318944855385}
   _stage:
     CharacterData: {fileID: 11400000, guid: e5c897c26a297814f9bd24ce66295ca9, type: 2}
     visibility: 0
@@ -483,4 +505,3 @@ MonoBehaviour:
     slotName: 1
   ParentNodes:
   - {fileID: -921276460245668631}
-  ChildNode: {fileID: 7247160318944855385}

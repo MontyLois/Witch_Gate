@@ -13,7 +13,7 @@ namespace cherrydev
         [HideInInspector] public bool IsDragging;
         [HideInInspector] public bool IsSelected;
 
-        [SerializeField] public virtual bool automaticSkip { get; protected set; } = true;
+        [SerializeField] public bool automaticSkip  = true;
 
         protected float StandardHeight;
 

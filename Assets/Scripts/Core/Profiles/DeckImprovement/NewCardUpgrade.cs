@@ -24,14 +24,20 @@ namespace WitchGate.Cards
 
         private void Start()
         {
+            Debug.Log("now we have");
+            Debug.Log(WitchCardDatas);
+            InitCards();
+            card = getCard();
+            Connect(card);
+        }
+
+        private void InitCards()
+        {
             WitchNewCards =  new Dictionary<Witch, CardData[]>();
             foreach (WitchCardDatas cardData in WitchCardDatas)
             {
                 WitchNewCards[cardData.WitchName] = cardData.CardDatas;
             }
-            
-            card = getCard();
-            Connect(card);
         }
 
         public void Connect(CardData card)
@@ -56,7 +62,8 @@ namespace WitchGate.Cards
         public void SelectWitch(Witch witch)
         {
             selectedWitch = witch;
-            card = WitchNewCards[witch][UnityEngine.Random.Range(0, WitchNewCards[witch].Length)];
+            InitCards();
+            card = getCard();
             Connect(card);
         }
 

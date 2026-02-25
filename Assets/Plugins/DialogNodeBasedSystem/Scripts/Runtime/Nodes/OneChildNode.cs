@@ -1,3 +1,5 @@
+using UnityEngine;
+
 namespace cherrydev
 {
     public abstract class OneChildNode : Node
@@ -8,6 +10,6 @@ namespace cherrydev
         {
             return ChildNode;
         }
-
+        
     }
 }

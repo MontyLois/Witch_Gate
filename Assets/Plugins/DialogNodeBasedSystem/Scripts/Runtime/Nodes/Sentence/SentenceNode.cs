@@ -35,15 +35,20 @@ namespace cherrydev
         private const float TextFieldWidth = 100f;
         private const float ExternalNodeHeight = 155f;
         
-        public override bool automaticSkip { get; protected set; } = false;
+        //public override bool automaticSkip { get; protected set; } = false;
 
-        
-        
-        public override void Initialize(Rect rect, string nodeName, DialogNodeGraph nodeGraph)
+        protected virtual void OnEnable()
         {
-            base.Initialize(rect, nodeName, nodeGraph);
-            automaticSkip = false;
+            // Only set default if it's a new asset or uninitialized
+            if (!hasInitialized)
+            {
+                automaticSkip = false;
+                hasInitialized = true;
+            }
         }
+
+        [SerializeField, HideInInspector]
+        private bool hasInitialized = false;
         
         
         /// <summary>
@@ -141,6 +146,13 @@ namespace cherrydev
 
 #if UNITY_EDITOR
 
+        
+        public override void Initialize(Rect rect, string nodeName, DialogNodeGraph nodeGraph)
+        {
+            base.Initialize(rect, nodeName, nodeGraph);
+        }
+        
+        
         /// <summary>
         /// Draw Sentence Node method
         /// </summary>
