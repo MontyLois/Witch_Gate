@@ -159,8 +159,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3944957588850970266}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.22673802, y: -0.19547716, z: 0.62301886, w: -0.7226522}
-  m_LocalPosition: {x: -0.00000034898778, y: 1.7287712, z: 5.4476905}
+  m_LocalRotation: {x: 0.22673799, y: 0.19547713, z: -0.6230188, w: 0.7226524}
+  m_LocalPosition: {x: -0.0000016132028, y: 1.7287714, z: 5.4476905}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1450,24 +1450,24 @@ ParticleSystem:
       maxColor: {r: 1, g: 1, b: 1, a: 1}
       maxGradient:
         serializedVersion: 2
-        key0: {r: 1, g: 1, b: 1, a: 0}
-        key1: {r: 1, g: 1, b: 1, a: 0.9053353}
-        key2: {r: 0.03053229, g: 0.10062885, b: 0.025631867, a: 1}
+        key0: {r: 0.17476374, g: 0.17476374, b: 0.17476374, a: 1}
+        key1: {r: 0.9001127, g: 0.9001127, b: 0.9001127, a: 1}
+        key2: {r: 1, g: 1, b: 1, a: 1}
         key3: {r: 0, g: 0, b: 0, a: 0}
-        key4: {r: 0, g: 0, b: 0, a: 0.9552212}
-        key5: {r: 0.054901965, g: 0.121568635, b: 0.04705883, a: 1}
-        key6: {r: 0, g: 0, b: 0, a: 0}
+        key4: {r: 0.85542166, g: 0.85542166, b: 0.85542166, a: 0.9552212}
+        key5: {r: 1, g: 1, b: 1, a: 1}
+        key6: {r: 0.09615385, g: 0.09615385, b: 0.09615385, a: 0}
         key7: {r: 0, g: 0, b: 0, a: 1}
         ctime0: 0
-        ctime1: 65535
-        ctime2: 16577
-        ctime3: 20971
-        ctime4: 41120
-        ctime5: 48830
-        ctime6: 54870
+        ctime1: 8995
+        ctime2: 20175
+        ctime3: 33410
+        ctime4: 41891
+        ctime5: 54741
+        ctime6: 65535
         ctime7: 65535
         atime0: 0
-        atime1: 11437
+        atime1: 65535
         atime2: 20946
         atime3: 32125
         atime4: 41377
@@ -1476,8 +1476,8 @@ ParticleSystem:
         atime7: 57343
         m_Mode: 0
         m_ColorSpace: 0
-        m_NumColorKeys: 2
-        m_NumAlphaKeys: 7
+        m_NumColorKeys: 7
+        m_NumAlphaKeys: 2
       minGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -1510,10 +1510,10 @@ ParticleSystem:
         m_NumAlphaKeys: 2
   UVModule:
     serializedVersion: 2
-    enabled: 0
+    enabled: 1
     mode: 0
-    timeMode: 0
-    fps: 30
+    timeMode: 2
+    fps: 6
     frameOverTime:
       serializedVersion: 2
       minMaxState: 1
@@ -1569,9 +1569,9 @@ ParticleSystem:
         m_RotationOrder: 4
     startFrame:
       serializedVersion: 2
-      minMaxState: 0
-      scalar: 0
-      minScalar: 0
+      minMaxState: 3
+      scalar: 0.9999
+      minScalar: 0.25
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -1621,11 +1621,11 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     speedRange: {x: 0, y: 1}
-    tilesX: 1
+    tilesX: 4
     tilesY: 1
     animationType: 0
     rowIndex: 0
-    cycles: 1
+    cycles: 10
     uvChannelMask: -1
     rowMode: 1
     sprites:
@@ -5062,8 +5062,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6473617372881194472}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.24486986, y: -0.18855062, z: 0.5802286, w: -0.75353986}
-  m_LocalPosition: {x: -0.0000018197896, y: -1.5405358, z: 8.620858}
+  m_LocalRotation: {x: -0.1607522, y: -0.13216354, z: -0.62117046, w: 0.7555389}
+  m_LocalPosition: {x: 0.000000033400582, y: -0.000000021953905, z: -0.000000016734525}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6183,7 +6183,7 @@ ParticleSystem:
         m_RotationOrder: 4
     separateAxes: 0
   RotationModule:
-    enabled: 1
+    enabled: 0
     x:
       serializedVersion: 2
       minMaxState: 3
@@ -6353,24 +6353,24 @@ ParticleSystem:
       maxColor: {r: 1, g: 1, b: 1, a: 1}
       maxGradient:
         serializedVersion: 2
-        key0: {r: 1, g: 1, b: 1, a: 0}
-        key1: {r: 1, g: 1, b: 1, a: 0.9053353}
+        key0: {r: 0.17476374, g: 0.17476374, b: 0.17476374, a: 1}
+        key1: {r: 0.9001127, g: 0.9001127, b: 0.9001127, a: 1}
         key2: {r: 1, g: 1, b: 1, a: 1}
-        key3: {r: 0.054901965, g: 0.121568635, b: 0.04705883, a: 0}
-        key4: {r: 0.07058824, g: 0.07058824, b: 0.07058824, a: 0.9552212}
-        key5: {r: 0.07058824, g: 0.07058824, b: 0.07058824, a: 1}
-        key6: {r: 0, g: 0, b: 0, a: 0}
+        key3: {r: 0, g: 0, b: 0, a: 0}
+        key4: {r: 0.85542166, g: 0.85542166, b: 0.85542166, a: 0.9552212}
+        key5: {r: 1, g: 1, b: 1, a: 1}
+        key6: {r: 0.09615385, g: 0.09615385, b: 0.09615385, a: 0}
         key7: {r: 0, g: 0, b: 0, a: 1}
         ctime0: 0
-        ctime1: 65535
-        ctime2: 65535
-        ctime3: 65535
-        ctime4: 65535
-        ctime5: 65535
+        ctime1: 8995
+        ctime2: 20175
+        ctime3: 33410
+        ctime4: 41891
+        ctime5: 54741
         ctime6: 65535
         ctime7: 65535
         atime0: 0
-        atime1: 11437
+        atime1: 65535
         atime2: 20946
         atime3: 32125
         atime4: 41377
@@ -6379,8 +6379,8 @@ ParticleSystem:
         atime7: 57343
         m_Mode: 0
         m_ColorSpace: 0
-        m_NumColorKeys: 2
-        m_NumAlphaKeys: 7
+        m_NumColorKeys: 7
+        m_NumAlphaKeys: 2
       minGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -6413,10 +6413,10 @@ ParticleSystem:
         m_NumAlphaKeys: 2
   UVModule:
     serializedVersion: 2
-    enabled: 0
+    enabled: 1
     mode: 0
-    timeMode: 0
-    fps: 30
+    timeMode: 2
+    fps: 6
     frameOverTime:
       serializedVersion: 2
       minMaxState: 1
@@ -6472,9 +6472,9 @@ ParticleSystem:
         m_RotationOrder: 4
     startFrame:
       serializedVersion: 2
-      minMaxState: 0
-      scalar: 0
-      minScalar: 0
+      minMaxState: 3
+      scalar: 0.9999
+      minScalar: 0.25
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -6524,7 +6524,7 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     speedRange: {x: 0, y: 1}
-    tilesX: 1
+    tilesX: 4
     tilesY: 1
     animationType: 0
     rowIndex: 0
@@ -7734,7 +7734,7 @@ ParticleSystem:
     strength:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1
+      scalar: 2
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -7892,7 +7892,7 @@ ParticleSystem:
         m_RotationOrder: 4
     separateAxes: 0
     frequency: 0.5
-    damping: 1
+    damping: 0
     octaves: 1
     octaveMultiplier: 0.5
     octaveScale: 2
