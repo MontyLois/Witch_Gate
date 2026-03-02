@@ -92,6 +92,7 @@ MonoBehaviour:
   cardIllustration: {fileID: 3408139398485211593}
   CardName: {fileID: 6643541730204972694}
   cardBackground: {fileID: 874580853433667981}
+  cardAnimator: {fileID: 8467489458061568572}
 --- !u!114 &6872996693155206931
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -257,6 +258,11 @@ MonoBehaviour:
 --- !u!224 &7378772092239996239 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5493026073957115257, guid: a2587ef951e67b74abd477cf977602b2, type: 3}
+  m_PrefabInstance: {fileID: 3052750071044751414}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &8467489458061568572 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 6908272030197754378, guid: a2587ef951e67b74abd477cf977602b2, type: 3}
   m_PrefabInstance: {fileID: 3052750071044751414}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3553279552949850099

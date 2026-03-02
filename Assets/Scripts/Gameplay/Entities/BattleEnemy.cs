@@ -46,9 +46,7 @@ namespace WitchGate.Gameplay.Battles.Entities
         {
             int missing = Hand.MaxSize - Hand.CurrentSize;
             for (int i = 0; i < missing; i++)
-            {
                 DrawCard();
-            }
         }
         public void DrawCard()
         {

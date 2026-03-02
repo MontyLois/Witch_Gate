@@ -9,7 +9,7 @@ namespace cherrydev
     public struct Sentence
     {
         public string CharacterName;
-        public string Text;
+        [TextArea] public string Text;
         public Sprite CharacterSprite;
         public VNCharacterData CharacterData;
         public Expression expression;

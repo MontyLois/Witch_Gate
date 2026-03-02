@@ -9,6 +9,8 @@ namespace WitchGate.Gameplay.Battles.TurnPhases
     public class EnemyAction : ITurnAction
     {
         public int Priority { get; set; }
+        public string Label => gameCard.Data.Name;
+        
         private readonly GameCard gameCard;
         private readonly BattlePhase battlePhase;
         
@@ -18,6 +20,8 @@ namespace WitchGate.Gameplay.Battles.TurnPhases
             this.battlePhase = battlePhase;
             Priority = gameCard.Data.Priority;
         }
+
+
         public async Awaitable Execute()
         {
             await gameCard.Use(GetTargetedWitch(), battlePhase.Enemy);

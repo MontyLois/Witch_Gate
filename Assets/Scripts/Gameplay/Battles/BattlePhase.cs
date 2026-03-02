@@ -10,6 +10,7 @@ using WitchGate.Cards;
 using WitchGate.Controllers;
 using WitchGate.Gameplay.Battles.Entities;
 using WitchGate.Gameplay.Battles.Entities.Interface;
+using WitchGate.Gameplay.Battles.Timelines;
 using WitchGate.Gameplay.Battles.TurnPhases;
 using WitchGate.Gameplay.Cards;
 using WitchGate.Players;
@@ -22,7 +23,7 @@ namespace WitchGate.Gameplay.Battles
 
         public readonly Dictionary<Witch, BattleWitch> BattleWitches;
         public Hand<GameCard>[] PlayedHands { get; private set; }
-        public List<ITurnAction> TurnActions { get; private set; }
+        public TurnTimeline TurnTimeline { get; private set; }
         
         
         public BattlePhase(BattleEnemy enemy)
@@ -36,7 +37,7 @@ namespace WitchGate.Gameplay.Battles
                 BattleWitches.Add(witchProfile.Key, new BattleWitch(witchProfile.Value));
             }
             
-            TurnActions = new List<ITurnAction>();
+            TurnTimeline = new();
 
             PlayedHands = new Hand<GameCard>[GameController.Metrics.MaxPlayedHandSize];
             for (int i = 0; i < GameController.Metrics.MaxPlayedHandSize; i++)
@@ -68,14 +69,16 @@ namespace WitchGate.Gameplay.Battles
             
             while (true)
             {
-                TurnActions.Clear();
+                TurnTimeline.Clear();
                 EnemyTurnPhase enemyTurnPhase = new EnemyTurnPhase(this);
+                PlayerTurnPhase playerTurnPhase = new PlayerTurnPhase(this);
+
+                await enemyTurnPhase.DrawPossibleCards();
+                
+                await playerTurnPhase.RunAsync();
                 await enemyTurnPhase.RunAsync();
                 
-                PlayerTurnPhase playerTurnPhase = new PlayerTurnPhase(this);
-                await playerTurnPhase.RunAsync();
-                
-                ResolutionPhase resolutionPhase = new ResolutionPhase(TurnActions);
+                ResolutionPhase resolutionPhase = new ResolutionPhase(TurnTimeline);
                 await resolutionPhase.RunAsync();
                 
                 if(IsASideDefeated())
@@ -116,11 +119,5 @@ namespace WitchGate.Gameplay.Battles
             }
             return playedCards;
         }
-
-        public void AddTurnActions(List<ITurnAction> turnActions)
-        {
-            TurnActions.AddRange(turnActions);
-        }
-        
     }
 }
