@@ -15,7 +15,6 @@ Material:
   - DR_OUTLINE_ON
   - _CELPRIMARYMODE_STEPS
   - _DETAILMAPBLENDINGMODE_MULTIPLY
-  - _EMISSION
   - _GRADIENTSPACE_WORLD
   - _OUTLINESPACE_SCREEN
   - _TEXTUREBLENDINGMODE_MULTIPLY
@@ -38,6 +37,7 @@ Material:
     m_Floats: []
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
+    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
 --- !u!114 &4295407271283229856
