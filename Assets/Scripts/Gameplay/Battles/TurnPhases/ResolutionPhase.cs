@@ -2,17 +2,18 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Pool;
 using WitchGate.Controllers;
+using WitchGate.Gameplay.Battles.Timelines;
 
 namespace WitchGate.Gameplay.Battles.TurnPhases
 {
     public class ResolutionPhase : IPhase
     {
-        public readonly List<ITurnAction> Actions;
+        public readonly TurnTimeline timeline;
         
         
-        public ResolutionPhase(List<ITurnAction> actions)
+        public ResolutionPhase(TurnTimeline timeline)
         {
-            Actions = actions;
+            this.timeline = timeline;
         }
 
         async Awaitable IPhase.OnBegin()
@@ -22,19 +23,13 @@ namespace WitchGate.Gameplay.Battles.TurnPhases
 
         async Awaitable IPhase.Execute()
         {
-            SortByPriority();
-            for (int i = 0; i < Actions.Count; i++)
-                await Actions[i].Execute();
+            foreach (ITurnAction turnAction in timeline.Actions)
+                await turnAction.Execute();
         }
 
         async Awaitable IPhase.OnEnd()
         {
             await PhaseController.CompletedAwaitable;
-        }
-
-        private void SortByPriority()
-        {
-            Actions.Sort((a, b) => a.Priority.CompareTo(b.Priority));
         }
     }
 }

@@ -6,14 +6,14 @@ using UnityEngine;
 namespace cherrydev
 {
     [CreateAssetMenu(menuName = "Scriptable Objects/Node Graph/Nodes/External Function Node", fileName = "New External Function Node")]
-    public class ExternalFunctionNode : Node
+    public class ExternalFunctionNode : OneChildNode
     {
         [SerializeField] private string _functionName;
         [SerializeField] private string _description;
 
         [Space(10)] 
         public List<Node> ParentNodes = new();
-        public Node ChildNode;
+        //public Node ChildNode;
 
         public string FunctionName => _functionName;
         public string Description => _description;
@@ -46,6 +46,7 @@ namespace cherrydev
             GUILayout.BeginArea(Rect, nodeStyle);
             EditorGUILayout.LabelField("External Function", labelStyle);
             DrawFunctionNameField();
+            DrawAutomaticFieldHorizontal();
             GUILayout.EndArea();
         }
 
@@ -78,6 +79,17 @@ namespace cherrydev
             EditorGUILayout.LabelField("Function", GUILayout.Width(LabelFieldSpace));
             _functionName = EditorGUILayout.TextField(_functionName, GUILayout.Width(TextFieldWidth));
             EditorGUILayout.EndHorizontal();
+        }
+        
+        
+        private void DrawAutomaticFieldHorizontal()
+        {
+            EditorGUILayout.BeginHorizontal();
+            EditorGUILayout.LabelField($"AutomaticSkip ", GUILayout.Width(LabelFieldSpace));
+            automaticSkip = EditorGUILayout.Toggle(automaticSkip, GUILayout.Width(TextFieldWidth));
+            EditorGUILayout.EndHorizontal();
+            
+            EditorUtility.SetDirty(this);
         }
 
         /// <summary>

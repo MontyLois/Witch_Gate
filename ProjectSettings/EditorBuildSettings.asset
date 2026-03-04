@@ -38,6 +38,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/City Night/City_Quartier_1.unity
     guid: 01e358256a3d2ad41b46a5dc6b7255c1
+  - enabled: 0
+    path: Assets/Scenes/City Night/City_Quartier_SINDY.unity
+    guid: efa521bad16b9644d9f1ac57a3911b0e
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 3812286fd0cdcdb469de2261347916da, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}

@@ -8,12 +8,15 @@ namespace WitchGate.Cards
 {
     public class LevelUpCardUpgrade : MonoBehaviour, IDeckImprovement<CardProfile>
     {
+        [field: SerializeField]
         public CardUI CardUI { get; set; }
         public CardProfile card { get; set; }
 
         private PlayerProfile playerProfile;
+        
+        public Witch selectedWitch  { get; set; } = Witch.None;
 
-        private void OnEnable()
+        private void Start()
         {
             playerProfile = GameController.GameDatabase.PlayerProfile;
             card = getCard();
@@ -27,13 +30,24 @@ namespace WitchGate.Cards
 
         public CardProfile getCard()
         {
-            return playerProfile.WitchProfiles.ElementAt(UnityEngine.Random.Range(0,
-                playerProfile.WitchProfiles.Count)).Value.GetRandomCardFromDeck();
+            if(selectedWitch == Witch.None)
+                return playerProfile.GetRandomCardProfile(playerProfile.WitchProfiles.ElementAt(UnityEngine.Random.Range(0,
+                    playerProfile.WitchProfiles.Count)).Key);
+            return playerProfile.GetRandomCardProfile(selectedWitch);
+        }
+        
+        public void SelectWitch(Witch witch)
+        {
+            playerProfile = GameController.GameDatabase.PlayerProfile;
+            selectedWitch = witch;
+            card = getCard();
+            Connect(card);
         }
         
         public void OnSelect()
         {
             playerProfile.LevelUpCard(card,card.CardData.WitchDeck);
         }
+        
     }
 }

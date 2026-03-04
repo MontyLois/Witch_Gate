@@ -1,16 +1,19 @@
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace cherrydev
 {
-    public class Node : ScriptableObject
+    public abstract class Node : ScriptableObject
     {
         [HideInInspector] public DialogNodeGraph NodeGraph;
         [HideInInspector] public Rect Rect;
 
         [HideInInspector] public bool IsDragging;
         [HideInInspector] public bool IsSelected;
+
+        [SerializeField] public bool automaticSkip  = true;
 
         protected float StandardHeight;
 
@@ -25,6 +28,8 @@ namespace cherrydev
             
             return NodeGraph.LocalizationTableName;
         }
+
+        public abstract Node GetNextNode();
 
 #if UNITY_EDITOR
 

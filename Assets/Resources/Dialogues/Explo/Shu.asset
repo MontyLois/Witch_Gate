@@ -1,0 +1,507 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-9168931535832667767
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 728bde28222c436aa8f80da237c76a9b, type: 3}
+  m_Name: Stage Node
+  m_EditorClassIdentifier: DialogNodeBaseSystem::cherrydev.StageNode
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: -741.6666
+    y: 174.33331
+    width: 190
+    height: 135
+  IsDragging: 1
+  IsSelected: 0
+  automaticSkip: 1
+  ChildNode: {fileID: -1664910696392004440}
+  _stage:
+    CharacterData: {fileID: 11400000, guid: dd9a0ea30a397c84aa0a9d14eb18eb5a, type: 2}
+    visibility: 1
+    expression: 1
+    slotName: 0
+  ParentNodes: []
+--- !u!114 &-5423085267946182857
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: DialogNodeBaseSystem::cherrydev.SentenceNode
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 7.3333435
+    y: 175.33331
+    width: 190
+    height: 135
+  IsDragging: 1
+  IsSelected: 0
+  automaticSkip: 0
+  ChildNode: {fileID: -463986552070027615}
+  _sentence:
+    CharacterName: 
+    Text: "Salut ! Alors laquelle d'entre vous veux am\xE9liorer ses pouvoirs ce
+      soir ? "
+    CharacterSprite: {fileID: 0}
+    CharacterData: {fileID: 11400000, guid: dd9a0ea30a397c84aa0a9d14eb18eb5a, type: 2}
+    expression: 1
+  ParentNodes:
+  - {fileID: -75272685267230350}
+  _isExternalFunc: 0
+  _externalFunctionName: 
+  CharacterNameKey: 
+  SentenceTextKey: 
+  hasInitialized: 1
+--- !u!114 &-4323434133699250750
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: DialogNodeBaseSystem::cherrydev.SentenceNode
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 1234.3334
+    y: 102.33331
+    width: 190
+    height: 135
+  IsDragging: 1
+  IsSelected: 0
+  automaticSkip: 0
+  ChildNode: {fileID: -733480723795796557}
+  _sentence:
+    CharacterName: 
+    Text: Montre moi ce que tu sais faire
+    CharacterSprite: {fileID: 0}
+    CharacterData: {fileID: 11400000, guid: e5c897c26a297814f9bd24ce66295ca9, type: 2}
+    expression: 1
+  ParentNodes:
+  - {fileID: -4317924674020854482}
+  _isExternalFunc: 0
+  _externalFunctionName: 
+  CharacterNameKey: 
+  SentenceTextKey: 
+  hasInitialized: 1
+--- !u!114 &-4317924674020854482
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 728bde28222c436aa8f80da237c76a9b, type: 3}
+  m_Name: Stage Node
+  m_EditorClassIdentifier: DialogNodeBaseSystem::cherrydev.StageNode
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 986.3335
+    y: 93.33332
+    width: 190
+    height: 135
+  IsDragging: 1
+  IsSelected: 0
+  automaticSkip: 1
+  ChildNode: {fileID: -4323434133699250750}
+  _stage:
+    CharacterData: {fileID: 11400000, guid: f76c2a6ccc23d354c9ec8e55ebcbff8f, type: 2}
+    visibility: 0
+    expression: 0
+    slotName: 1
+  ParentNodes:
+  - {fileID: -3239751729797214764}
+--- !u!114 &-3239751729797214764
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54f4b3c64aaf434ea0df52154c1c7680, type: 3}
+  m_Name: External Function Node
+  m_EditorClassIdentifier: DialogNodeBaseSystem::cherrydev.ExternalFunctionNode
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 767.3335
+    y: 127.33332
+    width: 190
+    height: 80
+  IsDragging: 1
+  IsSelected: 0
+  automaticSkip: 1
+  ChildNode: {fileID: -4317924674020854482}
+  _functionName: SelectWitch
+  _description: 
+  ParentNodes:
+  - {fileID: 3286905096141416239}
+--- !u!114 &-1664910696392004440
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 728bde28222c436aa8f80da237c76a9b, type: 3}
+  m_Name: Stage Node
+  m_EditorClassIdentifier: DialogNodeBaseSystem::cherrydev.StageNode
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: -462.66666
+    y: 177.33331
+    width: 190
+    height: 135
+  IsDragging: 1
+  IsSelected: 0
+  automaticSkip: 1
+  ChildNode: {fileID: -75272685267230350}
+  _stage:
+    CharacterData: {fileID: 11400000, guid: e5c897c26a297814f9bd24ce66295ca9, type: 2}
+    visibility: 1
+    expression: 0
+    slotName: 1
+  ParentNodes:
+  - {fileID: -9168931535832667767}
+--- !u!114 &-921276460245668631
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54f4b3c64aaf434ea0df52154c1c7680, type: 3}
+  m_Name: External Function Node
+  m_EditorClassIdentifier: DialogNodeBaseSystem::cherrydev.ExternalFunctionNode
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 776.3335
+    y: 338.33328
+    width: 190
+    height: 80
+  IsDragging: 1
+  IsSelected: 0
+  automaticSkip: 1
+  ChildNode: {fileID: 7735071931362991249}
+  _functionName: SelectWitch
+  _description: 
+  ParentNodes:
+  - {fileID: 816631323725408308}
+--- !u!114 &-733480723795796557
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: DialogNodeBaseSystem::cherrydev.SentenceNode
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 1522.3334
+    y: 173.33331
+    width: 190
+    height: 135
+  IsDragging: 1
+  IsSelected: 0
+  automaticSkip: 0
+  ChildNode: {fileID: 6434443676949277372}
+  _sentence:
+    CharacterName: 
+    Text: Ok, c'est partie !
+    CharacterSprite: {fileID: 0}
+    CharacterData: {fileID: 11400000, guid: dd9a0ea30a397c84aa0a9d14eb18eb5a, type: 2}
+    expression: 1
+  ParentNodes:
+  - {fileID: -4323434133699250750}
+  - {fileID: 7247160318944855385}
+  _isExternalFunc: 0
+  _externalFunctionName: 
+  CharacterNameKey: 
+  SentenceTextKey: 
+  hasInitialized: 1
+--- !u!114 &-463986552070027615
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1717f3c6dba9fa40844ddacac301510, type: 3}
+  m_Name: Answer Node
+  m_EditorClassIdentifier: DialogNodeBaseSystem::cherrydev.AnswerNode
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 273.33337
+    y: 184.33331
+    width: 190
+    height: 135
+  IsDragging: 1
+  IsSelected: 0
+  automaticSkip: 0
+  Answers:
+  - Elaris
+  - Velmora
+  AnswerKeys: []
+  ParentNodes:
+  - {fileID: -5423085267946182857}
+  ChildNodes:
+  - {fileID: 3286905096141416239}
+  - {fileID: 816631323725408308}
+  nextNodeIndex: 0
+  hasInitialized: 1
+--- !u!114 &-75272685267230350
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 728bde28222c436aa8f80da237c76a9b, type: 3}
+  m_Name: Stage Node
+  m_EditorClassIdentifier: DialogNodeBaseSystem::cherrydev.StageNode
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: -252.66666
+    y: 176.33331
+    width: 190
+    height: 135
+  IsDragging: 1
+  IsSelected: 0
+  automaticSkip: 1
+  ChildNode: {fileID: -5423085267946182857}
+  _stage:
+    CharacterData: {fileID: 11400000, guid: f76c2a6ccc23d354c9ec8e55ebcbff8f, type: 2}
+    visibility: 1
+    expression: 0
+    slotName: 1
+  ParentNodes:
+  - {fileID: -1664910696392004440}
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33f741ea10ebcf842a91c9b871dd032a, type: 3}
+  m_Name: Shu
+  m_EditorClassIdentifier: DialogNodeBaseSystem::cherrydev.DialogNodeGraph
+  NodesList:
+  - {fileID: -9168931535832667767}
+  - {fileID: -1664910696392004440}
+  - {fileID: -75272685267230350}
+  - {fileID: -5423085267946182857}
+  - {fileID: -463986552070027615}
+  - {fileID: 3286905096141416239}
+  - {fileID: 816631323725408308}
+  - {fileID: -4323434133699250750}
+  - {fileID: -4317924674020854482}
+  - {fileID: 7735071931362991249}
+  - {fileID: 7247160318944855385}
+  - {fileID: -733480723795796557}
+  - {fileID: -3239751729797214764}
+  - {fileID: -921276460245668631}
+  - {fileID: 6434443676949277372}
+  VariablesConfig: {fileID: 11400000, guid: 56254f50a081ad04e87246bef20b0f8b, type: 2}
+  _localizationTableName: 
+  _characterNamesLocalizationName: 
+  NodeToDrawLineFrom: {fileID: 0}
+  LinePosition: {x: 0, y: 0}
+  IsLocalizationSetUp: 0
+--- !u!114 &816631323725408308
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30402c10d300488491eb82eed1db9a20, type: 3}
+  m_Name: Modify Variable Node
+  m_EditorClassIdentifier: DialogNodeBaseSystem::cherrydev.ModifyVariableNode
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 538.3334
+    y: 300.33328
+    width: 210
+    height: 155
+  IsDragging: 1
+  IsSelected: 0
+  automaticSkip: 1
+  ChildNode: {fileID: -921276460245668631}
+  _variableName: WitchIndex
+  _modifyType: 0
+  _boolValue: 0
+  _intValue: 1
+  _floatValue: 0
+  _stringValue: 
+  ParentNodes:
+  - {fileID: -463986552070027615}
+--- !u!114 &3286905096141416239
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30402c10d300488491eb82eed1db9a20, type: 3}
+  m_Name: Modify Variable Node
+  m_EditorClassIdentifier: DialogNodeBaseSystem::cherrydev.ModifyVariableNode
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 531.3334
+    y: 96.33331
+    width: 210
+    height: 155
+  IsDragging: 1
+  IsSelected: 0
+  automaticSkip: 1
+  ChildNode: {fileID: -3239751729797214764}
+  _variableName: WitchIndex
+  _modifyType: 0
+  _boolValue: 0
+  _intValue: 2
+  _floatValue: 0
+  _stringValue: 
+  ParentNodes:
+  - {fileID: -463986552070027615}
+--- !u!114 &6434443676949277372
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54f4b3c64aaf434ea0df52154c1c7680, type: 3}
+  m_Name: External Function Node
+  m_EditorClassIdentifier: DialogNodeBaseSystem::cherrydev.ExternalFunctionNode
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 1756.3334
+    y: 181.33331
+    width: 190
+    height: 80
+  IsDragging: 1
+  IsSelected: 0
+  automaticSkip: 1
+  ChildNode: {fileID: 0}
+  _functionName: ToogleShop
+  _description: 
+  ParentNodes:
+  - {fileID: -733480723795796557}
+--- !u!114 &7247160318944855385
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: DialogNodeBaseSystem::cherrydev.SentenceNode
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 1231.3334
+    y: 301.33328
+    width: 190
+    height: 135
+  IsDragging: 1
+  IsSelected: 0
+  automaticSkip: 0
+  ChildNode: {fileID: -733480723795796557}
+  _sentence:
+    CharacterName: 
+    Text: Pour cette fois ce sera moi
+    CharacterSprite: {fileID: 0}
+    CharacterData: {fileID: 11400000, guid: f76c2a6ccc23d354c9ec8e55ebcbff8f, type: 2}
+    expression: 1
+  ParentNodes:
+  - {fileID: 7735071931362991249}
+  _isExternalFunc: 0
+  _externalFunctionName: 
+  CharacterNameKey: 
+  SentenceTextKey: 
+  hasInitialized: 1
+--- !u!114 &7735071931362991249
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 728bde28222c436aa8f80da237c76a9b, type: 3}
+  m_Name: Stage Node
+  m_EditorClassIdentifier: DialogNodeBaseSystem::cherrydev.StageNode
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 1004.3334
+    y: 313.33328
+    width: 190
+    height: 135
+  IsDragging: 1
+  IsSelected: 0
+  automaticSkip: 1
+  ChildNode: {fileID: 7247160318944855385}
+  _stage:
+    CharacterData: {fileID: 11400000, guid: e5c897c26a297814f9bd24ce66295ca9, type: 2}
+    visibility: 0
+    expression: 0
+    slotName: 1
+  ParentNodes:
+  - {fileID: -921276460245668631}

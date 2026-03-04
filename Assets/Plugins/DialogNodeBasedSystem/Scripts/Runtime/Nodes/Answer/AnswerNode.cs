@@ -28,6 +28,26 @@ namespace cherrydev
         private float _currentAnswerNodeHeight = 115f;
         private const float AdditionalAnswerNodeHeight = 20f;
 
+        public int nextNodeIndex;
+       
+        protected virtual void OnEnable()
+        {
+            // Only set default if it's a new asset or uninitialized
+            if (!hasInitialized)
+            {
+                automaticSkip = false;
+                hasInitialized = true;
+            }
+        }
+
+        [SerializeField, HideInInspector]
+        private bool hasInitialized = false;
+        
+        public override Node GetNextNode()
+        {
+            return ChildNodes[nextNodeIndex];
+        }
+
         public string GetAnswerText(int index)
         {
             if (index < 0 || index >= Answers.Count)
@@ -62,6 +82,8 @@ namespace cherrydev
 
 #if UNITY_EDITOR
 
+        
+
         /// <summary>
         /// Answer node initialisation method
         /// </summary>
@@ -74,6 +96,7 @@ namespace cherrydev
 
             CalculateAmountOfAnswers();
             ChildNodes = new List<Node>(_amountOfAnswers);
+            automaticSkip = false;
         }
 
         /// <summary>

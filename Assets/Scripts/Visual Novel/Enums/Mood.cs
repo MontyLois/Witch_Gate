@@ -1,4 +1,4 @@
-namespace WitchGate.Prototype.Enums
+namespace WitchGate.VisualNovel.Visual_Novel.Enums
 {
     public enum Mood
     {

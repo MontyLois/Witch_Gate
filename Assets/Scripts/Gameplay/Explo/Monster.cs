@@ -35,7 +35,6 @@ namespace WitchGate.Prototype
 
         private void StartBattle()
         {
-            Debug.Log("uh ?");
             BattlePhase phase = new BattlePhase(new BattleEnemy(enemyProfile));
             phase.Run();
         }

@@ -15,12 +15,14 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -2819.3337
-    y: 182.66666
+    x: 525.6662
+    y: 164.33363
     width: 190
     height: 135
   IsDragging: 1
   IsSelected: 0
+  automaticSkip: 1
+  ChildNode: {fileID: -5493066075146875532}
   _stage:
     CharacterData: {fileID: 11400000, guid: f76c2a6ccc23d354c9ec8e55ebcbff8f, type: 2}
     visibility: 0
@@ -28,73 +30,6 @@ MonoBehaviour:
     slotName: 0
   ParentNodes:
   - {fileID: 4363065833752978027}
-  ChildNode: {fileID: -5493066075146875532}
---- !u!114 &-8894791355868348484
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e1717f3c6dba9fa40844ddacac301510, type: 3}
-  m_Name: Answer Node
-  m_EditorClassIdentifier: DialogNodeBaseSystem::cherrydev.AnswerNode
-  NodeGraph: {fileID: 11400000}
-  Rect:
-    serializedVersion: 2
-    x: 5.6660767
-    y: 193.33328
-    width: 190
-    height: 155
-  IsDragging: 1
-  IsSelected: 0
-  Answers:
-  - Choix musique 1
-  - Choix musique 2
-  - Choix musique 3
-  AnswerKeys: []
-  ParentNodes:
-  - {fileID: 4944146430908420812}
-  ChildNodes:
-  - {fileID: -7432550522449624314}
-  - {fileID: -8571193682831638522}
-  - {fileID: -7618630702935728943}
---- !u!114 &-8571193682831638522
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
-  m_Name: Sentence Node
-  m_EditorClassIdentifier: DialogNodeBaseSystem::cherrydev.SentenceNode
-  NodeGraph: {fileID: 11400000}
-  Rect:
-    serializedVersion: 2
-    x: 363.66565
-    y: 233.33334
-    width: 190
-    height: 135
-  IsDragging: 1
-  IsSelected: 0
-  _sentence:
-    CharacterName: "Abiga\xEBlle"
-    Text: "\xE7a se voit tant que \xE7a ?"
-    CharacterSprite: {fileID: 21300000, guid: 971e9ad4c4188e4498df173aa0455c38, type: 3}
-    CharacterData: {fileID: 11400000, guid: 4f59aac53de14b04ebea0ad618a25c9f, type: 2}
-    expression: 1
-  ParentNodes:
-  - {fileID: -8894791355868348484}
-  ChildNode: {fileID: -2903131574548789527}
-  _isExternalFunc: 0
-  _externalFunctionName: 
-  CharacterNameKey: 
-  SentenceTextKey: 
 --- !u!114 &-7618630702935728943
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -110,12 +45,14 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 369.6656
-    y: 378.33325
+    x: 3811.3328
+    y: 84.00015
     width: 190
     height: 135
   IsDragging: 1
   IsSelected: 0
+  automaticSkip: 0
+  ChildNode: {fileID: -2903131574548789527}
   _sentence:
     CharacterName: "Abiga\xEBlle"
     Text: "Non, \xE7a va. Je pense seulement \xE0 beaucoup de chose perso ence moment."
@@ -123,12 +60,12 @@ MonoBehaviour:
     CharacterData: {fileID: 11400000, guid: 4f59aac53de14b04ebea0ad618a25c9f, type: 2}
     expression: 2
   ParentNodes:
-  - {fileID: -8894791355868348484}
-  ChildNode: {fileID: -2903131574548789527}
+  - {fileID: 4236113218215929049}
   _isExternalFunc: 0
   _externalFunctionName: 
   CharacterNameKey: 
   SentenceTextKey: 
+  hasInitialized: 1
 --- !u!114 &-7432550522449624314
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -144,12 +81,14 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 361.33264
-    y: 74.66661
+    x: 3816.3337
+    y: -156.33328
     width: 190
     height: 135
   IsDragging: 1
   IsSelected: 0
+  automaticSkip: 0
+  ChildNode: {fileID: -6187970471002876859}
   _sentence:
     CharacterName: "Abiga\xEBlle"
     Text: "\xE7a se voit tant que \xE7a ? "
@@ -157,12 +96,49 @@ MonoBehaviour:
     CharacterData: {fileID: 11400000, guid: 4f59aac53de14b04ebea0ad618a25c9f, type: 2}
     expression: 1
   ParentNodes:
-  - {fileID: -8894791355868348484}
-  ChildNode: {fileID: -2903131574548789527}
+  - {fileID: 4236113218215929049}
   _isExternalFunc: 0
   _externalFunctionName: 
   CharacterNameKey: 
   SentenceTextKey: 
+  hasInitialized: 1
+--- !u!114 &-6187970471002876859
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: DialogNodeBaseSystem::cherrydev.SentenceNode
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 4026.3333
+    y: -156.33322
+    width: 190
+    height: 135
+  IsDragging: 1
+  IsSelected: 0
+  automaticSkip: 0
+  ChildNode: {fileID: 4840767897152959162}
+  _sentence:
+    CharacterName: 
+    Text: "Pour \xEAtre honn\xEAte, je suis un peu anxieuse ces dernier temps \xE0
+      cause de ce qu'il s'est pass\xE9 au cimeti\xE8re..."
+    CharacterSprite: {fileID: 0}
+    CharacterData: {fileID: 11400000, guid: 4f59aac53de14b04ebea0ad618a25c9f, type: 2}
+    expression: 2
+  ParentNodes:
+  - {fileID: -7432550522449624314}
+  _isExternalFunc: 0
+  _externalFunctionName: 
+  CharacterNameKey: 
+  SentenceTextKey: 
+  hasInitialized: 1
 --- !u!114 &-5701140139791209159
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -178,12 +154,14 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -1854.3315
-    y: 99.66657
+    x: 1490.6687
+    y: 81.333466
     width: 190
     height: 135
   IsDragging: 1
   IsSelected: 0
+  automaticSkip: 0
+  ChildNode: {fileID: 7334688636739828862}
   _sentence:
     CharacterName: Elaris
     Text: Hey ! Dis moi, tu viens pour quoi?
@@ -192,11 +170,11 @@ MonoBehaviour:
     expression: 1
   ParentNodes:
   - {fileID: 8464188962346203594}
-  ChildNode: {fileID: 7334688636739828862}
   _isExternalFunc: 0
   _externalFunctionName: 
   CharacterNameKey: 
   SentenceTextKey: 
+  hasInitialized: 1
 --- !u!114 &-5686625207268807504
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -212,12 +190,14 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -1834.3315
-    y: 316.66663
+    x: 1510.6687
+    y: 298.3338
     width: 190
     height: 135
   IsDragging: 1
   IsSelected: 0
+  automaticSkip: 0
+  ChildNode: {fileID: 9204177260375245009}
   _sentence:
     CharacterName: Elaris
     Text: Sup, tu veux quoi?
@@ -226,11 +206,11 @@ MonoBehaviour:
     expression: 2
   ParentNodes:
   - {fileID: 8464188962346203594}
-  ChildNode: {fileID: 9204177260375245009}
   _isExternalFunc: 0
   _externalFunctionName: 
   CharacterNameKey: 
   SentenceTextKey: 
+  hasInitialized: 1
 --- !u!114 &-5493066075146875532
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -246,12 +226,14 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -2558.6677
-    y: 183.33328
+    x: 786.3317
+    y: 165.00032
     width: 190
     height: 135
   IsDragging: 1
   IsSelected: 0
+  automaticSkip: 1
+  ChildNode: {fileID: 8464188962346203594}
   _stage:
     CharacterData: {fileID: 11400000, guid: 4f59aac53de14b04ebea0ad618a25c9f, type: 2}
     visibility: 1
@@ -259,7 +241,6 @@ MonoBehaviour:
     slotName: 0
   ParentNodes:
   - {fileID: -9136480394919025530}
-  ChildNode: {fileID: 8464188962346203594}
 --- !u!114 &-4826624818468476582
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -275,12 +256,14 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -495.9989
-    y: 54.66667
+    x: 2849.0017
+    y: 36.33345
     width: 190
     height: 135
   IsDragging: 1
   IsSelected: 0
+  automaticSkip: 0
+  ChildNode: {fileID: 4944146430908420812}
   _sentence:
     CharacterName: "Abiga\xEBlle"
     Text: "Oui ! Pourquoi pas ! Pour tout avouer, j'\xE9coute souvent le m\xEAme
@@ -290,11 +273,11 @@ MonoBehaviour:
     expression: 1
   ParentNodes:
   - {fileID: -858738700121652252}
-  ChildNode: {fileID: 4944146430908420812}
   _isExternalFunc: 0
   _externalFunctionName: 
   CharacterNameKey: 
   SentenceTextKey: 
+  hasInitialized: 1
 --- !u!114 &-3808618171546961752
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -310,19 +293,58 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -3565.3333
-    y: 175.33325
+    x: -220.33612
+    y: 157.0002
     width: 190
     height: 135
   IsDragging: 1
   IsSelected: 0
+  automaticSkip: 1
+  ChildNode: {fileID: 1179389955632101922}
   _stage:
     CharacterData: {fileID: 11400000, guid: e5c897c26a297814f9bd24ce66295ca9, type: 2}
     visibility: 1
     expression: 0
     slotName: 1
   ParentNodes: []
-  ChildNode: {fileID: 1179389955632101922}
+--- !u!114 &-3152575183784730798
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: DialogNodeBaseSystem::cherrydev.SentenceNode
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 4472.3335
+    y: -152.33322
+    width: 190
+    height: 135
+  IsDragging: 1
+  IsSelected: 0
+  automaticSkip: 0
+  ChildNode: {fileID: -2903131574548789527}
+  _sentence:
+    CharacterName: 
+    Text: "Oui.. enfin non pas vraiment.... c'est juste qu'il y a eu une disparition
+      d'une femme r\xE9cemment et le dernier endroit o\xF9 elle a \xE9t\xE9 apper\xE7u
+      \xE9tait le cimeti\xE8re..."
+    CharacterSprite: {fileID: 0}
+    CharacterData: {fileID: 11400000, guid: 4f59aac53de14b04ebea0ad618a25c9f, type: 2}
+    expression: 0
+  ParentNodes:
+  - {fileID: 4840767897152959162}
+  _isExternalFunc: 0
+  _externalFunctionName: 
+  CharacterNameKey: 
+  SentenceTextKey: 
+  hasInitialized: 1
 --- !u!114 &-2903131574548789527
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -338,27 +360,28 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 750.66473
-    y: 152.33328
+    x: 4724.3325
+    y: 20.00003
     width: 190
     height: 135
-  IsDragging: 0
+  IsDragging: 1
   IsSelected: 0
+  automaticSkip: 0
+  ChildNode: {fileID: 0}
   _sentence:
     CharacterName: "Abiga\xEBlle"
-    Text: "Je vais y aller \xE0 bient\xF4t"
+    Text: "Enfin bon, Je vais y aller \xE0 bient\xF4t"
     CharacterSprite: {fileID: 21300000, guid: 2bb73bc8d5e4e7944a1cead93f76f4cf, type: 3}
     CharacterData: {fileID: 11400000, guid: 4f59aac53de14b04ebea0ad618a25c9f, type: 2}
     expression: 0
   ParentNodes:
-  - {fileID: -7432550522449624314}
-  - {fileID: -8571193682831638522}
   - {fileID: -7618630702935728943}
-  ChildNode: {fileID: 0}
+  - {fileID: -3152575183784730798}
   _isExternalFunc: 0
   _externalFunctionName: 
   CharacterNameKey: 
   SentenceTextKey: 
+  hasInitialized: 1
 --- !u!114 &-858738700121652252
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -374,12 +397,14 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -702.6645
-    y: 57.33333
+    x: 2637.6687
+    y: 39.000076
     width: 190
     height: 135
   IsDragging: 1
-  IsSelected: 0
+  IsSelected: 1
+  automaticSkip: 0
+  ChildNode: {fileID: -4826624818468476582}
   _sentence:
     CharacterName: Elaris
     Text: "Nan, d\xE9sol\xE9e, il est en rupture de stock. Mais si t'aimes la musique
@@ -390,11 +415,11 @@ MonoBehaviour:
     expression: 0
   ParentNodes:
   - {fileID: 2128725466365093873}
-  ChildNode: {fileID: -4826624818468476582}
   _isExternalFunc: 0
   _externalFunctionName: 
   CharacterNameKey: 
   SentenceTextKey: 
+  hasInitialized: 1
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -420,9 +445,7 @@ MonoBehaviour:
   - {fileID: 6687558246318772947}
   - {fileID: -858738700121652252}
   - {fileID: 4944146430908420812}
-  - {fileID: -8894791355868348484}
   - {fileID: -7432550522449624314}
-  - {fileID: -8571193682831638522}
   - {fileID: -7618630702935728943}
   - {fileID: -2903131574548789527}
   - {fileID: -5701140139791209159}
@@ -430,6 +453,11 @@ MonoBehaviour:
   - {fileID: 1179389955632101922}
   - {fileID: -9136480394919025530}
   - {fileID: -5493066075146875532}
+  - {fileID: 7815391446416710835}
+  - {fileID: 4236113218215929049}
+  - {fileID: -6187970471002876859}
+  - {fileID: 4840767897152959162}
+  - {fileID: -3152575183784730798}
   VariablesConfig: {fileID: 11400000, guid: be7857d1de2bf534fa9cb6e533ad0217, type: 2}
   _localizationTableName: 
   _characterNamesLocalizationName: 
@@ -451,12 +479,14 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -3313.3337
-    y: 180.66666
+    x: 33.664825
+    y: 154.33357
     width: 190
     height: 135
   IsDragging: 1
   IsSelected: 0
+  automaticSkip: 1
+  ChildNode: {fileID: 4363065833752978027}
   _stage:
     CharacterData: {fileID: 11400000, guid: f76c2a6ccc23d354c9ec8e55ebcbff8f, type: 2}
     visibility: 1
@@ -464,7 +494,6 @@ MonoBehaviour:
     slotName: 0
   ParentNodes:
   - {fileID: -3808618171546961752}
-  ChildNode: {fileID: 4363065833752978027}
 --- !u!114 &2128725466365093873
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -480,12 +509,13 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -1018.0009
-    y: 229.66647
+    x: 2326.9998
+    y: 211.33337
     width: 190
     height: 135
   IsDragging: 1
   IsSelected: 0
+  automaticSkip: 0
   Answers:
   - "Non... D\xE9sol\xE9e"
   - "Non. D\xE9so."
@@ -495,6 +525,40 @@ MonoBehaviour:
   ChildNodes:
   - {fileID: -858738700121652252}
   - {fileID: 6687558246318772947}
+  nextNodeIndex: 0
+  hasInitialized: 1
+--- !u!114 &4236113218215929049
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38789157e7795244280823d019530045, type: 3}
+  m_Name: Variable Condition Node
+  m_EditorClassIdentifier: DialogNodeBaseSystem::cherrydev.VariableConditionNode
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 3505.0007
+    y: -57.666565
+    width: 240
+    height: 160
+  IsDragging: 1
+  IsSelected: 0
+  automaticSkip: 1
+  _variableName: Vinyl_Number
+  _conditionType: 0
+  _boolTargetValue: 0
+  _intTargetValue: 1
+  _floatTargetValue: 0
+  _stringTargetValue: 
+  ParentNodes:
+  - {fileID: 7815391446416710835}
+  TrueChildNode: {fileID: -7432550522449624314}
+  FalseChildNode: {fileID: -7618630702935728943}
 --- !u!114 &4363065833752978027
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -510,12 +574,14 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -3053.3347
-    y: 176.33331
+    x: 291.6632
+    y: 158.00026
     width: 190
     height: 135
   IsDragging: 1
   IsSelected: 0
+  automaticSkip: 0
+  ChildNode: {fileID: -9136480394919025530}
   _sentence:
     CharacterName: Velmora
     Text: "<Wave> Abiga\xEBlle</> ! Elle tombe \xE0 pic occupes toi d'elle!"
@@ -524,11 +590,47 @@ MonoBehaviour:
     expression: 1
   ParentNodes:
   - {fileID: 1179389955632101922}
-  ChildNode: {fileID: -9136480394919025530}
   _isExternalFunc: 0
   _externalFunctionName: 
   CharacterNameKey: 
   SentenceTextKey: 
+  hasInitialized: 1
+--- !u!114 &4840767897152959162
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: DialogNodeBaseSystem::cherrydev.SentenceNode
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 4246.333
+    y: -152.33328
+    width: 190
+    height: 135
+  IsDragging: 1
+  IsSelected: 0
+  automaticSkip: 0
+  ChildNode: {fileID: -3152575183784730798}
+  _sentence:
+    CharacterName: 
+    Text: "Il s'est pass\xE9 quelque chose au cimeti\xE8re ? "
+    CharacterSprite: {fileID: 0}
+    CharacterData: {fileID: 11400000, guid: e5c897c26a297814f9bd24ce66295ca9, type: 2}
+    expression: 0
+  ParentNodes:
+  - {fileID: -6187970471002876859}
+  _isExternalFunc: 0
+  _externalFunctionName: 
+  CharacterNameKey: 
+  SentenceTextKey: 
+  hasInitialized: 1
 --- !u!114 &4944146430908420812
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -544,12 +646,14 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -231.99896
-    y: 209.99985
+    x: 3113.0017
+    y: 191.66682
     width: 190
     height: 135
   IsDragging: 1
   IsSelected: 0
+  automaticSkip: 0
+  ChildNode: {fileID: 7815391446416710835}
   _sentence:
     CharacterName: Elaris
     Text: Ok, alors pour rester dans ton style mais en mieux je te dirais...
@@ -559,11 +663,11 @@ MonoBehaviour:
   ParentNodes:
   - {fileID: -4826624818468476582}
   - {fileID: 7125346346369537327}
-  ChildNode: {fileID: -8894791355868348484}
   _isExternalFunc: 0
   _externalFunctionName: 
   CharacterNameKey: 
   SentenceTextKey: 
+  hasInitialized: 1
 --- !u!114 &5789640660060435712
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -579,12 +683,14 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -1217.3347
-    y: 226.3331
+    x: 2127.6663
+    y: 208.00008
     width: 190
     height: 135
   IsDragging: 1
   IsSelected: 0
+  automaticSkip: 0
+  ChildNode: {fileID: 2128725466365093873}
   _sentence:
     CharacterName: Elaris
     Text: "Je regarde \xE7a tout de suite...Alors"
@@ -594,11 +700,11 @@ MonoBehaviour:
   ParentNodes:
   - {fileID: 7334688636739828862}
   - {fileID: 9204177260375245009}
-  ChildNode: {fileID: 2128725466365093873}
   _isExternalFunc: 0
   _externalFunctionName: 
   CharacterNameKey: 
   SentenceTextKey: 
+  hasInitialized: 1
 --- !u!114 &6687558246318772947
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -614,12 +720,14 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -712.998
-    y: 295.6665
+    x: 2632.0027
+    y: 277.33362
     width: 190
     height: 135
   IsDragging: 1
   IsSelected: 0
+  automaticSkip: 0
+  ChildNode: {fileID: 7125346346369537327}
   _sentence:
     CharacterName: Elaris
     Text: "Cette daube ? Nan, d\xE9so j'ai pas. Par contre, si tu veux je peux te
@@ -629,11 +737,11 @@ MonoBehaviour:
     expression: 2
   ParentNodes:
   - {fileID: 2128725466365093873}
-  ChildNode: {fileID: 7125346346369537327}
   _isExternalFunc: 0
   _externalFunctionName: 
   CharacterNameKey: 
   SentenceTextKey: 
+  hasInitialized: 1
 --- !u!114 &7125346346369537327
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -649,12 +757,14 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -497.3324
-    y: 293.33337
+    x: 2847.6682
+    y: 275.0005
     width: 190
     height: 135
   IsDragging: 1
   IsSelected: 0
+  automaticSkip: 0
+  ChildNode: {fileID: 4944146430908420812}
   _sentence:
     CharacterName: "Abiga\xEBlle"
     Text: Euh... Ouais, pourquoi pas...
@@ -663,11 +773,11 @@ MonoBehaviour:
     expression: 2
   ParentNodes:
   - {fileID: 6687558246318772947}
-  ChildNode: {fileID: 4944146430908420812}
   _isExternalFunc: 0
   _externalFunctionName: 
   CharacterNameKey: 
   SentenceTextKey: 
+  hasInitialized: 1
 --- !u!114 &7334688636739828862
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -683,12 +793,14 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -1537.3335
-    y: 93.99995
+    x: 1807.6667
+    y: 75.66684
     width: 190
     height: 135
   IsDragging: 1
   IsSelected: 0
+  automaticSkip: 0
+  ChildNode: {fileID: 5789640660060435712}
   _sentence:
     CharacterName: "Abiga\xEBlle"
     Text: Bonjour ! Je voulais savoir si vous aviez l'album de Tessa?
@@ -697,11 +809,38 @@ MonoBehaviour:
     expression: 1
   ParentNodes:
   - {fileID: -5701140139791209159}
-  ChildNode: {fileID: 5789640660060435712}
   _isExternalFunc: 0
   _externalFunctionName: 
   CharacterNameKey: 
   SentenceTextKey: 
+  hasInitialized: 1
+--- !u!114 &7815391446416710835
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54f4b3c64aaf434ea0df52154c1c7680, type: 3}
+  m_Name: External Function Node
+  m_EditorClassIdentifier: DialogNodeBaseSystem::cherrydev.ExternalFunctionNode
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 3272.3337
+    y: -13.666595
+    width: 190
+    height: 80
+  IsDragging: 1
+  IsSelected: 0
+  automaticSkip: 0
+  ChildNode: {fileID: 4236113218215929049}
+  _functionName: ChooseVinyle
+  _description: 
+  ParentNodes:
+  - {fileID: 4944146430908420812}
 --- !u!114 &8464188962346203594
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -717,12 +856,13 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -2291.3352
-    y: 189.33328
+    x: 1053.6643
+    y: 171.00026
     width: 190
     height: 135
   IsDragging: 1
   IsSelected: 0
+  automaticSkip: 0
   Answers:
   - Hey!
   - Sup'
@@ -731,6 +871,8 @@ MonoBehaviour:
   ChildNodes:
   - {fileID: -5701140139791209159}
   - {fileID: -5686625207268807504}
+  nextNodeIndex: 0
+  hasInitialized: 1
 --- !u!114 &9204177260375245009
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -746,12 +888,14 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -1525.0005
-    y: 313.33325
+    x: 1819.9998
+    y: 295.00043
     width: 190
     height: 135
   IsDragging: 1
   IsSelected: 0
+  automaticSkip: 0
+  ChildNode: {fileID: 5789640660060435712}
   _sentence:
     CharacterName: "Abiga\xEBlle"
     Text: "S...Sup? Euh...Je..Je.. Vous avez, um, l'album de Tessaa, Nuit argent\xE9e?
@@ -761,8 +905,8 @@ MonoBehaviour:
     expression: 2
   ParentNodes:
   - {fileID: -5686625207268807504}
-  ChildNode: {fileID: 5789640660060435712}
   _isExternalFunc: 0
   _externalFunctionName: 
   CharacterNameKey: 
   SentenceTextKey: 
+  hasInitialized: 1

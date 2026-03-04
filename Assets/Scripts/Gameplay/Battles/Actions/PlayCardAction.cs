@@ -8,6 +8,8 @@ namespace WitchGate.Gameplay.Battles.TurnPhases
 {
     public class PlayCardAction : ITurnAction
     {
+        public string Label => gameCard.Data.Name;
+        
         private readonly BattlePhase battlePhase;
         private readonly GameCard gameCard;
         public int Priority { get; set;}
@@ -22,13 +24,13 @@ namespace WitchGate.Gameplay.Battles.TurnPhases
         // For player : need to use card, discard it and then draw a new one.
         public async Awaitable Execute()
         {
-                var witch = battlePhase.GetBattleWich(gameCard.Data.WitchDeck);
-                if (witch is not null)
-                {
-                    await gameCard.Use(TargetRegistry.Targets, witch);
-                    witch.Discard.TryAddCard(gameCard);
-                    witch.DrawCard();
-                }
+            var witch = battlePhase.GetBattleWich(gameCard.Data.WitchDeck);
+            if (witch is not null)
+            {
+                await gameCard.Use(TargetRegistry.Targets, witch);
+                witch.Discard.TryAddCard(gameCard);
+                witch.DrawCard();
+            }
         }
     }
 }

@@ -6,6 +6,8 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using WitchGate.Controllers;
 using Helteix.Singletons.MonoSingletons;
+using UnityEngine.EventSystems;
+using WitchGate.Prototype.Vinyles;
 using WitchGate.VisualNovel.Visual_Novel.Cards.UI;
 
 namespace WitchGate.Prototype
@@ -16,12 +18,12 @@ namespace WitchGate.Prototype
         [field: SerializeField] public GameObject Map_UI { get; private set; }
         [field: SerializeField] public GameObject CloseButton { get; private set; }
         [field: SerializeField] public GameObject DialogueUI { get; private set; }
+        [field: SerializeField] public GameObject VinylePanel { get; private set; }
+        private bool IsVinyleSelected;
         
         [field: SerializeField] public VNPlayedHandUI CardDropZone { get; private set; }
         
         [field: SerializeField] public GameObject Hand { get; private set; }
-        
-        [field: SerializeField] public SceneData SceneData { get; private set; }
         
         [SerializeField] private DialogBehaviour dialogBehaviour;
         [SerializeField] private DialogNodeGraph[] dialogGraph;
@@ -32,10 +34,11 @@ namespace WitchGate.Prototype
 
         private void Start()
         {
-            //SceneController.Instance.currentGameModeScene = SceneData;
             currentClientIndex = 0;
             NextClient();
             Hand.SetActive(false);
+            dialogBehaviour.BindExternalFunction("ChooseVinyle", WaitForVinyleChoice);
+            
         }
 
         public void EndDay()
@@ -53,8 +56,9 @@ namespace WitchGate.Prototype
                 currentTestimonyphase = new TestimonyPhase(Witch.Elaris);
                 currentTestimonyphase.Run();
                 
+                
                 dialogBehaviour.StartDialog(dialogGraph[currentClientIndex]);
-                Debug.Log("we should have started a dialog");
+                
                 DialogueUI.SetActive(true);
                 currentClientIndex++;
             }
@@ -84,12 +88,28 @@ namespace WitchGate.Prototype
         {
             yield return new WaitForSeconds(1);
             SceneController.Instance.LoadGameMode(GameMode.Exploration);
-            //SceneManager.LoadScene("Night_Exploration");
         }
 
-        public void DebugAlacon()
+        public void SelectMusic(Vinyle vinyle)
         {
-            Debug.Log("feur");
+            dialogBehaviour.SetVariableValue("Vinyl_Number",vinyle.VinyleNumber);
+            dialogBehaviour.SetVariableValue("IsFunctionCompleted",true);
+            ToogleVinylePanel();
+            dialogBehaviour.NextNode();
+            
         }
+
+        public void WaitForVinyleChoice()
+        {
+            ToogleVinylePanel();
+            dialogBehaviour.SetVariableValue("IsFunctionCompleted",false);
+        }
+
+        public void ToogleVinylePanel()
+        {
+            VinylePanel.SetActive(!VinylePanel.activeSelf);
+            DialogueUI.SetActive(!VinylePanel.activeSelf);
+        }
+        
     }
 }

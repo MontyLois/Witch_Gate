@@ -9,6 +9,8 @@ namespace cherrydev
         public delegate object ExternalFunction();
 
         private readonly Dictionary<string, ExternalFunction> _externals = new();
+        
+        
 
         public ExternalFunction CallExternalFunction(string funcName)
         {
@@ -25,6 +27,7 @@ namespace cherrydev
                 return null;
             }
         }
+        
 
         public void BindExternalFunction(string funcName, Action function)
         {

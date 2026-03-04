@@ -16,6 +16,7 @@ MonoBehaviour:
   <Name>k__BackingField: 5
   <Description>k__BackingField: Attaque de 7
   <CardRarity>k__BackingField: 1
-  <Icon>k__BackingField: {fileID: -1156602589, guid: 85efd2be411177a479ee49053483be9e, type: 3}
+  <Icon>k__BackingField: {fileID: -11704280, guid: 1249ff7473f1aa241a7c326a74ac6731, type: 3}
+  <BG>k__BackingField: {fileID: 508984422, guid: 59a9e08b1ed44124ca53ac719b751d22, type: 3}
   <Priority>k__BackingField: 0
   <ID>k__BackingField: cc0034b9-2ece-4f0a-a78d-5f2544c56167

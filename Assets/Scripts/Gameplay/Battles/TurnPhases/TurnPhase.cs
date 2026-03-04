@@ -19,10 +19,9 @@ namespace WitchGate.Gameplay.Battles.TurnPhases
             return OnBegin();
         }
 
-        async Awaitable IPhase.Execute()
+        Awaitable IPhase.Execute()
         {
-            List<ITurnAction> turnActions = await Execute();
-            BattlePhase.AddTurnActions(turnActions);
+            return Execute();
         }
 
         Awaitable IPhase.OnEnd()
@@ -31,7 +30,7 @@ namespace WitchGate.Gameplay.Battles.TurnPhases
         }
 
         protected abstract Awaitable OnBegin();
-        protected abstract Awaitable<List<ITurnAction>> Execute();
+        protected abstract Awaitable Execute();
         protected abstract Awaitable OnEnd();
     }
 }

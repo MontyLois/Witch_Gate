@@ -15,8 +15,14 @@ namespace WitchGate.Gameplay.Cards
     {
         [field: SerializeField]
         public CardData Data { get; private set; }
-        
         public int Level { get; private set; }
+        
+        public ICardAnimator CardAnimator { get; internal set; }
+
+        //public Func<Awaitable> GetAttackAwaitable{ get; internal set; }
+        
+        public event Action CardPutDown;
+        public event Action UseCard;
 
         public GameCard(CardData data, int level)
         {
@@ -31,11 +37,26 @@ namespace WitchGate.Gameplay.Cards
 
         public async Awaitable Use(IReadOnlyList<ICanFight> targets, ICanFight caster)
         {
+            if (CardAnimator != null)
+                await CardAnimator.OnAttack();
+            /*
+            if (GetAttackAwaitable != null)
+                await GetAttackAwaitable();
+            */
+            
             foreach (var effect in Effects)
             {
                 effect.AffectTargets(targets, caster);
             }
+
+            
+            UseCard?.Invoke();
             await PhaseController.CompletedAwaitable;
+        }
+
+        public void OnSelected()
+        {
+            CardPutDown?.Invoke();
         }
     }
 }
