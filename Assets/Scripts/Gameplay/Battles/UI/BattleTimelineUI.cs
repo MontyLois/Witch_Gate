@@ -13,6 +13,12 @@ namespace WitchGate.Gameplay
 {
     public class BattleTimelineUI : UIList<ITurnAction, TurnActionUI>, IPhaseListener<BattlePhase>
     {
+        public string name;
+        public BattleTimelineUI()
+        {
+            Debug.Log("hey");
+            
+        }
         private void OnEnable()
         {
             this.Register();
