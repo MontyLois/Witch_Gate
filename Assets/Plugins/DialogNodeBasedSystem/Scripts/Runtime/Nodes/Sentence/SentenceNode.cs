@@ -180,7 +180,7 @@ namespace cherrydev
 
                 EditorGUILayout.BeginHorizontal();
                 EditorGUILayout.LabelField("Text Key", GUILayout.Width(LabelFieldSpace));
-                SentenceTextKey = EditorGUILayout.TextField(SentenceTextKey, GUILayout.Width(TextFieldWidth));
+                SentenceTextKey = EditorGUILayout.TextArea(SentenceTextKey);
                 EditorGUILayout.EndHorizontal();
             }
             else
@@ -232,8 +232,15 @@ namespace cherrydev
         {
             EditorGUILayout.BeginHorizontal();
             EditorGUILayout.LabelField($"Text ", GUILayout.Width(LabelFieldSpace));
-            _sentence.Text = EditorGUILayout.TextField(_sentence.Text, GUILayout.Width(TextFieldWidth));
             EditorGUILayout.EndHorizontal();
+            GUIStyle wrappedTextArea = new GUIStyle(EditorStyles.textArea);
+            wrappedTextArea.wordWrap = true;
+
+            _sentence.Text = EditorGUILayout.TextArea(
+                _sentence.Text,
+                wrappedTextArea,
+                GUILayout.Height(150)
+            );
         }
         
         private void DrawExpressionFieldHorizontal()
@@ -285,7 +292,7 @@ namespace cherrydev
             else
             {
                 _externalButtonLabel = "Add external func";
-                Rect.height = StandardHeight;
+                Rect.height = 300f;
             }
         }
 
@@ -294,7 +301,7 @@ namespace cherrydev
         /// </summary>
         public void CheckNodeSize(float width, float height)
         {
-            Rect.width = width;
+            Rect.width = 200f;
 
             if (StandardHeight == 0)
             {
@@ -302,9 +309,9 @@ namespace cherrydev
             }
 
             if (_isExternalFunc)
-                Rect.height = ExternalNodeHeight;
+                Rect.height = 300f;
             else
-                Rect.height = StandardHeight;
+                Rect.height = 300f;
         }
 
         /// <summary>
