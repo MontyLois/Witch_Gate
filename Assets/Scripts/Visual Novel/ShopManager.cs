@@ -15,21 +15,22 @@ namespace WitchGate.Prototype
     public class ShopManager : MonoBehaviour
     {
         
+        [Header("UI")]
         [field: SerializeField] public GameObject Map_UI { get; private set; }
         [field: SerializeField] public GameObject CloseButton { get; private set; }
         [field: SerializeField] public GameObject DialogueUI { get; private set; }
         [field: SerializeField] public GameObject VinylePanel { get; private set; }
-        private bool IsVinyleSelected;
         
+        [Header("Card")]
         [field: SerializeField] public VNPlayedHandUI CardDropZone { get; private set; }
-        
         [field: SerializeField] public GameObject Hand { get; private set; }
         
+        [Header("Dialog")]
         [SerializeField] private DialogBehaviour dialogBehaviour;
         [SerializeField] private DialogNodeGraph[] dialogGraph;
 
+        
         private TestimonyPhase currentTestimonyphase;
-
         private int currentClientIndex;
 
         private void Start()
@@ -37,7 +38,7 @@ namespace WitchGate.Prototype
             currentClientIndex = 0;
             NextClient();
             Hand.SetActive(false);
-            dialogBehaviour.BindExternalFunction("ChooseVinyle", WaitForVinyleChoice);
+            dialogBehaviour.BindExternalFunction("InteractiveChoice", ChooseVinyl);
             
         }
 
@@ -69,10 +70,6 @@ namespace WitchGate.Prototype
                 ShowCloseButton();
             }
         }
-        private void OnTriggerEnter(Collider other)
-        {
-           // StartCoroutine(WaitToSwapScene());
-        }
 
         private void ShowCloseButton()
         {
@@ -92,20 +89,17 @@ namespace WitchGate.Prototype
 
         public void SelectMusic(Vinyle vinyle)
         {
-            dialogBehaviour.SetVariableValue("Vinyl_Number",vinyle.VinyleNumber);
-            dialogBehaviour.SetVariableValue("IsFunctionCompleted",true);
-            ToogleVinylePanel();
+            dialogBehaviour.SetVariableValue("interactiveChoiceValue",vinyle.VinyleNumber);
+            ToogleVinylPanel();
             dialogBehaviour.NextNode();
-            
         }
 
-        public void WaitForVinyleChoice()
+        public void ChooseVinyl()
         {
-            ToogleVinylePanel();
-            dialogBehaviour.SetVariableValue("IsFunctionCompleted",false);
+            ToogleVinylPanel();
         }
 
-        public void ToogleVinylePanel()
+        public void ToogleVinylPanel()
         {
             VinylePanel.SetActive(!VinylePanel.activeSelf);
             DialogueUI.SetActive(!VinylePanel.activeSelf);
