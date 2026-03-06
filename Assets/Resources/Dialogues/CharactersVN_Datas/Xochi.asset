@@ -10,12 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3bec44614f45472ba36a7952811dad65, type: 3}
-  m_Name: Abigaelle
-  m_EditorClassIdentifier: WitchGate.VisualNovel::WitchGate.VisualNovel.Visual_Novel.Dialog.VNCharacterData
+  m_Name: Xochi
+  m_EditorClassIdentifier: WitchGate.Core::WitchGate.VisualNovel.Visual_Novel.Dialog.VNCharacterData
+  Name: Xochi
   expressions:
   - expression: 0
-    sprite: {fileID: 21300000, guid: bd78e604f38c97847964bb5b15a39207, type: 3}
+    sprite: {fileID: 21300000, guid: 666fccd891ca340488f6a06a10fe485b, type: 3}
   - expression: 1
-    sprite: {fileID: 21300000, guid: 652acc9f20939574cbc35cff22c8e479, type: 3}
+    sprite: {fileID: 21300000, guid: 0dae19027b5c11142be7cc1bb954a942, type: 3}
   - expression: 2
-    sprite: {fileID: 21300000, guid: dbdc1e10c46328547ae36f8ad19a9900, type: 3}
+    sprite: {fileID: 21300000, guid: 88731d912b5e84d4db01ec6e62a1589e, type: 3}
