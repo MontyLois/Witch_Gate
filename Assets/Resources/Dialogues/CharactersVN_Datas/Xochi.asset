@@ -20,3 +20,5 @@ MonoBehaviour:
     sprite: {fileID: 21300000, guid: 0dae19027b5c11142be7cc1bb954a942, type: 3}
   - expression: 2
     sprite: {fileID: 21300000, guid: 88731d912b5e84d4db01ec6e62a1589e, type: 3}
+  - expression: 3
+    sprite: {fileID: 21300000, guid: 2aedcf68dff321a45bbae9b85f310eed, type: 3}
