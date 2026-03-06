@@ -5,6 +5,7 @@ namespace cherrydev
         Neutral,
         Happy,
         Unhappy,
-        Other
+        Smiling,
+        Sad
     }
 }
