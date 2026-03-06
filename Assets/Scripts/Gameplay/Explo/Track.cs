@@ -6,6 +6,8 @@ namespace WitchGate.Prototype
     {
         [field: SerializeField] private GameObject vfx;
         [field: SerializeField] private GameObject interaction;
+        [field: SerializeField] private GameObject nextTrackStep;
+        
         
         private bool _playerInside = false;
         private void OnTriggerEnter(Collider other)
@@ -26,7 +28,14 @@ namespace WitchGate.Prototype
             if (_playerInside && Input.GetKeyDown(KeyCode.E))
             {
                 vfx.SetActive(true);
+                ActivateNextTrackStep();
             }
+        }
+
+        private void ActivateNextTrackStep()
+        {
+            if(nextTrackStep)
+                nextTrackStep.SetActive(true);
         }
     }
 }

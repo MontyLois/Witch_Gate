@@ -3,22 +3,16 @@ using WitchGate.Mission.Data;
 
 namespace WitchGate.Mission.Plannings.Data
 {
-    public class PlanningData
+    [CreateAssetMenu(fileName = "P_", menuName = "WitchGate/Planning/PlanningContextualized", order = 0)]
+    public class PlanningData : ScriptableObject
     {
         [field: SerializeField]
         public CharacterData CharacterData { get; private set; }
         [field: SerializeField]
         public EncounterContext EncounterContext { get; private set; }
         [field: SerializeField]
-        public PlanningCondition PlanningCondition { get; private set; }
-
-        public bool CheckAvailability()
-        {
-            if (GameState.Instance.CurrentContext == EncounterContext && PlanningCondition.IsConditionValid)
-            {
-                return true;
-            }
-            return false; 
-        }
+        public PlanningConditionData PlanningConditionData { get; private set; }
+        [field: SerializeField]
+        public PlanningFormula PlanningFormula { get; private set; }
     }
 }

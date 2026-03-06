@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ff58608488e4d7ba9901f880e43c7db, type: 3}
   m_Name: PF_EveryXDays_1
   m_EditorClassIdentifier: WitchGate.Core::WitchGate.Mission.Plannings.Data.PlanningFormulaEveryXDays
-  <X>k__BackingField: 0
+  <X>k__BackingField: 1

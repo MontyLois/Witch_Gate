@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace WitchGate.Gameplay.Cards.Effects
 {
-    [CreateAssetMenu(fileName = "NewSeekTruthEffect", menuName = "WitchGate/Cards/Effects/VN/SeekTruth", order = 0)]
+    [CreateAssetMenu(fileName = "NewSeekTruthEffect", menuName = "WitchGate/Decks/Cards/Effects/VN/SeekTruth", order = 0)]
     public class SeekTruthCardVNEffectData : CardVNEffectData
     {
         

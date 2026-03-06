@@ -1,19 +1,21 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
+using WitchGate.Mission.Data;
 using WitchGate.Visual_Novel.Dialog;
 using WitchGate.Visual_Novel.Enums;
 
 namespace WitchGate.VisualNovel.Visual_Novel.Dialog
 {
-    [CreateAssetMenu(fileName = "VNCharacterData", menuName = "WitchGate/VN/VNCharacter", order = 0)]
+    [CreateAssetMenu(fileName = "VNCharacterData", menuName = "WitchGate/Characters/VNCharacter", order = 0)]
     public class VNCharacterData : ScriptableObject
     {
         [field: SerializeField]
-        private String Name;
-        [field: SerializeField]
         public List<ExpressionSprite> expressions;
         private Dictionary<Expression, Sprite> _lookup;
+        [field: SerializeField] public CharacterData CharacterData { get; private set; } 
+        public String Name => CharacterData.displayName;
 
         public Sprite GetSprite(Expression expression)
         {

@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace WitchGate.Controllers
 {
-    [CreateAssetMenu(fileName = "newMission", menuName = "WitchGate/Missions/Mission", order = 0)]
+    [CreateAssetMenu(fileName = "newMission", menuName = "WitchGate/SceneManagement/Mission", order = 0)]
     public class MissionSceneData : ScriptableObject
     {
         [field: SerializeField] public string MissionName { get; private set; }

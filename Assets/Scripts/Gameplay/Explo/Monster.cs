@@ -18,19 +18,24 @@ namespace WitchGate.Prototype
         private GameObject sprite;
         
         [field: SerializeField]
+        private Animator animator;
+        
+        [field: SerializeField]
         private BattleProfile enemyProfile;
         
         private void OnTriggerEnter(Collider other)
         {
             sprite.SetActive(true);
             ExplorationGameplayManager.Instance.LockPlayerMovement();
-            StartCoroutine(WaitToSwapScene());
-            StartBattle();
+            StartCoroutine(WaitAnimation());
         }
         
-        private IEnumerator WaitToSwapScene()
+        private IEnumerator WaitAnimation()
         {
-            yield return new WaitForSeconds(1);
+            animator.SetTrigger("Apparition");
+            float animationLength = animator.GetCurrentAnimatorStateInfo(0).length;
+            yield return new WaitForSecondsRealtime(animationLength);
+            StartBattle();
         }
 
         private void StartBattle()

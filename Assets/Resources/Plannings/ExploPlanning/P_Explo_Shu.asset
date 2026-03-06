@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a6cc34690e5403f8ed997a3c9088751, type: 3}
   m_Name: P_Explo_Shu
   m_EditorClassIdentifier: WitchGate.Core::WitchGate.Mission.Plannings.Data.PlanningData
-  <CharacterData>k__BackingField: {fileID: 0}
+  <CharacterData>k__BackingField: {fileID: 11400000, guid: 36cd925630610c64284b4c1c7cbe1b04, type: 2}
   <EncounterContext>k__BackingField: 0
-  <PlanningCondition>k__BackingField: {fileID: 0}
-  <PlanningFormula>k__BackingField: {fileID: 0}
+  <PlanningCondition>k__BackingField: {fileID: 11400000, guid: c3ab60f7d2c7d094aa819646eab32b16, type: 2}
+  <PlanningFormula>k__BackingField: {fileID: 11400000, guid: 10062c7e96d7abf4ebaeae1a86c38ecf, type: 2}
   FirstEncounterDay: 0

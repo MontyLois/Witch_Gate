@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace WitchGate.Mission.Data
 {
-    [CreateAssetMenu(fileName = "CharacterExplorationData", menuName = "WitchGate/Mission/CharacterExplorationData", order = 0)]
+    [CreateAssetMenu(fileName = "CharacterExplorationData", menuName = "WitchGate/Characters/CharacterExploration", order = 0)]
     public class CharacterExplorationData : ScriptableObject
     {
         [field: SerializeField]
@@ -10,6 +10,6 @@ namespace WitchGate.Mission.Data
         [field: SerializeField]
         public GameObject prefab { get; private set; }
         [field: SerializeField]
-        public LocationData LocationData { get; private set; }
+        public PlaceData PlaceData { get; private set; }
     }
 }

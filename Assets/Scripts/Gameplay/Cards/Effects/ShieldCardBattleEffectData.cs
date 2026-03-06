@@ -4,7 +4,7 @@ using WitchGate.Gameplay.Battles.Entities.Interface;
 
 namespace WitchGate.Gameplay.Cards.Effects
 {
-    [CreateAssetMenu(fileName = "NewShieldEffect", menuName = "WitchGate/Cards/Effects/Shield", order = 0)]
+    [CreateAssetMenu(fileName = "NewShieldEffect", menuName = "WitchGate/Decks/Cards/Effects/Fight/Shield", order = 0)]
     public class ShieldCardBattleEffectData : CardBattleEffectData
     {
         [field: SerializeField]

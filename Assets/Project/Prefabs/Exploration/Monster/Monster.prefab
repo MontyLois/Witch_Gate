@@ -100,6 +100,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1414117703619288605}
   - component: {fileID: 937872612696445819}
+  - component: {fileID: 2471509931128030148}
   m_Layer: 0
   m_Name: Sprite
   m_TagString: Untagged
@@ -116,8 +117,8 @@ Transform:
   m_GameObject: {fileID: 1960905814773123079}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.17999983, y: 0.90999985, z: 0}
-  m_LocalScale: {x: 0.12, y: 0.12, z: 0.12}
+  m_LocalPosition: {x: -0.26, y: 0.65, z: 0}
+  m_LocalScale: {x: 0.21, y: 0.21, z: 0.21}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 2296400564755674982}
@@ -169,7 +170,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1832146589, guid: 7120ec20faf46ec4a986dcd1689b0054, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 356a1f4c637da2841b1c4e64ada42357, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -180,6 +181,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &2471509931128030148
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1960905814773123079}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 83c6219a95531a4448c5c1de94efbd86, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &2901714876111772804
 GameObject:
   m_ObjectHideFlags: 0
@@ -247,69 +270,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sprite: {fileID: 1960905814773123079}
-  playerProfile:
-    <VelmoraProfile>k__BackingField:
-      <Witch>k__BackingField: 1
-      <Health>k__BackingField: 20
-      <MaxHealth>k__BackingField: 20
-      <Deck>k__BackingField:
-      - <Level>k__BackingField: 1
-        <CardID>k__BackingField: 08b37319-1e47-43c3-82cc-4031f777ae23
-      - <Level>k__BackingField: 1
-        <CardID>k__BackingField: 08b37319-1e47-43c3-82cc-4031f777ae23
-      - <Level>k__BackingField: 1
-        <CardID>k__BackingField: 08b37319-1e47-43c3-82cc-4031f777ae23
-      - <Level>k__BackingField: 1
-        <CardID>k__BackingField: 08b37319-1e47-43c3-82cc-4031f777ae23
-      - <Level>k__BackingField: 1
-        <CardID>k__BackingField: 08b37319-1e47-43c3-82cc-4031f777ae23
-      - <Level>k__BackingField: 1
-        <CardID>k__BackingField: 08b37319-1e47-43c3-82cc-4031f777ae23
-      - <Level>k__BackingField: 1
-        <CardID>k__BackingField: 08b37319-1e47-43c3-82cc-4031f777ae23
-      - <Level>k__BackingField: 1
-        <CardID>k__BackingField: 08b37319-1e47-43c3-82cc-4031f777ae23
-    <ElarisProfile>k__BackingField:
-      <Witch>k__BackingField: 2
-      <Health>k__BackingField: 20
-      <MaxHealth>k__BackingField: 20
-      <Deck>k__BackingField:
-      - <Level>k__BackingField: 1
-        <CardID>k__BackingField: 500490b8-7ebe-40fc-a90f-8cc0006305df
-      - <Level>k__BackingField: 1
-        <CardID>k__BackingField: 500490b8-7ebe-40fc-a90f-8cc0006305df
-      - <Level>k__BackingField: 1
-        <CardID>k__BackingField: 500490b8-7ebe-40fc-a90f-8cc0006305df
-      - <Level>k__BackingField: 1
-        <CardID>k__BackingField: 500490b8-7ebe-40fc-a90f-8cc0006305df
-      - <Level>k__BackingField: 1
-        <CardID>k__BackingField: 500490b8-7ebe-40fc-a90f-8cc0006305df
-      - <Level>k__BackingField: 1
-        <CardID>k__BackingField: 500490b8-7ebe-40fc-a90f-8cc0006305df
-      - <Level>k__BackingField: 1
-        <CardID>k__BackingField: 500490b8-7ebe-40fc-a90f-8cc0006305df
-      - <Level>k__BackingField: 1
-        <CardID>k__BackingField: 500490b8-7ebe-40fc-a90f-8cc0006305df
-  enemyProfile:
-    <Health>k__BackingField: 30
-    <MaxHealth>k__BackingField: 30
-    <Deck>k__BackingField:
-    - <Level>k__BackingField: 1
-      <CardID>k__BackingField: 06065e9d-f0d3-44c5-88b3-d3997a6da0ad
-    - <Level>k__BackingField: 1
-      <CardID>k__BackingField: 06065e9d-f0d3-44c5-88b3-d3997a6da0ad
-    - <Level>k__BackingField: 1
-      <CardID>k__BackingField: 06065e9d-f0d3-44c5-88b3-d3997a6da0ad
-    - <Level>k__BackingField: 1
-      <CardID>k__BackingField: 06065e9d-f0d3-44c5-88b3-d3997a6da0ad
-    - <Level>k__BackingField: 1
-      <CardID>k__BackingField: 06065e9d-f0d3-44c5-88b3-d3997a6da0ad
-    - <Level>k__BackingField: 1
-      <CardID>k__BackingField: 06065e9d-f0d3-44c5-88b3-d3997a6da0ad
-    - <Level>k__BackingField: 1
-      <CardID>k__BackingField: 06065e9d-f0d3-44c5-88b3-d3997a6da0ad
-    - <Level>k__BackingField: 1
-      <CardID>k__BackingField: cc0034b9-2ece-4f0a-a78d-5f2544c56167
+  animator: {fileID: 2471509931128030148}
+  enemyProfile: {fileID: 11400000, guid: e39c0dfb258e9724db25c7068e129699, type: 2}
 --- !u!1 &3618564566373262351
 GameObject:
   m_ObjectHideFlags: 0
@@ -325,7 +287,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2296400564755674982
 Transform:
   m_ObjectHideFlags: 0
@@ -367,7 +329,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4023609220980778564}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -391,7 +353,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4966987681482507799
 Transform:
   m_ObjectHideFlags: 0

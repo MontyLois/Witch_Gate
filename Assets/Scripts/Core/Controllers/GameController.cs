@@ -1,4 +1,6 @@
+using System;
 using UnityEngine;
+using WitchGate.Mission;
 
 namespace WitchGate.Controllers
 {
@@ -6,6 +8,15 @@ namespace WitchGate.Controllers
     {
         public static GameMetrics Metrics => GameMetrics.Current;
         public static GameDatabase GameDatabase { get; private set; }
+        
+        
+        
+        public static int CurrentDay { get; private set; }
+        public static EncounterContext CurrentContext  { get; private set; }
+        public static Investigation Investigation { get; private set; }
+
+        public static event Action<int> DayChanged;
+        public static event Action<int> InvestigationChanged;
 
         
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]

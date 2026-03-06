@@ -95,7 +95,7 @@ namespace cherrydev
         {
             Debug.Log("donc là on est dans le deuxième settup");
             
-            _dialogNameText.text = characterData.name;
+            _dialogNameText.text = characterData.Name;
             _dialogText.text = text;
             _currentFullText = text;
         }
@@ -163,7 +163,7 @@ namespace cherrydev
 
         private void ChangeText(VNCharacterData characterData, string text)
         {
-            _dialogNameText.text = characterData.name;
+            _dialogNameText.text = characterData.Name;
             _dialogText.text = text;
             _currentFullText = text;
         }

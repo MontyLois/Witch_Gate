@@ -2,8 +2,8 @@ using UnityEngine;
 
 namespace WitchGate.Mission.Plannings.Data
 {
-    [CreateAssetMenu(fileName = "PlanningFormulaEveryXDays", menuName = "WitchGate/Mission/Planning", order = 0)]
-    public class PlanningFormulaEveryXDay : PlanningFormula
+    [CreateAssetMenu(fileName = "PF_EveryXDays_", menuName = "WitchGate/Planning/PlanningFormula/EveryXDays", order = 0)]
+    public class PlanningFormulaEveryXDays : PlanningFormula
     {
         [field: SerializeField]
         public int X { get; private set; }

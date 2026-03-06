@@ -3,7 +3,7 @@ using WitchGate.Players;
 
 namespace WitchGate.Gameplay.Entities
 {
-    [CreateAssetMenu(fileName = "BattleProfile", menuName = "WitchGate/Profiles/BattleProfile", order = 0)]
+    [CreateAssetMenu(fileName = "BattleProfile", menuName = "WitchGate/Decks/Profiles/BattleProfile", order = 0)]
     public class BattleProfile : ScriptableObject
     {
         [field: SerializeField, Min(0)]
