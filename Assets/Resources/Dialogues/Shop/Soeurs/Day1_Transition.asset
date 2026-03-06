@@ -1,0 +1,822 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8770883008239941367
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: DialogNodeBaseSystem::cherrydev.SentenceNode
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: -1745.6011
+    y: 353.19983
+    width: 200
+    height: 300
+  IsDragging: 1
+  IsSelected: 0
+  automaticSkip: 0
+  ChildNode: {fileID: 6416919380707940721}
+  _sentence:
+    CharacterName: 
+    Text: "Morgane a compl\xE8tement perdu la t\xEAte..."
+    CharacterSprite: {fileID: 0}
+    CharacterData: {fileID: 11400000, guid: f76c2a6ccc23d354c9ec8e55ebcbff8f, type: 2}
+    expression: 2
+  ParentNodes:
+  - {fileID: -4867172138034866749}
+  _isExternalFunc: 0
+  _externalFunctionName: 
+  CharacterNameKey: 
+  SentenceTextKey: 
+  hasInitialized: 1
+--- !u!114 &-6964542906384193573
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: DialogNodeBaseSystem::cherrydev.SentenceNode
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: -608.8001
+    y: 550.7997
+    width: 200
+    height: 300
+  IsDragging: 0
+  IsSelected: 0
+  automaticSkip: 0
+  ChildNode: {fileID: -417260734756826364}
+  _sentence:
+    CharacterName: 
+    Text: "Tu n'as aucune exp\xE9rience Ela ! Et on sait m\xEAme pas c'est quoi ces
+      choses."
+    CharacterSprite: {fileID: 0}
+    CharacterData: {fileID: 11400000, guid: f76c2a6ccc23d354c9ec8e55ebcbff8f, type: 2}
+    expression: 2
+  ParentNodes:
+  - {fileID: 1517666099198996616}
+  _isExternalFunc: 0
+  _externalFunctionName: 
+  CharacterNameKey: 
+  SentenceTextKey: 
+  hasInitialized: 1
+--- !u!114 &-6247822072436024675
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: DialogNodeBaseSystem::cherrydev.SentenceNode
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 659.99554
+    y: 216.4
+    width: 200
+    height: 300
+  IsDragging: 1
+  IsSelected: 1
+  automaticSkip: 0
+  ChildNode: {fileID: 0}
+  _sentence:
+    CharacterName: 
+    Text: "C'est \xE7a oui.. Bon moi j'y vais."
+    CharacterSprite: {fileID: 0}
+    CharacterData: {fileID: 11400000, guid: e5c897c26a297814f9bd24ce66295ca9, type: 2}
+    expression: 0
+  ParentNodes:
+  - {fileID: -2658387541324793666}
+  _isExternalFunc: 0
+  _externalFunctionName: 
+  CharacterNameKey: 
+  SentenceTextKey: 
+  hasInitialized: 1
+--- !u!114 &-4867172138034866749
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: DialogNodeBaseSystem::cherrydev.SentenceNode
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: -1945.6006
+    y: 353.99982
+    width: 200
+    height: 300
+  IsDragging: 1
+  IsSelected: 0
+  automaticSkip: 0
+  ChildNode: {fileID: -8770883008239941367}
+  _sentence:
+    CharacterName: 
+    Text: "Tu n'iras pas te battre Ela. Tu as \xE0 peine 19 ans."
+    CharacterSprite: {fileID: 0}
+    CharacterData: {fileID: 11400000, guid: f76c2a6ccc23d354c9ec8e55ebcbff8f, type: 2}
+    expression: 0
+  ParentNodes:
+  - {fileID: -1566698480115037081}
+  _isExternalFunc: 0
+  _externalFunctionName: 
+  CharacterNameKey: 
+  SentenceTextKey: 
+  hasInitialized: 1
+--- !u!114 &-2658387541324793666
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: DialogNodeBaseSystem::cherrydev.SentenceNode
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 447.99615
+    y: 216.40002
+    width: 200
+    height: 300
+  IsDragging: 1
+  IsSelected: 0
+  automaticSkip: 0
+  ChildNode: {fileID: -6247822072436024675}
+  _sentence:
+    CharacterName: 
+    Text: 'Bon. Attends ! Je peux pas te laisser sortir seule, tu vas te faire tuer... '
+    CharacterSprite: {fileID: 0}
+    CharacterData: {fileID: 11400000, guid: f76c2a6ccc23d354c9ec8e55ebcbff8f, type: 2}
+    expression: 0
+  ParentNodes:
+  - {fileID: -1526485250050888738}
+  _isExternalFunc: 0
+  _externalFunctionName: 
+  CharacterNameKey: 
+  SentenceTextKey: 
+  hasInitialized: 1
+--- !u!114 &-1907693995524394467
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: DialogNodeBaseSystem::cherrydev.SentenceNode
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 39.19731
+    y: 549.1996
+    width: 200
+    height: 300
+  IsDragging: 1
+  IsSelected: 0
+  automaticSkip: 0
+  ChildNode: {fileID: 0}
+  _sentence:
+    CharacterName: 
+    Text: "Si on croise <bounce> des chasseurs de sorci\xE8res </> tu pars ok?"
+    CharacterSprite: {fileID: 0}
+    CharacterData: {fileID: 11400000, guid: f76c2a6ccc23d354c9ec8e55ebcbff8f, type: 2}
+    expression: 0
+  ParentNodes:
+  - {fileID: 485544320078581326}
+  _isExternalFunc: 0
+  _externalFunctionName: 
+  CharacterNameKey: 
+  SentenceTextKey: 
+  hasInitialized: 1
+--- !u!114 &-1566698480115037081
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 728bde28222c436aa8f80da237c76a9b, type: 3}
+  m_Name: Stage Node
+  m_EditorClassIdentifier: DialogNodeBaseSystem::cherrydev.StageNode
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: -2147.2004
+    y: 381.9997
+    width: 190
+    height: 135
+  IsDragging: 1
+  IsSelected: 0
+  automaticSkip: 1
+  ChildNode: {fileID: -4867172138034866749}
+  _stage:
+    CharacterData: {fileID: 11400000, guid: e5c897c26a297814f9bd24ce66295ca9, type: 2}
+    visibility: 1
+    expression: 0
+    slotName: 1
+  ParentNodes:
+  - {fileID: 6910486039296583776}
+--- !u!114 &-1526485250050888738
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: DialogNodeBaseSystem::cherrydev.SentenceNode
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 215.99591
+    y: 218.00009
+    width: 200
+    height: 300
+  IsDragging: 1
+  IsSelected: 0
+  automaticSkip: 0
+  ChildNode: {fileID: -2658387541324793666}
+  _sentence:
+    CharacterName: 
+    Text: J'irais avec Naila. Elle est courageuse elle au moins.
+    CharacterSprite: {fileID: 0}
+    CharacterData: {fileID: 11400000, guid: e5c897c26a297814f9bd24ce66295ca9, type: 2}
+    expression: 2
+  ParentNodes:
+  - {fileID: 2758133891344242663}
+  _isExternalFunc: 0
+  _externalFunctionName: 
+  CharacterNameKey: 
+  SentenceTextKey: 
+  hasInitialized: 1
+--- !u!114 &-417260734756826364
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: DialogNodeBaseSystem::cherrydev.SentenceNode
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: -396.00165
+    y: 545.99963
+    width: 200
+    height: 300
+  IsDragging: 1
+  IsSelected: 0
+  automaticSkip: 0
+  ChildNode: {fileID: 485544320078581326}
+  _sentence:
+    CharacterName: 
+    Text: "Vel. J'\xE9tais la premi\xE8re de ma classe en combat. Fait moi un peu
+      confiance..."
+    CharacterSprite: {fileID: 0}
+    CharacterData: {fileID: 11400000, guid: e5c897c26a297814f9bd24ce66295ca9, type: 2}
+    expression: 0
+  ParentNodes:
+  - {fileID: -6964542906384193573}
+  _isExternalFunc: 0
+  _externalFunctionName: 
+  CharacterNameKey: 
+  SentenceTextKey: 
+  hasInitialized: 1
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33f741ea10ebcf842a91c9b871dd032a, type: 3}
+  m_Name: Day1_Transition
+  m_EditorClassIdentifier: DialogNodeBaseSystem::cherrydev.DialogNodeGraph
+  NodesList:
+  - {fileID: 6910486039296583776}
+  - {fileID: -1566698480115037081}
+  - {fileID: -4867172138034866749}
+  - {fileID: -8770883008239941367}
+  - {fileID: 6416919380707940721}
+  - {fileID: 2423803214977727189}
+  - {fileID: 2798062358097072402}
+  - {fileID: 2548597813978979727}
+  - {fileID: 1304728639332635870}
+  - {fileID: 1678908351531051645}
+  - {fileID: 7201651243399215265}
+  - {fileID: 2758133891344242663}
+  - {fileID: -1526485250050888738}
+  - {fileID: -2658387541324793666}
+  - {fileID: -6247822072436024675}
+  - {fileID: 6986531136123763636}
+  - {fileID: 8377239794745044897}
+  - {fileID: 1517666099198996616}
+  - {fileID: -6964542906384193573}
+  - {fileID: -417260734756826364}
+  - {fileID: 485544320078581326}
+  - {fileID: -1907693995524394467}
+  VariablesConfig: {fileID: 11400000, guid: be7857d1de2bf534fa9cb6e533ad0217, type: 2}
+  _localizationTableName: 
+  _characterNamesLocalizationName: 
+  NodeToDrawLineFrom: {fileID: 0}
+  LinePosition: {x: 0, y: 0}
+  IsLocalizationSetUp: 0
+--- !u!114 &485544320078581326
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: DialogNodeBaseSystem::cherrydev.SentenceNode
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: -173.6025
+    y: 551.59937
+    width: 200
+    height: 300
+  IsDragging: 1
+  IsSelected: 0
+  automaticSkip: 0
+  ChildNode: {fileID: -1907693995524394467}
+  _sentence:
+    CharacterName: 
+    Text: "D'accord... Tu restes pr\xE8s de moi Ela..."
+    CharacterSprite: {fileID: 0}
+    CharacterData: {fileID: 11400000, guid: f76c2a6ccc23d354c9ec8e55ebcbff8f, type: 2}
+    expression: 0
+  ParentNodes:
+  - {fileID: -417260734756826364}
+  _isExternalFunc: 0
+  _externalFunctionName: 
+  CharacterNameKey: 
+  SentenceTextKey: 
+  hasInitialized: 1
+--- !u!114 &1304728639332635870
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: DialogNodeBaseSystem::cherrydev.SentenceNode
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: -613.6005
+    y: 213.20001
+    width: 200
+    height: 300
+  IsDragging: 1
+  IsSelected: 0
+  automaticSkip: 0
+  ChildNode: {fileID: 1678908351531051645}
+  _sentence:
+    CharacterName: 
+    Text: C'est mon devoir en tant que membre du coven. Ton opinion tu peux te la
+      garder.
+    CharacterSprite: {fileID: 0}
+    CharacterData: {fileID: 11400000, guid: e5c897c26a297814f9bd24ce66295ca9, type: 2}
+    expression: 2
+  ParentNodes:
+  - {fileID: 2548597813978979727}
+  _isExternalFunc: 0
+  _externalFunctionName: 
+  CharacterNameKey: 
+  SentenceTextKey: 
+  hasInitialized: 1
+--- !u!114 &1517666099198996616
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: DialogNodeBaseSystem::cherrydev.SentenceNode
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: -839.99994
+    y: 550.7997
+    width: 200
+    height: 300
+  IsDragging: 1
+  IsSelected: 0
+  automaticSkip: 0
+  ChildNode: {fileID: -6964542906384193573}
+  _sentence:
+    CharacterName: 
+    Text: 'Je sais me battre ! '
+    CharacterSprite: {fileID: 0}
+    CharacterData: {fileID: 11400000, guid: e5c897c26a297814f9bd24ce66295ca9, type: 2}
+    expression: 0
+  ParentNodes:
+  - {fileID: 8377239794745044897}
+  _isExternalFunc: 0
+  _externalFunctionName: 
+  CharacterNameKey: 
+  SentenceTextKey: 
+  hasInitialized: 1
+--- !u!114 &1678908351531051645
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: DialogNodeBaseSystem::cherrydev.SentenceNode
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: -407.20135
+    y: 212.40012
+    width: 200
+    height: 300
+  IsDragging: 1
+  IsSelected: 0
+  automaticSkip: 0
+  ChildNode: {fileID: 7201651243399215265}
+  _sentence:
+    CharacterName: 
+    Text: Moi j'y vais, avec ou sans toi. C'est pas comme si j'avais besoin de toi.
+    CharacterSprite: {fileID: 0}
+    CharacterData: {fileID: 11400000, guid: e5c897c26a297814f9bd24ce66295ca9, type: 2}
+    expression: 2
+  ParentNodes:
+  - {fileID: 1304728639332635870}
+  _isExternalFunc: 0
+  _externalFunctionName: 
+  CharacterNameKey: 
+  SentenceTextKey: 
+  hasInitialized: 1
+--- !u!114 &2423803214977727189
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: DialogNodeBaseSystem::cherrydev.SentenceNode
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: -1268.0002
+    y: 228.40012
+    width: 200
+    height: 300
+  IsDragging: 1
+  IsSelected: 0
+  automaticSkip: 0
+  ChildNode: {fileID: 2798062358097072402}
+  _sentence:
+    CharacterName: 
+    Text: "Attends, t'es s\xE9rieuse la ?? Mais tu te prends pour qui Vel ?"
+    CharacterSprite: {fileID: 0}
+    CharacterData: {fileID: 11400000, guid: e5c897c26a297814f9bd24ce66295ca9, type: 2}
+    expression: 2
+  ParentNodes:
+  - {fileID: 6416919380707940721}
+  _isExternalFunc: 0
+  _externalFunctionName: 
+  CharacterNameKey: 
+  SentenceTextKey: 
+  hasInitialized: 1
+--- !u!114 &2548597813978979727
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: DialogNodeBaseSystem::cherrydev.SentenceNode
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: -828.8001
+    y: 224.40012
+    width: 200
+    height: 300
+  IsDragging: 0
+  IsSelected: 0
+  automaticSkip: 0
+  ChildNode: {fileID: 1304728639332635870}
+  _sentence:
+    CharacterName: 
+    Text: "C'est pas \xE0 toi de d\xE9cider."
+    CharacterSprite: {fileID: 0}
+    CharacterData: {fileID: 11400000, guid: e5c897c26a297814f9bd24ce66295ca9, type: 2}
+    expression: 2
+  ParentNodes:
+  - {fileID: 2798062358097072402}
+  _isExternalFunc: 0
+  _externalFunctionName: 
+  CharacterNameKey: 
+  SentenceTextKey: 
+  hasInitialized: 1
+--- !u!114 &2758133891344242663
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: DialogNodeBaseSystem::cherrydev.SentenceNode
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 7.1958466
+    y: 217.99997
+    width: 200
+    height: 300
+  IsDragging: 1
+  IsSelected: 0
+  automaticSkip: 0
+  ChildNode: {fileID: -1526485250050888738}
+  _sentence:
+    CharacterName: 
+    Text: "Tu sais m\xEAme pas d'o\xF9 ils viennent. Tu d\xE9lires compl\xE8tement."
+    CharacterSprite: {fileID: 0}
+    CharacterData: {fileID: 11400000, guid: f76c2a6ccc23d354c9ec8e55ebcbff8f, type: 2}
+    expression: 2
+  ParentNodes:
+  - {fileID: 7201651243399215265}
+  _isExternalFunc: 0
+  _externalFunctionName: 
+  CharacterNameKey: 
+  SentenceTextKey: 
+  hasInitialized: 1
+--- !u!114 &2798062358097072402
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: DialogNodeBaseSystem::cherrydev.SentenceNode
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: -1047.2007
+    y: 227.60007
+    width: 200
+    height: 300
+  IsDragging: 1
+  IsSelected: 0
+  automaticSkip: 0
+  ChildNode: {fileID: 2548597813978979727}
+  _sentence:
+    CharacterName: 
+    Text: Me parle pas sur ce ton Elaris. C'est juste trop dangereux.
+    CharacterSprite: {fileID: 0}
+    CharacterData: {fileID: 11400000, guid: f76c2a6ccc23d354c9ec8e55ebcbff8f, type: 2}
+    expression: 2
+  ParentNodes:
+  - {fileID: 2423803214977727189}
+  _isExternalFunc: 0
+  _externalFunctionName: 
+  CharacterNameKey: 
+  SentenceTextKey: 
+  hasInitialized: 1
+--- !u!114 &6416919380707940721
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1717f3c6dba9fa40844ddacac301510, type: 3}
+  m_Name: Answer Node
+  m_EditorClassIdentifier: DialogNodeBaseSystem::cherrydev.AnswerNode
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: -1496.8003
+    y: 419.59967
+    width: 190
+    height: 135
+  IsDragging: 1
+  IsSelected: 0
+  automaticSkip: 0
+  Answers:
+  - Pardon ???
+  - Vel...
+  AnswerKeys: []
+  ParentNodes:
+  - {fileID: -8770883008239941367}
+  ChildNodes:
+  - {fileID: 2423803214977727189}
+  - {fileID: 6986531136123763636}
+  nextNodeIndex: 0
+  hasInitialized: 1
+--- !u!114 &6910486039296583776
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 728bde28222c436aa8f80da237c76a9b, type: 3}
+  m_Name: Stage Node
+  m_EditorClassIdentifier: DialogNodeBaseSystem::cherrydev.StageNode
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: -2349.601
+    y: 378.79974
+    width: 190
+    height: 135
+  IsDragging: 1
+  IsSelected: 0
+  automaticSkip: 1
+  ChildNode: {fileID: -1566698480115037081}
+  _stage:
+    CharacterData: {fileID: 11400000, guid: f76c2a6ccc23d354c9ec8e55ebcbff8f, type: 2}
+    visibility: 1
+    expression: 0
+    slotName: 0
+  ParentNodes: []
+--- !u!114 &6986531136123763636
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: DialogNodeBaseSystem::cherrydev.SentenceNode
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: -1267.2002
+    y: 552.39966
+    width: 200
+    height: 300
+  IsDragging: 1
+  IsSelected: 0
+  automaticSkip: 0
+  ChildNode: {fileID: 8377239794745044897}
+  _sentence:
+    CharacterName: 
+    Text: "Vel, tu peux pas faire \xE7a. Je ferais attention !"
+    CharacterSprite: {fileID: 0}
+    CharacterData: {fileID: 11400000, guid: e5c897c26a297814f9bd24ce66295ca9, type: 2}
+    expression: 2
+  ParentNodes:
+  - {fileID: 6416919380707940721}
+  _isExternalFunc: 0
+  _externalFunctionName: 
+  CharacterNameKey: 
+  SentenceTextKey: 
+  hasInitialized: 1
+--- !u!114 &7201651243399215265
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: DialogNodeBaseSystem::cherrydev.SentenceNode
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: -206.40395
+    y: 216.39995
+    width: 200
+    height: 300
+  IsDragging: 1
+  IsSelected: 0
+  automaticSkip: 0
+  ChildNode: {fileID: 2758133891344242663}
+  _sentence:
+    CharacterName: 
+    Text: Ah bon ? Parce que tu penses pouvoir te battre seule ?
+    CharacterSprite: {fileID: 0}
+    CharacterData: {fileID: 11400000, guid: f76c2a6ccc23d354c9ec8e55ebcbff8f, type: 2}
+    expression: 0
+  ParentNodes:
+  - {fileID: 1678908351531051645}
+  _isExternalFunc: 0
+  _externalFunctionName: 
+  CharacterNameKey: 
+  SentenceTextKey: 
+  hasInitialized: 1
+--- !u!114 &8377239794745044897
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: DialogNodeBaseSystem::cherrydev.SentenceNode
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: -1056.0002
+    y: 553.99976
+    width: 200
+    height: 300
+  IsDragging: 1
+  IsSelected: 0
+  automaticSkip: 0
+  ChildNode: {fileID: 1517666099198996616}
+  _sentence:
+    CharacterName: 
+    Text: Mais..
+    CharacterSprite: {fileID: 0}
+    CharacterData: {fileID: 11400000, guid: f76c2a6ccc23d354c9ec8e55ebcbff8f, type: 2}
+    expression: 0
+  ParentNodes:
+  - {fileID: 6986531136123763636}
+  _isExternalFunc: 0
+  _externalFunctionName: 
+  CharacterNameKey: 
+  SentenceTextKey: 
+  hasInitialized: 1
