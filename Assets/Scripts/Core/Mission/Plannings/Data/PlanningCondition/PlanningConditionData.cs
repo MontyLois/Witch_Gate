@@ -4,7 +4,7 @@ namespace WitchGate.Mission.Plannings.Data
 {
     public abstract class PlanningCondition : ScriptableObject
     {
-        private bool isConditionValid;
+        protected bool isConditionValid;
         public bool IsConditionValid => isConditionValid;
     }
 }
