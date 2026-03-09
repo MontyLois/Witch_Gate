@@ -15,19 +15,20 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 400.66663
-    y: 347.3333
+    x: 719.3333
+    y: 362.66666
     width: 190
     height: 135
   IsDragging: 1
   IsSelected: 0
+  automaticSkip: 1
+  ChildNode: {fileID: 0}
   _stage:
     CharacterData: {fileID: 11400000, guid: f76c2a6ccc23d354c9ec8e55ebcbff8f, type: 2}
     visibility: 1
     expression: 2
     slotName: 0
   ParentNodes: []
-  ChildNode: {fileID: 0}
 --- !u!114 &-3288482939563847705
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -43,12 +44,14 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -268.6669
-    y: 129.33331
+    x: 49.999756
+    y: 144.66664
     width: 190
     height: 135
   IsDragging: 1
   IsSelected: 0
+  automaticSkip: 1
+  ChildNode: {fileID: -2947251631461933742}
   _stage:
     CharacterData: {fileID: 11400000, guid: 4f59aac53de14b04ebea0ad618a25c9f, type: 2}
     visibility: 1
@@ -56,7 +59,6 @@ MonoBehaviour:
     slotName: 0
   ParentNodes:
   - {fileID: 3221145534790708723}
-  ChildNode: {fileID: -2947251631461933742}
 --- !u!114 &-3074844694179361097
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -72,19 +74,20 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -1248
-    y: 148.66664
+    x: -929.3333
+    y: 163.99997
     width: 190
     height: 135
   IsDragging: 0
   IsSelected: 0
+  automaticSkip: 1
+  ChildNode: {fileID: 420641291773275757}
   _stage:
     CharacterData: {fileID: 11400000, guid: e5c897c26a297814f9bd24ce66295ca9, type: 2}
     visibility: 1
     expression: 0
     slotName: 1
   ParentNodes: []
-  ChildNode: {fileID: 420641291773275757}
 --- !u!114 &-2947251631461933742
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -100,12 +103,13 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 19.999603
-    y: 131.99998
+    x: 338.66626
+    y: 147.33331
     width: 190
     height: 155
   IsDragging: 1
   IsSelected: 0
+  automaticSkip: 0
   Answers:
   - 'Hi '
   - '''Sup'
@@ -115,6 +119,8 @@ MonoBehaviour:
   ChildNodes:
   - {fileID: -1924156833685907271}
   - {fileID: 4965443269136005066}
+  nextNodeIndex: 0
+  hasInitialized: 1
 --- !u!114 &-1924156833685907271
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -130,12 +136,14 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 315.99994
-    y: 73.99997
-    width: 190
-    height: 135
+    x: 634.66656
+    y: 89.3333
+    width: 200
+    height: 300
   IsDragging: 1
   IsSelected: 0
+  automaticSkip: 0
+  ChildNode: {fileID: 9006409654043050245}
   _sentence:
     CharacterName: 
     Text: hi
@@ -144,11 +152,11 @@ MonoBehaviour:
     expression: 1
   ParentNodes:
   - {fileID: -2947251631461933742}
-  ChildNode: {fileID: 9006409654043050245}
   _isExternalFunc: 0
   _externalFunctionName: 
   CharacterNameKey: 
   SentenceTextKey: 
+  hasInitialized: 1
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -193,12 +201,14 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -1006
-    y: 145.99998
+    x: -687.3333
+    y: 161.33331
     width: 190
     height: 135
   IsDragging: 1
   IsSelected: 0
+  automaticSkip: 1
+  ChildNode: {fileID: 8309941169343281083}
   _stage:
     CharacterData: {fileID: 11400000, guid: f76c2a6ccc23d354c9ec8e55ebcbff8f, type: 2}
     visibility: 1
@@ -206,7 +216,6 @@ MonoBehaviour:
     slotName: 0
   ParentNodes:
   - {fileID: -3074844694179361097}
-  ChildNode: {fileID: 8309941169343281083}
 --- !u!114 &3221145534790708723
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -222,12 +231,14 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -512.6666
-    y: 130.66663
+    x: -193.99997
+    y: 145.99995
     width: 190
     height: 135
   IsDragging: 1
   IsSelected: 0
+  automaticSkip: 1
+  ChildNode: {fileID: -3288482939563847705}
   _stage:
     CharacterData: {fileID: 11400000, guid: f76c2a6ccc23d354c9ec8e55ebcbff8f, type: 2}
     visibility: 0
@@ -235,7 +246,6 @@ MonoBehaviour:
     slotName: 0
   ParentNodes:
   - {fileID: 8309941169343281083}
-  ChildNode: {fileID: -3288482939563847705}
 --- !u!114 &4965443269136005066
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -251,12 +261,14 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 410.6667
-    y: 201.99992
-    width: 190
-    height: 135
+    x: 729.3333
+    y: 217.33325
+    width: 200
+    height: 300
   IsDragging: 1
   IsSelected: 0
+  automaticSkip: 0
+  ChildNode: {fileID: 0}
   _sentence:
     CharacterName: 
     Text: '''sup'
@@ -265,11 +277,11 @@ MonoBehaviour:
     expression: 0
   ParentNodes:
   - {fileID: -2947251631461933742}
-  ChildNode: {fileID: 0}
   _isExternalFunc: 0
   _externalFunctionName: 
   CharacterNameKey: 
   SentenceTextKey: 
+  hasInitialized: 1
 --- !u!114 &8309941169343281083
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -285,12 +297,14 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -753.3331
-    y: 135.33333
-    width: 190
-    height: 135
+    x: -434.66644
+    y: 150.66666
+    width: 200
+    height: 300
   IsDragging: 1
   IsSelected: 0
+  automaticSkip: 0
+  ChildNode: {fileID: 3221145534790708723}
   _sentence:
     CharacterName: 
     Text: she's here nice
@@ -299,11 +313,11 @@ MonoBehaviour:
     expression: 1
   ParentNodes:
   - {fileID: 420641291773275757}
-  ChildNode: {fileID: 3221145534790708723}
   _isExternalFunc: 0
   _externalFunctionName: 
   CharacterNameKey: 
   SentenceTextKey: 
+  hasInitialized: 1
 --- !u!114 &9006409654043050245
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -319,12 +333,14 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 638.00037
-    y: 67.999985
-    width: 190
-    height: 135
+    x: 956.66705
+    y: 83.33331
+    width: 200
+    height: 300
   IsDragging: 1
   IsSelected: 1
+  automaticSkip: 0
+  ChildNode: {fileID: 0}
   _sentence:
     CharacterName: 
     Text: Hiii
@@ -333,8 +349,8 @@ MonoBehaviour:
     expression: 1
   ParentNodes:
   - {fileID: -1924156833685907271}
-  ChildNode: {fileID: 0}
   _isExternalFunc: 0
   _externalFunctionName: 
   CharacterNameKey: 
   SentenceTextKey: 
+  hasInitialized: 1

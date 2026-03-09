@@ -3,8 +3,6 @@ using cherrydev.Interface;
 using DialogNodeBaseSystem.Plugins.DialogNodeBasedSystem.Scripts.Runtime.Enums;
 using UnityEditor;
 using UnityEngine;
-using WitchGate.Visual_Novel.Enums;
-using WitchGate.VisualNovel.Visual_Novel.Dialog;
 
 namespace cherrydev
 {

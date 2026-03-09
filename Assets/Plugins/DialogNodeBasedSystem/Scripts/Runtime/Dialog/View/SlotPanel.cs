@@ -6,8 +6,6 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.Serialization;
 using UnityEngine.UI;
-using WitchGate.Visual_Novel.Enums;
-using WitchGate.VisualNovel.Visual_Novel.Dialog;
 
 namespace cherrydev
 {

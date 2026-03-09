@@ -1,3 +1,4 @@
+using cherrydev;
 using UnityEngine;
 using WitchGate.Mission.Data;
 
@@ -11,8 +12,8 @@ namespace WitchGate.Mission.Plannings.Data
         [field: SerializeField]
         public EncounterContext EncounterContext { get; private set; }
         [field: SerializeField]
-        public PlanningConditionData PlanningConditionData { get; private set; }
+        public PlanningConditionData PlanningConditionData { get; private set; } 
         [field: SerializeField]
-        public PlanningFormula PlanningFormula { get; private set; }
+        public PlanningFormulaData PlanningFormulaData { get; private set; }
     }
 }

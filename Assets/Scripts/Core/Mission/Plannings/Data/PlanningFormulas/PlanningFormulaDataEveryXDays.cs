@@ -3,7 +3,7 @@ using UnityEngine;
 namespace WitchGate.Mission.Plannings.Data
 {
     [CreateAssetMenu(fileName = "PF_EveryXDays_", menuName = "WitchGate/Planning/PlanningFormula/EveryXDays", order = 0)]
-    public class PlanningFormulaEveryXDays : PlanningFormula
+    public class PlanningFormulaDataEveryXDays : PlanningFormulaData
     {
         [field: SerializeField]
         public int X { get; private set; }

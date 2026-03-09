@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace WitchGate.Mission.Plannings.PlanningCondition
+namespace WitchGate.Mission.Plannings.PlanningsCondition
 {
     public class PlanningCondition
     {

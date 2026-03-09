@@ -5,7 +5,8 @@
         "Helteix.Cards.Core",
         "Helteix.Tools",
         "Helteix.Singletons.Runtime",
-        "Unity.TextMeshPro"
+        "Unity.TextMeshPro",
+        "DialogNodeBaseSystem"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

@@ -2,11 +2,8 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Serialization;
-using WitchGate.Mission.Data;
-using WitchGate.Visual_Novel.Dialog;
-using WitchGate.Visual_Novel.Enums;
 
-namespace WitchGate.VisualNovel.Visual_Novel.Dialog
+namespace cherrydev
 {
     [CreateAssetMenu(fileName = "VNCharacterData", menuName = "WitchGate/Characters/VNCharacter", order = 0)]
     public class VNCharacterData : ScriptableObject

@@ -1,4 +1,5 @@
 using UnityEngine;
+using WitchGate.Mission.Plannings.PlanningsCondition;
 
 namespace WitchGate.Mission.Plannings.Data
 {
@@ -6,5 +7,7 @@ namespace WitchGate.Mission.Plannings.Data
     {
         protected bool isConditionValid;
         public bool IsConditionValid => isConditionValid;
+
+        public abstract PlanningCondition InitCondition();
     }
 }

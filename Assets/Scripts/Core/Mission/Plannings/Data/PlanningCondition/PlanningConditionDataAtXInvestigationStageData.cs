@@ -1,4 +1,5 @@
 using UnityEngine;
+using WitchGate.Mission.Plannings.PlanningsCondition;
 
 namespace WitchGate.Mission.Plannings.Data
 {
@@ -7,5 +8,10 @@ namespace WitchGate.Mission.Plannings.Data
     {
         [field: SerializeField]
         public int X { get; private set; }
+
+        public override PlanningCondition InitCondition()
+        {
+            return new PlanningConditionDataAtXInvestigationStage(X);
+        }
     }
 }

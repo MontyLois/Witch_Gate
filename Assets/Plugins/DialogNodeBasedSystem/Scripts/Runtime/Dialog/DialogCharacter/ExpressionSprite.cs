@@ -1,7 +1,6 @@
 using UnityEngine;
-using WitchGate.Visual_Novel.Enums;
 
-namespace WitchGate.Visual_Novel.Dialog
+namespace cherrydev
 {
     [System.Serializable]
     public class ExpressionSprite

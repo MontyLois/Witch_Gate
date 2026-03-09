@@ -1,6 +1,9 @@
 using System;
+using cherrydev;
 using UnityEngine;
 using WitchGate.Mission;
+using WitchGate.Mission.Dialogs;
+using WitchGate.Mission.Plannings;
 
 namespace WitchGate.Controllers
 {
@@ -10,7 +13,7 @@ namespace WitchGate.Controllers
         public static GameDatabase GameDatabase { get; private set; }
         
         
-        
+        [Header("GameState")]
         public static int CurrentDay { get; private set; }
         public static EncounterContext CurrentContext  { get; private set; }
         public static Investigation Investigation { get; private set; }
@@ -24,11 +27,30 @@ namespace WitchGate.Controllers
         {
             //generate the database
             GameDatabase = new GameDatabase();
+            Investigation = new Investigation();
+            CurrentDay = 1;
+            
+            PlanningController.Load();
+            DialogsController.Load();
         }
         
-        static GameController()
+        
+        public static void ChangeDay()
         {
-            
+            CurrentDay++;
+            DayChanged?.Invoke(CurrentDay);
         }
+        
+        public static void ChangeContext(EncounterContext encounterContext)
+        {
+            CurrentContext = encounterContext;
+        }
+
+        public static void ProgressInvestigation()
+        {
+            Investigation.Progress();
+            InvestigationChanged?.Invoke(Investigation.CurrentStage);
+        }
+      
     }
 }

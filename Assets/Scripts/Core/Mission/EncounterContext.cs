@@ -1,4 +1,4 @@
-namespace WitchGate.Mission
+namespace cherrydev
 {
     public enum EncounterContext
     {

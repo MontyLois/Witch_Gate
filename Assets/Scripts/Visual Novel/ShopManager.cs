@@ -7,6 +7,8 @@ using UnityEngine.SceneManagement;
 using WitchGate.Controllers;
 using Helteix.Singletons.MonoSingletons;
 using UnityEngine.EventSystems;
+using WitchGate.Mission.Dialogs;
+using WitchGate.Mission.Plannings;
 using WitchGate.Prototype.Vinyles;
 using WitchGate.VisualNovel.Visual_Novel.Cards.UI;
 
@@ -29,17 +31,19 @@ namespace WitchGate.Prototype
         [SerializeField] private DialogBehaviour dialogBehaviour;
         [SerializeField] private DialogNodeGraph[] dialogGraph;
 
+        [SerializeField] private List<DialogNodeGraph> customersDialogNodeGraphs = new List<DialogNodeGraph>();
+        [SerializeField] private List<CharacterData> customers = new List<CharacterData>();
+
         
         private TestimonyPhase currentTestimonyphase;
-        private int currentClientIndex;
+        private int currentClientIndex = 0;
 
         private void Start()
         {
-            currentClientIndex = 0;
-            NextClient();
             Hand.SetActive(false);
+            getTodaysCustomers();
             dialogBehaviour.BindExternalFunction("InteractiveChoice", ChooseVinyl);
-            
+            NextClient();
         }
 
         public void EndDay()
@@ -47,11 +51,37 @@ namespace WitchGate.Prototype
             ShowMap();
         }
 
+        /**
+         * fill the dialogs list with dialogs of all present customers (via planning controller)
+         * for the vinyl shop based on current stage (via dialogs controller)
+         */
+        private void GetTodaysDialogs()
+        {
+            customersDialogNodeGraphs.Clear();
+            List<CharacterData> characterDatas = PlanningController.GetAllCharacterPresent();
+
+            foreach (var characterData in characterDatas)
+            {
+                var dialog = DialogsController.GetNextDialogForSpecificEntity(characterData);
+                if(dialog)
+                    customersDialogNodeGraphs.Add(dialog);
+            }
+        }
+
+        private void getTodaysCustomers()
+        {
+            customers.Clear();
+            GameController.ChangeContext(EncounterContext.VinylShop);
+            customers.AddRange(PlanningController.GetAllCharacterPresent());
+            Debug.Log("Nomber of customers today : "+customers.Count);
+        }
+
         public void NextClient()
         {
             if(currentTestimonyphase is not null) 
                 currentTestimonyphase.SetReady();
             
+            /*
             if (currentClientIndex < dialogGraph.Length)
             {
                 currentTestimonyphase = new TestimonyPhase(Witch.Elaris);
@@ -61,6 +91,31 @@ namespace WitchGate.Prototype
                 dialogBehaviour.StartDialog(dialogGraph[currentClientIndex]);
                 
                 DialogueUI.SetActive(true);
+                currentClientIndex++;
+            }
+            else
+            {
+                CardDropZone.gameObject.SetActive(false);
+                DialogueUI.SetActive(false);
+                ShowCloseButton();
+            }
+            */
+            if (currentClientIndex < customers.Count)
+            {
+                currentTestimonyphase = new TestimonyPhase(Witch.Elaris);
+                currentTestimonyphase.Run();
+                Debug.Log("Current client : "+customers[currentClientIndex].displayName);
+                DialogNodeGraph dialogNodeGraph =
+                    DialogsController.GetNextDialogForSpecificEntity(customers[currentClientIndex]);
+                if (dialogNodeGraph is not null)
+                {
+                    dialogBehaviour.StartDialog(dialogNodeGraph);
+                    DialogueUI.SetActive(true);
+                }
+                else
+                {
+                    Debug.LogError("wtf c'est null");
+                }
                 currentClientIndex++;
             }
             else

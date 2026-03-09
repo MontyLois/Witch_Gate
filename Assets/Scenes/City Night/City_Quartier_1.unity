@@ -4363,6 +4363,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3276799275445163839, guid: 374ca21378bcb664d8b39bf6eb0542e2, type: 3}
       insertIndex: -1
       addedObject: {fileID: 876624715}
+    - targetCorrespondingSourceObject: {fileID: 3276799275445163839, guid: 374ca21378bcb664d8b39bf6eb0542e2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 459888135}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 374ca21378bcb664d8b39bf6eb0542e2, type: 3}
 --- !u!4 &218616537 stripped
@@ -5016,6 +5019,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 37bc00319e040ef4884490ebe5277c99, type: 3}
   m_PrefabInstance: {fileID: 439055496}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &459888135 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6172057434937766084, guid: 7c6ce4db61158d04896f0b16839197b0, type: 3}
+  m_PrefabInstance: {fileID: 1239608525}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &486132151
 GameObject:
@@ -9560,4 +9568,3 @@ SceneRoots:
   - {fileID: 351325037}
   - {fileID: 1491228708}
   - {fileID: 1857856098}
-  - {fileID: 1239608525}

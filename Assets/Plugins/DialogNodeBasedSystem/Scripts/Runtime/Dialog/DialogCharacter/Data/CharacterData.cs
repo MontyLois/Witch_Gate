@@ -1,7 +1,7 @@
 using UnityEngine;
 
 
-namespace WitchGate.Mission.Data
+namespace cherrydev
 {
     [CreateAssetMenu(fileName = "ID_", menuName = "WitchGate/Characters/CharactersID", order = 0)]
     public class CharacterData : ScriptableObject

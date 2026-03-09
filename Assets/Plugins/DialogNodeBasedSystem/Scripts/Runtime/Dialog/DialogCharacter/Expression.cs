@@ -1,4 +1,4 @@
-namespace WitchGate.Visual_Novel.Enums
+namespace cherrydev
 {
     public enum Expression
     {
