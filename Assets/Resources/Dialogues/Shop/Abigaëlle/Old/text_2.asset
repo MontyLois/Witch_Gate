@@ -18,9 +18,11 @@ MonoBehaviour:
     x: 1830.6664
     y: 202.66667
     width: 190
-    height: 135
+    height: 300
   IsDragging: 1
   IsSelected: 0
+  automaticSkip: 0
+  ChildNode: {fileID: -3576535596580016507}
   _sentence:
     CharacterName: 
     Text: Heeeuuu je cherches un vinyle magueule
@@ -29,11 +31,11 @@ MonoBehaviour:
     expression: 0
   ParentNodes:
   - {fileID: -7631732187988042295}
-  ChildNode: {fileID: -3576535596580016507}
   _isExternalFunc: 0
   _externalFunctionName: ChooseVinyle
   CharacterNameKey: 
   SentenceTextKey: 
+  hasInitialized: 1
 --- !u!114 &-7631732187988042295
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -52,9 +54,11 @@ MonoBehaviour:
     x: 1551.3331
     y: 200.66661
     width: 190
-    height: 135
+    height: 300
   IsDragging: 1
   IsSelected: 0
+  automaticSkip: 0
+  ChildNode: {fileID: -8351590753040026807}
   _sentence:
     CharacterName: 
     Text: hiiii
@@ -63,11 +67,11 @@ MonoBehaviour:
     expression: 0
   ParentNodes:
   - {fileID: -7289943932777381529}
-  ChildNode: {fileID: -8351590753040026807}
   _isExternalFunc: 0
   _externalFunctionName: 
   CharacterNameKey: 
   SentenceTextKey: 
+  hasInitialized: 1
 --- !u!114 &-7289943932777381529
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -86,9 +90,11 @@ MonoBehaviour:
     x: 1287.3333
     y: 189.99995
     width: 190
-    height: 135
+    height: 300
   IsDragging: 1
   IsSelected: 0
+  automaticSkip: 0
+  ChildNode: {fileID: -7631732187988042295}
   _sentence:
     CharacterName: 
     Text: Helllooo
@@ -97,11 +103,11 @@ MonoBehaviour:
     expression: 0
   ParentNodes:
   - {fileID: -3000875547220476858}
-  ChildNode: {fileID: -7631732187988042295}
   _isExternalFunc: 0
   _externalFunctionName: 
   CharacterNameKey: 
   SentenceTextKey: 
+  hasInitialized: 1
 --- !u!114 &-6196413490271754893
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -120,9 +126,11 @@ MonoBehaviour:
     x: 455.99988
     y: 187.99995
     width: 190
-    height: 135
+    height: 300
   IsDragging: 1
   IsSelected: 0
+  automaticSkip: 0
+  ChildNode: {fileID: 5250840760658136374}
   _sentence:
     CharacterName: Ahahahah
     Text: je parles
@@ -131,11 +139,11 @@ MonoBehaviour:
     expression: 0
   ParentNodes:
   - {fileID: 4778475169229961721}
-  ChildNode: {fileID: 5250840760658136374}
   _isExternalFunc: 0
   _externalFunctionName: 
   CharacterNameKey: 
   SentenceTextKey: 
+  hasInitialized: 1
 --- !u!114 &-3576535596580016507
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -157,11 +165,12 @@ MonoBehaviour:
     height: 80
   IsDragging: 1
   IsSelected: 0
+  automaticSkip: 1
+  ChildNode: {fileID: 368049094128358075}
   _functionName: ChooseVinyle
   _description: 
   ParentNodes:
   - {fileID: -8351590753040026807}
-  ChildNode: {fileID: 368049094128358075}
 --- !u!114 &-3000875547220476858
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -183,6 +192,8 @@ MonoBehaviour:
     height: 135
   IsDragging: 1
   IsSelected: 0
+  automaticSkip: 1
+  ChildNode: {fileID: -7289943932777381529}
   _stage:
     CharacterData: {fileID: 11400000, guid: f76c2a6ccc23d354c9ec8e55ebcbff8f, type: 2}
     visibility: 1
@@ -190,7 +201,6 @@ MonoBehaviour:
     slotName: 1
   ParentNodes:
   - {fileID: 5250840760658136374}
-  ChildNode: {fileID: -7289943932777381529}
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -242,6 +252,7 @@ MonoBehaviour:
     height: 160
   IsDragging: 1
   IsSelected: 0
+  automaticSkip: 1
   _variableName: Vinyl_Number
   _conditionType: 0
   _boolTargetValue: 0
@@ -270,9 +281,11 @@ MonoBehaviour:
     x: 2646
     y: 107.33334
     width: 190
-    height: 135
+    height: 300
   IsDragging: 1
   IsSelected: 0
+  automaticSkip: 0
+  ChildNode: {fileID: 0}
   _sentence:
     CharacterName: 
     Text: Nice !
@@ -281,11 +294,11 @@ MonoBehaviour:
     expression: 1
   ParentNodes:
   - {fileID: 368049094128358075}
-  ChildNode: {fileID: 0}
   _isExternalFunc: 0
   _externalFunctionName: 
   CharacterNameKey: 
   SentenceTextKey: 
+  hasInitialized: 1
 --- !u!114 &4778475169229961721
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -307,13 +320,14 @@ MonoBehaviour:
     height: 135
   IsDragging: 1
   IsSelected: 0
+  automaticSkip: 1
+  ChildNode: {fileID: -6196413490271754893}
   _stage:
     CharacterData: {fileID: 11400000, guid: 4f59aac53de14b04ebea0ad618a25c9f, type: 2}
     visibility: 1
     expression: 0
     slotName: 0
   ParentNodes: []
-  ChildNode: {fileID: -6196413490271754893}
 --- !u!114 &4883351636060028890
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -332,9 +346,11 @@ MonoBehaviour:
     x: 2651.333
     y: 251.33331
     width: 190
-    height: 135
+    height: 300
   IsDragging: 1
   IsSelected: 0
+  automaticSkip: 0
+  ChildNode: {fileID: 0}
   _sentence:
     CharacterName: 
     Text: uhhh ????
@@ -343,11 +359,11 @@ MonoBehaviour:
     expression: 2
   ParentNodes:
   - {fileID: 368049094128358075}
-  ChildNode: {fileID: 0}
   _isExternalFunc: 0
   _externalFunctionName: 
   CharacterNameKey: 
   SentenceTextKey: 
+  hasInitialized: 1
 --- !u!114 &5250840760658136374
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -369,6 +385,8 @@ MonoBehaviour:
     height: 135
   IsDragging: 1
   IsSelected: 0
+  automaticSkip: 1
+  ChildNode: {fileID: -3000875547220476858}
   _stage:
     CharacterData: {fileID: 11400000, guid: 4f59aac53de14b04ebea0ad618a25c9f, type: 2}
     visibility: 1
@@ -376,4 +394,3 @@ MonoBehaviour:
     slotName: 0
   ParentNodes:
   - {fileID: -6196413490271754893}
-  ChildNode: {fileID: -3000875547220476858}

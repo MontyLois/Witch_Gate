@@ -10,14 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3bec44614f45472ba36a7952811dad65, type: 3}
-  m_Name: Velmora
+  m_Name: Xochi
   m_EditorClassIdentifier: WitchGate.Core::WitchGate.VisualNovel.Visual_Novel.Dialog.VNCharacterData
+  Name: Xochi
   expressions:
   - expression: 0
-    sprite: {fileID: 21300000, guid: 8f7fe47f5238b934d8955ae487fd31e5, type: 3}
+    sprite: {fileID: 21300000, guid: 666fccd891ca340488f6a06a10fe485b, type: 3}
   - expression: 1
-    sprite: {fileID: 21300000, guid: ef3f676dd3e24cb4ca331ce08eb117b1, type: 3}
+    sprite: {fileID: 21300000, guid: 0dae19027b5c11142be7cc1bb954a942, type: 3}
   - expression: 2
-    sprite: {fileID: 21300000, guid: 155de8f810e1c084d9faacfa1ceabec2, type: 3}
+    sprite: {fileID: 21300000, guid: 88731d912b5e84d4db01ec6e62a1589e, type: 3}
   - expression: 3
-    sprite: {fileID: 21300000, guid: 613e6b07b7c67a245863609e640c1e67, type: 3}
+    sprite: {fileID: 21300000, guid: 2aedcf68dff321a45bbae9b85f310eed, type: 3}

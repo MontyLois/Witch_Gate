@@ -4,6 +4,8 @@ namespace cherrydev
     {
         Neutral,
         Happy,
-        Unhappy
+        Unhappy,
+        Smiling,
+        Sad
     }
 }
