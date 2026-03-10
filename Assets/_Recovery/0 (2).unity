@@ -286,7 +286,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 640197239}
         m_TargetAssemblyTypeName: WitchGate.Prototype.ShopManager, WitchGate.VisualNovel
-        m_MethodName: ToogleVinylePanel
+        m_MethodName: ToogleVinylPanel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

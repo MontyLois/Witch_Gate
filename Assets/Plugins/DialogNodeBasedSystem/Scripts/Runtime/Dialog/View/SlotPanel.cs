@@ -6,8 +6,6 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.Serialization;
 using UnityEngine.UI;
-using WitchGate.Visual_Novel.Enums;
-using WitchGate.VisualNovel.Visual_Novel.Dialog;
 
 namespace cherrydev
 {
@@ -95,7 +93,7 @@ namespace cherrydev
         {
             Debug.Log("donc là on est dans le deuxième settup");
             
-            _dialogNameText.text = characterData.name;
+            _dialogNameText.text = characterData.Name;
             _dialogText.text = text;
             _currentFullText = text;
         }
@@ -163,7 +161,7 @@ namespace cherrydev
 
         private void ChangeText(VNCharacterData characterData, string text)
         {
-            _dialogNameText.text = characterData.name;
+            _dialogNameText.text = characterData.Name;
             _dialogText.text = text;
             _currentFullText = text;
         }

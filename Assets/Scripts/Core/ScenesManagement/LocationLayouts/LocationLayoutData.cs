@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace WitchGate.Controllers.LocationLayouts
 {
-    [CreateAssetMenu(fileName = "newLocationLayoutData", menuName = "WitchGate/LocationLayoutDatas/LocationLayout", order = 0)]
+    [CreateAssetMenu(fileName = "newLocationLayoutData", menuName = "WitchGate/SceneManagement/LocationLayout", order = 0)]
     public class LocationLayoutData : ScriptableObject
     {
         [field: SerializeField] public Location Location { get; private set; }

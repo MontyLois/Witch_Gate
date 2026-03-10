@@ -4,7 +4,7 @@ using WitchGate.Gameplay.Cards.DamageModifier;
 
 namespace WitchGate.Gameplay.Cards.Effects
 {
-    [CreateAssetMenu(fileName = "NewMitigateDamagesEffectData", menuName = "WitchGate/Cards/Effects/MitigateDamages", order = 0)]
+    [CreateAssetMenu(fileName = "NewMitigateDamagesEffectData", menuName = "WitchGate/Decks/Cards/Effects/Fight/MitigateDamages", order = 0)]
     public class MitigateDamagesEffectData : CardBattleEffectData
     {
         

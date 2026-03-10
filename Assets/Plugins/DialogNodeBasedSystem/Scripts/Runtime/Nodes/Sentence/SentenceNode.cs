@@ -2,8 +2,6 @@ using System.Collections.Generic;
 using Febucci.TextAnimatorCore.Text;
 using UnityEditor;
 using UnityEngine;
-using WitchGate.Visual_Novel.Enums;
-using WitchGate.VisualNovel.Visual_Novel.Dialog;
 #if UNITY_LOCALIZATION
 using UnityEngine.Localization.Settings;
 #endif

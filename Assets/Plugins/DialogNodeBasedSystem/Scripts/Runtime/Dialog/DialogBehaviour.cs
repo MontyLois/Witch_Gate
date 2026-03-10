@@ -6,8 +6,6 @@ using DialogNodeBaseSystem.Plugins.DialogNodeBasedSystem.Scripts.Runtime.Enums;
 using Febucci.TextAnimatorCore.Text;
 using UnityEngine;
 using UnityEngine.Events;
-using WitchGate.Visual_Novel.Enums;
-using WitchGate.VisualNovel.Visual_Novel.Dialog;
 #if UNITY_LOCALIZATION
 using UnityEngine.Localization;
 using UnityEngine.Localization.Settings;
@@ -819,7 +817,6 @@ namespace cherrydev
         /// <returns></returns>
         public void SkipText()
         {
-            Debug.Log(_isCurrentSentenceSkipped);
             if (_isCurrentSentenceTyping)
             {
                 _isCurrentSentenceSkipped = true;
@@ -828,8 +825,6 @@ namespace cherrydev
             {
                 _isCurrentSentenceNext = true;
             }
-                
-            
         }
     }
 }

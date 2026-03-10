@@ -4,7 +4,7 @@ using WitchGate.Gameplay.Battles.Entities.Interface;
 
 namespace WitchGate.Gameplay.Cards.Effects
 {
-    [CreateAssetMenu(fileName = "NewHealEffect", menuName = "WitchGate/Cards/Effects/Heal", order = 0)]
+    [CreateAssetMenu(fileName = "NewHealEffect", menuName = "WitchGate/Decks/Cards/Effects/Fight/Heal", order = 0)]
     public class HealCardBattleEffectData : CardBattleEffectData
     {
         [field: SerializeField]

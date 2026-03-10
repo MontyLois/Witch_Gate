@@ -6,7 +6,7 @@ using UnityEditor;
 
 namespace WitchGate.Cards
 {
-    [CreateAssetMenu(fileName = "NewCard", menuName = "WitchGate/Cards/Card", order = 0)]
+    [CreateAssetMenu(fileName = "NewCard", menuName = "WitchGate/Decks/Cards/Card", order = 0)]
     public class CardData : ScriptableObject
     {
         [field: SerializeField]

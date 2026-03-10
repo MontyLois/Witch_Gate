@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace WitchGate.Controllers
 {
-    [CreateAssetMenu(fileName = "newGameModeLayout", menuName = "WitchGate/GameModeLayouts/GameModeLayout", order = 0)]
+    [CreateAssetMenu(fileName = "newGameModeLayout", menuName = "WitchGate/SceneManagement/GameModeLayout", order = 0)]
     public class GameModeLayoutData : ScriptableObject
     {
         [field: SerializeField] public GameMode Mode { get; private set; }

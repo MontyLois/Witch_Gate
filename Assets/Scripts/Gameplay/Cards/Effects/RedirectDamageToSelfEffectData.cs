@@ -4,7 +4,7 @@ using WitchGate.Gameplay.Cards.DamageModifier;
 
 namespace WitchGate.Gameplay.Cards.Effects
 {
-    [CreateAssetMenu(fileName = "NewRedirectDamageEffect", menuName = "WitchGate/Cards/Effects/RedirectDamage", order = 0)]
+    [CreateAssetMenu(fileName = "NewRedirectDamageEffect", menuName = "WitchGate/Decks/Cards/Effects/Fight/RedirectDamage", order = 0)]
     public class RedirectDamageToSelfEffectData : CardBattleEffectData
     {
         [field: SerializeField, Range(0f, 1f)] public float DamagePercent { get; private set; }
