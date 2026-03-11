@@ -1,9 +1,11 @@
 using System;
+using System.Threading.Tasks;
 using Helteix.Cards.UI.Physical;
 using UnityEngine;
 using UnityEngine.UI;
 using WitchGate.Gameplay.Cards;
 using TMPro;
+using WitchGate.Utilities;
 
 namespace WitchGate.Gameplay
 {
@@ -43,7 +45,8 @@ namespace WitchGate.Gameplay
 
         public async Awaitable OnAttack()
         {
-            
+            cardAnimator.Play("Card_Attack");
+            await cardAnimator.WaitForAnimation("Card_Attack");
         }
     }
 }

@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using Helteix.Cards;
 using UnityEngine;
 using WitchGate.Cards;
@@ -18,8 +19,6 @@ namespace WitchGate.Gameplay.Cards
         public int Level { get; private set; }
         
         public ICardAnimator CardAnimator { get; internal set; }
-
-        //public Func<Awaitable> GetAttackAwaitable{ get; internal set; }
         
         public event Action CardPutDown;
         public event Action UseCard;
@@ -39,16 +38,11 @@ namespace WitchGate.Gameplay.Cards
         {
             if (CardAnimator != null)
                 await CardAnimator.OnAttack();
-            /*
-            if (GetAttackAwaitable != null)
-                await GetAttackAwaitable();
-            */
             
             foreach (var effect in Effects)
             {
                 effect.AffectTargets(targets, caster);
             }
-
             
             UseCard?.Invoke();
             await PhaseController.CompletedAwaitable;

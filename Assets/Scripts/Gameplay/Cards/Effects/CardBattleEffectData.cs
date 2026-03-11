@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Pool;
+using UnityEngine.VFX;
 using WitchGate.Cards;
 using WitchGate.Gameplay.Battles;
 using WitchGate.Gameplay.Battles.Entities;
@@ -21,6 +22,9 @@ namespace WitchGate.Gameplay.Cards.Effects
         
         [field: SerializeField]
         public bool EnemiesAffected { get; private set; }
+        
+        [field: SerializeField]
+        public GameObject Vfx { get; private set; }
 
         public void AffectTargets(IReadOnlyList<ICanFight> targets, ICanFight caster)
         {

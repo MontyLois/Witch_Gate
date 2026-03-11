@@ -16,8 +16,6 @@ namespace WitchGate.Gameplay
         public string name;
         public BattleTimelineUI()
         {
-            Debug.Log("hey");
-            
         }
         private void OnEnable()
         {
@@ -57,8 +55,6 @@ namespace WitchGate.Gameplay
             {
                 builder.Append($"{turnTimeline.Actions[i].Label} is {i} \n");
             }
-            
-            Debug.Log(builder);
         }
     }
 }
