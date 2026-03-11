@@ -1133,7 +1133,7 @@ MonoBehaviour:
   IsDragging: 1
   IsSelected: 0
   automaticSkip: 1
-  _variableName: Vinyl_Number
+  _variableName: interactiveChoiceValue
   _conditionType: 0
   _boolTargetValue: 0
   _intTargetValue: 1
