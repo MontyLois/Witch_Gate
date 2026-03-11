@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3f9b773ae78441199d701b33864bf724, type: 3}
-  m_Name: Dialogs_Shu_Shop_Inv1
+  m_Name: DialogContextualized_Shu_Shop_Inv1
   m_EditorClassIdentifier: WitchGate.Core::WitchGate.Mission.DialogContextualizedData
   <CharacterData>k__BackingField: {fileID: 11400000, guid: 36cd925630610c64284b4c1c7cbe1b04, type: 2}
   <EncounterContext>k__BackingField: 2
-  <InvestigationStage>k__BackingField: 0
+  <InvestigationStage>k__BackingField: 3
   <DialogBehaviours>k__BackingField:
-  - {fileID: 11400000, guid: ee16b33daf77e414da4cc1fd4b428050, type: 2}
+  - {fileID: 11400000, guid: d223d72b73fdd9a48948f54cc8f46544, type: 2}
