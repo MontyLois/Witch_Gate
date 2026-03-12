@@ -33,7 +33,6 @@ namespace cherrydev
 
         private void OnEnable()
         {
-            _dialogBehaviour.AddListenerToDialogFinishedEvent(DisableDialogPanel);
 
             _dialogBehaviour.DialogDisabled += DisableDialogPanel;
             _dialogBehaviour.AnswerButtonSetUp += SetUpAnswerButtonsClickEvent;
@@ -127,6 +126,14 @@ namespace cherrydev
             //ActiveGameObject(_dialogAnswerPanel.gameObject, true);
             _dialogAnswerPanel.DisableAllButtons();
             _dialogAnswerPanel.gameObject.SetActive(true);
+        }
+
+        public void ClearCharacterSlot()
+        {
+            foreach (var dialogSlotPanel in _dialogSlotPanels)
+            {
+                dialogSlotPanel.ClearCharacterSlot();
+            }
         }
 
         /// <summary>
