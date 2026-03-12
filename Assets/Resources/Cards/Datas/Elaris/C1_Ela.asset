@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: C1_Ela
   m_EditorClassIdentifier: WitchGate.Core::WitchGate.Cards.CardData
   <WitchDeck>k__BackingField: 2
-  <Name>k__BackingField: 0
+  <Name>k__BackingField: "1 d'\xE9p\xE9e"
   <Description>k__BackingField: Attaque de 4
   <CardRarity>k__BackingField: 0
   <Icon>k__BackingField: {fileID: 345050102, guid: 02b2405de7b67d44c96fc5520a3325d9, type: 3}

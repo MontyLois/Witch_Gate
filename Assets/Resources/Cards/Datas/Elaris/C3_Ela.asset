@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: C3_Ela
   m_EditorClassIdentifier: WitchGate.Core::WitchGate.Cards.CardData
   <WitchDeck>k__BackingField: 2
-  <Name>k__BackingField: 1
+  <Name>k__BackingField: La justice
   <Description>k__BackingField: "Attaque de 8 mais se blesse de 3 d\xE9g\xE2ts"
   <CardRarity>k__BackingField: 0
   <Icon>k__BackingField: {fileID: -1950590382, guid: 9484973310ddcf34294c58bba315ff11, type: 3}

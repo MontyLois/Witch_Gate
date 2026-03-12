@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: C2_Ela
   m_EditorClassIdentifier: 
   <WitchDeck>k__BackingField: 2
-  <Name>k__BackingField: 5
+  <Name>k__BackingField: "2 d'\xE9p\xE9e"
   <Description>k__BackingField: Attaque de 7
   <CardRarity>k__BackingField: 1
   <Icon>k__BackingField: {fileID: 317373968, guid: 3f9a6f7760efdf5499bfd653ecd8c689, type: 3}
