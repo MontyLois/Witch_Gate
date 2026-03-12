@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEditor;
 using UnityEngine;
 using WitchGate.Cards;
@@ -15,7 +16,7 @@ namespace WitchGate.Gameplay.Cards
         private static void Load()
         {
             effects = new Dictionary<CardData, List<CardBattleEffectData>>();
-            CardBattleEffectData[] loadedEffects = Resources.LoadAll<CardBattleEffectData>("Cards/CombatEffect");
+            CardBattleEffectData[] loadedEffects = Resources.LoadAll<CardBattleEffectData>("Cards/Effects/CombatEffect");
             for (int i = 0; i < loadedEffects.Length; i++)
             {
                 CardBattleEffectData battleEffectData = loadedEffects[i];

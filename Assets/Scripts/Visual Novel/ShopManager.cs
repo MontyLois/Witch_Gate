@@ -68,6 +68,9 @@ namespace WitchGate.Prototype
             }
         }
 
+        /**
+         * Get all today customers
+         */
         private void getTodaysCustomers()
         {
             customers.Clear();
@@ -105,6 +108,7 @@ namespace WitchGate.Prototype
                 currentTestimonyphase = new TestimonyPhase(Witch.Elaris);
                 currentTestimonyphase.Run();
                 Debug.Log("Current client : "+customers[currentClientIndex].displayName);
+                //retrieve the current dialog for this client
                 DialogNodeGraph dialogNodeGraph =
                     DialogsController.GetNextDialogForSpecificEntity(customers[currentClientIndex]);
                 if (dialogNodeGraph is not null)
@@ -135,12 +139,7 @@ namespace WitchGate.Prototype
         {
             Map_UI.SetActive(true);
         }
-
-        private IEnumerator WaitToSwapScene()
-        {
-            yield return new WaitForSeconds(1);
-            SceneController.Instance.LoadGameMode(GameMode.Exploration);
-        }
+        
 
         public void SelectMusic(Vinyle vinyle)
         {

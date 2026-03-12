@@ -4,6 +4,7 @@ using DialogNodeBaseSystem.Plugins.DialogNodeBasedSystem.Scripts.Runtime.Enums;
 using Febucci.TextAnimatorCore.Text;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Pool;
 using UnityEngine.Serialization;
 using UnityEngine.UI;
 
@@ -70,9 +71,6 @@ namespace cherrydev
         /// </summary>
         public void Setup(string characterName, string text, Sprite sprite)
         {
-            
-            Debug.Log("olala");
-            
             _dialogNameText.text = characterName;
             _dialogText.text = text;
             _currentFullText = text;
@@ -200,6 +198,18 @@ namespace cherrydev
         private void SetSprite(GameObject characterImageGO, Sprite newImage)
         {
             characterImageGO.GetComponent<Image>().sprite = newImage;
+        }
+
+        public void ClearCharacterSlot()
+        {
+            using (ListPool<VNCharacterData>.Get(out var list))
+            {
+                list.AddRange(_charactersInSlot.Keys);
+                foreach (VNCharacterData characterData in list)
+                {
+                    RemoveCharacterToSlot(characterData);
+                }
+            }
         }
     }
 }
