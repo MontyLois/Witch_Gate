@@ -12,10 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3bec44614f45472ba36a7952811dad65, type: 3}
   m_Name: Seojun
   m_EditorClassIdentifier: WitchGate.Core::WitchGate.VisualNovel.Visual_Novel.Dialog.VNCharacterData
-  Name: 
   expressions:
   - expression: 0
-    sprite: {fileID: 21300000, guid: f5c42582fc6361a4cb92947360868a04, type: 3}
+    sprite: {fileID: 21300000, guid: ba0f09c6f9807cd478b4551be97ce1ed, type: 3}
   - expression: 1
     sprite: {fileID: 21300000, guid: bf9e5e28ce1731b439a8a3840cc732d1, type: 3}
   - expression: 2
@@ -24,3 +23,6 @@ MonoBehaviour:
     sprite: {fileID: 21300000, guid: 91658d6dd956ca248ab963a4f3c0c471, type: 3}
   - expression: 4
     sprite: {fileID: 21300000, guid: 42190320ba9132f42a1853b07f93e7ab, type: 3}
+  - expression: 5
+    sprite: {fileID: 21300000, guid: ba812320eb4724944b08af562e3d2835, type: 3}
+  <CharacterData>k__BackingField: {fileID: 11400000, guid: 863b140ab388f7045a04169733af3dff, type: 2}

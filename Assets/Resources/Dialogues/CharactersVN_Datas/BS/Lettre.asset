@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3bec44614f45472ba36a7952811dad65, type: 3}
+  m_Name: Lettre
+  m_EditorClassIdentifier: DialogNodeBaseSystem::cherrydev.VNCharacterData
+  expressions:
+  - expression: 0
+    sprite: {fileID: 21300000, guid: 7b7eec69251f4d54291c421dacb9edaa, type: 3}
+  <CharacterData>k__BackingField: {fileID: 11400000, guid: 76c9aa5ba6cde3846880c19c48b0e1fe, type: 2}

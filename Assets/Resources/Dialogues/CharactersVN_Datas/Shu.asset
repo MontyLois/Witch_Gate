@@ -23,3 +23,4 @@ MonoBehaviour:
     sprite: {fileID: 21300000, guid: bdb58bac1dcd4b6448eaca9dc8187374, type: 3}
   - expression: 4
     sprite: {fileID: 21300000, guid: 61abf89d76bb10f47a0d12c762cae682, type: 3}
+  <CharacterData>k__BackingField: {fileID: 11400000, guid: 36cd925630610c64284b4c1c7cbe1b04, type: 2}

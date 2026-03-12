@@ -15,9 +15,9 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -189.59991
-    y: 201.20003
-    width: 190
+    x: -40.799576
+    y: 98.000046
+    width: 200
     height: 300
   IsDragging: 1
   IsSelected: 0
@@ -51,8 +51,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -526.40027
-    y: 219.6
+    x: -377.60062
+    y: 116.400024
     width: 190
     height: 135
   IsDragging: 1
@@ -80,9 +80,9 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 264.00006
-    y: 200.40001
-    width: 190
+    x: 626.40076
+    y: 117.20006
+    width: 200
     height: 300
   IsDragging: 1
   IsSelected: 0
@@ -95,7 +95,7 @@ MonoBehaviour:
     CharacterData: {fileID: 11400000, guid: f76c2a6ccc23d354c9ec8e55ebcbff8f, type: 2}
     expression: 1
   ParentNodes:
-  - {fileID: 8940586610418588074}
+  - {fileID: 2386385610390573611}
   _isExternalFunc: 0
   _externalFunctionName: 
   CharacterNameKey: 
@@ -116,8 +116,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -416.80008
-    y: 361.99988
+    x: -268.0003
+    y: 258.79987
     width: 190
     height: 135
   IsDragging: 1
@@ -149,12 +149,43 @@ MonoBehaviour:
   - {fileID: -7937670826928507238}
   - {fileID: 8940586610418588074}
   - {fileID: -6824647251144873948}
+  - {fileID: 2386385610390573611}
   VariablesConfig: {fileID: 11400000, guid: be7857d1de2bf534fa9cb6e533ad0217, type: 2}
   _localizationTableName: 
   _characterNamesLocalizationName: 
   NodeToDrawLineFrom: {fileID: 0}
   LinePosition: {x: 0, y: 0}
   IsLocalizationSetUp: 0
+--- !u!114 &2386385610390573611
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 728bde28222c436aa8f80da237c76a9b, type: 3}
+  m_Name: Stage Node
+  m_EditorClassIdentifier: DialogNodeBaseSystem::cherrydev.StageNode
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 407.20093
+    y: 136.40002
+    width: 190
+    height: 135
+  IsDragging: 1
+  IsSelected: 0
+  automaticSkip: 1
+  ChildNode: {fileID: -6824647251144873948}
+  _stage:
+    CharacterData: {fileID: 11400000, guid: 4f59aac53de14b04ebea0ad618a25c9f, type: 2}
+    visibility: 1
+    expression: 3
+    slotName: 0
+  ParentNodes:
+  - {fileID: 8940586610418588074}
 --- !u!114 &8940586610418588074
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -170,14 +201,14 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 30.40004
-    y: 202.8
-    width: 190
+    x: 179.20041
+    y: 99.60002
+    width: 200
     height: 300
   IsDragging: 1
   IsSelected: 0
   automaticSkip: 0
-  ChildNode: {fileID: -6824647251144873948}
+  ChildNode: {fileID: 2386385610390573611}
   _sentence:
     CharacterName: 
     Text: "Coucou Velmora, \xE7a va bien, et toi ?"

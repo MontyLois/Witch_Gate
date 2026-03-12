@@ -2489,8 +2489,7 @@ MonoBehaviour:
   <CardDropZone>k__BackingField: {fileID: 597368079}
   <Hand>k__BackingField: {fileID: 8342631969711494549}
   dialogBehaviour: {fileID: 640197241}
-  dialogGraph:
-  - {fileID: 11400000, guid: 8afc7b36f2f1b9647b32d9720f6ac121, type: 2}
+  dialogGraph: []
   customersDialogNodeGraphs: []
   customers: []
 --- !u!114 &640197240

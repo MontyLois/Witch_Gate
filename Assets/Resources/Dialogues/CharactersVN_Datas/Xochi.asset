@@ -12,13 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3bec44614f45472ba36a7952811dad65, type: 3}
   m_Name: Xochi
   m_EditorClassIdentifier: WitchGate.Core::WitchGate.VisualNovel.Visual_Novel.Dialog.VNCharacterData
-  Name: Xochi
   expressions:
   - expression: 0
-    sprite: {fileID: 21300000, guid: 666fccd891ca340488f6a06a10fe485b, type: 3}
+    sprite: {fileID: 21300000, guid: 18d4194ca371ed24480d6b097787b691, type: 3}
   - expression: 1
     sprite: {fileID: 21300000, guid: 0dae19027b5c11142be7cc1bb954a942, type: 3}
   - expression: 2
     sprite: {fileID: 21300000, guid: 88731d912b5e84d4db01ec6e62a1589e, type: 3}
   - expression: 3
     sprite: {fileID: 21300000, guid: 2aedcf68dff321a45bbae9b85f310eed, type: 3}
+  - expression: 4
+    sprite: {fileID: 21300000, guid: 51e92eb0b67b611448bd3836e3270188, type: 3}
+  - expression: 5
+    sprite: {fileID: 21300000, guid: 666fccd891ca340488f6a06a10fe485b, type: 3}
+  <CharacterData>k__BackingField: {fileID: 11400000, guid: 4d53249c21004534bacc070bd67c2d35, type: 2}

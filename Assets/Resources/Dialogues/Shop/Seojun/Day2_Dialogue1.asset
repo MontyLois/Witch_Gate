@@ -1,5 +1,41 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-9208370552054570605
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: DialogNodeBaseSystem::cherrydev.SentenceNode
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: -211.1998
+    y: 378.79996
+    width: 200
+    height: 300
+  IsDragging: 1
+  IsSelected: 0
+  automaticSkip: 0
+  ChildNode: {fileID: 5301842755048913866}
+  _sentence:
+    CharacterName: 
+    Text: "Mais \xE7a me d\xE9prime de parler de \xE7a.."
+    CharacterSprite: {fileID: 0}
+    CharacterData: {fileID: 11400000, guid: 3f5b258700e72394fac7fbaff5f5aaa6, type: 2}
+    expression: 4
+  ParentNodes:
+  - {fileID: 6688122964411413150}
+  _isExternalFunc: 0
+  _externalFunctionName: 
+  CharacterNameKey: 
+  SentenceTextKey: 
+  hasInitialized: 1
 --- !u!114 &-8996344284065397296
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15,8 +51,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 272.00006
-    y: 334.7999
+    x: -4038.402
+    y: 399.59998
     width: 190
     height: 135
   IsDragging: 1
@@ -45,14 +81,14 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 3237.6006
-    y: 231.60007
+    x: -1053.5986
+    y: 376.4001
     width: 240
     height: 160
   IsDragging: 1
   IsSelected: 0
   automaticSkip: 1
-  _variableName: Vinyl_Number
+  _variableName: interactiveChoiceValue
   _conditionType: 0
   _boolTargetValue: 0
   _intTargetValue: 2
@@ -77,14 +113,14 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 3513.6006
-    y: -15.600021
-    width: 190
+    x: -829.5985
+    y: 47.599976
+    width: 200
     height: 300
   IsDragging: 1
   IsSelected: 0
   automaticSkip: 0
-  ChildNode: {fileID: 0}
+  ChildNode: {fileID: 8776844720734028472}
   _sentence:
     CharacterName: 
     Text: "J\u2019adore \xE7a ! C\u2019est plein de bonnes \xE9nergies !"
@@ -113,9 +149,9 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 1713.5999
-    y: 12.399948
-    width: 190
+    x: -2596.798
+    y: 77.2
+    width: 200
     height: 300
   IsDragging: 1
   IsSelected: 0
@@ -127,7 +163,7 @@ MonoBehaviour:
       discuter avec un peu de musique !"
     CharacterSprite: {fileID: 0}
     CharacterData: {fileID: 11400000, guid: 3f5b258700e72394fac7fbaff5f5aaa6, type: 2}
-    expression: 1
+    expression: 3
   ParentNodes:
   - {fileID: 2629885612483806095}
   _isExternalFunc: 0
@@ -150,9 +186,9 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 1302.3995
-    y: 401.19998
-    width: 190
+    x: -3007.9993
+    y: 465.99994
+    width: 200
     height: 300
   IsDragging: 1
   IsSelected: 0
@@ -164,7 +200,7 @@ MonoBehaviour:
       qu\u2019il y a de nouveau."
     CharacterSprite: {fileID: 0}
     CharacterData: {fileID: 11400000, guid: 3f5b258700e72394fac7fbaff5f5aaa6, type: 2}
-    expression: 2
+    expression: 5
   ParentNodes:
   - {fileID: 3194385862283051126}
   _isExternalFunc: 0
@@ -187,8 +223,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 898.4
-    y: 391.59988
+    x: -3412.0012
+    y: 456.39984
     width: 190
     height: 135
   IsDragging: 1
@@ -217,11 +253,11 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 3896.8008
-    y: -15.600021
-    width: 190
+    x: -421.59897
+    y: 44.399994
+    width: 200
     height: 300
-  IsDragging: 0
+  IsDragging: 1
   IsSelected: 0
   automaticSkip: 0
   ChildNode: {fileID: 3540190399902717266}
@@ -230,7 +266,7 @@ MonoBehaviour:
     Text: "Vel\u2026 T\u2019as entendu ce qui se dit?"
     CharacterSprite: {fileID: 0}
     CharacterData: {fileID: 11400000, guid: 3f5b258700e72394fac7fbaff5f5aaa6, type: 2}
-    expression: 0
+    expression: 5
   ParentNodes:
   - {fileID: -5427763006559870658}
   _isExternalFunc: 0
@@ -253,9 +289,9 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 2773.6
-    y: 379.60007
-    width: 190
+    x: -1536.7993
+    y: 444.39984
+    width: 200
     height: 300
   IsDragging: 1
   IsSelected: 0
@@ -266,7 +302,7 @@ MonoBehaviour:
     Text: "Ouais ! Je peux te conseiller\u2026"
     CharacterSprite: {fileID: 0}
     CharacterData: {fileID: 11400000, guid: f76c2a6ccc23d354c9ec8e55ebcbff8f, type: 2}
-    expression: 3
+    expression: 1
   ParentNodes:
   - {fileID: -3372765781434345807}
   _isExternalFunc: 0
@@ -289,22 +325,22 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 3702.401
-    y: -15.600037
-    width: 190
+    x: -622.3981
+    y: 46.799957
+    width: 200
     height: 300
-  IsDragging: 0
+  IsDragging: 1
   IsSelected: 0
   automaticSkip: 0
   ChildNode: {fileID: -6177321348923218484}
   _sentence:
     CharacterName: 
-    Text: "Ravie que \xE7a te plaise ! En ce moment j'appr\xE9cie la musique qui
-      am\xE9liore l'humeur"
+    Text: "Ravie que \xE7a te plaise ! En ce moment j'appr\xE9cie la musique joyeuse"
     CharacterSprite: {fileID: 0}
     CharacterData: {fileID: 11400000, guid: f76c2a6ccc23d354c9ec8e55ebcbff8f, type: 2}
     expression: 1
-  ParentNodes: []
+  ParentNodes:
+  - {fileID: 8776844720734028472}
   _isExternalFunc: 0
   _externalFunctionName: 
   CharacterNameKey: 
@@ -325,9 +361,9 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 2376.001
-    y: 378.80002
-    width: 190
+    x: -1934.3975
+    y: 443.5998
+    width: 200
     height: 300
   IsDragging: 1
   IsSelected: 0
@@ -361,8 +397,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 903.1998
-    y: 246.80002
+    x: -3407.2014
+    y: 311.6001
     width: 190
     height: 135
   IsDragging: 1
@@ -394,9 +430,9 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 2572.0005
-    y: 379.59995
-    width: 190
+    x: -1738.3984
+    y: 444.39972
+    width: 200
     height: 300
   IsDragging: 1
   IsSelected: 0
@@ -430,9 +466,9 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 2764.0005
-    y: 13.999939
-    width: 190
+    x: -1452.7991
+    y: 163.59998
+    width: 200
     height: 300
   IsDragging: 1
   IsSelected: 0
@@ -466,8 +502,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 1310.3995
-    y: 10.799942
+    x: -3000.7996
+    y: 75.59999
     width: 200
     height: 300
   IsDragging: 1
@@ -479,7 +515,7 @@ MonoBehaviour:
     Text: "Tu t\u2019attendais \xE0 voir quelqu\u2019un d\u2019autre?"
     CharacterSprite: {fileID: 0}
     CharacterData: {fileID: 11400000, guid: f76c2a6ccc23d354c9ec8e55ebcbff8f, type: 2}
-    expression: 0
+    expression: 3
   ParentNodes:
   - {fileID: 7315501465078448518}
   _isExternalFunc: 0
@@ -502,8 +538,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 1971.2004
-    y: 273.2001
+    x: -2339.198
+    y: 338.00012
     width: 190
     height: 135
   IsDragging: 1
@@ -536,9 +572,9 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 3508.0005
-    y: 317.2001
-    width: 190
+    x: -802.39856
+    y: 382.00015
+    width: 200
     height: 300
   IsDragging: 1
   IsSelected: 0
@@ -549,7 +585,7 @@ MonoBehaviour:
     Text: "Merci\u2026 Je vais finir ma boisson avant d\u2019y aller.."
     CharacterSprite: {fileID: 0}
     CharacterData: {fileID: 11400000, guid: 3f5b258700e72394fac7fbaff5f5aaa6, type: 2}
-    expression: 4
+    expression: 5
   ParentNodes:
   - {fileID: -8622117250721666664}
   _isExternalFunc: 0
@@ -602,12 +638,48 @@ MonoBehaviour:
   - {fileID: 3540190399902717266}
   - {fileID: 1739167631881455892}
   - {fileID: 1204576011484416012}
+  - {fileID: 4962940398961717459}
+  - {fileID: 8776844720734028472}
+  - {fileID: 6418088130904826520}
+  - {fileID: -9208370552054570605}
+  - {fileID: 101530355940518178}
   VariablesConfig: {fileID: 11400000, guid: be7857d1de2bf534fa9cb6e533ad0217, type: 2}
   _localizationTableName: 
   _characterNamesLocalizationName: 
   NodeToDrawLineFrom: {fileID: 0}
   LinePosition: {x: 0, y: 0}
   IsLocalizationSetUp: 0
+--- !u!114 &101530355940518178
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 728bde28222c436aa8f80da237c76a9b, type: 3}
+  m_Name: Stage Node
+  m_EditorClassIdentifier: DialogNodeBaseSystem::cherrydev.StageNode
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 840
+    y: 323.6
+    width: 190
+    height: 135
+  IsDragging: 1
+  IsSelected: 1
+  automaticSkip: 1
+  ChildNode: {fileID: 0}
+  _stage:
+    CharacterData: {fileID: 11400000, guid: 3f5b258700e72394fac7fbaff5f5aaa6, type: 2}
+    visibility: 0
+    expression: 0
+    slotName: 0
+  ParentNodes:
+  - {fileID: 5301842755048913866}
+  - {fileID: 1204576011484416012}
 --- !u!114 &1204576011484416012
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -623,18 +695,18 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 4468.001
-    y: -16.400055
-    width: 190
+    x: 373.59576
+    y: 37.19995
+    width: 200
     height: 300
-  IsDragging: 0
+  IsDragging: 1
   IsSelected: 0
   automaticSkip: 0
-  ChildNode: {fileID: 0}
+  ChildNode: {fileID: 101530355940518178}
   _sentence:
     CharacterName: 
     Text: "Oui, j\u2019ai entendu dire que vers [endroit pr\xE9cis] quelqu\u2019un
-      avait vu un d\xE9mon\u2026 Apr\xE8s les gens deviennent paranos."
+      avait vu un d\xE9mon\u2026 Les gens sont paranos."
     CharacterSprite: {fileID: 0}
     CharacterData: {fileID: 11400000, guid: 3f5b258700e72394fac7fbaff5f5aaa6, type: 2}
     expression: 4
@@ -660,9 +732,9 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 4272.801
-    y: -14.000015
-    width: 190
+    x: 171.99567
+    y: 37.19998
+    width: 200
     height: 300
   IsDragging: 1
   IsSelected: 0
@@ -696,8 +768,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 1511.2002
-    y: 11.59993
+    x: -2799.1985
+    y: 76.39998
     width: 200
     height: 300
   IsDragging: 1
@@ -709,7 +781,7 @@ MonoBehaviour:
     Text: "Non ! Haha.. Je viens voir ce qu\u2019il y a de nouveau !"
     CharacterSprite: {fileID: 0}
     CharacterData: {fileID: 11400000, guid: 3f5b258700e72394fac7fbaff5f5aaa6, type: 2}
-    expression: 4
+    expression: 5
   ParentNodes:
   - {fileID: -1298291465678841434}
   _isExternalFunc: 0
@@ -732,8 +804,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 485.60052
-    y: 167.6
+    x: -3824.801
+    y: 232.40005
     width: 200
     height: 300
   IsDragging: 0
@@ -768,9 +840,9 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 1110.3995
-    y: 400.39993
-    width: 190
+    x: -3199.9993
+    y: 465.1999
+    width: 200
     height: 300
   IsDragging: 1
   IsSelected: 0
@@ -804,9 +876,9 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 4083.2007
-    y: -14.800003
-    width: 190
+    x: -218.40536
+    y: 42.80002
+    width: 200
     height: 300
   IsDragging: 1
   IsSelected: 0
@@ -815,7 +887,7 @@ MonoBehaviour:
   _sentence:
     CharacterName: 
     Text: "J\u2019ai entendu que \xE7a craint vers [lieu nuit], il faudrait \xE9viter
-      de s\u2019y rendre\u2026 Y aurait un serial killer ou quelque chose\u2026"
+      de s\u2019y rendre\u2026 "
     CharacterSprite: {fileID: 0}
     CharacterData: {fileID: 11400000, guid: 3f5b258700e72394fac7fbaff5f5aaa6, type: 2}
     expression: 4
@@ -841,9 +913,9 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 3708.0005
-    y: 317.99997
-    width: 190
+    x: -602.39856
+    y: 382.80005
+    width: 200
     height: 300
   IsDragging: 1
   IsSelected: 0
@@ -858,6 +930,42 @@ MonoBehaviour:
     expression: 0
   ParentNodes:
   - {fileID: -532402053183576958}
+  _isExternalFunc: 0
+  _externalFunctionName: 
+  CharacterNameKey: 
+  SentenceTextKey: 
+  hasInitialized: 1
+--- !u!114 &4962940398961717459
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: DialogNodeBaseSystem::cherrydev.SentenceNode
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: -1688
+    y: 80.400024
+    width: 200
+    height: 300
+  IsDragging: 1
+  IsSelected: 0
+  automaticSkip: 0
+  ChildNode: {fileID: 0}
+  _sentence:
+    CharacterName: 
+    Text: "Um, j\u2019ai bien envie d\u2019\xE9couter quelque chose d'emouvant en
+      ce moment.."
+    CharacterSprite: {fileID: 0}
+    CharacterData: {fileID: 0}
+    expression: 3
+  ParentNodes: []
   _isExternalFunc: 0
   _externalFunctionName: 
   CharacterNameKey: 
@@ -878,14 +986,14 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 4090.401
-    y: 315.60013
-    width: 190
+    x: -9.606018
+    y: 378.80014
+    width: 200
     height: 300
   IsDragging: 1
   IsSelected: 0
   automaticSkip: 0
-  ChildNode: {fileID: 0}
+  ChildNode: {fileID: 101530355940518178}
   _sentence:
     CharacterName: 
     Text: Oui, tu as raison, finis ta boisson tranquille.
@@ -893,7 +1001,7 @@ MonoBehaviour:
     CharacterData: {fileID: 11400000, guid: f76c2a6ccc23d354c9ec8e55ebcbff8f, type: 2}
     expression: 0
   ParentNodes:
-  - {fileID: 6688122964411413150}
+  - {fileID: -9208370552054570605}
   _isExternalFunc: 0
   _externalFunctionName: 
   CharacterNameKey: 
@@ -914,8 +1022,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 183.19983
-    y: 209.19998
+    x: -4127.202
+    y: 273.99997
     width: 190
     height: 135
   IsDragging: 0
@@ -943,19 +1051,54 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 3032.8003
-    y: 265.20004
+    x: -1277.5994
+    y: 330.00006
     width: 190
     height: 80
   IsDragging: 0
   IsSelected: 0
   automaticSkip: 0
   ChildNode: {fileID: -8622117250721666664}
-  _functionName: ChooseVinyle
+  _functionName: InteractiveChoice
   _description: 
   ParentNodes:
   - {fileID: -5555783439211068397}
   - {fileID: -2293048573539628775}
+--- !u!114 &6418088130904826520
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: DialogNodeBaseSystem::cherrydev.SentenceNode
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: -19.200012
+    y: 37.99997
+    width: 200
+    height: 300
+  IsDragging: 1
+  IsSelected: 0
+  automaticSkip: 0
+  ChildNode: {fileID: 0}
+  _sentence:
+    CharacterName: 
+    Text: y aurait un serial killer ou quelque chose...
+    CharacterSprite: {fileID: 0}
+    CharacterData: {fileID: 11400000, guid: 3f5b258700e72394fac7fbaff5f5aaa6, type: 2}
+    expression: 0
+  ParentNodes: []
+  _isExternalFunc: 0
+  _externalFunctionName: 
+  CharacterNameKey: 
+  SentenceTextKey: 
+  hasInitialized: 1
 --- !u!114 &6688122964411413150
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -971,21 +1114,20 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 3900.8008
-    y: 316.40005
-    width: 190
+    x: -409.5992
+    y: 381.19998
+    width: 200
     height: 300
   IsDragging: 1
   IsSelected: 0
   automaticSkip: 0
-  ChildNode: {fileID: 5301842755048913866}
+  ChildNode: {fileID: -9208370552054570605}
   _sentence:
     CharacterName: 
-    Text: "Um si\u2026 Apparemment \xE7a craint au niveau de [lieu nuit pass\xE9e]
-      mais \xE7a me d\xE9prime de parler de \xE7a\u2026"
+    Text: "Um si\u2026 Apparemment \xE7a craint au niveau de [lieu nuit pass\xE9e]..."
     CharacterSprite: {fileID: 0}
     CharacterData: {fileID: 11400000, guid: 3f5b258700e72394fac7fbaff5f5aaa6, type: 2}
-    expression: 0
+    expression: 5
   ParentNodes:
   - {fileID: 4063441672429567121}
   _isExternalFunc: 0
@@ -1008,8 +1150,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 900.0001
-    y: 106.00006
+    x: -3410.4011
+    y: 170.80008
     width: 190
     height: 135
   IsDragging: 1
@@ -1038,9 +1180,9 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 2564.001
-    y: 16.399963
-    width: 190
+    x: -1892.7979
+    y: 79.60002
+    width: 200
     height: 300
   IsDragging: 1
   IsSelected: 0
@@ -1048,11 +1190,10 @@ MonoBehaviour:
   ChildNode: {fileID: -2293048573539628775}
   _sentence:
     CharacterName: 
-    Text: "Ah bon ! Haha.. Um, j\u2019ai bien envie d\u2019\xE9couter quelque chose
-      d'emouvant en ce moment.."
+    Text: Ah bon ? Haha... Ouais...
     CharacterSprite: {fileID: 0}
     CharacterData: {fileID: 11400000, guid: 3f5b258700e72394fac7fbaff5f5aaa6, type: 2}
-    expression: 1
+    expression: 5
   ParentNodes:
   - {fileID: 8456513836715933476}
   _isExternalFunc: 0
@@ -1075,8 +1216,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 1111.9996
-    y: 11.59993
+    x: -3198.3992
+    y: 76.39998
     width: 200
     height: 300
   IsDragging: 1
@@ -1111,8 +1252,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 684.8003
-    y: 169.19998
+    x: -3625.6008
+    y: 234.00003
     width: 200
     height: 300
   IsDragging: 0
@@ -1124,7 +1265,7 @@ MonoBehaviour:
     Text: Oh ! Um.. Velmora..! Salut..
     CharacterSprite: {fileID: 0}
     CharacterData: {fileID: 11400000, guid: 3f5b258700e72394fac7fbaff5f5aaa6, type: 2}
-    expression: 3
+    expression: 5
   ParentNodes:
   - {fileID: 2953543881583788811}
   _isExternalFunc: 0
@@ -1147,9 +1288,9 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 2375.2012
-    y: 15.599976
-    width: 190
+    x: -2095.9973
+    y: 82.80003
+    width: 200
     height: 300
   IsDragging: 1
   IsSelected: 0
@@ -1168,3 +1309,33 @@ MonoBehaviour:
   CharacterNameKey: 
   SentenceTextKey: 
   hasInitialized: 1
+--- !u!114 &8776844720734028472
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 728bde28222c436aa8f80da237c76a9b, type: 3}
+  m_Name: Stage Node
+  m_EditorClassIdentifier: DialogNodeBaseSystem::cherrydev.StageNode
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: -709.60034
+    y: -97.19995
+    width: 190
+    height: 135
+  IsDragging: 1
+  IsSelected: 0
+  automaticSkip: 1
+  ChildNode: {fileID: -5427763006559870658}
+  _stage:
+    CharacterData: {fileID: 11400000, guid: 3f5b258700e72394fac7fbaff5f5aaa6, type: 2}
+    visibility: 1
+    expression: 3
+    slotName: 0
+  ParentNodes:
+  - {fileID: -8403865380747699625}

@@ -9,7 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f5927d572625f42479a7826aa95bdd97, type: 3}
-  m_Name: Day1_Dialogue1_Variables
-  m_EditorClassIdentifier: DialogNodeBaseSystem::cherrydev.VariablesConfig
-  _variables: []
+  m_Script: {fileID: 11500000, guid: f8718c9b17ad43daae1caa4fa2c6c11e, type: 3}
+  m_Name: ID_Lettre
+  m_EditorClassIdentifier: DialogNodeBaseSystem::cherrydev.CharacterData
+  <id>k__BackingField: 
+  <displayName>k__BackingField: 
