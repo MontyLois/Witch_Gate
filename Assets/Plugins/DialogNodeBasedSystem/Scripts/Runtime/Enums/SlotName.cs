@@ -4,5 +4,6 @@ namespace DialogNodeBaseSystem.Plugins.DialogNodeBasedSystem.Scripts.Runtime.Enu
     {
         Primary,
         Secondary,
+        Tertiary,
     }
 }
