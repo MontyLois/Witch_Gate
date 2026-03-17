@@ -16,9 +16,11 @@ namespace WitchGate.Gameplay.Cards
     {
         [field: SerializeField]
         public CardData Data { get; private set; }
+
         public int Level { get; private set; }
         
         public ICardAnimator CardAnimator { get; internal set; }
+        public string CardDescription { get; private set; }
         
         public event Action CardPutDown;
         public event Action UseCard;
@@ -29,10 +31,31 @@ namespace WitchGate.Gameplay.Cards
                 Debug.LogError("No data was given to the card");
             Data = data;
             this.Level = level;
+            CardDescription = GetCardDescription();
         }
 
         public IEnumerable<CardBattleEffectData> Effects => CardManager.GetEffectsFor(Data);
+        
+        public string GetCardDescription()
+        {
+            string description = "";
+            int effectsLenght = Effects.Count();
+            for (int i = 0; i < effectsLenght; i++)
+            {
+                description += Effects.ElementAt(i).GetEffectDescription(Level);
+                if (i < Effects.Count() - 1)
+                {
+                    description += ", ";
+                }
+            }
+            description += ".";
+            return description;
+        }
 
+        public string GetCardName()
+        {
+            return Data.Name;
+        }
 
         public async Awaitable Use(IReadOnlyList<ICanFight> targets, ICanFight caster)
         {
@@ -41,9 +64,8 @@ namespace WitchGate.Gameplay.Cards
             
             foreach (var effect in Effects)
             {
-                effect.AffectTargets(targets, caster);
+                effect.AffectTargets(targets, caster, Level);
             }
-            
             UseCard?.Invoke();
             await PhaseController.CompletedAwaitable;
         }

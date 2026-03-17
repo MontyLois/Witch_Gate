@@ -33,7 +33,7 @@ namespace WitchGate
         public override void Connect(IGameCard current)
         {
             base.Connect(current);
-            DescritpionText.text = current.Data.Description;
+            DescritpionText.text = current.GetCardDescription();
         }
 
         public override void Disconnect(IGameCard current)

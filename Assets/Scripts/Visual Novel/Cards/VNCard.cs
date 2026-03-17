@@ -3,14 +3,16 @@ using Helteix.Cards;
 using TMPro;
 using UnityEngine;
 using WitchGate.Cards;
+using WitchGate.Cards.Collections;
 using WitchGate.Controllers;
 using WitchGate.Gameplay.Cards.Effects;
 
 namespace WitchGate.VisualNovel.Visual_Novel.Cards
 {
-    public class VNCard : Card, IGameCard
+    public class VNCard : Card, ITaroCard
     {
         public CardData Data { get; }
+
         public int Level { get; private set; }
 
         public VNCard(CardData data, int level)
@@ -23,6 +25,15 @@ namespace WitchGate.VisualNovel.Visual_Novel.Cards
         
         public IEnumerable<CardVNEffectData> Effects => VNCardManager.GetEffectsFor(Data);
         
+        public string GetCardDescription()
+        {
+            return "";
+        }
+        
+        public string GetCardName()
+        {
+            return "";
+        }
         
         public async Awaitable Use(TMP_Text text)
         {

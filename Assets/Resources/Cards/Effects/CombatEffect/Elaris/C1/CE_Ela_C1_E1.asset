@@ -13,7 +13,10 @@ MonoBehaviour:
   m_Name: CE_Ela_C1_E1
   m_EditorClassIdentifier: WitchGate.Gameplay::WitchGate.Gameplay.Cards.Effects.DamageCardBattleEffectData
   <CardData>k__BackingField: {fileID: 11400000, guid: 2f8c249896c5ebf4c995cb84188863bf, type: 2}
+  <Description>k__BackingField: "Inflige [value] d\xE9gats"
   <SelfAffected>k__BackingField: 0
   <AlliesAffected>k__BackingField: 0
   <EnemiesAffected>k__BackingField: 1
+  <Vfx>k__BackingField: {fileID: 0}
+  <UpgradableValue>k__BackingField: 1
   <Damage>k__BackingField: 4

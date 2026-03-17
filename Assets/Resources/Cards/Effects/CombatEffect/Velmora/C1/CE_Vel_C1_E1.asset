@@ -13,7 +13,10 @@ MonoBehaviour:
   m_Name: CE_Vel_C1_E1
   m_EditorClassIdentifier: WitchGate.Gameplay::WitchGate.Gameplay.Cards.Effects.HealCardBattleEffectData
   <CardData>k__BackingField: {fileID: 11400000, guid: 9dec036e4c40cf7429cd6c872dbab32a, type: 2}
+  <Description>k__BackingField: Soigne [value] PV
   <SelfAffected>k__BackingField: 1
   <AlliesAffected>k__BackingField: 0
   <EnemiesAffected>k__BackingField: 0
+  <Vfx>k__BackingField: {fileID: 0}
+  <UpgradableValue>k__BackingField: 1
   <Heal>k__BackingField: 3
