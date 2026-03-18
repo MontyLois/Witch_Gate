@@ -31,12 +31,12 @@ namespace WitchGate.Gameplay.Cards
                 Debug.LogError("No data was given to the card");
             Data = data;
             this.Level = level;
-            CardDescription = GetCardDescription();
+            CardDescription = GetDescription();
         }
 
         public IEnumerable<CardBattleEffectData> Effects => CardManager.GetEffectsFor(Data);
         
-        public string GetCardDescription()
+        public string GetDescription()
         {
             string description = "";
             int effectsLenght = Effects.Count();
@@ -52,7 +52,7 @@ namespace WitchGate.Gameplay.Cards
             return description;
         }
 
-        public string GetCardName()
+        public string GetTitle()
         {
             return Data.Name;
         }

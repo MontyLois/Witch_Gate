@@ -6,7 +6,7 @@ using WitchGate.Gameplay.Battles.Entities.Interface;
 
 namespace WitchGate.Cards
 {
-    public interface IGameCard : ITaroCard
+    public interface IGameCard :ICard, IDescription
     {
         public Awaitable Use(IReadOnlyList<ICanFight> targets, ICanFight caster);
     }

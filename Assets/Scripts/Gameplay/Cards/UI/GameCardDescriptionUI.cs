@@ -9,10 +9,11 @@ using WitchGate.Cards;
 
 namespace WitchGate
 {
-    public class CardDescriptionUI : CardUIComponent<IGameCard>, ICardPointerHoverHandler
+    public class GameCardDescriptionUI : CardUIComponent<IGameCard>, ICardPointerHoverHandler
     {
         [field: SerializeField] public GameObject CardDescriptionGameObject { get; private set; }
         [field: SerializeField] public TMP_Text DescritpionText { get; private set; }
+        [field: SerializeField] public TMP_Text NameText { get; private set; }
         
 
         private void OnEnable()
@@ -33,7 +34,7 @@ namespace WitchGate
         public override void Connect(IGameCard current)
         {
             base.Connect(current);
-            DescritpionText.text = current.GetCardDescription();
+            DescritpionText.text = current.GetDescription();
         }
 
         public override void Disconnect(IGameCard current)

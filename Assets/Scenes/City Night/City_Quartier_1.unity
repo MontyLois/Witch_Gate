@@ -181,15 +181,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 3572607490663941363, guid: cc835538a7833994aa398b3852a8fc29, type: 3}
+    - {fileID: 772724784080775458, guid: cc835538a7833994aa398b3852a8fc29, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 847632412867087086, guid: cc835538a7833994aa398b3852a8fc29, type: 3}
       insertIndex: -1
       addedObject: {fileID: 26103260}
-    - targetCorrespondingSourceObject: {fileID: 847632412867087086, guid: cc835538a7833994aa398b3852a8fc29, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 26103263}
   m_SourcePrefab: {fileID: 100100000, guid: cc835538a7833994aa398b3852a8fc29, type: 3}
 --- !u!1 &26103259 stripped
 GameObject:
@@ -209,19 +207,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: WitchGate.Gameplay::WitchGate.Gameplay.ExplorationGameplayManager
   <playerManager>k__BackingField: {fileID: 1507258183}
---- !u!114 &26103263
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 26103259}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3fa85a4791a84744a0050868c4a32ecf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: WitchGate.Core::WitchGate.Controllers.SceneController
-  currentGameModeScene: {fileID: 11400000, guid: ae81519eb4aa4c04aaa09b9511adfddf, type: 2}
 --- !u!1 &33465847
 GameObject:
   m_ObjectHideFlags: 0
@@ -8687,6 +8672,51 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: WitchGate.Core::WitchGate.Utilities.ToggleElement
   <gameObject>k__BackingField: {fileID: 581702883}
+--- !u!1 &2127068846
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2127068848}
+  - component: {fileID: 2127068847}
+  m_Layer: 0
+  m_Name: GameController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2127068847
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2127068846}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fa85a4791a84744a0050868c4a32ecf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: WitchGate.Core::WitchGate.Controllers.SceneController
+  currentGameModeScene: {fileID: 11400000, guid: ae81519eb4aa4c04aaa09b9511adfddf, type: 2}
+--- !u!4 &2127068848
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2127068846}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.24671, y: -0.02223, z: -1.21283}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2140828552
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9675,3 +9705,4 @@ SceneRoots:
   - {fileID: 351325037}
   - {fileID: 1491228708}
   - {fileID: 1857856098}
+  - {fileID: 2127068848}

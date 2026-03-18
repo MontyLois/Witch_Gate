@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace WitchGate.Prototype
 {
-    public class Track : MonoBehaviour
+    public class Track : MonoBehaviour, IInteractable
     {
         [field: SerializeField] private GameObject vfx;
         [field: SerializeField] private GameObject interaction;

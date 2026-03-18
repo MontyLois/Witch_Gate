@@ -9,7 +9,7 @@ using WitchGate.Gameplay.Cards.Effects;
 
 namespace WitchGate.VisualNovel.Visual_Novel.Cards
 {
-    public class VNCard : Card, ITaroCard
+    public class VNCard : Card, IDescription
     {
         public CardData Data { get; }
 
@@ -25,12 +25,12 @@ namespace WitchGate.VisualNovel.Visual_Novel.Cards
         
         public IEnumerable<CardVNEffectData> Effects => VNCardManager.GetEffectsFor(Data);
         
-        public string GetCardDescription()
+        public string GetDescription()
         {
             return "";
         }
         
-        public string GetCardName()
+        public string GetTitle()
         {
             return "";
         }
