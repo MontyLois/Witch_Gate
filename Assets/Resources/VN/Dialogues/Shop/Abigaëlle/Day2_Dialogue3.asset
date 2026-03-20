@@ -15,8 +15,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -40.799576
-    y: 98.000046
+    x: 435.20038
+    y: 164.40007
     width: 200
     height: 300
   IsDragging: 1
@@ -51,8 +51,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -377.60062
-    y: 116.400024
+    x: 98.39932
+    y: 182.80003
     width: 190
     height: 135
   IsDragging: 1
@@ -80,8 +80,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 626.40076
-    y: 117.20006
+    x: 1102.4004
+    y: 183.60008
     width: 200
     height: 300
   IsDragging: 1
@@ -116,8 +116,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -268.0003
-    y: 258.79987
+    x: 207.99966
+    y: 325.19977
     width: 190
     height: 135
   IsDragging: 1
@@ -171,8 +171,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 407.20093
-    y: 136.40002
+    x: 883.20087
+    y: 202.80006
     width: 190
     height: 135
   IsDragging: 1
@@ -201,8 +201,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 179.20041
-    y: 99.60002
+    x: 655.2005
+    y: 166.00005
     width: 200
     height: 300
   IsDragging: 1
