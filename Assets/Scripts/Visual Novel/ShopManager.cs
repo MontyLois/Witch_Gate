@@ -43,6 +43,7 @@ namespace WitchGate.Prototype
             Hand.SetActive(false);
             getTodaysCustomers();
             dialogBehaviour.BindExternalFunction("InteractiveChoice", ChooseVinyl);
+            dialogBehaviour.BindExternalFunction("NextPhase", ShowMap);
             NextClient();
         }
 
@@ -83,26 +84,7 @@ namespace WitchGate.Prototype
         {
             if(currentTestimonyphase is not null) 
                 currentTestimonyphase.SetReady();
-            
-            /*
-            if (currentClientIndex < dialogGraph.Length)
-            {
-                currentTestimonyphase = new TestimonyPhase(Witch.Elaris);
-                currentTestimonyphase.Run();
-                
-                
-                dialogBehaviour.StartDialog(dialogGraph[currentClientIndex]);
-                
-                DialogueUI.SetActive(true);
-                currentClientIndex++;
-            }
-            else
-            {
-                CardDropZone.gameObject.SetActive(false);
-                DialogueUI.SetActive(false);
-                ShowCloseButton();
-            }
-            */
+           
             if (currentClientIndex < customers.Count)
             {
                 currentTestimonyphase = new TestimonyPhase(Witch.Elaris);
@@ -125,8 +107,8 @@ namespace WitchGate.Prototype
             else
             {
                 CardDropZone.gameObject.SetActive(false);
-                DialogueUI.SetActive(false);
-                ShowCloseButton();
+                GameController.ChangeContext(EncounterContext.FromVinylShopToCity);
+                //ShowCloseButton();
             }
         }
 
@@ -137,6 +119,7 @@ namespace WitchGate.Prototype
 
         private void ShowMap()
         {
+            DialogueUI.SetActive(false);
             Map_UI.SetActive(true);
         }
         
