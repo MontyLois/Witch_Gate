@@ -6,28 +6,35 @@ using WitchGate.Gameplay.Controller.Component;
 
 namespace WitchGate.VFX
 {
-    public class PlayerVFXPositionHandler : PlayerDirectionListener
+    public class PlayerVFXPositionHandler : PlayerComponent
     {
         [field: SerializeField] public float XOffSet {get; private set; }
+        [field: SerializeField] public GameObject Vfx { get; private set; }
+        
+        private PlayerDirectionListener directionListener = new();
 
         private void OnEnable()
         {
-            base.OnEnable();
-            OnDirectionChanged(XOffSet);
+            directionListener.Bind(Manager.Body, OnDirectionChanged);
         }
 
-        protected override void OnDirectionChanged(float dir)
+        private void OnDisable()
+        {
+            directionListener.Unbind(Manager.Body, OnDirectionChanged);
+        }
+
+        private void OnDirectionChanged(float dir)
         {
             float x = 0;
-            if (dir > 0)
+            if (Mathf.Sign(dir) < 0)
             {
                 x = XOffSet;
             }
             else
             {
-                x = XOffSet*-1;
+                x = XOffSet*(-1);
             }
-            this.transform.DOLocalMoveX(x, 0);
+            Vfx.transform.DOLocalMoveX(x, 0.1f);
         }
     }
 }

@@ -23,6 +23,7 @@ namespace WitchGate.Gameplay.Controller
         public bool IsGrounded { get; private set; }
         
         public bool CanMove { get; private set; }
+        private float direction = 1;
 
         public event Action<float> OnChangedXDirection;
         public event Action<bool> OnChangedGrounded;
@@ -42,7 +43,7 @@ namespace WitchGate.Gameplay.Controller
 
         private void FixedUpdate()
         {
-            checkDirectionChange();
+            CheckDirectionChange();
             
             rb.linearVelocity = CurrentVelocity;
             
@@ -83,10 +84,13 @@ namespace WitchGate.Gameplay.Controller
             Gizmos.DrawRay(checkGroundPosition.position, Vector3.down * checkGroundDistance);
         }
 
-        private void checkDirectionChange()
+        private void CheckDirectionChange()
         {
-            if(CurrentVelocity.x!=0 && (Mathf.Sign(CurrentVelocity.x) != Mathf.Sign(rb.linearVelocity.x)||(rb.linearVelocity.x==0)))
-                OnChangedXDirection?.Invoke(CurrentVelocity.x);
+            if (CurrentVelocity.x != 0 && (Mathf.Sign(CurrentVelocity.x) != Mathf.Sign(direction)))
+            {
+                direction = Mathf.Sign(CurrentVelocity.x);
+                OnChangedXDirection?.Invoke(direction);
+            }
         }
     }
 }
