@@ -20,6 +20,7 @@ namespace WitchGate.Gameplay
         [field: SerializeField] private Image cardBackground;
         [field: SerializeField] private Animator cardAnimator;
         
+        public ICardUI CardUI { get; set; }
 
         protected override void ConnectWithCurrent()
         {
@@ -27,10 +28,6 @@ namespace WitchGate.Gameplay
             CardName.text = Current.Data.Name;
             cardBackground.sprite = Current.Data.BG;
             Current.CardAnimator = this;
-            
-            //Current.GetAttackAwaitable = OnAttack;
-            
-            Current.CardPutDown += OnSelected;
         }
         
         protected override void DisconnectWithCurrent()
@@ -38,7 +35,6 @@ namespace WitchGate.Gameplay
             cardIllustration.sprite = null;
             CardName.text = "";
             Current.CardAnimator = null;
-            Current.CardPutDown -= OnSelected;
         }
 
         public void OnSelected()
@@ -51,8 +47,7 @@ namespace WitchGate.Gameplay
             cardAnimator.Play("Card_Attack");
             await cardAnimator.WaitForAnimation("Card_Attack");
         }
-
-        public ICardUI CardUI { get; set; }
+       
         public void OnPointerEnter(PointerEventData eventData)
         {
             UIManager.OnCardHovered?.Invoke(Current);

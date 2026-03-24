@@ -9,6 +9,7 @@ namespace WitchGate.Gameplay.Cards.UI
     public class EnemyGameCardUI: CardUI<GameCard>, ICardAnimator, ICardPointerHoverHandler
     {
         [field : SerializeField] private Image cardIllustration;
+        public ICardUI CardUI { get; set; }
         
         protected override void ConnectWithCurrent()
         {
@@ -27,7 +28,11 @@ namespace WitchGate.Gameplay.Cards.UI
             
         }
 
-        public ICardUI CardUI { get; set; }
+        public void OnSelected()
+        {
+            
+        }
+        
         public void OnPointerEnter(PointerEventData eventData)
         {
             UIManager.OnCardHovered?.Invoke(Current);

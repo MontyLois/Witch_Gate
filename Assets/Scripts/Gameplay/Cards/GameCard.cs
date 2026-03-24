@@ -62,12 +62,18 @@ namespace WitchGate.Gameplay.Cards
             if (CardAnimator != null)
                 await CardAnimator.OnAttack();
             
+            ApplyEffects(targets, caster);
+            
+            UseCard?.Invoke();
+            await PhaseController.CompletedAwaitable;
+        }
+
+        private void ApplyEffects(IReadOnlyList<ICanFight> targets, ICanFight caster)
+        {
             foreach (var effect in Effects)
             {
                 effect.AffectTargets(targets, caster, Level);
             }
-            UseCard?.Invoke();
-            await PhaseController.CompletedAwaitable;
         }
 
         public void OnSelected()

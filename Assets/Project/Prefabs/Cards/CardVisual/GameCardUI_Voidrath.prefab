@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 1275729102824859967}
   - component: {fileID: 7575936904523380178}
   - component: {fileID: 6872996693155206931}
-  - component: {fileID: 2446841187469606339}
   m_Layer: 5
   m_Name: GameCardUI_Voidrath
   m_TagString: Untagged
@@ -107,21 +106,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.AspectRatioFitter
   m_AspectMode: 1
   m_AspectRatio: 0.6
---- !u!114 &2446841187469606339
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5774503963738779875}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 59bf8512c0fa850459828541f45a867e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: WitchGate.Gameplay::WitchGate.CardDescriptionUI
-  <CardDescriptionGameObject>k__BackingField: {fileID: 1521843611464983556}
-  <DescritpionText>k__BackingField: {fileID: 2352884015388979688}
-  <NameText>k__BackingField: {fileID: 0}
 --- !u!1001 &4391321809923740797
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -496,22 +480,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cab2381bad4c3d946ae975f56edb4dcc, type: 3}
---- !u!1 &1521843611464983556 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5146021901351940292, guid: cab2381bad4c3d946ae975f56edb4dcc, type: 3}
-  m_PrefabInstance: {fileID: 5941649872085521600}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &2352884015388979688 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8274208314839229736, guid: cab2381bad4c3d946ae975f56edb4dcc, type: 3}
-  m_PrefabInstance: {fileID: 5941649872085521600}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
 --- !u!224 &7992218894270072611 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4368187801645421539, guid: cab2381bad4c3d946ae975f56edb4dcc, type: 3}

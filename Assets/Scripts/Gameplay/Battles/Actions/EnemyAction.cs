@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using WitchGate.Cards;
 using WitchGate.Gameplay.Battles.Entities;
 using WitchGate.Gameplay.Battles.Entities.Interface;
 using WitchGate.Gameplay.Cards;
@@ -10,6 +11,7 @@ namespace WitchGate.Gameplay.Battles.TurnPhases
     {
         public int Priority { get; set; }
         public string Label => gameCard.Data.Name;
+        public GameCard GameCard => gameCard;
         
         private readonly GameCard gameCard;
         private readonly BattlePhase battlePhase;

@@ -1,12 +1,13 @@
 using Helteix.Tools.UI;
 using TMPro;
 using UnityEngine;
-using WitchGate.Controllers;
+using UnityEngine.EventSystems;
 using WitchGate.Gameplay.Battles.TurnPhases;
+using WitchGate.Gameplay.Cards.UI;
 
 namespace WitchGate.Gameplay.Battles.UI
 {
-    public class TurnActionUI : UIItem<ITurnAction>
+    public class TurnActionUI : UIItem<ITurnAction>, IPointerEnterHandler, IPointerExitHandler
     {
         [SerializeField] 
         private TMP_Text actionName;
@@ -22,6 +23,16 @@ namespace WitchGate.Gameplay.Battles.UI
         protected override void ClearUI()
         {
             
+        }
+
+        public void OnPointerEnter(PointerEventData eventData)
+        {
+            UIManager.OnCardHovered?.Invoke(Current.GameCard);
+        }
+
+        public void OnPointerExit(PointerEventData eventData)
+        {
+            UIManager.OnCardUnhovered?.Invoke();
         }
     }
 }
