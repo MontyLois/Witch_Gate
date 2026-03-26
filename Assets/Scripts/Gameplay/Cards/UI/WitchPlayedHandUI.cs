@@ -82,8 +82,13 @@ namespace WitchGate.Gameplay.Battles.UI
         void ICardDropTarget<GameCard>.OnCardHover(GameCard cardUICurrent)
         {
         }
-        
-        
+
+
+        protected override void OnCardAdded(GameCard card)
+        {
+            base.OnCardAdded(card);
+        }
+
         protected override bool CanCardBeClicked(ICard card)
         {
             return true;

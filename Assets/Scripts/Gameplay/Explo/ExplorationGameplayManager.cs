@@ -1,12 +1,11 @@
+using Helteix.Singletons.MonoSingletons;
 using UnityEngine;
 using WitchGate.Gameplay.Controller;
 
 namespace WitchGate.Gameplay
 {
-    public class ExplorationGameplayManager : MonoBehaviour
+    public class ExplorationGameplayManager : MonoSingleton<ExplorationGameplayManager>
     {
-        // The one and only instance
-        public static ExplorationGameplayManager Instance { get; private set; }
 
         [field: SerializeField] public PlayerManager playerManager { get; private set; }
 

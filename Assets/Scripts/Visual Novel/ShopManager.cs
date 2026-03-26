@@ -108,7 +108,7 @@ namespace WitchGate.Prototype
             {
                 CardDropZone.gameObject.SetActive(false);
                 GameController.ChangeContext(EncounterContext.FromVinylShopToCity);
-                //ShowCloseButton();
+                ShowMap();
             }
         }
 
