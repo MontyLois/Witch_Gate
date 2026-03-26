@@ -489,15 +489,15 @@ RectTransform:
   m_GameObject: {fileID: 74368845}
   m_LocalRotation: {x: 0.000000013038514, y: -9.3132246e-10, z: -7.2759565e-10, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1.63, y: 1.63, z: 1.63}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1524742353}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 256.73593, y: 460.97937}
+  m_SizeDelta: {x: 170, y: 260}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &74368847
 MonoBehaviour:
@@ -515,7 +515,7 @@ MonoBehaviour:
   holderPrefab: {fileID: 543346472712950553, guid: c81eeb505fc35514c8224f52e2d4beeb, type: 3}
   containerRoot: {fileID: 74368846}
   cardDamping: 15
-  draggingParent: {fileID: 1439019609}
+  draggingParent: {fileID: 0}
   dragDampingMultiplier: 2
   witch: 2
   <PlayedHandIndex>k__BackingField: 2
@@ -564,7 +564,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 74368845}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 30649d3a9faa99c48a7b1166b86bf2a0, type: 3}
   m_Name: 
@@ -1188,15 +1188,15 @@ RectTransform:
   m_GameObject: {fileID: 413706341}
   m_LocalRotation: {x: 0.000000013038514, y: -9.3132246e-10, z: -7.2759565e-10, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1.63, y: 1.63, z: 1.63}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1524742353}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 256.73593, y: 460.97937}
+  m_SizeDelta: {x: 170, y: 260}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &413706343
 MonoBehaviour:
@@ -1205,7 +1205,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 413706341}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 30649d3a9faa99c48a7b1166b86bf2a0, type: 3}
   m_Name: 
@@ -1240,7 +1240,7 @@ MonoBehaviour:
   holderPrefab: {fileID: 543346472712950553, guid: c81eeb505fc35514c8224f52e2d4beeb, type: 3}
   containerRoot: {fileID: 413706342}
   cardDamping: 15
-  draggingParent: {fileID: 1439019609}
+  draggingParent: {fileID: 0}
   dragDampingMultiplier: 2
   witch: -1
   <PlayedHandIndex>k__BackingField: 1
@@ -3079,15 +3079,15 @@ RectTransform:
   m_GameObject: {fileID: 1285922386}
   m_LocalRotation: {x: 0.000000013038514, y: -9.3132246e-10, z: -7.2759565e-10, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1.63, y: 1.63, z: 1.63}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1524742353}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 256.73593, y: 460.97937}
+  m_SizeDelta: {x: 170, y: 260}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1285922388
 MonoBehaviour:
@@ -3150,8 +3150,8 @@ MonoBehaviour:
   m_ChildForceExpandHeight: 1
   m_ChildControlWidth: 1
   m_ChildControlHeight: 1
-  m_ChildScaleWidth: 0
-  m_ChildScaleHeight: 0
+  m_ChildScaleWidth: 1
+  m_ChildScaleHeight: 1
   m_ReverseArrangement: 0
 --- !u!114 &1285922392
 MonoBehaviour:
@@ -3169,7 +3169,7 @@ MonoBehaviour:
   holderPrefab: {fileID: 543346472712950553, guid: c81eeb505fc35514c8224f52e2d4beeb, type: 3}
   containerRoot: {fileID: 1285922387}
   cardDamping: 15
-  draggingParent: {fileID: 1439019609}
+  draggingParent: {fileID: 0}
   dragDampingMultiplier: 2
   witch: 1
   <PlayedHandIndex>k__BackingField: 0
@@ -4569,6 +4569,14 @@ PrefabInstance:
       propertyPath: draggingParent
       value: 
       objectReference: {fileID: 1439019609}
+    - target: {fileID: 9175173192912002262, guid: 7285d40b7487e874c9fa649c21279d2a, type: 3}
+      propertyPath: <Use3DDragging>k__BackingField
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9175173192912002262, guid: 7285d40b7487e874c9fa649c21279d2a, type: 3}
+      propertyPath: <DraggingParent>k__BackingField
+      value: 
+      objectReference: {fileID: 2121758538}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7447,6 +7455,14 @@ PrefabInstance:
       propertyPath: draggingParent
       value: 
       objectReference: {fileID: 1439019609}
+    - target: {fileID: 9175173192912002262, guid: 7285d40b7487e874c9fa649c21279d2a, type: 3}
+      propertyPath: <Use3DDragging>k__BackingField
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9175173192912002262, guid: 7285d40b7487e874c9fa649c21279d2a, type: 3}
+      propertyPath: <DraggingParent>k__BackingField
+      value: 
+      objectReference: {fileID: 2121758538}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
