@@ -14,8 +14,6 @@ namespace cherrydev
         
         [Space(10)] 
         public List<Node> ParentNodes = new();
-        //public Node ChildNode;
-        
         
         private const float LabelFieldSpace = 47f;
         private const float TextFieldWidth = 100f;

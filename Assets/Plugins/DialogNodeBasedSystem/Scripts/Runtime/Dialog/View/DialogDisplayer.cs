@@ -16,21 +16,10 @@ namespace cherrydev
         [SerializeField] private SlotPanel[] _dialogSlotPanels;
         [SerializeField] private AnswerPanel _dialogAnswerPanel;
 
-        //private Dictionary<SlotName, SlotPanel> SlotPanelsByName;
-
 
         [Header("set up")] [SerializeField] private GameObject SentenceDefaultPrefab;
 
-
-        private void Awake()
-        {
-            //SlotPanelsByName = new Dictionary<SlotName, SlotPanel>();
-            foreach (var dialogSlotPanel in _dialogSlotPanels)
-            {
-               // SlotPanelsByName.Add(dialogSlotPanel.SlotName, dialogSlotPanel);
-            }
-        }
-
+        
         private void OnEnable()
         {
 
@@ -43,6 +32,7 @@ namespace cherrydev
             _dialogBehaviour.SentenceNodeActivated += _dialogSentencePanel.ResetDialogText;
             _dialogBehaviour.SentenceNodeActivatedWithParameter += _dialogSentencePanel.Setup;*/
 
+            //Subscribe every slot to dialog event
             foreach (var dialogSlotPanel in _dialogSlotPanels)
             {
                 _dialogBehaviour.DialogTextCharWrote += dialogSlotPanel.IncreaseMaxVisibleCharacters;
@@ -122,8 +112,6 @@ namespace cherrydev
         /// </summary>
         public void EnableDialogAnswerPanel()
         {
-            
-            //ActiveGameObject(_dialogAnswerPanel.gameObject, true);
             _dialogAnswerPanel.DisableAllButtons();
             _dialogAnswerPanel.gameObject.SetActive(true);
         }
@@ -142,7 +130,7 @@ namespace cherrydev
         public void DisableDialogAnswerPanel() => ActiveGameObject(_dialogAnswerPanel.gameObject, false);
 
         /// <summary>
-        /// Enable dialog sentence panel
+        /// Enable every dialog sentence panel
         /// </summary>
         public void EnableDialogSentencePanel()
         {
@@ -151,13 +139,10 @@ namespace cherrydev
                 dialogSlotPanel.ResetDialogText();
                 ActiveGameObject(dialogSlotPanel.gameObject, true);
             }
-            
-            //_dialogSentencePanel.ResetDialogText();
-            //ActiveGameObject(_dialogSentencePanel.gameObject, true);
         }
 
         /// <summary>
-        /// Disable dialog sentence panel
+        /// Disable every dialog sentence panel
         /// </summary>
         public void DisableDialogSentencePanel()
         {
@@ -166,7 +151,6 @@ namespace cherrydev
             {
                 ActiveGameObject(dialogSlotPanel.gameObject, false);
             }
-            //ActiveGameObject(_dialogSentencePanel.gameObject, false);
         } 
 
         /// <summary>
@@ -181,7 +165,6 @@ namespace cherrydev
                 Debug.LogWarning("Game object is null");
                 return;
             }
-
             gameObject.SetActive(isActive);
         }
         
