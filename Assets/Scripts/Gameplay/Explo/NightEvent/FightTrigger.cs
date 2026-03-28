@@ -12,11 +12,8 @@ using WitchGate.Players;
 
 namespace WitchGate.Prototype
 {
-    public class Monster : MonoBehaviour
+    public class FightTrigger : MonoBehaviour
     {
-        [field: SerializeField]
-        private GameObject sprite;
-        
         [field: SerializeField]
         private Animator animator;
         
@@ -25,7 +22,6 @@ namespace WitchGate.Prototype
         
         private void OnTriggerEnter(Collider other)
         {
-            sprite.SetActive(true);
             ExplorationGameplayManager.Instance.LockPlayerMovement();
             StartCoroutine(WaitAnimation());
         }
@@ -40,8 +36,7 @@ namespace WitchGate.Prototype
 
         private void StartBattle()
         {
-            BattlePhase phase = new BattlePhase(new BattleEnemy(enemyProfile));
-            phase.Run();
+            BattleController.StartBattle(enemyProfile);
         }
     }
 }

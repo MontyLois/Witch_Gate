@@ -5,5 +5,6 @@ namespace WitchGate.Gameplay.Cards
     public interface ICardAnimator
     {
         Awaitable OnAttack();
+        void OnSelected();
     }
 }

@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Pool;
+using WitchGate.Cards;
 using WitchGate.Gameplay.Battles.Entities;
 using WitchGate.Gameplay.Cards;
 
@@ -9,9 +10,10 @@ namespace WitchGate.Gameplay.Battles.TurnPhases
     public class PlayCardAction : ITurnAction
     {
         public string Label => gameCard.Data.Name;
-        
+        public GameCard GameCard => gameCard;
+
         private readonly BattlePhase battlePhase;
-        private readonly GameCard gameCard;
+        public readonly GameCard gameCard;
         public int Priority { get; set;}
 
         public PlayCardAction(GameCard gameCard, BattlePhase battlePhase)

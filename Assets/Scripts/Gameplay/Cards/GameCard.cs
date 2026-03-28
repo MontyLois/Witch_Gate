@@ -16,9 +16,11 @@ namespace WitchGate.Gameplay.Cards
     {
         [field: SerializeField]
         public CardData Data { get; private set; }
+
         public int Level { get; private set; }
         
         public ICardAnimator CardAnimator { get; internal set; }
+        public string CardDescription { get; private set; }
         
         public event Action CardPutDown;
         public event Action UseCard;
@@ -29,23 +31,49 @@ namespace WitchGate.Gameplay.Cards
                 Debug.LogError("No data was given to the card");
             Data = data;
             this.Level = level;
+            CardDescription = GetDescription();
         }
 
         public IEnumerable<CardBattleEffectData> Effects => CardManager.GetEffectsFor(Data);
+        
+        public string GetDescription()
+        {
+            string description = "";
+            int effectsLenght = Effects.Count();
+            for (int i = 0; i < effectsLenght; i++)
+            {
+                description += Effects.ElementAt(i).GetEffectDescription(Level);
+                if (i < Effects.Count() - 1)
+                {
+                    description += ", ";
+                }
+            }
+            description += ".";
+            return description;
+        }
 
+        public string GetTitle()
+        {
+            return Data.Name;
+        }
 
         public async Awaitable Use(IReadOnlyList<ICanFight> targets, ICanFight caster)
         {
             if (CardAnimator != null)
                 await CardAnimator.OnAttack();
             
-            foreach (var effect in Effects)
-            {
-                effect.AffectTargets(targets, caster);
-            }
+            ApplyEffects(targets, caster);
             
             UseCard?.Invoke();
             await PhaseController.CompletedAwaitable;
+        }
+
+        private void ApplyEffects(IReadOnlyList<ICanFight> targets, ICanFight caster)
+        {
+            foreach (var effect in Effects)
+            {
+                effect.AffectTargets(targets, caster, Level);
+            }
         }
 
         public void OnSelected()

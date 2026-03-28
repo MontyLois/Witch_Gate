@@ -10,15 +10,21 @@ namespace WitchGate.Gameplay.Cards.Effects
     {
         [field: SerializeField]
         public int Damage { get; private set; }
+        
 
 
-        protected override void ApplyEffect(ICanFight target, ICanFight caster)
+        public override string GetEffectDescription(int level)
+        {
+            return Description.Replace("[value]", (Damage+(UpgradableValue? level : 0)).ToString());
+        }
+
+        protected override void ApplyEffect(ICanFight target, ICanFight caster, int level)
         {
             var context = new DamageContext
             {
                 Source = caster,
                 Target = target,
-                Amount = Damage
+                Amount = Damage + (UpgradableValue? level : 0)
             };
             
             Debug.Log("deal damages");

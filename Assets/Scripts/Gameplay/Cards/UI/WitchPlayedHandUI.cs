@@ -65,26 +65,30 @@ namespace WitchGate.Gameplay.Battles.UI
 
         void ICardDropTarget<GameCard>.OnCardEnter(GameCard cardUI)
         {
-            transform.localScale = Vector3.one * 1.2f;
+            //transform.localScale = Vector3.one * 1.2f;
         }
 
         void ICardDropTarget<GameCard>.OnCardExit(GameCard cardUI)
         {
-            
-            transform.localScale = Vector3.one ;
+            //transform.localScale = Vector3.one ;
         }
 
         void ICardDropTarget<GameCard>.OnCardDrop(GameCard card)
         {
             hand.TryAddCard(card);
-            transform.localScale = Vector3.one;
+            //transform.localScale = Vector3.one;
         }
 
         void ICardDropTarget<GameCard>.OnCardHover(GameCard cardUICurrent)
         {
         }
-        
-        
+
+
+        protected override void OnCardAdded(GameCard card)
+        {
+            base.OnCardAdded(card);
+        }
+
         protected override bool CanCardBeClicked(ICard card)
         {
             return true;

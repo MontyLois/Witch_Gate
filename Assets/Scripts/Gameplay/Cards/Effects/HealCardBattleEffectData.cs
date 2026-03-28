@@ -10,11 +10,15 @@ namespace WitchGate.Gameplay.Cards.Effects
         [field: SerializeField]
         public int Heal { get; private set; }
 
+        public override string GetEffectDescription(int level)
+        {
+            return Description.Replace("[value]", (Heal+(UpgradableValue? level : 0)).ToString());
+        }
 
-        protected override void ApplyEffect(ICanFight target, ICanFight caster)
+        protected override void ApplyEffect(ICanFight target, ICanFight caster, int level)
         {
             Debug.Log("use heal");
-            target.HealHealth(Heal);
+            target.HealHealth(Heal+(UpgradableValue? level : 0));
         }
     }
 }

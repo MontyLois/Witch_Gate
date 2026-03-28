@@ -536,7 +536,6 @@ GameObject:
   - component: {fileID: 1275729102824859967}
   - component: {fileID: 6305414973527860364}
   - component: {fileID: 6872996693155206931}
-  - component: {fileID: 2446841187469606339}
   m_Layer: 5
   m_Name: GameCardUI_VN
   m_TagString: Untagged
@@ -629,20 +628,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.AspectRatioFitter
   m_AspectMode: 1
   m_AspectRatio: 0.6
---- !u!114 &2446841187469606339
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5774503963738779875}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 59bf8512c0fa850459828541f45a867e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: WitchGate.Gameplay::WitchGate.CardDescriptionUI
-  <CardDescriptionGameObject>k__BackingField: {fileID: 8513385814704160567}
-  <DescritpionText>k__BackingField: {fileID: 4871817768513530587}
 --- !u!1 &6391022224187455174
 GameObject:
   m_ObjectHideFlags: 0
@@ -734,7 +719,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &995615767866711056
 RectTransform:
   m_ObjectHideFlags: 0

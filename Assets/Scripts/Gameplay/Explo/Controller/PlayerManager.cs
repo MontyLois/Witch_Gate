@@ -1,9 +1,10 @@
 using System;
+using Helteix.Singletons.MonoSingletons;
 using UnityEngine;
 
 namespace WitchGate.Gameplay.Controller
 {
-    public class PlayerManager : MonoBehaviour
+    public class PlayerManager : MonoSingleton<PlayerManager>
     {
         [field: SerializeField]
         public PlayerMovement Movement { get; private set; }

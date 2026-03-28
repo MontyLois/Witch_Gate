@@ -13,7 +13,9 @@ MonoBehaviour:
   m_Name: CE_Ela_C3_E2
   m_EditorClassIdentifier: WitchGate.Gameplay::WitchGate.Gameplay.Cards.Effects.DamageCardBattleEffectData
   <CardData>k__BackingField: {fileID: 11400000, guid: a1a51d2b8aa7834478cfa2eae61ad8c4, type: 2}
+  <Description>k__BackingField: "subit [value] d\xE9gats"
   <SelfAffected>k__BackingField: 1
   <AlliesAffected>k__BackingField: 0
   <EnemiesAffected>k__BackingField: 0
+  <Vfx>k__BackingField: {fileID: 0}
   <Damage>k__BackingField: 3

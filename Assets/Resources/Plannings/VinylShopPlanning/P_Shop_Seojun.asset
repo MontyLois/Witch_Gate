@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: P_Shop_Seojun
   m_EditorClassIdentifier: WitchGate.Core::WitchGate.Mission.Plannings.Data.PlanningData
   <CharacterData>k__BackingField: {fileID: 11400000, guid: 863b140ab388f7045a04169733af3dff, type: 2}
-  <EncounterContext>k__BackingField: 2
+  <EncounterContext>k__BackingField: 1
   <PlanningConditionData>k__BackingField: {fileID: 11400000, guid: 566a185abecdb264dab3df7796de8bbb, type: 2}
   <PlanningFormulaData>k__BackingField: {fileID: 11400000, guid: 10062c7e96d7abf4ebaeae1a86c38ecf, type: 2}

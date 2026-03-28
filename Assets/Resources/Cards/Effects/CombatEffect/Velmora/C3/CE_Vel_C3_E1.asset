@@ -13,8 +13,13 @@ MonoBehaviour:
   m_Name: CE_Vel_C3_E1
   m_EditorClassIdentifier: WitchGate.Gameplay::WitchGate.Gameplay.Cards.Effects.RedirectDamageToSelfEffectData
   <CardData>k__BackingField: {fileID: 11400000, guid: 79cd361b1419f004a8146eefaea1f4a2, type: 2}
+  <Description>k__BackingField: "Prend [value]% de d\xE9gats \xE0 la place d'Elaris
+    pendant [lifeCycle] tour"
   <SelfAffected>k__BackingField: 0
   <AlliesAffected>k__BackingField: 1
   <EnemiesAffected>k__BackingField: 0
+  <Vfx>k__BackingField: {fileID: 0}
+  <UpgradableValue>k__BackingField: 0
+  <UpgradableCycleValue>k__BackingField: 1
   <DamagePercent>k__BackingField: 1
   <LifeCycle>k__BackingField: 1

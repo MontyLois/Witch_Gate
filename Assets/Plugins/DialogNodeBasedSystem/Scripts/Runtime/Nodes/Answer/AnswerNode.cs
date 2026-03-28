@@ -245,7 +245,8 @@ namespace cherrydev
             if (nodeToAdd.GetType() == typeof(SentenceNode) 
                 || nodeToAdd.GetType() == typeof(ModifyVariableNode)
                 || nodeToAdd.GetType() == typeof(VariableConditionNode)
-                || nodeToAdd.GetType() == typeof(ExternalFunctionNode))
+                || nodeToAdd.GetType() == typeof(ExternalFunctionNode)
+                || nodeToAdd.GetType() == typeof(StageNode))
             {
                 ParentNodes.Add(nodeToAdd);
                 return true;

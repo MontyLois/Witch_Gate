@@ -53,15 +53,17 @@ namespace WitchGate.Gameplay.Battles.TurnPhases
         private void AddCardActionEvent(GameCard card)
         {
             PlayCardAction playCardAction = new PlayCardAction(card, BattlePhase);
-            if(cardActions.TryAdd(card, playCardAction))
+            if (cardActions.TryAdd(card, playCardAction))
+            {
                 BattlePhase.TurnTimeline.AddAction(playCardAction);
+                card.CardAnimator.OnSelected();
+            }
         }
 
         private void RemoveCardActionEvent(GameCard card)
         {
             if(cardActions.Remove(card, out PlayCardAction action))
                 BattlePhase.TurnTimeline.RemoveAction(action);
-                
         }
         public void SetReady()
         {

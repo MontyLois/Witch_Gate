@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: DialogContextualized_Xochi_Shop_Inv1
   m_EditorClassIdentifier: WitchGate.Core::WitchGate.Mission.DialogContextualizedData
   <CharacterData>k__BackingField: {fileID: 11400000, guid: 4d53249c21004534bacc070bd67c2d35, type: 2}
-  <EncounterContext>k__BackingField: 2
+  <EncounterContext>k__BackingField: 1
   <InvestigationStage>k__BackingField: 0
   <DialogBehaviours>k__BackingField:
   - {fileID: 11400000, guid: 5cea3668d2282414aa6c4df1ee70a916, type: 2}
