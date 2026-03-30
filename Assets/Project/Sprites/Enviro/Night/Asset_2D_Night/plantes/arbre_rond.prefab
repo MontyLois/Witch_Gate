@@ -76,8 +76,8 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1535953963
+  m_SortingLayer: -1
   m_SortingOrder: 0
   m_Sprite: {fileID: 1395915002, guid: 59939cf26684f4b40896aa5d9af1862c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -166,8 +166,8 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1535953963
+  m_SortingLayer: -1
   m_SortingOrder: 0
   m_Sprite: {fileID: 406348776, guid: 59939cf26684f4b40896aa5d9af1862c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -190,7 +190,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5602619116529783407}
   m_Layer: 0
-  m_Name: Arbre_rond
+  m_Name: arbre_rond
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -290,8 +290,8 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1535953963
+  m_SortingLayer: -1
   m_SortingOrder: 0
   m_Sprite: {fileID: -1381756802, guid: 59939cf26684f4b40896aa5d9af1862c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
