@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: C1_Void
   m_EditorClassIdentifier: WitchGate.Core::WitchGate.Cards.CardData
   <WitchDeck>k__BackingField: -1
-  <Name>k__BackingField: Payback
+  <Name>k__BackingField: Vengeance
   <Description>k__BackingField: "Inflige 3 d\xE9gats aux deux soeurs"
   <CardRarity>k__BackingField: 0
   <Icon>k__BackingField: {fileID: 21300000, guid: c1fb773854e0fe442b31d03694c31c70, type: 3}

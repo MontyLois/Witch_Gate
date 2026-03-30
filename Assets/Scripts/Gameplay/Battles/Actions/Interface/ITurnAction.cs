@@ -8,7 +8,7 @@ namespace WitchGate.Gameplay.Battles.TurnPhases
     {
         public int Priority { get; set; }
         string Label { get; }
-        GameCard GameCard { get;  }
+        IGameCard GameCard { get;  }
         Awaitable Execute();
     }
 }

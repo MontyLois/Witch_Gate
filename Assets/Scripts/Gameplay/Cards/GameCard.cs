@@ -18,9 +18,14 @@ namespace WitchGate.Gameplay.Cards
         public CardData Data { get; private set; }
 
         public int Level { get; private set; }
+        public string Label => Data.name;
+        public Witch Witch => Data.WitchDeck;
+        public int Priority => Data.Priority;
+        public CardData CardData => Data;
         
-        public ICardAnimator CardAnimator { get; internal set; }
+        public ICardAnimator CardAnimator { get; set; }
         public string CardDescription { get; private set; }
+        
         
         public event Action CardPutDown;
         public event Action UseCard;
@@ -67,6 +72,8 @@ namespace WitchGate.Gameplay.Cards
             UseCard?.Invoke();
             await PhaseController.CompletedAwaitable;
         }
+
+        
 
         private void ApplyEffects(IReadOnlyList<ICanFight> targets, ICanFight caster)
         {

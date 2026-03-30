@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4b21abdfb0b1456c9877fa40e36c001b, type: 3}
-  m_Name: C2_Vel
+  m_Name: Ela_Calice_1
   m_EditorClassIdentifier: WitchGate.Core::WitchGate.Cards.CardData
-  <WitchDeck>k__BackingField: 1
-  <Name>k__BackingField: Pierre Soleil
-  <Description>k__BackingField: Attaque de 2
+  <WitchDeck>k__BackingField: 2
+  <Name>k__BackingField: Calice I
+  <Description>k__BackingField: 
   <CardRarity>k__BackingField: 0
-  <Icon>k__BackingField: {fileID: -180989914, guid: b4e1d1368e83c0a4f93cb2322b3f15a7, type: 3}
-  <BG>k__BackingField: {fileID: -1964221159, guid: 566923a53340cad48ada546e720227b1, type: 3}
-  <Priority>k__BackingField: 1
-  <ID>k__BackingField: 15d97fee-6635-4bcb-af2e-e6e1100b6869
+  <Icon>k__BackingField: {fileID: -992899983, guid: 56676cb5b4640b548b7ec00b8978a68b, type: 3}
+  <BG>k__BackingField: {fileID: -343380549, guid: 93c498d013914364d8a6637bc86aa5f8, type: 3}
+  <Priority>k__BackingField: 0
+  <ID>k__BackingField: e1e30f4c-0103-429b-bb46-95127ff28a66

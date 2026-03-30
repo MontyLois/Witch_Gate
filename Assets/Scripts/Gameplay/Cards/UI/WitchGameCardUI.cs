@@ -7,12 +7,13 @@ using UnityEngine.UI;
 using WitchGate.Gameplay.Cards;
 using TMPro;
 using UnityEngine.EventSystems;
+using WitchGate.Cards;
 using WitchGate.Gameplay.Cards.UI;
 using WitchGate.Utilities;
 
 namespace WitchGate.Gameplay
 {
-    public class WitchGameCardUI : CardUI<GameCard>, ICardAnimator, ICardPointerHoverHandler
+    public class WitchGameCardUI : CardUI<IGameCard>, ICardAnimator, ICardPointerHoverHandler
     {
 
         [field : SerializeField] private Image cardIllustration;
@@ -24,9 +25,9 @@ namespace WitchGate.Gameplay
 
         protected override void ConnectWithCurrent()
         {
-            cardIllustration.sprite = Current.Data.Icon;
-            CardName.text = Current.Data.Name;
-            cardBackground.sprite = Current.Data.BG;
+            cardIllustration.sprite = Current.CardData.Icon;
+            CardName.text = Current.CardData.Name;
+            cardBackground.sprite = Current.CardData.BG;
             Current.CardAnimator = this;
         }
         

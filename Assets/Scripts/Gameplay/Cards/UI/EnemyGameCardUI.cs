@@ -3,17 +3,18 @@ using Helteix.Cards.UI.Physical.Components;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using WitchGate.Cards;
 
 namespace WitchGate.Gameplay.Cards.UI
 {
-    public class EnemyGameCardUI: CardUI<GameCard>, ICardAnimator, ICardPointerHoverHandler
+    public class EnemyGameCardUI: CardUI<IGameCard>, ICardAnimator, ICardPointerHoverHandler
     {
         [field : SerializeField] private Image cardIllustration;
         public ICardUI CardUI { get; set; }
         
         protected override void ConnectWithCurrent()
         {
-            cardIllustration.sprite = Current.Data.Icon;
+            cardIllustration.sprite = Current.CardData.Icon;
             Current.CardAnimator = this;
         }
         

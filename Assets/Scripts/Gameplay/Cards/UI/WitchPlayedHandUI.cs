@@ -4,15 +4,16 @@ using Helteix.Cards.UI.Physical;
 using Helteix.Cards.UI.Physical.Drag;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using WitchGate.Cards;
 using WitchGate.Controllers;
 using WitchGate.Gameplay.Battles.TurnPhases;
 using WitchGate.Gameplay.Cards;
 
 namespace WitchGate.Gameplay.Battles.UI
 {
-    public class WitchPlayedHandUI : PhysicalCardCollectionUI<GameCard>, 
+    public class WitchPlayedHandUI : PhysicalCardCollectionUI<IGameCard>, 
         IPhaseListener<BattlePhase>,
-        ICardDropTarget<GameCard>
+        ICardDropTarget<IGameCard>
     {
         [SerializeField] private Witch witch;
         
@@ -20,7 +21,7 @@ namespace WitchGate.Gameplay.Battles.UI
         
         private int priority;
 
-        private Hand<GameCard> hand;
+        private Hand<IGameCard> hand;
         private BattlePhase battlePhase;
         private void OnEnable()
         {
@@ -55,36 +56,36 @@ namespace WitchGate.Gameplay.Battles.UI
             hand = null;
         }
 
-        int ICardDropTarget<GameCard>.Priority => priority;
+        int ICardDropTarget<IGameCard>.Priority => priority;
 
-        bool ICardDropTarget<GameCard>.Accepts(GameCard card)
+        bool ICardDropTarget<IGameCard>.Accepts(IGameCard card)
         {
-            var accepts = (card.Data.WitchDeck & witch)!= 0 && (hand.CurrentSize==0) ;
+            var accepts = (card.CardData.WitchDeck & witch)!= 0 && (hand.CurrentSize==0) ;
             return accepts;
         }
 
-        void ICardDropTarget<GameCard>.OnCardEnter(GameCard cardUI)
+        void ICardDropTarget<IGameCard>.OnCardEnter(IGameCard cardUI)
         {
             //transform.localScale = Vector3.one * 1.2f;
         }
 
-        void ICardDropTarget<GameCard>.OnCardExit(GameCard cardUI)
+        void ICardDropTarget<IGameCard>.OnCardExit(IGameCard cardUI)
         {
             //transform.localScale = Vector3.one ;
         }
 
-        void ICardDropTarget<GameCard>.OnCardDrop(GameCard card)
+        void ICardDropTarget<IGameCard>.OnCardDrop(IGameCard card)
         {
             hand.TryAddCard(card);
             //transform.localScale = Vector3.one;
         }
 
-        void ICardDropTarget<GameCard>.OnCardHover(GameCard cardUICurrent)
+        void ICardDropTarget<IGameCard>.OnCardHover(IGameCard cardUICurrent)
         {
         }
 
 
-        protected override void OnCardAdded(GameCard card)
+        protected override void OnCardAdded(IGameCard card)
         {
             base.OnCardAdded(card);
         }
@@ -99,7 +100,7 @@ namespace WitchGate.Gameplay.Battles.UI
             base.OnCardPointerDown(holder, eventData);
             if (holder.CardUI is WitchGameCardUI cardUI)
             {
-                var targetHand = battlePhase.GetBattleWich(cardUI.Current.Data.WitchDeck).Hand;
+                var targetHand = battlePhase.GetBattleWich(cardUI.Current.CardData.WitchDeck).Hand;
                 targetHand?.TryAddCard(cardUI.Current);
             }
         }

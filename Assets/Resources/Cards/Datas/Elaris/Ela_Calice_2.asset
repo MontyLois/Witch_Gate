@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b21abdfb0b1456c9877fa40e36c001b, type: 3}
+  m_Name: Ela_Calice_2
+  m_EditorClassIdentifier: WitchGate.Core::WitchGate.Cards.CardData
+  <WitchDeck>k__BackingField: 2
+  <Name>k__BackingField: Calice II
+  <Description>k__BackingField: 
+  <CardRarity>k__BackingField: 0
+  <Icon>k__BackingField: {fileID: 474388267, guid: 41483da5a330a73408edde6c22334b30, type: 3}
+  <BG>k__BackingField: {fileID: -343380549, guid: 93c498d013914364d8a6637bc86aa5f8, type: 3}
+  <Priority>k__BackingField: 0
+  <ID>k__BackingField: 616d5a6e-28ea-4ff1-a2dd-3186f39767b4

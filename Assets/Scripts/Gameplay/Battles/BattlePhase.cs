@@ -22,7 +22,7 @@ namespace WitchGate.Gameplay.Battles
         public readonly BattleEnemy Enemy;
 
         public readonly Dictionary<Witch, BattleWitch> BattleWitches;
-        public Hand<GameCard>[] PlayedHands { get; private set; }
+        public Hand<IGameCard>[] PlayedHands { get; private set; }
         public TurnTimeline TurnTimeline { get; private set; }
         
         
@@ -39,10 +39,10 @@ namespace WitchGate.Gameplay.Battles
             
             TurnTimeline = new();
 
-            PlayedHands = new Hand<GameCard>[GameController.Metrics.MaxPlayedHandSize];
+            PlayedHands = new Hand<IGameCard>[GameController.Metrics.MaxPlayedHandSize];
             for (int i = 0; i < GameController.Metrics.MaxPlayedHandSize; i++)
             {
-                PlayedHands[i] = new Hand<GameCard>();
+                PlayedHands[i] = new Hand<IGameCard>();
             }
         }
 
@@ -107,12 +107,12 @@ namespace WitchGate.Gameplay.Battles
             TargetRegistry.ClearRegistry();
         }
 
-        public List<GameCard> GetAllPlayedCards()
+        public List<IGameCard> GetAllPlayedCards()
         {
-            List<GameCard> playedCards = new List<GameCard>();
+            List<IGameCard> playedCards = new List<IGameCard>();
             foreach (var playedHand in PlayedHands)
             {
-                if (playedHand.TryGetCard(0, out GameCard card))
+                if (playedHand.TryGetCard(0, out IGameCard card))
                 {
                     playedCards.Add(card);
                 }

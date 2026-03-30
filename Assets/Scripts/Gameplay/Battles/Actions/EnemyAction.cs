@@ -10,17 +10,17 @@ namespace WitchGate.Gameplay.Battles.TurnPhases
     public class EnemyAction : ITurnAction
     {
         public int Priority { get; set; }
-        public string Label => gameCard.Data.Name;
-        public GameCard GameCard => gameCard;
+        public string Label => gameCard.CardData.Name;
+        public IGameCard GameCard => gameCard;
         
-        private readonly GameCard gameCard;
+        private readonly IGameCard gameCard;
         private readonly BattlePhase battlePhase;
         
-        public EnemyAction(GameCard gameCard, BattlePhase battlePhase)
+        public EnemyAction(IGameCard gameCard, BattlePhase battlePhase)
         {
             this.gameCard = gameCard;
             this.battlePhase = battlePhase;
-            Priority = gameCard.Data.Priority;
+            Priority = gameCard.CardData.Priority;
         }
 
 
@@ -33,7 +33,7 @@ namespace WitchGate.Gameplay.Battles.TurnPhases
         private List<ICanFight> GetTargetedWitch()
         {
             List<ICanFight> target = new List<ICanFight>();
-            switch (gameCard.Data.WitchDeck)
+            switch (gameCard.CardData.WitchDeck)
             {
                 case Witch.Elaris:
                     target.Add(battlePhase.GetBattleWich(Witch.Elaris));
