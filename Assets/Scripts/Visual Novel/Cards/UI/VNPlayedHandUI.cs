@@ -14,6 +14,7 @@ namespace WitchGate.VisualNovel.Visual_Novel.Cards.UI
         [field: SerializeField] public TMP_Text VisionText { get; private set;}
 
         private VNWitch vnWitch;
+        private TestimonyPhase phase;
         private int priority;
         
         private void OnEnable()
@@ -47,9 +48,7 @@ namespace WitchGate.VisualNovel.Visual_Novel.Cards.UI
 
         void ICardDropTarget<VNCard>.OnCardDrop(VNCard card)
         {
-            card.Use(VisionText);
-            vnWitch.Discard.TryAddCard(card);
-            VisionUI.SetActive(true);
+            
         }
 
         void ICardDropTarget<VNCard>.OnCardHover(VNCard cardUICurrent)
@@ -60,11 +59,13 @@ namespace WitchGate.VisualNovel.Visual_Novel.Cards.UI
         public void OnPhaseBegins(TestimonyPhase phase)
         {
             vnWitch = phase.VnWitch;
+            this.phase = phase;
         }
 
         public void OnPhaseEnds(TestimonyPhase phase)
         {
-           
+            vnWitch = null;
+            this.phase = null;
         }
     }
 }

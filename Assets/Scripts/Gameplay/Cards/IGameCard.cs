@@ -12,6 +12,7 @@ namespace WitchGate.Cards
         public Awaitable Use(IReadOnlyList<ICanFight> targets, ICanFight caster);
         public CardData CardData { get; }
         public ICardAnimator CardAnimator { get; set; }
+        public Witch WitchDeck { get; }
         
     }
 }

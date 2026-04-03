@@ -69,7 +69,7 @@ namespace WitchGate.Cards
 
         public void OnSelect()
         {
-            GameController.GameDatabase.PlayerProfile.AddCard(card,card.WitchDeck);
+            GameController.GameDatabase.PlayerProfile.AddCard(card,selectedWitch);
         }
     }
 }

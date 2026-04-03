@@ -60,7 +60,7 @@ namespace WitchGate.Gameplay.Battles.UI
 
         bool ICardDropTarget<IGameCard>.Accepts(IGameCard card)
         {
-            var accepts = (card.CardData.WitchDeck & witch)!= 0 && (hand.CurrentSize==0) ;
+            var accepts = (card.WitchDeck & witch)!= 0 && (hand.CurrentSize==0) ;
             return accepts;
         }
 
@@ -100,7 +100,7 @@ namespace WitchGate.Gameplay.Battles.UI
             base.OnCardPointerDown(holder, eventData);
             if (holder.CardUI is WitchGameCardUI cardUI)
             {
-                var targetHand = battlePhase.GetBattleWich(cardUI.Current.CardData.WitchDeck).Hand;
+                var targetHand = battlePhase.GetBattleWich(cardUI.Current.WitchDeck).Hand;
                 targetHand?.TryAddCard(cardUI.Current);
             }
         }

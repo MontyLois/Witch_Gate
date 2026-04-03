@@ -55,8 +55,8 @@ namespace WitchGate
             DialogContextualizedDatas = Resources.LoadAll<DialogContextualizedData>("Dialogues");
 
             //Sisters decks
-            BattleWitchProfile Elaris = Resources.Load<BattleWitchProfile>("Cards/BattleProfiles/Witches/Elaris");
-            BattleWitchProfile Velmora = Resources.Load<BattleWitchProfile>("Cards/BattleProfiles/Witches/Velmora");
+            BattleWitchProfileData Elaris = Resources.Load<BattleWitchProfileData>("Cards/BattleProfiles/Witches/Elaris");
+            BattleWitchProfileData Velmora = Resources.Load<BattleWitchProfileData>("Cards/BattleProfiles/Witches/Velmora");
             PlayerProfile = new PlayerProfile(Velmora, Elaris);
         }
 

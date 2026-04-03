@@ -40,7 +40,7 @@ namespace WitchGate.Prototype
 
         private void Start()
         {
-            Hand.SetActive(false);
+            Hand.SetActive(true);
             getTodaysCustomers();
             dialogBehaviour.BindExternalFunction("InteractiveChoice", ChooseVinyl);
             dialogBehaviour.BindExternalFunction("NextPhase", ShowMap);
@@ -87,7 +87,7 @@ namespace WitchGate.Prototype
            
             if (currentClientIndex < customers.Count)
             {
-                currentTestimonyphase = new TestimonyPhase(Witch.Elaris);
+                currentTestimonyphase = new TestimonyPhase(Witch.Elaris, customers[currentClientIndex]);
                 currentTestimonyphase.Run();
                 Debug.Log("Current client : "+customers[currentClientIndex].displayName);
                 //retrieve the current dialog for this client

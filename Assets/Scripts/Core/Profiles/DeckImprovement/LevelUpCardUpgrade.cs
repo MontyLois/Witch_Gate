@@ -46,7 +46,7 @@ namespace WitchGate.Cards
         
         public void OnSelect()
         {
-            playerProfile.LevelUpCard(card,card.CardData.WitchDeck);
+            playerProfile.LevelUpCard(card,card.Witch);
         }
         
     }

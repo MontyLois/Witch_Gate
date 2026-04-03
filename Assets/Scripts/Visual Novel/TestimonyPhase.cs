@@ -1,4 +1,6 @@
+using System;
 using System.Linq;
+using cherrydev;
 using UnityEngine;
 using WitchGate.Controllers;
 using WitchGate.VisualNovel.Visual_Novel.Cards;
@@ -9,12 +11,15 @@ namespace WitchGate.Prototype
     {
         
         public VNWitch VnWitch { get; private set; }
+        public CharacterData CharacterData { get; private set; }
         public bool IsReady { get; private set; }
 
-        public TestimonyPhase(Witch witch)
+        public Action CardUsed;
+
+        public TestimonyPhase(Witch witch, CharacterData characterData)
         {
             VnWitch = new VNWitch(GameController.GameDatabase.PlayerProfile.WitchProfiles[witch]);
-            Debug.Log(VnWitch.Deck.Cards.Count());
+            CharacterData = characterData;
         }
         async Awaitable IPhase.OnBegin()
         {
@@ -24,7 +29,6 @@ namespace WitchGate.Prototype
         async Awaitable IPhase.Execute()
         {
             VnWitch.DrawMissingCards();
-            VnWitch.DrawCard();
             
             while (!IsReady)
                 await Awaitable.NextFrameAsync();
@@ -38,6 +42,15 @@ namespace WitchGate.Prototype
         public void SetReady()
         {
             IsReady = true;
+        }
+
+        public void UseCard(VNCard card)
+        {
+            //card.Use(VisionText);
+            
+            VnWitch.Discard.TryAddCard(card);
+            CardUsed?.Invoke();
+            //VisionUI.SetActive(true);
         }
     }
 }

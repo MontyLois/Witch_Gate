@@ -19,20 +19,20 @@ namespace WitchGate.Players
         [field: SerializeField]
         public List<CardProfile> Deck { get; private set; }
 
-        public WitchProfile(BattleWitchProfile battleWitchProfile)
+        public WitchProfile(BattleWitchProfileData battleWitchProfileData)
         {
-            Witch = battleWitchProfile.Witch;
-            Health = battleWitchProfile.Health;
-            MaxHealth = battleWitchProfile.MaxHealth;
+            Witch = battleWitchProfileData.Witch;
+            Health = battleWitchProfileData.Health;
+            MaxHealth = battleWitchProfileData.MaxHealth;
             
-            Deck = new List<CardProfile>(battleWitchProfile.Deck.Length);
-            foreach (var card in battleWitchProfile.Deck)
+            Deck = new List<CardProfile>(battleWitchProfileData.Deck.Length);
+            foreach (var card in battleWitchProfileData.Deck)
                 Deck.Add(card);
         }
 
         public void AddCard(CardData cardData)
         {
-            Deck.Add(new CardProfile(cardData));
+            Deck.Add(new CardProfile(cardData, Witch));
         }
 
         public void RemoveCard(CardProfile cardProfile)

@@ -1,4 +1,5 @@
 using System;
+using Unity.Properties;
 using UnityEngine;
 using WitchGate.Cards;
 using WitchGate.Controllers;
@@ -13,6 +14,8 @@ namespace WitchGate.Players
         [field: SerializeField]
         public string CardID { get; private set; }
 
+        public Witch Witch;
+
         public CardData CardData
         {
             get
@@ -24,7 +27,7 @@ namespace WitchGate.Players
             }
         }
         
-        public CardProfile(CardData other)
+        public CardProfile(CardData other, Witch witch)
         {
             Level = 0;
             CardID = other.ID;
@@ -32,6 +35,10 @@ namespace WitchGate.Players
 
         public void LevelUp()
         {
+            if (CardData is CardMinorArcane)
+            {
+                CardID = (CardData as CardMinorArcane).TransformCard();
+            }
             Level++;
         }
     }

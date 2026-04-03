@@ -26,7 +26,7 @@ namespace WitchGate.Gameplay.Battles.TurnPhases
         // For player : need to use card, discard it and then draw a new one.
         public async Awaitable Execute()
         {
-            var witch = battlePhase.GetBattleWich(gameCard.CardData.WitchDeck);
+            var witch = battlePhase.GetBattleWich(gameCard.WitchDeck);
             if (witch is not null)
             {
                 await gameCard.Use(TargetRegistry.Targets, witch);

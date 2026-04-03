@@ -12,7 +12,6 @@ namespace WitchGate.VisualNovel.Visual_Novel.Cards
     public class VNCard : Card, IDescription
     {
         public CardData Data { get; }
-
         public int Level { get; private set; }
 
         public VNCard(CardData data, int level)
@@ -27,20 +26,23 @@ namespace WitchGate.VisualNovel.Visual_Novel.Cards
         
         public string GetDescription()
         {
-            return "";
+            return "cette carte peut sonder l'esprit";
         }
         
         public string GetTitle()
         {
-            return "";
+            return Data.Name;
         }
         
-        public async Awaitable Use(TMP_Text text)
+        public async Awaitable Use()
         {
+            /*
             foreach (var effect in Effects)
             {
                 effect.AffectTarget(text);
-            }
+            }*/
+            
+            
             await PhaseController.CompletedAwaitable;
         }
     }

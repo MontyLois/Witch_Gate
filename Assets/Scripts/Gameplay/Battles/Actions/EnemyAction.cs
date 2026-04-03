@@ -4,6 +4,7 @@ using WitchGate.Cards;
 using WitchGate.Gameplay.Battles.Entities;
 using WitchGate.Gameplay.Battles.Entities.Interface;
 using WitchGate.Gameplay.Cards;
+using WitchGate.Players;
 
 namespace WitchGate.Gameplay.Battles.TurnPhases
 {
@@ -33,7 +34,7 @@ namespace WitchGate.Gameplay.Battles.TurnPhases
         private List<ICanFight> GetTargetedWitch()
         {
             List<ICanFight> target = new List<ICanFight>();
-            switch (gameCard.CardData.WitchDeck)
+            switch (gameCard.WitchDeck)
             {
                 case Witch.Elaris:
                     target.Add(battlePhase.GetBattleWich(Witch.Elaris));

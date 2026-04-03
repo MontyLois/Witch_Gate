@@ -16,10 +16,9 @@ namespace WitchGate.Gameplay.Cards
     {
         [field: SerializeField]
         public CardData Data { get; private set; }
-
+        public Witch WitchDeck {get; private set;}
         public int Level { get; private set; }
         public string Label => Data.name;
-        public Witch Witch => Data.WitchDeck;
         public int Priority => Data.Priority;
         public CardData CardData => Data;
         
@@ -30,12 +29,13 @@ namespace WitchGate.Gameplay.Cards
         public event Action CardPutDown;
         public event Action UseCard;
 
-        public GameCard(CardData data, int level)
+        public GameCard(CardData data, int level, Witch witch)
         {
             if(data == null)
                 Debug.LogError("No data was given to the card");
             Data = data;
             this.Level = level;
+            WitchDeck = witch;
             CardDescription = GetDescription();
         }
 

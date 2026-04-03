@@ -30,8 +30,9 @@ namespace WitchGate.Gameplay.Battles.Entities
             //remplissage du deck
             foreach (var cardProfile in enemyProfile.Deck)
             {
-                var data = cardProfile.CardData;
-                IGameCard gameCard = new GameCard(data, cardProfile.Level);
+                IGameCard gameCard = new GameCard(cardProfile.CardData, 
+                    cardProfile.Level,
+                    cardProfile.Witch);
                 Deck.TryAddCard(gameCard);
             }
             Deck.Shuffle();
