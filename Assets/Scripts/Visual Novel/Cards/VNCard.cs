@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using cherrydev;
 using Helteix.Cards;
 using TMPro;
 using UnityEngine;
@@ -13,13 +14,15 @@ namespace WitchGate.VisualNovel.Visual_Novel.Cards
     {
         public CardData Data { get; }
         public int Level { get; private set; }
+        public Witch WitchName { get; private set; }
 
-        public VNCard(CardData data, int level)
+        public VNCard(CardData data, int level, Witch witchName)
         {
             if(data == null)
                 Debug.LogError("No data was given to the card");
             Data = data;
             this.Level = level;
+            WitchName = witchName;
         }
         
         public IEnumerable<CardVNEffectData> Effects => VNCardManager.GetEffectsFor(Data);
@@ -41,7 +44,6 @@ namespace WitchGate.VisualNovel.Visual_Novel.Cards
             {
                 effect.AffectTarget(text);
             }*/
-            
             
             await PhaseController.CompletedAwaitable;
         }

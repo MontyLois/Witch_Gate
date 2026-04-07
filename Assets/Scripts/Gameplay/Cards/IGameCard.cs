@@ -13,6 +13,5 @@ namespace WitchGate.Cards
         public CardData CardData { get; }
         public ICardAnimator CardAnimator { get; set; }
         public Witch WitchDeck { get; }
-        
     }
 }

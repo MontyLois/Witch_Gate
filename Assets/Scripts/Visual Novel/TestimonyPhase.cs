@@ -2,6 +2,7 @@ using System;
 using System.Linq;
 using cherrydev;
 using UnityEngine;
+using WitchGate.Cards.Collections;
 using WitchGate.Controllers;
 using WitchGate.VisualNovel.Visual_Novel.Cards;
 
@@ -11,15 +12,15 @@ namespace WitchGate.Prototype
     {
         
         public VNWitch VnWitch { get; private set; }
-        public CharacterData CharacterData { get; private set; }
+        public CharacterData CurrentClient { get; private set; }
         public bool IsReady { get; private set; }
 
-        public Action CardUsed;
+        public Action<CharacterData, CardType> CardUsed;
 
-        public TestimonyPhase(Witch witch, CharacterData characterData)
+        public TestimonyPhase(Witch witch, CharacterData currentClient)
         {
             VnWitch = new VNWitch(GameController.GameDatabase.PlayerProfile.WitchProfiles[witch]);
-            CharacterData = characterData;
+            CurrentClient = currentClient;
         }
         async Awaitable IPhase.OnBegin()
         {
@@ -46,11 +47,9 @@ namespace WitchGate.Prototype
 
         public void UseCard(VNCard card)
         {
-            //card.Use(VisionText);
-            
+            card.Use();
             VnWitch.Discard.TryAddCard(card);
-            CardUsed?.Invoke();
-            //VisionUI.SetActive(true);
+            CardUsed?.Invoke(CurrentClient, card.Data.CardType);
         }
     }
 }

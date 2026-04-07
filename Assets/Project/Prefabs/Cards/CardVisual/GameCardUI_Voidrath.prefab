@@ -91,6 +91,7 @@ MonoBehaviour:
   cardIllustration: {fileID: 4170530416592989570}
   CardName: {fileID: 5376750302275576541}
   cardBackground: {fileID: 1913947719743849926}
+  CardLogo: {fileID: 2138454952384419881}
   cardAnimator: {fileID: 7146657510644661879}
 --- !u!114 &6872996693155206931
 MonoBehaviour:
@@ -244,7 +245,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8534064020426208928, guid: a2587ef951e67b74abd477cf977602b2, type: 3}
       propertyPath: m_fontSize
-      value: 10
+      value: 19.3
       objectReference: {fileID: 0}
     - target: {fileID: 8534064020426208928, guid: a2587ef951e67b74abd477cf977602b2, type: 3}
       propertyPath: m_fontColor.b
@@ -283,6 +284,17 @@ PrefabInstance:
 --- !u!114 &1913947719743849926 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2773846444148150715, guid: a2587ef951e67b74abd477cf977602b2, type: 3}
+  m_PrefabInstance: {fileID: 4391321809923740797}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2138454952384419881 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2403878324312099924, guid: a2587ef951e67b74abd477cf977602b2, type: 3}
   m_PrefabInstance: {fileID: 4391321809923740797}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}

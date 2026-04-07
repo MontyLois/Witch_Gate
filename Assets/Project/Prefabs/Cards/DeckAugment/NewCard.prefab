@@ -238,7 +238,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5146021901351940292, guid: cab2381bad4c3d946ae975f56edb4dcc, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -266,6 +266,10 @@ PrefabInstance:
     - target: {fileID: 2054312425195023685, guid: a2587ef951e67b74abd477cf977602b2, type: 3}
       propertyPath: m_Name
       value: CardBody
+      objectReference: {fileID: 0}
+    - target: {fileID: 2510323509177367922, guid: a2587ef951e67b74abd477cf977602b2, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5493026073957115257, guid: a2587ef951e67b74abd477cf977602b2, type: 3}
       propertyPath: m_Pivot.x

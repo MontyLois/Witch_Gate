@@ -19,4 +19,5 @@ MonoBehaviour:
   <CardType>k__BackingField: 1
   <Icon>k__BackingField: {fileID: 1295174127, guid: 3a02640bfa0cc5f43a864e6df910062b, type: 3}
   <BG>k__BackingField: {fileID: -343380549, guid: 93c498d013914364d8a6637bc86aa5f8, type: 3}
+  <Type_Sprite>k__BackingField: {fileID: -1155108190, guid: 32ad2ebb0b2497e49abc9837b47e9e21, type: 3}
   lvlUpcard: {fileID: 11400000, guid: 325e184b3c97bdd4fb9aadd616960727, type: 2}

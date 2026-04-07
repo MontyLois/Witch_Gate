@@ -27,7 +27,10 @@ namespace WitchGate.Players
             
             Deck = new List<CardProfile>(battleWitchProfileData.Deck.Length);
             foreach (var card in battleWitchProfileData.Deck)
+            {
                 Deck.Add(card);
+                card.Witch = this.Witch;
+            }
         }
 
         public void AddCard(CardData cardData)

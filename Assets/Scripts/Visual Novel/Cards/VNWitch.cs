@@ -15,7 +15,7 @@ namespace WitchGate.VisualNovel.Visual_Novel.Cards
 
         public VNWitch(WitchProfile witchProfile)
         {
-            Hand = new Hand<VNCard>(GameController.Metrics.MaxBattleHandSize);
+            Hand = new Hand<VNCard>(GameController.Metrics.MaxBDialogHandSize);
             Deck = new Deck<VNCard>();
             Discard = new Deck<VNCard>();
             WitchName = witchProfile.Witch;
@@ -24,7 +24,7 @@ namespace WitchGate.VisualNovel.Visual_Novel.Cards
             foreach (var cardProfile in witchProfile.Deck)
             {
                 var data = cardProfile.CardData;
-                VNCard gameCard = new VNCard(data, cardProfile.Level);
+                VNCard gameCard = new VNCard(data, cardProfile.Level, WitchName);
                 Deck.TryAddCard(gameCard);
             }
             Deck.Shuffle();

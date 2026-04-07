@@ -17,4 +17,6 @@ MonoBehaviour:
     sprite: {fileID: 21300000, guid: 89f93293af9b2d44b8a9eeabc6c37c7f, type: 3}
   - type: 1
     sprite: {fileID: 21300000, guid: 89f93293af9b2d44b8a9eeabc6c37c7f, type: 3}
+  - type: 2
+    sprite: {fileID: 21300000, guid: 89f93293af9b2d44b8a9eeabc6c37c7f, type: 3}
   <CharacterData>k__BackingField: {fileID: 11400000, guid: 863b140ab388f7045a04169733af3dff, type: 2}

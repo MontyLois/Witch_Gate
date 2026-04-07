@@ -37,6 +37,7 @@ namespace WitchGate.Prototype
         
         private TestimonyPhase currentTestimonyphase;
         private int currentClientIndex = 0;
+        public CharacterData currentClientData;
 
         private void Start()
         {
@@ -77,7 +78,6 @@ namespace WitchGate.Prototype
             customers.Clear();
             GameController.ChangeContext(EncounterContext.VinylShop);
             customers.AddRange(PlanningController.GetAllCharacterPresent());
-            Debug.Log("Nomber of customers today : "+customers.Count);
         }
 
         public void NextClient()
@@ -89,7 +89,6 @@ namespace WitchGate.Prototype
             {
                 currentTestimonyphase = new TestimonyPhase(Witch.Elaris, customers[currentClientIndex]);
                 currentTestimonyphase.Run();
-                Debug.Log("Current client : "+customers[currentClientIndex].displayName);
                 //retrieve the current dialog for this client
                 DialogNodeGraph dialogNodeGraph =
                     DialogsController.GetNextDialogForSpecificEntity(customers[currentClientIndex]);
@@ -140,6 +139,11 @@ namespace WitchGate.Prototype
         {
             VinylePanel.SetActive(!VinylePanel.activeSelf);
             DialogueUI.SetActive(!VinylePanel.activeSelf);
+        }
+
+        public void ClickDebug()
+        {
+            Debug.Log("Click Debug");
         }
         
     }

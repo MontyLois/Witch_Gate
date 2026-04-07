@@ -31,6 +31,8 @@ namespace WitchGate.Cards
         public Sprite Icon { get; private set; }
         [field: SerializeField]
         public Sprite BG { get; private set; }
+        [field: SerializeField]
+        public Sprite Type_Sprite { get; private set; }
 
 
 #if UNITY_EDITOR

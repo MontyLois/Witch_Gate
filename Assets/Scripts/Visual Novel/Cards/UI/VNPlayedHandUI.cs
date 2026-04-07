@@ -32,12 +32,13 @@ namespace WitchGate.VisualNovel.Visual_Novel.Cards.UI
 
         bool ICardDropTarget<VNCard>.Accepts(VNCard card)
         {
+            Debug.Log("yes yes we can");
             return true;
         }
 
         void ICardDropTarget<VNCard>.OnCardEnter(VNCard cardUI)
         {
-            
+            Debug.Log("goddamit we are in");
         }
 
         void ICardDropTarget<VNCard>.OnCardExit(VNCard cardUI)
@@ -48,7 +49,8 @@ namespace WitchGate.VisualNovel.Visual_Novel.Cards.UI
 
         void ICardDropTarget<VNCard>.OnCardDrop(VNCard card)
         {
-            
+            Debug.Log($"[VNPlayedHandUI] {card}");
+            phase.UseCard(card);
         }
 
         void ICardDropTarget<VNCard>.OnCardHover(VNCard cardUICurrent)

@@ -19,6 +19,7 @@ namespace WitchGate.Gameplay
         [field : SerializeField] private Image cardIllustration;
         [field: SerializeField] private TMP_Text CardName;
         [field: SerializeField] private Image cardBackground;
+        [field: SerializeField] public Image CardLogo;
         [field: SerializeField] private Animator cardAnimator;
         
         public ICardUI CardUI { get; set; }
@@ -28,6 +29,7 @@ namespace WitchGate.Gameplay
             cardIllustration.sprite = Current.CardData.Icon;
             CardName.text = Current.CardData.Name;
             cardBackground.sprite = Current.CardData.BG;
+            CardLogo.sprite = Current.CardData.Type_Sprite;
             Current.CardAnimator = this;
         }
         

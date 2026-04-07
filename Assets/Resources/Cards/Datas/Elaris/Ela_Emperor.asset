@@ -16,6 +16,7 @@ MonoBehaviour:
   <Name>k__BackingField: Emperor
   <CardRarity>k__BackingField: 1
   <Priority>k__BackingField: 1
-  <CardType>k__BackingField: 0
+  <CardType>k__BackingField: 1
   <Icon>k__BackingField: {fileID: 66630785, guid: 84472c4af95e1ae4aa51e1a4522c070d, type: 3}
   <BG>k__BackingField: {fileID: -343380549, guid: 93c498d013914364d8a6637bc86aa5f8, type: 3}
+  <Type_Sprite>k__BackingField: {fileID: -1155108190, guid: 32ad2ebb0b2497e49abc9837b47e9e21, type: 3}

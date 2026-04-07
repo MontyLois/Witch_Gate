@@ -119,6 +119,108 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &32194243
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 2058146245}
+    m_Modifications:
+    - target: {fileID: 1324125669022775588, guid: e6394f3f8e8df8b4397ab61442444649, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1324125669022775588, guid: e6394f3f8e8df8b4397ab61442444649, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1324125669022775588, guid: e6394f3f8e8df8b4397ab61442444649, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1324125669022775588, guid: e6394f3f8e8df8b4397ab61442444649, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1324125669022775588, guid: e6394f3f8e8df8b4397ab61442444649, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1324125669022775588, guid: e6394f3f8e8df8b4397ab61442444649, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1324125669022775588, guid: e6394f3f8e8df8b4397ab61442444649, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 1324125669022775588, guid: e6394f3f8e8df8b4397ab61442444649, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 1324125669022775588, guid: e6394f3f8e8df8b4397ab61442444649, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1324125669022775588, guid: e6394f3f8e8df8b4397ab61442444649, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1324125669022775588, guid: e6394f3f8e8df8b4397ab61442444649, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 14.72883
+      objectReference: {fileID: 0}
+    - target: {fileID: 1324125669022775588, guid: e6394f3f8e8df8b4397ab61442444649, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1324125669022775588, guid: e6394f3f8e8df8b4397ab61442444649, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1324125669022775588, guid: e6394f3f8e8df8b4397ab61442444649, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1324125669022775588, guid: e6394f3f8e8df8b4397ab61442444649, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1324125669022775588, guid: e6394f3f8e8df8b4397ab61442444649, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 816
+      objectReference: {fileID: 0}
+    - target: {fileID: 1324125669022775588, guid: e6394f3f8e8df8b4397ab61442444649, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 257
+      objectReference: {fileID: 0}
+    - target: {fileID: 1324125669022775588, guid: e6394f3f8e8df8b4397ab61442444649, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1324125669022775588, guid: e6394f3f8e8df8b4397ab61442444649, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1324125669022775588, guid: e6394f3f8e8df8b4397ab61442444649, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2686163273909926652, guid: e6394f3f8e8df8b4397ab61442444649, type: 3}
+      propertyPath: m_Name
+      value: Description
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e6394f3f8e8df8b4397ab61442444649, type: 3}
+--- !u!224 &32194244 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 1324125669022775588, guid: e6394f3f8e8df8b4397ab61442444649, type: 3}
+  m_PrefabInstance: {fileID: 32194243}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &67040073
 GameObject:
   m_ObjectHideFlags: 0
@@ -2516,7 +2618,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 640197239}
         m_TargetAssemblyTypeName: WitchGate.Prototype.ShopManager, WitchGate.VisualNovel
-        m_MethodName: DebugAlacon
+        m_MethodName: ClickDebug
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2899,6 +3001,7 @@ MonoBehaviour:
   dialogGraph: []
   customersDialogNodeGraphs: []
   customers: []
+  currentClientData: {fileID: 0}
 --- !u!114 &640197240
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3220,6 +3323,129 @@ Transform:
   m_Children: []
   m_Father: {fileID: 316506102}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &815040875
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 815040873}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 016165ff044ed664f9f5e6c2bf49340d, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 277ca9f6d860fb04b8996355054c22b3, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 18.45, y: 4.46}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!1 &815405035
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 815405036}
+  - component: {fileID: 815405038}
+  - component: {fileID: 815405037}
+  m_Layer: 5
+  m_Name: Vision
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &815405036
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 815405035}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1809565794}
+  m_Father: {fileID: 2058146245}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &815405037
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 815405035}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8a08404b57140eba9802e33bfdcf0f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: WitchGate.VisualNovel::WitchGate.VisualNovel.Visual_Novel.Cards.UI.VisionUI
+  <visionSprite>k__BackingField: {fileID: 1809565795}
+  <Vision>k__BackingField: {fileID: 815405038}
+--- !u!114 &815405038
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 815405035}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e361788af360484f8104310e42bf88e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: WitchGate.VisualNovel::WitchGate.Prototype.ToogleUI
+  <UI>k__BackingField: {fileID: 1809565793}
 --- !u!1 &827103156
 GameObject:
   m_ObjectHideFlags: 0
@@ -6378,14 +6604,13 @@ GameObject:
   - component: {fileID: 1809565796}
   - component: {fileID: 1809565795}
   - component: {fileID: 1809565798}
-  - component: {fileID: 1809565797}
   m_Layer: 5
   m_Name: VisionUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1809565794
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6393,7 +6618,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1809565793}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -6402,7 +6627,7 @@ RectTransform:
   - {fileID: 943923684}
   - {fileID: 989561833}
   - {fileID: 1256907773}
-  m_Father: {fileID: 2058146245}
+  m_Father: {fileID: 815405036}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -6447,19 +6672,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1809565793}
   m_CullTransparentMesh: 1
---- !u!114 &1809565797
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1809565793}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e361788af360484f8104310e42bf88e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: WitchGate.VisualNovel::WitchGate.Prototype.ToogleUI
-  <UI>k__BackingField: {fileID: 1809565793}
 --- !u!114 &1809565798
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6504,7 +6716,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1809565797}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: WitchGate.Prototype.ToogleUI, WitchGate.VisualNovel
         m_MethodName: Toogle
         m_Mode: 1
@@ -7013,7 +7225,8 @@ RectTransform:
   - {fileID: 597368080}
   - {fileID: 494074803350137153}
   - {fileID: 1105524035}
-  - {fileID: 1809565794}
+  - {fileID: 32194244}
+  - {fileID: 815405036}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
