@@ -7460,6 +7460,10 @@ PrefabInstance:
       value: -382.18848
       objectReference: {fileID: 0}
     - target: {fileID: 5100497678151141552, guid: f60abeb6026284c48baeb151f3e5016c, type: 3}
+      propertyPath: <selectedWitch>k__BackingField
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5100497678151141552, guid: f60abeb6026284c48baeb151f3e5016c, type: 3}
       propertyPath: <WitchCardDatas>k__BackingField.Array.size
       value: 1
       objectReference: {fileID: 0}

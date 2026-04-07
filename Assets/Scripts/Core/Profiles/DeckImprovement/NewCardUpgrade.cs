@@ -19,13 +19,11 @@ namespace WitchGate.Cards
         [field: SerializeField]
         public List<WitchCardDatas> WitchCardDatas { get; private set; }
         public Dictionary<Witch, CardData[]> WitchNewCards { get; private set; }
-
+        
         public Witch selectedWitch  { get; set; } = Witch.None;
 
         private void Start()
         {
-            Debug.Log("now we have");
-            Debug.Log(WitchCardDatas);
             InitCards();
             card = getCard();
             Connect(card);
@@ -52,6 +50,7 @@ namespace WitchGate.Cards
                 int index = UnityEngine.Random.Range(0, WitchNewCards.Count);
                 var pair = WitchNewCards.ElementAt(index); // KeyValuePair<Witch, CardData[]>
 
+                selectedWitch = pair.Key;
                 var cards = pair.Value;
                 return cards[UnityEngine.Random.Range(0, cards.Length)];
             }
@@ -69,6 +68,7 @@ namespace WitchGate.Cards
 
         public void OnSelect()
         {
+            Debug.Log(selectedWitch);
             GameController.GameDatabase.PlayerProfile.AddCard(card,selectedWitch);
         }
     }

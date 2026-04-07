@@ -9965,6 +9965,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 494074803350137153}
+  - component: {fileID: 2808611620269333753}
   m_Layer: 5
   m_Name: Velmora
   m_TagString: Untagged
@@ -9972,6 +9973,24 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &2808611620269333753
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2808611620269333752}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f27eee93d8a428ab894eb6922460961, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: WitchGate.VisualNovel::WitchGate.VisualNovel.Visual_Novel.Cards.VNHandUI
+  factory: {fileID: 1105524036}
+  holderPrefab: {fileID: 1299516389831672891, guid: 0bb542c65b3904c4fad03077d6787134, type: 3}
+  containerRoot: {fileID: 626103952}
+  cardDamping: 15
+  draggingParent: {fileID: 2058146245}
+  dragDampingMultiplier: 2
 --- !u!1 &2814093228789406811
 GameObject:
   m_ObjectHideFlags: 0
@@ -16761,32 +16780,13 @@ GameObject:
   - component: {fileID: 3902853236427068057}
   - component: {fileID: 5708422821344471262}
   - component: {fileID: 8342631969711494551}
-  - component: {fileID: 8342631969711494550}
   m_Layer: 5
   m_Name: Card_Hand_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &8342631969711494550
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8342631969711494549}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3f27eee93d8a428ab894eb6922460961, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: WitchGate.VisualNovel::WitchGate.VisualNovel.Visual_Novel.Cards.VNHandUI
-  factory: {fileID: 1105524036}
-  holderPrefab: {fileID: 1299516389831672891, guid: 0bb542c65b3904c4fad03077d6787134, type: 3}
-  containerRoot: {fileID: 626103952}
-  cardDamping: 15
-  draggingParent: {fileID: 2058146245}
-  dragDampingMultiplier: 2
+  m_IsActive: 0
 --- !u!114 &8342631969711494551
 MonoBehaviour:
   m_ObjectHideFlags: 0
