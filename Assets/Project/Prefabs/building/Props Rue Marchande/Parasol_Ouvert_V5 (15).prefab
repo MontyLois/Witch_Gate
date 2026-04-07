@@ -61,12 +61,20 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: 7f62ccb89b3ecf6429d7d36744dd5434, type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 7f62ccb89b3ecf6429d7d36744dd5434, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: eee53e9d74dc0a641bf241d573a00ec6, type: 2}
     - target: {fileID: 919132149155446097, guid: 7f62ccb89b3ecf6429d7d36744dd5434, type: 3}
       propertyPath: m_Name
       value: Parasol_Ouvert_V5 (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7f62ccb89b3ecf6429d7d36744dd5434, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
