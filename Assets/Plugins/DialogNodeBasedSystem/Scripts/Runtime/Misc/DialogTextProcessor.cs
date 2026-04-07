@@ -23,7 +23,7 @@ namespace cherrydev
         {
             if (string.IsNullOrEmpty(text) || variablesHandler == null)
             {
-                Debug.LogWarning($"ProcessText called with null text or handler. Text: '{text}', Handler null: {variablesHandler == null}");
+                 Debug.LogWarning($"ProcessText called with null text or handler. Text: '{text}', Handler null: {variablesHandler == null}");
                 return text;
             }
 

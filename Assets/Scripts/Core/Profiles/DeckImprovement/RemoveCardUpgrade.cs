@@ -47,7 +47,7 @@ namespace WitchGate.Cards
 
         public void OnSelect()
         {
-            playerProfile.RemoveCard(card,card.CardData.WitchDeck);
+            playerProfile.RemoveCard(card,card.Witch);
         }
     }
 }

@@ -3,6 +3,7 @@ using Helteix.Cards;
 using Helteix.Cards.Collections;
 using UnityEngine;
 using UnityEngine.Pool;
+using WitchGate.Cards;
 using WitchGate.Controllers;
 using WitchGate.Gameplay.Battles.Entities;
 using WitchGate.Gameplay.Cards;
@@ -15,22 +16,23 @@ namespace WitchGate.Gameplay.Battles
     {
         public Witch WitchName { get; private set; }
         public override Faction Faction { get; } = Faction.Witch;
-        public Hand<GameCard> Hand { get; private set; }
-        public Deck<GameCard> Deck { get; private set; }
-        public Deck<GameCard> Discard { get; private set; }
+        public Hand<IGameCard> Hand { get; private set; }
+        public Deck<IGameCard> Deck { get; private set; }
+        public Deck<IGameCard> Discard { get; private set; }
         
         public BattleWitch(WitchProfile profile) : base(profile.MaxHealth, profile.Health)
         {
-            Hand = new Hand<GameCard>(GameController.Metrics.MaxBattleHandSize);
-            Deck = new Deck<GameCard>();
-            Discard = new Deck<GameCard>();
+            Hand = new Hand<IGameCard>(GameController.Metrics.MaxBattleHandSize);
+            Deck = new Deck<IGameCard>();
+            Discard = new Deck<IGameCard>();
             WitchName = profile.Witch;
             
             //remplissage du deck
             foreach (var cardProfile in profile.Deck)
             {
-                var data = cardProfile.CardData;
-                GameCard gameCard = new GameCard(data, cardProfile.Level);
+                IGameCard gameCard = new GameCard(cardProfile.CardData,
+                    cardProfile.Level,
+                    cardProfile.Witch);
                 Deck.TryAddCard(gameCard);
             }
             Deck.Shuffle();
@@ -47,7 +49,7 @@ namespace WitchGate.Gameplay.Battles
 
         public void DrawCard()
         {
-            if(!Deck.TryGet(out GameCard card))
+            if(!Deck.TryGet(out IGameCard card))
             {
                 while (Discard.TryGet(out var discardCard))
                     Deck.TryAddCard(discardCard);
@@ -64,7 +66,7 @@ namespace WitchGate.Gameplay.Battles
         
         public void DiscardHand()
         {
-            using (ListPool<GameCard>.Get(out List<GameCard> cards))
+            using (ListPool<IGameCard>.Get(out List<IGameCard> cards))
             {
                 cards.AddRange(Hand.Cards);
                 Debug.Log(cards.Count);

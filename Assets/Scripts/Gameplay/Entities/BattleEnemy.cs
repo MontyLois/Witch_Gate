@@ -4,6 +4,7 @@ using Helteix.Cards;
 using Helteix.Cards.Collections;
 using UnityEngine;
 using UnityEngine.Pool;
+using WitchGate.Cards;
 using WitchGate.Gameplay.Cards;
 using WitchGate.Gameplay.Entities;
 using WitchGate.Players;
@@ -14,29 +15,30 @@ namespace WitchGate.Gameplay.Battles.Entities
     public class BattleEnemy : BattleEntity, IBattleEnemy
     {
         public override Faction Faction { get; } = Faction.Enemy;
-        public event Action<GameCard> OnCardSelected;
+        public event Action<IGameCard> OnCardSelected;
         
-        public Hand<GameCard> Hand { get; private set; }
-        public Deck<GameCard> Deck { get; private set; }
-        public Deck<GameCard> Discard { get; private set; }
+        public Hand<IGameCard> Hand { get; private set; }
+        public Deck<IGameCard> Deck { get; private set; }
+        public Deck<IGameCard> Discard { get; private set; }
         
         public BattleEnemy(BattleProfile enemyProfile) : base(enemyProfile.MaxHealth, enemyProfile.Health)
         {
-            Hand = new Hand<GameCard>(2);
-            Deck = new Deck<GameCard>();
-            Discard = new Deck<GameCard>();
+            Hand = new Hand<IGameCard>(2);
+            Deck = new Deck<IGameCard>();
+            Discard = new Deck<IGameCard>();
             
             //remplissage du deck
             foreach (var cardProfile in enemyProfile.Deck)
             {
-                var data = cardProfile.CardData;
-                GameCard gameCard = new GameCard(data, cardProfile.Level);
+                IGameCard gameCard = new GameCard(cardProfile.CardData, 
+                    cardProfile.Level,
+                    cardProfile.Witch);
                 Deck.TryAddCard(gameCard);
             }
             Deck.Shuffle();
         }
 
-        public GameCard SelectRandomCardInHand()
+        public IGameCard SelectRandomCardInHand()
         {
             int cardIndex = Random.Range(0, Hand.CurrentSize);
             return Hand.GetCard(cardIndex);
@@ -50,7 +52,7 @@ namespace WitchGate.Gameplay.Battles.Entities
         }
         public void DrawCard()
         {
-            if(!Deck.TryGet(out GameCard card))
+            if(!Deck.TryGet(out IGameCard card))
             {
                 while (Discard.TryGet(out var discardCard))
                     Deck.TryAddCard(discardCard);
@@ -67,7 +69,7 @@ namespace WitchGate.Gameplay.Battles.Entities
 
         public void DiscardHand()
         {
-            using (ListPool<GameCard>.Get(out List<GameCard> cards))
+            using (ListPool<IGameCard>.Get(out List<IGameCard> cards))
             {
                 cards.AddRange(Hand.Cards);
                 foreach (var card in cards)

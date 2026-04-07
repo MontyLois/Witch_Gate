@@ -3,12 +3,13 @@ using Helteix.Cards;
 using Helteix.Cards.UI.Physical;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using WitchGate.Cards;
 using WitchGate.Controllers;
 using WitchGate.Gameplay.Cards;
 
 namespace WitchGate.Gameplay.Battles.UI
 {
-    public class WitchBattleHandUI : PhysicalCardCollectionUI<GameCard>, IPhaseListener<BattlePhase>
+    public class WitchBattleHandUI : PhysicalCardCollectionUI<IGameCard>, IPhaseListener<BattlePhase>
     {
         [SerializeField] private Witch witch;
 

@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using UnityEngine;
+using WitchGate.Cards;
 using WitchGate.Controllers;
 using WitchGate.Gameplay.Battles.Entities.Interface;
 using WitchGate.Gameplay.Cards;
@@ -11,7 +12,7 @@ namespace WitchGate.Gameplay.Battles.TurnPhases
     {
         public bool IsReady { get; private set; }
 
-        private Dictionary<GameCard, PlayCardAction> cardActions;
+        private Dictionary<IGameCard, PlayCardAction> cardActions;
         public PlayerTurnPhase(BattlePhase battlePhase) : base(battlePhase)
         {
             cardActions = new();
@@ -50,7 +51,7 @@ namespace WitchGate.Gameplay.Battles.TurnPhases
         }
 
 
-        private void AddCardActionEvent(GameCard card)
+        private void AddCardActionEvent(IGameCard card)
         {
             PlayCardAction playCardAction = new PlayCardAction(card, BattlePhase);
             if (cardActions.TryAdd(card, playCardAction))
@@ -60,7 +61,7 @@ namespace WitchGate.Gameplay.Battles.TurnPhases
             }
         }
 
-        private void RemoveCardActionEvent(GameCard card)
+        private void RemoveCardActionEvent(IGameCard card)
         {
             if(cardActions.Remove(card, out PlayCardAction action))
                 BattlePhase.TurnTimeline.RemoveAction(action);

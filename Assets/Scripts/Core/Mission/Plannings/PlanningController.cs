@@ -23,10 +23,6 @@ namespace WitchGate.Mission.Plannings
 
         public static List<CharacterData> GetAllCharacterPresent()
         {
-            Debug.Log("current investifation stage : "+GameController.Investigation.CurrentStage);
-            Debug.Log("current context : "+GameController.CurrentContext);
-            Debug.Log("current day  : "+GameController.CurrentDay);
-            
             List<CharacterData> characterDatas = new List<CharacterData>();
             foreach (var planning in planningsList)
             {

@@ -11,7 +11,7 @@ namespace WitchGate.Players
     {
         public Dictionary<Witch, WitchProfile> WitchProfiles { get; private set; }
 
-        public PlayerProfile(BattleWitchProfile velmora, BattleWitchProfile elaris)
+        public PlayerProfile(BattleWitchProfileData velmora, BattleWitchProfileData elaris)
         {
             WitchProfiles = new Dictionary<Witch, WitchProfile>();
             WitchProfiles.Add(Witch.Velmora, new WitchProfile(velmora));

@@ -14,7 +14,7 @@ namespace WitchGate.VisualNovel.Visual_Novel.Map
 
         public async Awaitable OnMapSelected()
         {
-            await SceneController.Instance.LoadGameMode(GameMode.Exploration);
+            await SceneController.Instance.LoadGameModeAndLocation(Location, GameMode.Exploration);
         }
 
 
@@ -22,6 +22,7 @@ namespace WitchGate.VisualNovel.Visual_Novel.Map
         {
             if (!isLocked)
             {
+                SceneController.Instance.LoadLocation(Location);
                 SceneController.Instance.LoadGameMode(GameMode.Exploration);
             }
         }

@@ -44,7 +44,7 @@ namespace WitchGate
                 cards.TryAdd(data.ID, data);
             }
 
-            CharacterData[] cD = Resources.LoadAll<CharacterData>("Characters/Datas");
+            CharacterData[] cD = Resources.LoadAll<CharacterData>("Characters/IDs");
             this.characters = new Dictionary<string, CharacterData>();
             for (int i = 0; i < cD.Length; i++)
             {
@@ -52,11 +52,11 @@ namespace WitchGate
             }
 
             PlanningDatas = Resources.LoadAll<PlanningData>("Plannings");
-            DialogContextualizedDatas = Resources.LoadAll<DialogContextualizedData>("Dialogues");
+            DialogContextualizedDatas = Resources.LoadAll<DialogContextualizedData>("VN/Dialogues");
 
             //Sisters decks
-            BattleWitchProfile Elaris = Resources.Load<BattleWitchProfile>("Cards/BattleProfiles/Witches/Elaris");
-            BattleWitchProfile Velmora = Resources.Load<BattleWitchProfile>("Cards/BattleProfiles/Witches/Velmora");
+            BattleWitchProfileData Elaris = Resources.Load<BattleWitchProfileData>("Cards/BattleProfiles/Witches/Elaris");
+            BattleWitchProfileData Velmora = Resources.Load<BattleWitchProfileData>("Cards/BattleProfiles/Witches/Velmora");
             PlayerProfile = new PlayerProfile(Velmora, Elaris);
         }
 

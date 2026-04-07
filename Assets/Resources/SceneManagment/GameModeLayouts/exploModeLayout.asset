@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: exploModeLayout
   m_EditorClassIdentifier: WitchGate.Core::WitchGate.Controllers.GameModeLayout
   <Mode>k__BackingField: 2
-  <MainScene>k__BackingField: {fileID: 11400000, guid: ae81519eb4aa4c04aaa09b9511adfddf, type: 2}
+  <MainScene>k__BackingField: {fileID: 11400000, guid: ecd1b3c9589c83144b709b5a9e073e86, type: 2}
   <TransitionScene>k__BackingField: {fileID: 11400000, guid: 6d9d62aeb722a234a88fd11225916c84, type: 2}
   <AdditiveScenes>k__BackingField: []
