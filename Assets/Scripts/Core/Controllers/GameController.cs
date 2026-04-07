@@ -51,6 +51,7 @@ namespace WitchGate.Controllers
             Investigation.Progress();
             InvestigationChanged?.Invoke(Investigation.CurrentStage);
         }
+        
       
     }
 }

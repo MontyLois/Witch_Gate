@@ -116,15 +116,24 @@ namespace WitchGate.Controllers
             }
         }
 
+        public async Awaitable LoadGameModeAndLocation(Location location, GameMode gameMode)
+        {
+            await LoadLocation(location);
+            await LoadGameMode(gameMode);
+        }
+
         public async Awaitable LoadLocation(Location location)
         {
+            Debug.Log("Are we really in the same location ? Is that how it is ?");
             if (location == currentLocation)
                 return;
-            
+            Debug.Log("we are changing location");
             if (locationLayouts.TryGetValue(location, out var locationLayout))
             {
+                Debug.Log("we are in location "+ location);
                 currentLocation = location;
-                await  SceneManager.UnloadSceneAsync(currentLocationScene.ScenePath);
+                if(currentLocationScene is not null)
+                    await  SceneManager.UnloadSceneAsync(currentLocationScene.ScenePath);
             
                 // Load next main scene
                 await SceneManager.LoadSceneAsync(locationLayout.LocationScene.ScenePath, LoadSceneMode.Additive);

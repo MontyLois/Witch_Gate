@@ -12540,7 +12540,7 @@ PrefabInstance:
     - target: {fileID: 3147014557426529367, guid: d7860079862c39346bac244c832de0bf, type: 3}
       propertyPath: sharedSettings
       value: 
-      objectReference: {fileID: 11400000, guid: 503730955ff7ed9468949780cdcb9806, type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 6786260407521408405, guid: d7860079862c39346bac244c832de0bf, type: 3}
       propertyPath: _dialogCharacterImage
       value: 
