@@ -461,6 +461,7 @@ GameObject:
   - component: {fileID: 2106626713895115246}
   - component: {fileID: 3476399041904653790}
   - component: {fileID: 8796201157924543132}
+  - component: {fileID: 6999495120815834827}
   m_Layer: 0
   m_Name: Pot_Fleurs
   m_TagString: Untagged
@@ -539,6 +540,28 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &6999495120815834827
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7907234513439158650}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 2021243766072210033, guid: ba626a9354c2c6547b931794d51efc02, type: 3}
 --- !u!1 &9193509404780607607
 GameObject:
   m_ObjectHideFlags: 0
