@@ -44,7 +44,7 @@ namespace WitchGate.Gameplay.Battles.TurnPhases
                     target.Add(battlePhase.GetBattleWich(Witch.Velmora));
                     break;
 
-                case Witch.All:
+                default :
                     target.Add(battlePhase.GetBattleWich(Witch.Elaris));
                     target.Add(battlePhase.GetBattleWich(Witch.Velmora));
                     break;
