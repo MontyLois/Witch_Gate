@@ -36,12 +36,12 @@ namespace WitchGate.Gameplay.Cards.UI
         
         public void OnPointerEnter(PointerEventData eventData)
         {
-            UIManager.OnCardHovered?.Invoke(Current);
+            UIManager.TriggerOnCardHovered(Current);
         }
 
         public void OnPointerExit(PointerEventData eventData)
         {
-           UIManager.OnCardUnhovered?.Invoke();
+            UIManager.TriggerOnCardUnhovered();
         }
 
         public void OnPointerMove(PointerEventData eventData)

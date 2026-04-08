@@ -15,8 +15,8 @@ namespace WitchGate.VisualNovel.Visual_Novel.Cards.UI
         [field: SerializeField] private TMP_Text CardName;
         [field: SerializeField] public Image CardBackground;
         [field: SerializeField] public Image CardLogo;
-        
-        public ICardUI CardUI { get; set; }
+
+        ICardUI ICardUIComponent.CardUI { get; set; }
         
 
         protected override void ConnectWithCurrent()
@@ -33,7 +33,7 @@ namespace WitchGate.VisualNovel.Visual_Novel.Cards.UI
             CardName.text = "";
         }
 
-        public string GetDescription()
+        string IDescription.GetDescription()
         {
             string description = "";
             switch (Current.Data.CardType)
@@ -51,22 +51,22 @@ namespace WitchGate.VisualNovel.Visual_Novel.Cards.UI
             return description;
         }
 
-        public string GetTitle()
+        string IDescription.GetTitle()
         {
             return Current.Data.Name;
         }
-        
-        public void OnPointerEnter(PointerEventData eventData)
+
+        void ICardPointerHoverHandler.OnPointerEnter(PointerEventData eventData)
         {
-            UIManager.OnCardHovered?.Invoke(this);
+            UIManager.TriggerOnCardHovered(this);
         }
 
-        public void OnPointerExit(PointerEventData eventData)
+        void ICardPointerHoverHandler.OnPointerExit(PointerEventData eventData)
         {
-            UIManager.OnCardUnhovered?.Invoke();
+            UIManager.TriggerOnCardUnhovered();
         }
 
-        public void OnPointerMove(PointerEventData eventData)
+        void ICardPointerHoverHandler.OnPointerMove(PointerEventData eventData)
         {
             
         }

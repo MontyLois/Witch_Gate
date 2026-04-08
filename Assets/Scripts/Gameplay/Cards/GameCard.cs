@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Helteix.Cards;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using WitchGate.Cards;
 using WitchGate.Controllers;
 using WitchGate.Gameplay.Battles;
@@ -14,6 +15,9 @@ namespace WitchGate.Gameplay.Cards
     [Serializable]
     public class GameCard : Card, IGameCard
     {
+        public event Action OnPointerEnter;
+        public event Action OnPointerExit;
+        
         [field: SerializeField]
         public CardData Data { get; private set; }
         public Witch WitchDeck {get; private set;}
@@ -62,6 +66,8 @@ namespace WitchGate.Gameplay.Cards
             return Data.Name;
         }
 
+
+        // ReSharper disable Unity.PerformanceAnalysis
         public async Awaitable Use(IReadOnlyList<ICanFight> targets, ICanFight caster)
         {
             if (CardAnimator != null)
@@ -72,9 +78,16 @@ namespace WitchGate.Gameplay.Cards
             UseCard?.Invoke();
             await PhaseController.CompletedAwaitable;
         }
-
         
+        void IGameCard.TriggerOnPointerEnter(PointerEventData eventData)
+        {
+            OnPointerEnter?.Invoke();
+        }
 
+        void IGameCard.TriggerOnPointerExit(PointerEventData eventData)
+        {
+            OnPointerExit?.Invoke();
+        }
         private void ApplyEffects(IReadOnlyList<ICanFight> targets, ICanFight caster)
         {
             foreach (var effect in Effects)

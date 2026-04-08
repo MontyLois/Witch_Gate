@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Unity.Plastic.Antlr3.Runtime.Misc;
 using UnityEngine;
 using WitchGate.Cards;
 using WitchGate.Gameplay.Battles.Entities;
@@ -10,18 +11,22 @@ namespace WitchGate.Gameplay.Battles.TurnPhases
 {
     public class EnemyAction : ITurnAction
     {
+        public event Action OnConfirmationChanged;
         public int Priority { get; set; }
         public string Label => gameCard.CardData.Name;
         public IGameCard GameCard => gameCard;
         
         private readonly IGameCard gameCard;
         private readonly BattlePhase battlePhase;
+
+        public bool IsConfirmed { get; private set; }
         
         public EnemyAction(IGameCard gameCard, BattlePhase battlePhase)
         {
             this.gameCard = gameCard;
             this.battlePhase = battlePhase;
             Priority = gameCard.CardData.Priority;
+            IsConfirmed = false;
         }
 
 
@@ -51,6 +56,11 @@ namespace WitchGate.Gameplay.Battles.TurnPhases
             }
             target.Add(battlePhase.Enemy);
             return target;
+        }
+
+        public void Confirm()
+        {
+            IsConfirmed = true;
         }
     }
 }

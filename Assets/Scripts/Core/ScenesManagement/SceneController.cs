@@ -139,8 +139,9 @@ namespace WitchGate.Controllers
                 await SceneManager.LoadSceneAsync(locationLayout.LocationScene.ScenePath, LoadSceneMode.Additive);
                 currentLocationScene = locationLayout.LocationScene;
             
+                /*
                 if (currentMissionScene.SceneLocation == location)
-                    await LoadMissionScene();
+                    await LoadMissionScene();*/
             }
         }
         
