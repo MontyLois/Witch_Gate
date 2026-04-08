@@ -22,6 +22,11 @@ namespace WitchGate.Players
         {
             WitchProfiles[witch].AddCard(cardData);
         }
+        
+        public void AddCard(CardProfile cardProfile, Witch witch)
+        {
+            WitchProfiles[witch].AddCard(cardProfile);
+        }
 
         public void RemoveCard(CardProfile cardProfile, Witch witch)
         {

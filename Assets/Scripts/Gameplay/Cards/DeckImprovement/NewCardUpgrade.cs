@@ -2,30 +2,28 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using Helteix.Cards.UI.Physical;
+using Helteix.Cards.UI.Physical.Components;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using WitchGate.Cards.UI;
 using WitchGate.Controllers;
 using WitchGate.Players;
 
 namespace WitchGate.Cards
 {
-    public class NewCardUpgrade : MonoBehaviour, IDeckImprovement<CardData>
+    public class NewCardUpgrade : DeckImprovement
     {
-        [field: SerializeField]
-        public CardUI CardUI { get; set; }
-        public CardData card { get; set; }
-        
         
         [field: SerializeField]
         public List<WitchCardDatas> WitchCardDatas { get; private set; }
         public Dictionary<Witch, CardData[]> WitchNewCards { get; private set; }
         
-        public Witch selectedWitch  { get; set; } = Witch.None;
-
-        private void Start()
+        protected override void Start()
         {
+            base.Start();
             InitCards();
-            card = getCard();
+            card = GetCard();
             Connect(card);
         }
 
@@ -40,11 +38,12 @@ namespace WitchGate.Cards
 
         public void Connect(CardData card)
         {
-            CardUI.ConnectCard(card);
+            WitchCardUI.ConnectCard(card);
         }
 
-        public CardData getCard()
+        public override CardProfile GetCard()
         {
+            CardProfile card;
             if (selectedWitch == Witch.None)
             {
                 int index = UnityEngine.Random.Range(0, WitchNewCards.Count);
@@ -52,22 +51,21 @@ namespace WitchGate.Cards
 
                 selectedWitch = pair.Key;
                 var cards = pair.Value;
-                return cards[UnityEngine.Random.Range(0, cards.Length)];
+                card = new CardProfile(cards[UnityEngine.Random.Range(0, cards.Length)],
+                    selectedWitch,0);
+                return card;
             }
-                
-            return WitchNewCards[selectedWitch][UnityEngine.Random.Range(0, WitchNewCards[selectedWitch].Length)];
+
+            card =
+                new CardProfile(
+                    WitchNewCards[selectedWitch][UnityEngine.Random.Range(0, WitchNewCards[selectedWitch].Length)],
+                    selectedWitch,0);
+            return card;
         }
 
-        public void SelectWitch(Witch witch)
+        public override void OnSelect()
         {
-            selectedWitch = witch;
-            InitCards();
-            card = getCard();
-            Connect(card);
-        }
-
-        public void OnSelect()
-        {
+            base.OnSelect();
             Debug.Log(selectedWitch);
             GameController.GameDatabase.PlayerProfile.AddCard(card,selectedWitch);
         }

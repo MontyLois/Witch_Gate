@@ -18,7 +18,7 @@ namespace WitchGate
         public GameModeLayoutData[] GameModeLayouts { get; private set; }
         public LocationLayoutData[] LocationLayouts { get; private set; }
         
-        [Header("Characters")]
+        [Header("Characters IDs")]
         private readonly Dictionary<string, CharacterData> characters;
         public IReadOnlyDictionary<string, CharacterData> Characters => characters;
 

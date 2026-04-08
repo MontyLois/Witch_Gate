@@ -1,10 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Pool;
-using UnityEngine.VFX;
 using WitchGate.Cards;
-using WitchGate.Gameplay.Battles;
-using WitchGate.Gameplay.Battles.Entities;
 using WitchGate.Gameplay.Battles.Entities.Interface;
 
 namespace WitchGate.Gameplay.Cards.Effects

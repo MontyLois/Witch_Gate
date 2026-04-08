@@ -27,7 +27,6 @@ namespace WitchGate.Gameplay.Cards
         public CardData CardData => Data;
         
         public ICardAnimator CardAnimator { get; set; }
-        public string CardDescription { get; private set; }
         
         
         public event Action CardPutDown;
@@ -40,7 +39,6 @@ namespace WitchGate.Gameplay.Cards
             Data = data;
             this.Level = level;
             WitchDeck = witch;
-            CardDescription = GetDescription();
         }
 
         public IEnumerable<CardBattleEffectData> Effects => CardManager.GetEffectsFor(Data);
@@ -65,9 +63,7 @@ namespace WitchGate.Gameplay.Cards
         {
             return Data.Name;
         }
-
-
-        // ReSharper disable Unity.PerformanceAnalysis
+        
         public async Awaitable Use(IReadOnlyList<ICanFight> targets, ICanFight caster)
         {
             if (CardAnimator != null)

@@ -35,7 +35,12 @@ namespace WitchGate.Players
 
         public void AddCard(CardData cardData)
         {
-            Deck.Add(new CardProfile(cardData, Witch));
+            Deck.Add(new CardProfile(cardData, Witch, 0));
+        }
+        
+        public void AddCard(CardProfile cardProfile)
+        {
+            Deck.Add(cardProfile);
         }
 
         public void RemoveCard(CardProfile cardProfile)

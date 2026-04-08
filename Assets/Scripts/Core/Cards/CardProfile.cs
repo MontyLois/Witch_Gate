@@ -27,9 +27,9 @@ namespace WitchGate.Players
             }
         }
         
-        public CardProfile(CardData other, Witch witch)
+        public CardProfile(CardData other, Witch witch, int level)
         {
-            Level = 0;
+            Level = level;
             CardID = other.ID;
         }
 

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 8eb6935060fec2740a77850e6ea5dbc8
+guid: a26829dac76fa9b4db0d16cfafd20c9e
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,11 +110,11 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: WitchsGateSpritesheetElaMarcheCouleur2_0
+      name: WitchsGateSpritesheetElaIdleCouleur2_left_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 2096
+        y: 48
         width: 1000
         height: 2000
       alignment: 0
@@ -125,18 +125,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0ce82d39f072ac2488855f68f01ce664
-      internalID: -1955486336
+      spriteID: cc30e247563b4cd4986aeabc6c3d0ba4
+      internalID: 1516056634
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WitchsGateSpritesheetElaMarcheCouleur2_1
+      name: WitchsGateSpritesheetElaIdleCouleur2_left_1
       rect:
         serializedVersion: 2
         x: 1000
-        y: 2096
+        y: 48
         width: 1000
         height: 2000
       alignment: 0
@@ -147,96 +147,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 34a64ca07708c11468b7087624d869ed
-      internalID: -1215437924
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: WitchsGateSpritesheetElaMarcheCouleur2_2
-      rect:
-        serializedVersion: 2
-        x: 2000
-        y: 2096
-        width: 1000
-        height: 2000
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7406ed5347a6d4648ba5f24cdeeedd30
-      internalID: 1705372850
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: WitchsGateSpritesheetElaMarcheCouleur2_3
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 96
-        width: 1000
-        height: 2000
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6179269483984dd43a5b483ce5ede25b
-      internalID: 367659063
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: WitchsGateSpritesheetElaMarcheCouleur2_4
-      rect:
-        serializedVersion: 2
-        x: 1000
-        y: 96
-        width: 1000
-        height: 2000
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 34605cafb78499544ad427b3862e89eb
-      internalID: 1347266752
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: WitchsGateSpritesheetElaMarcheCouleur2_5
-      rect:
-        serializedVersion: 2
-        x: 2000
-        y: 96
-        width: 1000
-        height: 2000
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ce4b04dbc098b4646a62ab8281e53bde
-      internalID: -1931299706
+      spriteID: 4944d5580b2c8b74394b492556b13732
+      internalID: 2084187950
       vertices: []
       indices: 
       edges: []
@@ -245,7 +157,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 59f694f76027d9c4aafe03f1bd37b0b6
+    spriteID: e66ce269a7c6c514a8e820d159273b4e
     internalID: 0
     vertices: []
     indices: 
@@ -254,17 +166,11 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries:
-      - key: SpriteEditor.SliceOnImport
-        value: False
       - key: SpriteEditor.SliceSettings
         value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":1000.0,"y":2000.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      WitchsGateSpritesheetElaMarcheCouleur2_0: -1955486336
-      WitchsGateSpritesheetElaMarcheCouleur2_1: -1215437924
-      WitchsGateSpritesheetElaMarcheCouleur2_2: 1705372850
-      WitchsGateSpritesheetElaMarcheCouleur2_3: 367659063
-      WitchsGateSpritesheetElaMarcheCouleur2_4: 1347266752
-      WitchsGateSpritesheetElaMarcheCouleur2_5: -1931299706
+      WitchsGateSpritesheetElaIdleCouleur2_left_0: 1516056634
+      WitchsGateSpritesheetElaIdleCouleur2_left_1: 2084187950
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
