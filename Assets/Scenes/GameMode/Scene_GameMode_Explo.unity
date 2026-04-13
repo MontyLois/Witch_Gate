@@ -1765,11 +1765,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8445731140420596856, guid: 47a560d3ac41c744dab527b98a5cb4c4, type: 3}
   m_PrefabInstance: {fileID: 1019071372}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1019071374 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8604686581369011764, guid: 47a560d3ac41c744dab527b98a5cb4c4, type: 3}
-  m_PrefabInstance: {fileID: 1019071372}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1060446061
 GameObject:
   m_ObjectHideFlags: 0
@@ -3087,7 +3082,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: WitchGate.Gameplay::WitchGate.Prototype.Track
   vfx: {fileID: 2140828553}
-  interaction: {fileID: 1019071374}
   nextTrackStep: {fileID: 1897602349}
 --- !u!1 &1579018078 stripped
 GameObject:
@@ -3136,7 +3130,7 @@ MonoBehaviour:
       - m_Target: {fileID: 183853273}
         m_TargetAssemblyTypeName: WitchGate.Gameplay.Controller.PlayerBody, WitchGate.Gameplay
         m_MethodName: Interact
-        m_Mode: 1
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

@@ -21,7 +21,6 @@ namespace WitchGate.Prototype
 
         private void OnInteraction(bool isinteractable)
         {
-            Debug.Log("we should be doing things "+isinteractable);
             interaction.SetActive(isinteractable);
         }
     }

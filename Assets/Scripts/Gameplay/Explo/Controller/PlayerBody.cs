@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using WitchGate.Prototype;
 
 namespace WitchGate.Gameplay.Controller
@@ -102,7 +103,6 @@ namespace WitchGate.Gameplay.Controller
             IInteractable item = other.transform.GetComponent<IInteractable>();
             if (item is not null && interactable is null)
             {
-                Debug.Log("triggered");
                 interactable = item;
                 OnInteractable?.Invoke(true);
             }
@@ -118,12 +118,18 @@ namespace WitchGate.Gameplay.Controller
             }
         }
         
-        public void Interact()
+        public void Interact(InputAction.CallbackContext context)
         {
-            if (interactable is not null)
+            if (interactable is not null && context.performed)
             {
+                Debug.Log("we interact");
                 interactable.Interact();
                 OnInteract?.Invoke();
+                
+                /*
+                interactable = null;
+                OnInteractable?.Invoke(false);
+                */
             }
         }
     }
