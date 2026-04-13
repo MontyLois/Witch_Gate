@@ -6,9 +6,9 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using WitchGate.Cards;
 using WitchGate.Controllers;
-using WitchGate.Gameplay.Battles;
 using WitchGate.Gameplay.Battles.Entities.Interface;
 using WitchGate.Gameplay.Cards.Effects;
+using WitchGate.Players;
 
 namespace WitchGate.Gameplay.Cards
 {
@@ -19,29 +19,27 @@ namespace WitchGate.Gameplay.Cards
         public event Action OnPointerExit;
         
         [field: SerializeField]
-        public CardData Data { get; private set; }
+        public CardProfile Data { get; private set; }
         public Witch WitchDeck {get; private set;}
         public int Level { get; private set; }
-        public string Label => Data.name;
-        public int Priority => Data.Priority;
-        public CardData CardData => Data;
+        public string Label => Data.CardData.name;
+        public int Priority => Data.CardData.Priority;
+        public CardData CardData => Data.CardData;
         
         public ICardAnimator CardAnimator { get; set; }
         
         
-        public event Action CardPutDown;
-        public event Action UseCard;
 
-        public GameCard(CardData data, int level, Witch witch)
+        public GameCard(CardProfile data)
         {
             if(data == null)
                 Debug.LogError("No data was given to the card");
             Data = data;
-            this.Level = level;
-            WitchDeck = witch;
+            this.Level = data.Level;
+            WitchDeck = data.witch;
         }
 
-        public IEnumerable<CardBattleEffectData> Effects => CardManager.GetEffectsFor(Data);
+        public IEnumerable<CardBattleEffectData> Effects => CardManager.GetEffectsFor(Data.CardData);
         
         public string GetDescription()
         {
@@ -61,7 +59,7 @@ namespace WitchGate.Gameplay.Cards
 
         public string GetTitle()
         {
-            return Data.Name;
+            return Label;
         }
         
         public async Awaitable Use(IReadOnlyList<ICanFight> targets, ICanFight caster)
@@ -70,8 +68,7 @@ namespace WitchGate.Gameplay.Cards
                 await CardAnimator.OnAttack();
             
             ApplyEffects(targets, caster);
-            
-            UseCard?.Invoke();
+          
             await PhaseController.CompletedAwaitable;
         }
         
@@ -90,11 +87,6 @@ namespace WitchGate.Gameplay.Cards
             {
                 effect.AffectTargets(targets, caster, Level);
             }
-        }
-
-        public void OnSelected()
-        {
-            CardPutDown?.Invoke();
         }
     }
 }

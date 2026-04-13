@@ -29,7 +29,7 @@ namespace WitchGate.Players
             foreach (var card in battleWitchProfileData.Deck)
             {
                 Deck.Add(card);
-                card.Witch = this.Witch;
+                card.witch = this.Witch;
             }
         }
 

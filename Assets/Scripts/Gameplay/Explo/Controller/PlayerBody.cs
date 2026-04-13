@@ -1,5 +1,7 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
+using WitchGate.Prototype;
 
 namespace WitchGate.Gameplay.Controller
 {
@@ -27,7 +29,12 @@ namespace WitchGate.Gameplay.Controller
 
         public event Action<float> OnChangedXDirection;
         public event Action<bool> OnChangedGrounded;
+        public event Action OnInteract;
+        public event Action<bool> OnInteractable;
         
+        private IInteractable interactable;
+        
+
         public void ApplyVelocity(Vector3 currentVelocity)
         {
             if (CanMove)
@@ -44,11 +51,8 @@ namespace WitchGate.Gameplay.Controller
         private void FixedUpdate()
         {
             CheckDirectionChange();
-            
             rb.linearVelocity = CurrentVelocity;
-            
             CurrentVelocity = Vector3.zero;
-
             CheckGround();
         }
 
@@ -90,6 +94,36 @@ namespace WitchGate.Gameplay.Controller
             {
                 direction = Mathf.Sign(CurrentVelocity.x);
                 OnChangedXDirection?.Invoke(direction);
+            }
+        }
+        
+        private void OnTriggerEnter(Collider other)
+        {
+            IInteractable item = other.transform.GetComponent<IInteractable>();
+            if (item is not null && interactable is null)
+            {
+                Debug.Log("triggered");
+                interactable = item;
+                OnInteractable?.Invoke(true);
+            }
+        }
+
+        private void OnTriggerExit(Collider other)
+        {
+            IInteractable item = other.transform.GetComponent<IInteractable>();
+            if (item == interactable)
+            {
+                interactable = null;
+                OnInteractable?.Invoke(false);
+            }
+        }
+        
+        public void Interact()
+        {
+            if (interactable is not null)
+            {
+                interactable.Interact();
+                OnInteract?.Invoke();
             }
         }
     }

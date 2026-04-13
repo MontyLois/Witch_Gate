@@ -75,6 +75,7 @@ namespace WitchGate.Gameplay.Battles
                 PlayerTurnPhase playerTurnPhase = new PlayerTurnPhase(this);
 
                 await enemyTurnPhase.DrawPossibleCards();
+                TurnTimeline.Reorder();
                 
                 await playerTurnPhase.RunAsync();
                 await enemyTurnPhase.RunAsync();

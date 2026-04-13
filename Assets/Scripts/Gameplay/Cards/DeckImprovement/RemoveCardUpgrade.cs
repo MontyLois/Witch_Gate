@@ -14,23 +14,20 @@ namespace WitchGate.Cards
         protected override void Start()
         {
             base.Start();
-            card = GetCard();
-            Connect(card);
         }
 
         public override CardProfile GetCard()
         {
-            Debug.Log(selectedWitch);
-            if(selectedWitch == Witch.None)
+            Debug.Log(SelectedWitch);
+            if(SelectedWitch == Witch.None)
                 return playerProfile.GetRandomCardProfile(playerProfile.WitchProfiles.ElementAt(UnityEngine.Random.Range(0,
                     playerProfile.WitchProfiles.Count)).Key);
-            return playerProfile.GetRandomCardProfile(selectedWitch);
+            return playerProfile.GetRandomCardProfile(SelectedWitch);
         }
 
         public override void OnSelect()
         {
-            base.OnSelect();
-            playerProfile.RemoveCard(card,card.Witch);
+            playerProfile.RemoveCard(card,card.witch);
         }
     }
 }

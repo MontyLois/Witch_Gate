@@ -21,10 +21,8 @@ namespace WitchGate.Cards
         
         protected override void Start()
         {
-            base.Start();
             InitCards();
-            card = GetCard();
-            Connect(card);
+            base.Start();
         }
 
         private void InitCards()
@@ -36,38 +34,30 @@ namespace WitchGate.Cards
             }
         }
 
-        public void Connect(CardData card)
-        {
-            WitchCardUI.ConnectCard(card);
-        }
-
         public override CardProfile GetCard()
         {
             CardProfile card;
-            if (selectedWitch == Witch.None)
+            if (SelectedWitch == Witch.None)
             {
                 int index = UnityEngine.Random.Range(0, WitchNewCards.Count);
                 var pair = WitchNewCards.ElementAt(index); // KeyValuePair<Witch, CardData[]>
 
-                selectedWitch = pair.Key;
+                SelectedWitch = pair.Key;
                 var cards = pair.Value;
                 card = new CardProfile(cards[UnityEngine.Random.Range(0, cards.Length)],
-                    selectedWitch,0);
+                    SelectedWitch,0);
                 return card;
             }
-
             card =
                 new CardProfile(
-                    WitchNewCards[selectedWitch][UnityEngine.Random.Range(0, WitchNewCards[selectedWitch].Length)],
-                    selectedWitch,0);
+                    WitchNewCards[SelectedWitch][UnityEngine.Random.Range(0, WitchNewCards[SelectedWitch].Length)],
+                    SelectedWitch,0);
             return card;
         }
 
         public override void OnSelect()
         {
-            base.OnSelect();
-            Debug.Log(selectedWitch);
-            GameController.GameDatabase.PlayerProfile.AddCard(card,selectedWitch);
+            GameController.GameDatabase.PlayerProfile.AddCard(card,SelectedWitch);
         }
     }
 }

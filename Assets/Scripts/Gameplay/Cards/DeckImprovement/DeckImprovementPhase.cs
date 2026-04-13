@@ -13,7 +13,7 @@ namespace WitchGate.Cards
         public Action<CardProfile> OnHoveredCard;
         public Action<CardProfile> UnHoveredCard;
 
-        public bool Finish=false;
+        public bool IsReady=false;
         
         public async Awaitable OnBegin()
         {
@@ -22,10 +22,8 @@ namespace WitchGate.Cards
 
         public async Awaitable Execute()
         {
-            while (!Finish)
-            {
-                
-            }
+            while (!IsReady)
+                await Awaitable.NextFrameAsync();
         }
 
         public async Awaitable OnEnd()

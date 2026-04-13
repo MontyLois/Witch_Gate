@@ -15,16 +15,14 @@ namespace WitchGate.Cards
         protected override void Start()
         {
             base.Start();
-            card = GetCard();
-            Connect(card);
         }
 
         public override CardProfile GetCard()
         {
-            if(selectedWitch == Witch.None)
+            if(SelectedWitch == Witch.None)
                 return playerProfile.GetRandomCardProfile(playerProfile.WitchProfiles.ElementAt(UnityEngine.Random.Range(0,
                     playerProfile.WitchProfiles.Count)).Key);
-            return playerProfile.GetRandomCardProfile(selectedWitch);
+            return playerProfile.GetRandomCardProfile(SelectedWitch);
         }
 
         public void OnPointerEnter(PointerEventData eventData)
@@ -32,14 +30,13 @@ namespace WitchGate.Cards
             //base.OnPointerEnter(eventData);
             if (card is null)
                 return;
-            CardProfile cardProfile = new CardProfile(card.CardData, card.Witch, card.Level);
+            CardProfile cardProfile = new CardProfile(card.CardData, card.witch, card.Level);
             cardProfile.LevelUp();
         }
 
         public override void OnSelect()
         {
-            base.OnSelect();
-            playerProfile.LevelUpCard(card,card.Witch);
+            playerProfile.LevelUpCard(card,card.witch);
         }
     }
 }
