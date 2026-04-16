@@ -1426,7 +1426,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fa85a4791a84744a0050868c4a32ecf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: WitchGate.Core::WitchGate.Controllers.SceneController
-  currentGameModeScene: {fileID: 11400000, guid: 58628b444d3f60d4d919a0b2d2e99ec1, type: 2}
+  <currentGameModeScene>k__BackingField: {fileID: 11400000, guid: 58628b444d3f60d4d919a0b2d2e99ec1, type: 2}
+  <currentLocationScene>k__BackingField: {fileID: 0}
 --- !u!4 &1414431449
 Transform:
   m_ObjectHideFlags: 0
