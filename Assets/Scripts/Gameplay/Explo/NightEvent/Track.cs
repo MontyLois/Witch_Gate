@@ -1,4 +1,6 @@
 using UnityEngine;
+using UnityEngine.Playables;
+using Cinemachine;
 
 namespace WitchGate.Prototype
 {
@@ -6,7 +8,8 @@ namespace WitchGate.Prototype
     {
         [field: SerializeField] private GameObject vfx;
         [field: SerializeField] private GameObject nextTrackStep;
-        
+        [field: SerializeField] private PlayableDirector custscene;
+
 
         private void ActivateNextTrackStep()
         {
@@ -17,7 +20,8 @@ namespace WitchGate.Prototype
         public void Interact()
         {
             vfx.SetActive(true);
-            ActivateNextTrackStep();
+            ActivateNextTrackStep(); 
+            custscene.Play();
         }
     }
 }
