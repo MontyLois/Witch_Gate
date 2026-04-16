@@ -10,11 +10,13 @@ namespace WitchGate.Controllers
 {
     public class SceneController : MonoSingleton<SceneController>
     {
-        public SceneData currentGameModeScene;
-        private SceneData currentLocationScene; //For the location : shop, all city part, fight subspace
-        private List<SceneData> additiveScenes;
-        private MissionSceneData currentMissionScene; // For Mission : only one mission active at a same time
-        
+        [field: SerializeField]
+        public SceneData currentGameModeScene { get; private set; } //Loaded GameMode Scene
+        [field: SerializeField]
+        public SceneData currentLocationScene { get; private set; } //Loaded Location Scene
+        private List<EncounterSceneData> encounterScene; //Active encounter scenes
+        private List<EncounterSceneData> loadedEncounterScene; //All loaded encounter scenes
+       
         //Data of all GameModeLayout for each GameMode
         private static Dictionary<GameMode, GameModeLayoutData> gameModeLayouts; 
         private GameMode currentgameMode;
@@ -36,7 +38,8 @@ namespace WitchGate.Controllers
             base.OnAwake();
             gameModeLayouts = new Dictionary<GameMode, GameModeLayoutData>();
             locationLayouts = new Dictionary<Location, LocationLayoutData>();
-            additiveScenes = new List<SceneData>();
+            encounterScene = new List<EncounterSceneData>();
+            loadedEncounterScene = new List<EncounterSceneData>();
             LoadGameModeLayouts();
             LoadLocationLayouts();
         }
@@ -72,8 +75,9 @@ namespace WitchGate.Controllers
                 //load transition scene
                 await SceneManager.LoadSceneAsync(gameModeLayout.TransitionScene.ScenePath, LoadSceneMode.Additive);
 
-                //Unload last scene
-                if (currentGameModeScene != null)
+                Debug.Log(currentGameModeScene.name);
+                //Unload last game mode scene
+                if (currentGameModeScene is not null)
                     await SceneManager.UnloadSceneAsync(currentGameModeScene.ScenePath);
 
                 // Load next main scene
@@ -85,36 +89,12 @@ namespace WitchGate.Controllers
                 
                 currentGameModeScene = gameModeLayout.MainScene;
 
-                //load additive scenes
-                await LoadAdditiveScenes(gameModeLayout);
-
                 //Unload the transition
                 await SceneManager.UnloadSceneAsync(gameModeLayout.TransitionScene.ScenePath);
                 
             }
         }
-
-        private async Awaitable UnloadAdditiveScenes()
-        {
-            foreach (var scene in additiveScenes)
-            {
-                await SceneManager.UnloadSceneAsync(scene.ScenePath);
-            }
-            additiveScenes.Clear();
-        }
         
-        private async Awaitable LoadAdditiveScenes(GameModeLayoutData gameModeLayoutData)
-        {
-            await UnloadAdditiveScenes();
-            foreach (var sceneData in gameModeLayoutData.AdditiveScenes)
-            {
-                if (!additiveScenes.Contains(sceneData))
-                {
-                    await SceneManager.LoadSceneAsync(sceneData.ScenePath, LoadSceneMode.Additive);
-                    TryAddScene(sceneData);
-                }
-            }
-        }
 
         public async Awaitable LoadGameModeAndLocation(Location location, GameMode gameMode)
         {
@@ -138,50 +118,72 @@ namespace WitchGate.Controllers
                 // Load next main scene
                 await SceneManager.LoadSceneAsync(locationLayout.LocationScene.ScenePath, LoadSceneMode.Additive);
                 currentLocationScene = locationLayout.LocationScene;
-            
-                if (currentMissionScene.SceneLocation == location)
-                    await LoadMissionScene();
+
+                HandleEncounterScene();
+            }
+        }
+        
+        
+        private async Awaitable HandleEncounterScene()
+        {
+            foreach (var scene in encounterScene)
+            {
+                if (scene.SceneLocation == currentLocation)
+                    LoadEncounterScene(scene);
+                else
+                    UnloadEncounterScene(scene);
             }
         }
         
 
-        private async Awaitable LoadMissionScene()
+        private async Awaitable LoadEncounterScene(EncounterSceneData encounterSceneData)
         {
-            if(!currentMissionScene)
-                return;
-            await (currentMissionScene.SceneLocation == currentLocation ? 
-                SceneManager.LoadSceneAsync(currentMissionScene.MissionScene.ScenePath, LoadSceneMode.Additive):
-                SceneManager.UnloadSceneAsync(currentMissionScene.MissionScene.ScenePath));
-        }
-        
-        public async Awaitable AddMissionScene(MissionSceneData missionSceneData)
-        {
-            if (currentMissionScene)
+            if (!loadedEncounterScene.Contains(encounterSceneData))
             {
-                RemoveMissionScene(currentMissionScene);
-                await LoadMissionScene();
-                currentMissionScene = missionSceneData;
+                await SceneManager.LoadSceneAsync(encounterSceneData.MissionScene.ScenePath, LoadSceneMode.Additive);
+                loadedEncounterScene.Add(encounterSceneData);
+            }
+        }
+
+        private async Awaitable UnloadEncounterScene(EncounterSceneData encounterSceneData)
+        {
+            if (loadedEncounterScene.Contains(encounterSceneData))
+            {
+                await SceneManager.UnloadSceneAsync(encounterSceneData.MissionScene.ScenePath);
+                loadedEncounterScene.Remove(encounterSceneData);
             }
         }
         
-        public void RemoveMissionScene(MissionSceneData missionSceneData)
+        public async Awaitable RemoveEncounterScene(EncounterSceneData encounterSceneData)
         {
-            if (currentMissionScene == missionSceneData)
+            if (encounterScene.Contains(encounterSceneData))
             {
-                SceneManager.UnloadSceneAsync(currentMissionScene.MissionScene.ScenePath);
-                currentMissionScene = null;
+                if (encounterSceneData.SceneLocation == currentLocation)
+                    await UnloadEncounterScene(encounterSceneData);
+                encounterScene.Remove(encounterSceneData);
             }
         }
         
-        public bool TryAddScene(SceneData data)
+        public bool TryAddMEncounterScene(EncounterSceneData data)
         {
-            if (additiveScenes.Contains(data))
+            if (encounterScene.Contains(data))
                 return false;
-
-            additiveScenes.Add(data);
+            encounterScene.Add(data);
+            if (data.SceneLocation == currentLocation) 
+                LoadEncounterScene(data);
             return true;
         }
-        
+
+        public async Awaitable UnloadLocationScene()
+        {
+            if(currentLocationScene is not null)
+                await  SceneManager.UnloadSceneAsync(currentLocationScene.ScenePath);
+            foreach (var lEncounterSceneData in loadedEncounterScene)
+            {
+                await UnloadEncounterScene(lEncounterSceneData);
+            }
+            loadedEncounterScene.Clear();
+        }
     }
     
 }

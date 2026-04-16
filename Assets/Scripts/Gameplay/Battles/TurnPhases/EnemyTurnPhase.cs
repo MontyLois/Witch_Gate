@@ -40,8 +40,13 @@ namespace WitchGate.Gameplay.Battles.TurnPhases
             int rnd = Random.Range(0, possibleActions.Length);
             for (int i = 0; i < possibleActions.Length; i++)
             {
-                if(i != rnd)
-                    BattlePhase.TurnTimeline.RemoveAction(possibleActions[i]);
+                if (possibleActions[i] is EnemyAction action)
+                {
+                    if (i != rnd)
+                        BattlePhase.TurnTimeline.RemoveAction(action);
+                    else
+                        action.Confirm();
+                }
             }
             
             await Task.CompletedTask;

@@ -1,3 +1,4 @@
+using System;
 using Helteix.Cards;
 
 namespace WitchGate.Cards.Collections
@@ -6,5 +7,6 @@ namespace WitchGate.Cards.Collections
     {
         public string GetDescription();
         public string GetTitle();
+
     }
 }

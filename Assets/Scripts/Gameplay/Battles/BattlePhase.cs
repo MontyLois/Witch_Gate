@@ -57,9 +57,8 @@ namespace WitchGate.Gameplay.Battles
 
         async Awaitable IPhase.OnBegin()
         {
+            await SceneController.Instance.UnloadLocationScene();
             await SceneController.Instance.LoadGameMode(GameMode.Fight);
-            await SceneController.Instance.LoadLocation(Location.Fight_1
-            );
         }
 
         async Awaitable IPhase.Execute()
@@ -76,6 +75,7 @@ namespace WitchGate.Gameplay.Battles
                 PlayerTurnPhase playerTurnPhase = new PlayerTurnPhase(this);
 
                 await enemyTurnPhase.DrawPossibleCards();
+                TurnTimeline.Reorder();
                 
                 await playerTurnPhase.RunAsync();
                 await enemyTurnPhase.RunAsync();

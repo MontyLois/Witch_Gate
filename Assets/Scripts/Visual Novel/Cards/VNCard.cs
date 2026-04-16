@@ -10,7 +10,7 @@ using WitchGate.Gameplay.Cards.Effects;
 
 namespace WitchGate.VisualNovel.Visual_Novel.Cards
 {
-    public class VNCard : Card, IDescription
+    public class VNCard : Card
     {
         public CardData Data { get; }
         public int Level { get; private set; }
@@ -26,16 +26,6 @@ namespace WitchGate.VisualNovel.Visual_Novel.Cards
         }
         
         public IEnumerable<CardVNEffectData> Effects => VNCardManager.GetEffectsFor(Data);
-        
-        public string GetDescription()
-        {
-            return "cette carte peut sonder l'esprit";
-        }
-        
-        public string GetTitle()
-        {
-            return Data.Name;
-        }
         
         public async Awaitable Use()
         {

@@ -11,17 +11,20 @@ namespace WitchGate.Gameplay.Controller
 
         private PlayerDirectionListener directionListener = new();
         private PlayerGroundedListener groundedListener = new();
+        private PlayerInteractionListener interactionListener = new();
 
         private void OnEnable()
         {
             directionListener.Bind(Manager.Body, OnDirectionChanged);
             groundedListener.Bind(Manager.Body, OnGroundedChanged);
+            interactionListener.Bind(Manager.Body, OnInteraction);
         }
 
         private void OnDisable()
         {
             directionListener.Unbind(Manager.Body, OnDirectionChanged);
             groundedListener.Unbind(Manager.Body, OnGroundedChanged);
+            interactionListener.Unbind(Manager.Body, OnInteraction);
         }
         
         private void Update()
@@ -38,6 +41,11 @@ namespace WitchGate.Gameplay.Controller
         {
             animator.SetFloat("Direction",velocity);
             animator.SetTrigger("DirectionChanged");
+        }
+
+        private void OnInteraction()
+        {
+            animator.SetTrigger("Interaction");
         }
     }
 }

@@ -53,12 +53,14 @@ namespace WitchGate.Gameplay
        
         public void OnPointerEnter(PointerEventData eventData)
         {
-            UIManager.OnCardHovered?.Invoke(Current);
+            UIManager.TriggerOnCardHovered(Current);
+            Current.TriggerOnPointerEnter(eventData);
         }
 
         public void OnPointerExit(PointerEventData eventData)
         {
-            UIManager.OnCardUnhovered?.Invoke();
+            UIManager.TriggerOnCardUnhovered();
+            Current.TriggerOnPointerExit(eventData);
         }
 
         public void OnPointerMove(PointerEventData eventData)

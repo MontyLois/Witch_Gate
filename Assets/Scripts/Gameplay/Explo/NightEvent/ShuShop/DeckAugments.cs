@@ -12,13 +12,6 @@ namespace WitchGate.Gameplay
     public class DeckAugments : CharacterDialog
     {
         
-        /*[field: SerializeField]
-        public RemoveCardUpgrade removeCardUpgrade { get; private set; }
-        [field: SerializeField]
-        public LevelUpCardUpgrade levelUpCardUpgrade { get; private set; }
-        [field: SerializeField]
-        public NewCardUpgrade newCardUpgrade { get; private set; }*/
-        
         [SerializeField]
         private MonoBehaviour[] _improvementBehaviours;
         
@@ -43,7 +36,7 @@ namespace WitchGate.Gameplay
         
         private void Start()
         {
-            //bind function to dialog external function
+            // Bind function to dialog external function
             _dialogBehaviour.BindExternalFunction("SelectWitch", SelectWitch);
             _dialogBehaviour.BindExternalFunction("ToogleShop", ToggleShop);
         }
@@ -56,9 +49,6 @@ namespace WitchGate.Gameplay
             {
                 deckImprovement.SelectWitch(witch);
             }
-            /*removeCardUpgrade.SelectWitch(witch);
-            levelUpCardUpgrade.SelectWitch(witch);
-            newCardUpgrade.SelectWitch(witch);*/
         }
 
         //toogle the UI for Shu Shop
