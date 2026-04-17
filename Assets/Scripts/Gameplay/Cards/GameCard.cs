@@ -22,7 +22,7 @@ namespace WitchGate.Gameplay.Cards
         public CardProfile Data { get; private set; }
         public Witch WitchDeck {get; private set;}
         public int Level { get; private set; }
-        public string Label => Data.CardData.name;
+        public string Label => Data.CardData.Name;
         public int Priority => Data.CardData.Priority;
         public CardData CardData => Data.CardData;
         

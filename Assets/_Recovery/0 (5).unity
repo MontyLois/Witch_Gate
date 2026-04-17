@@ -459,7 +459,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Unity.RenderPipelines.Core.Runtime::UnityEngine.Rendering.ProbeVolumePerSceneData
   serializedBakingSet: {fileID: 11400000, guid: 745833275a959cd45bee9b871ae7e773, type: 2}
-  sceneGUID: 01e358256a3d2ad41b46a5dc6b7255c1
+  sceneGUID: 4256474a2e140f248a604a5bfb2d5fdf
   obsoleteAsset: {fileID: 0}
   obsoleteCellSharedDataAsset: {fileID: 0}
   obsoleteCellSupportDataAsset: {fileID: 0}
@@ -912,7 +912,7 @@ Transform:
   m_GameObject: {fileID: 775423547}
   serializedVersion: 2
   m_LocalRotation: {x: 0.043619405, y: 0, z: 0, w: 0.9990483}
-  m_LocalPosition: {x: 5.410001, y: 2.174422, z: -0.8886616}
+  m_LocalPosition: {x: -65.86, y: 2.174422, z: -0.8886616}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2762,7 +2762,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3005904089657491281, guid: 82c3222e8d465114996ce7643d28d0eb, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.3
+      value: -66.97
       objectReference: {fileID: 0}
     - target: {fileID: 3005904089657491281, guid: 82c3222e8d465114996ce7643d28d0eb, type: 3}
       propertyPath: m_LocalPosition.y

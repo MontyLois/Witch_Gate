@@ -1,3 +1,5 @@
+using System;
+using Unity.Cinemachine;
 using UnityEngine;
 using UnityEngine.Playables;
 
@@ -10,6 +12,19 @@ namespace WitchGate.Prototype
         [field: SerializeField] private GameObject nextTrackStep;
         [field: SerializeField] private PlayableDirector custscene;
 
+
+        private void Start()
+        {
+            var brain = Camera.main.GetComponent<CinemachineBrain>();
+
+            foreach (var output in custscene.playableAsset.outputs)
+            {
+                if (output.streamName == "Cinemachine Track")
+                {
+                    custscene.SetGenericBinding(output.sourceObject, brain);
+                }
+            }
+        }
 
         private void ActivateNextTrackStep()
         {

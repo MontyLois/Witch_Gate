@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0b148e33188f46a9a6521ada126cdc74, type: 3}
-  m_Name: Vel_Sword_2 1
+  m_Name: Vel_Sword_1
   m_EditorClassIdentifier: WitchGate.Core::WitchGate.Cards.CardMinorArcane
-  <ID>k__BackingField: 47d2da94-9e28-40cc-b445-5704ae581a9c
-  <Name>k__BackingField: Sword II
+  <ID>k__BackingField: 29f28b4e-4ce6-4460-af46-8f0a80b21af8
+  <Name>k__BackingField: Sword I
   <CardRarity>k__BackingField: 0
   <Priority>k__BackingField: 1
   <CardType>k__BackingField: 1
-  <Icon>k__BackingField: {fileID: 965061742, guid: cde0ce6c3ec33524ea784ee9d27d5ec9, type: 3}
+  <Icon>k__BackingField: {fileID: -184334519, guid: 32d3ad63cbc886847be0892d347f1ef6, type: 3}
   <BG>k__BackingField: {fileID: 202001596, guid: 5004be54fa10844448ee866582f2edb5, type: 3}
   <Type_Sprite>k__BackingField: {fileID: -1155108190, guid: 32ad2ebb0b2497e49abc9837b47e9e21, type: 3}
-  lvlUpcard: {fileID: 0}
+  lvlUpcard: {fileID: 11400000, guid: a76391a7e81cba34786ed9d9bf82437c, type: 2}

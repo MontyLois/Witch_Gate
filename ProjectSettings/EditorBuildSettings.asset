@@ -14,9 +14,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/GameMode/Day_Shop.unity
     guid: f56dccd6348089c49bc40290ef1ce0d1
-  - enabled: 0
-    path: Assets/Scenes/Prototypes/Night_Exploration.unity
-    guid: 128778eec49f5b647aef802985246c8c
   - enabled: 1
     path: Assets/Scenes/GameMode/Night_Fight.unity
     guid: 5251d5c7830bf4e4e8a7b80426488976
@@ -32,6 +29,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/City Night/Zone_Market_Fontain.unity
     guid: 131de1b5aca91924f9078b9bd2196f8f
+  - enabled: 1
+    path: Assets/Scenes/City Night/Zone_Church_Graveyard.unity
+    guid: 49f75661346b4114288497cb591a7aeb
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 3812286fd0cdcdb469de2261347916da, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}

@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4b21abdfb0b1456c9877fa40e36c001b, type: 3}
-  m_Name: C5_Vel
+  m_Name: Vel_WheelOfFortune
   m_EditorClassIdentifier: 
   <ID>k__BackingField: bad6bc94-50ab-4f89-9fa8-08df42b2a52f
-  <Name>k__BackingField: Rhodonite
+  <Name>k__BackingField: Roue de la fortune
   <CardRarity>k__BackingField: 1
   <Priority>k__BackingField: 0
   <CardType>k__BackingField: 0
-  <Icon>k__BackingField: {fileID: -847686086, guid: d5fe50c44b7d7be40b69170f20581e76, type: 3}
-  <BG>k__BackingField: {fileID: -1964221159, guid: 566923a53340cad48ada546e720227b1, type: 3}
-  <Type_Sprite>k__BackingField: {fileID: 0}
+  <Icon>k__BackingField: {fileID: 132149946, guid: b8a37c1f3719ac141b9a584b20ad1ddc, type: 3}
+  <BG>k__BackingField: {fileID: 202001596, guid: 5004be54fa10844448ee866582f2edb5, type: 3}
+  <Type_Sprite>k__BackingField: {fileID: 1540616625, guid: 79b621f868b5a70479cc10ee0dc8806d, type: 3}
