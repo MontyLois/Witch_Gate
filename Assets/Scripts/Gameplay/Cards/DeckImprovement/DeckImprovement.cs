@@ -61,14 +61,14 @@ namespace WitchGate.Cards
         {
             return card.CardData.Name;
         }
-        
 
-        public void OnPointerEnter(PointerEventData eventData)
+
+        public virtual void OnPointerEnter(PointerEventData eventData)
         {
-            Debug.Log("aaaaaaaaaaa");
+            
         }
 
-        public void OnPointerExit(PointerEventData eventData)
+        public virtual void OnPointerExit(PointerEventData eventData)
         {
             
         }
