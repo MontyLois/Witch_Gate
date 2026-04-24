@@ -1439,7 +1439,7 @@ MonoBehaviour:
     width: 200
     height: 300
   IsDragging: 0
-  IsSelected: 1
+  IsSelected: 0
   automaticSkip: 0
   ChildNode: {fileID: 8377001906072905231}
   _sentence:
@@ -1604,8 +1604,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -3300.8
-    y: 230.80006
+    x: 286.40045
+    y: 55.600037
     width: 200
     height: 300
   IsDragging: 1
