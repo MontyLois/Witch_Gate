@@ -1,5 +1,40 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8756765493685201758
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: DialogNodeBaseSystem::cherrydev.SentenceNode
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 4172.8
+    y: 915.5999
+    width: 190
+    height: 300
+  IsDragging: 1
+  IsSelected: 0
+  automaticSkip: 0
+  ChildNode: {fileID: 0}
+  _sentence:
+    CharacterName: 
+    Text: "On ne sait pas, ils ne ressemblent \xE0 aucune cr\xE9ature connue..."
+    CharacterSprite: {fileID: 0}
+    CharacterData: {fileID: 0}
+    expression: 0
+  ParentNodes: []
+  _isExternalFunc: 0
+  _externalFunctionName: 
+  CharacterNameKey: 
+  SentenceTextKey: 
+  hasInitialized: 1
 --- !u!114 &-8691970702314519401
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15,8 +50,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 2556.8096
-    y: 175.59972
+    x: 2988.0085
+    y: 209.1997
     width: 200
     height: 300
   IsDragging: 1
@@ -51,8 +86,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -2627.1948
-    y: 134.79974
+    x: -2195.988
+    y: 168.39969
     width: 190
     height: 135
   IsDragging: 1
@@ -80,19 +115,19 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -12.003174
-    y: 137.20007
+    x: 419.19656
+    y: 170.80002
     width: 190
     height: 135
   IsDragging: 1
-  IsSelected: 0
+  IsSelected: 1
   automaticSkip: 1
   ChildNode: {fileID: -3167749547308588649}
   _stage:
     CharacterData: {fileID: 11400000, guid: 94bf7593af22c0642a596cf891e8122e, type: 2}
     visibility: 1
     expression: 0
-    slotName: 0
+    slotName: 1
   ParentNodes:
   - {fileID: -4708040517670743942}
 --- !u!114 &-6221248723160205418
@@ -110,8 +145,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 695.9963
-    y: 184.39966
+    x: 1127.1958
+    y: 217.9996
     width: 200
     height: 300
   IsDragging: 1
@@ -146,8 +181,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 2298.4087
-    y: 189.99982
+    x: 2729.6086
+    y: 223.59976
     width: 190
     height: 135
   IsDragging: 0
@@ -176,8 +211,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 2350.4082
-    y: 330.7991
+    x: 2781.6082
+    y: 364.39908
     width: 190
     height: 135
   IsDragging: 0
@@ -206,8 +241,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -1755.1957
-    y: 323.59915
+    x: -1323.9956
+    y: 357.19913
     width: 190
     height: 135
   IsDragging: 1
@@ -221,6 +256,41 @@ MonoBehaviour:
     slotName: 1
   ParentNodes:
   - {fileID: 1926268946279411724}
+--- !u!114 &-5591899602359724806
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: DialogNodeBaseSystem::cherrydev.SentenceNode
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 5101.5996
+    y: 909.2
+    width: 190
+    height: 300
+  IsDragging: 1
+  IsSelected: 0
+  automaticSkip: 0
+  ChildNode: {fileID: 0}
+  _sentence:
+    CharacterName: 
+    Text: Justement... Ils sont fait de chair d'humain et animaux...
+    CharacterSprite: {fileID: 0}
+    CharacterData: {fileID: 0}
+    expression: 0
+  ParentNodes: []
+  _isExternalFunc: 0
+  _externalFunctionName: 
+  CharacterNameKey: 
+  SentenceTextKey: 
+  hasInitialized: 1
 --- !u!114 &-5168993991871823592
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -236,8 +306,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 4353.6074
-    y: -8.400185
+    x: 4784.8047
+    y: 25.199768
     width: 200
     height: 300
   IsDragging: 1
@@ -273,8 +343,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -217.6012
-    y: 161.19974
+    x: 213.59848
+    y: 194.79965
     width: 200
     height: 300
   IsDragging: 1
@@ -309,8 +379,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 3955.2075
-    y: -7.6001663
+    x: 4386.4053
+    y: 25.999786
     width: 200
     height: 300
   IsDragging: 1
@@ -345,8 +415,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -1369.5985
-    y: 157.99979
+    x: -938.3958
+    y: 191.5997
     width: 200
     height: 300
   IsDragging: 1
@@ -381,8 +451,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 397.59595
-    y: 138.79974
+    x: 828.7965
+    y: 172.39969
     width: 190
     height: 135
   IsDragging: 1
@@ -411,8 +481,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -5.602783
-    y: 293.19998
+    x: 425.59695
+    y: 326.8
     width: 190
     height: 135
   IsDragging: 1
@@ -421,7 +491,7 @@ MonoBehaviour:
   ChildNode: {fileID: 6783692302864544894}
   _stage:
     CharacterData: {fileID: 11400000, guid: 78964f7cb196e3d4d84fd25597ae7a7a, type: 2}
-    visibility: 0
+    visibility: 1
     expression: 0
     slotName: 0
   ParentNodes:
@@ -441,8 +511,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -1951.195
-    y: 156.39975
+    x: -1519.9949
+    y: 189.99966
     width: 200
     height: 300
   IsDragging: 1
@@ -478,8 +548,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 4162.407
-    y: -8.4002
+    x: 4593.6055
+    y: 25.199768
     width: 200
     height: 300
   IsDragging: 1
@@ -494,6 +564,7 @@ MonoBehaviour:
     expression: 3
   ParentNodes:
   - {fileID: -3698891398161339110}
+  - {fileID: 8753666753658127478}
   _isExternalFunc: 0
   _externalFunctionName: 
   CharacterNameKey: 
@@ -514,21 +585,23 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 2754.4097
-    y: 228.39957
+    x: 3185.6086
+    y: 261.9996
     width: 190
-    height: 115
+    height: 135
   IsDragging: 1
   IsSelected: 0
   automaticSkip: 0
   Answers:
   - Origines
   - "Mati\xE8re"
+  - 
   AnswerKeys: []
   ParentNodes:
   - {fileID: -8691970702314519401}
   ChildNodes:
   - {fileID: 6554187930591230707}
+  - {fileID: 2466831578315341586}
   nextNodeIndex: 0
   hasInitialized: 1
 --- !u!114 &-2141847384421356569
@@ -546,8 +619,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -416.80066
-    y: 160.39975
+    x: 14.399261
+    y: 193.99966
     width: 200
     height: 300
   IsDragging: 1
@@ -582,8 +655,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 1691.2025
-    y: 185.9997
+    x: 2122.4026
+    y: 219.59964
     width: 200
     height: 300
   IsDragging: 1
@@ -598,6 +671,42 @@ MonoBehaviour:
     expression: 4
   ParentNodes:
   - {fileID: 8038874707695660103}
+  _isExternalFunc: 0
+  _externalFunctionName: 
+  CharacterNameKey: 
+  SentenceTextKey: 
+  hasInitialized: 1
+--- !u!114 &-1874458963532271442
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: DialogNodeBaseSystem::cherrydev.SentenceNode
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 4407.199
+    y: 445.19986
+    width: 190
+    height: 300
+  IsDragging: 1
+  IsSelected: 0
+  automaticSkip: 0
+  ChildNode: {fileID: 8753666753658127478}
+  _sentence:
+    CharacterName: 
+    Text: "C'est d\xE9goutant..."
+    CharacterSprite: {fileID: 0}
+    CharacterData: {fileID: 11400000, guid: e5c897c26a297814f9bd24ce66295ca9, type: 2}
+    expression: 2
+  ParentNodes:
+  - {fileID: 7027068137044908688}
   _isExternalFunc: 0
   _externalFunctionName: 
   CharacterNameKey: 
@@ -618,8 +727,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -616.80164
-    y: 161.19986
+    x: -185.60071
+    y: 194.79977
     width: 200
     height: 300
   IsDragging: 1
@@ -654,8 +763,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 405.5965
-    y: 451.60007
+    x: 836.797
+    y: 485.2001
     width: 190
     height: 135
   IsDragging: 1
@@ -684,8 +793,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 3180.0098
-    y: 4.399849
+    x: 3611.2078
+    y: 37.999817
     width: 200
     height: 300
   IsDragging: 1
@@ -720,8 +829,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -2144.7969
-    y: 158.79977
+    x: -1713.5923
+    y: 192.39969
     width: 200
     height: 300
   IsDragging: 1
@@ -756,8 +865,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 3567.209
-    y: 2.799858
+    x: 3998.407
+    y: 36.39981
     width: 200
     height: 300
   IsDragging: 1
@@ -835,6 +944,15 @@ MonoBehaviour:
   - {fileID: -3167749547308588649}
   - {fileID: -951166986022549793}
   - {fileID: 7098407559009027956}
+  - {fileID: 2466831578315341586}
+  - {fileID: -8756765493685201758}
+  - {fileID: 1177366215817841274}
+  - {fileID: 8259750367630351123}
+  - {fileID: -5591899602359724806}
+  - {fileID: -1874458963532271442}
+  - {fileID: 8753666753658127478}
+  - {fileID: 4503117784893430000}
+  - {fileID: 7027068137044908688}
   VariablesConfig: {fileID: 0}
   _localizationTableName: 
   _characterNamesLocalizationName: 
@@ -856,8 +974,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -802.4027
-    y: 169.19978
+    x: -371.2013
+    y: 202.79974
     width: 190
     height: 135
   IsDragging: 1
@@ -886,8 +1004,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -898.4027
-    y: 309.19937
+    x: -467.20276
+    y: 342.79935
     width: 190
     height: 135
   IsDragging: 1
@@ -916,8 +1034,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 1572.0028
-    y: 785.1981
+    x: 2003.2026
+    y: 818.7983
     width: 190
     height: 135
   IsDragging: 1
@@ -930,6 +1048,43 @@ MonoBehaviour:
     expression: 0
     slotName: 0
   ParentNodes: []
+--- !u!114 &1177366215817841274
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: DialogNodeBaseSystem::cherrydev.SentenceNode
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 3807.9998
+    y: 362.79984
+    width: 190
+    height: 300
+  IsDragging: 1
+  IsSelected: 0
+  automaticSkip: 0
+  ChildNode: {fileID: 8259750367630351123}
+  _sentence:
+    CharacterName: 
+    Text: "Une de nos consoeurs, sp\xE9cialis\xE9e en scientologie des b\xEAtes en
+      a r\xE9cup\xE9r\xE9 un morceau."
+    CharacterSprite: {fileID: 0}
+    CharacterData: {fileID: 11400000, guid: 78964f7cb196e3d4d84fd25597ae7a7a, type: 2}
+    expression: 0
+  ParentNodes:
+  - {fileID: 4503117784893430000}
+  _isExternalFunc: 0
+  _externalFunctionName: 
+  CharacterNameKey: 
+  SentenceTextKey: 
+  hasInitialized: 1
 --- !u!114 &1656061849965365502
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -945,8 +1100,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -1559.9965
-    y: 156.39987
+    x: -1128.7954
+    y: 189.99979
     width: 200
     height: 300
   IsDragging: 1
@@ -981,8 +1136,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -1761.5951
-    y: 163.59982
+    x: -1330.395
+    y: 197.19974
     width: 190
     height: 135
   IsDragging: 0
@@ -1011,8 +1166,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 892.79663
-    y: 188.39978
+    x: 1323.9956
+    y: 221.99973
     width: 190
     height: 135
   IsDragging: 1
@@ -1026,6 +1181,42 @@ MonoBehaviour:
     slotName: 1
   ParentNodes:
   - {fileID: -6221248723160205418}
+--- !u!114 &2466831578315341586
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: DialogNodeBaseSystem::cherrydev.SentenceNode
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 3417.5999
+    y: 364.39993
+    width: 190
+    height: 300
+  IsDragging: 1
+  IsSelected: 0
+  automaticSkip: 0
+  ChildNode: {fileID: 4503117784893430000}
+  _sentence:
+    CharacterName: 
+    Text: "Quel genre de cr\xE9ature sont ces voidraths ? "
+    CharacterSprite: {fileID: 0}
+    CharacterData: {fileID: 11400000, guid: e5c897c26a297814f9bd24ce66295ca9, type: 2}
+    expression: 0
+  ParentNodes:
+  - {fileID: -2619801908685585896}
+  _isExternalFunc: 0
+  _externalFunctionName: 
+  CharacterNameKey: 
+  SentenceTextKey: 
+  hasInitialized: 1
 --- !u!114 &3657269793412980689
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1041,8 +1232,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 1893.6056
-    y: 182.7998
+    x: 2324.806
+    y: 216.39975
     width: 200
     height: 300
   IsDragging: 1
@@ -1077,8 +1268,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 1010.3972
-    y: 340.39908
+    x: 1441.5962
+    y: 373.9991
     width: 190
     height: 135
   IsDragging: 1
@@ -1092,6 +1283,42 @@ MonoBehaviour:
     slotName: 1
   ParentNodes:
   - {fileID: 2225919513344857765}
+--- !u!114 &4503117784893430000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: DialogNodeBaseSystem::cherrydev.SentenceNode
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 3613.5994
+    y: 363.59988
+    width: 190
+    height: 300
+  IsDragging: 1
+  IsSelected: 0
+  automaticSkip: 0
+  ChildNode: {fileID: 1177366215817841274}
+  _sentence:
+    CharacterName: 
+    Text: "Ils ne ressemblent \xE0 aucune cr\xE9atures..."
+    CharacterSprite: {fileID: 0}
+    CharacterData: {fileID: 11400000, guid: 78964f7cb196e3d4d84fd25597ae7a7a, type: 2}
+    expression: 4
+  ParentNodes:
+  - {fileID: 2466831578315341586}
+  _isExternalFunc: 0
+  _externalFunctionName: 
+  CharacterNameKey: 
+  SentenceTextKey: 
+  hasInitialized: 1
 --- !u!114 &4648248120100779701
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1107,8 +1334,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 2086.4062
-    y: 185.9997
+    x: 2517.6067
+    y: 219.59964
     width: 200
     height: 300
   IsDragging: 1
@@ -1143,8 +1370,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -2337.5967
-    y: 157.1998
+    x: -1906.3914
+    y: 190.79971
     width: 200
     height: 300
   IsDragging: 1
@@ -1179,8 +1406,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -1177.5978
-    y: 160.39975
+    x: -746.3967
+    y: 193.99966
     width: 200
     height: 300
   IsDragging: 1
@@ -1215,8 +1442,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 2983.208
-    y: 3.599846
+    x: 3414.407
+    y: 37.199814
     width: 200
     height: 300
   IsDragging: 1
@@ -1251,8 +1478,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 193.59692
-    y: 145.19974
+    x: 624.7968
+    y: 178.79965
     width: 200
     height: 300
   IsDragging: 1
@@ -1267,6 +1494,43 @@ MonoBehaviour:
     expression: 0
   ParentNodes:
   - {fileID: -3167749547308588649}
+  _isExternalFunc: 0
+  _externalFunctionName: 
+  CharacterNameKey: 
+  SentenceTextKey: 
+  hasInitialized: 1
+--- !u!114 &7027068137044908688
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: DialogNodeBaseSystem::cherrydev.SentenceNode
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 4196.799
+    y: 360.39987
+    width: 190
+    height: 300
+  IsDragging: 1
+  IsSelected: 0
+  automaticSkip: 0
+  ChildNode: {fileID: -1874458963532271442}
+  _sentence:
+    CharacterName: 
+    Text: "Elle a d\xE9couvert que leur chair \xE9tait humaine et animale... Un m\xE9lange
+      de chair."
+    CharacterSprite: {fileID: 0}
+    CharacterData: {fileID: 11400000, guid: 78964f7cb196e3d4d84fd25597ae7a7a, type: 2}
+    expression: 2
+  ParentNodes:
+  - {fileID: 8259750367630351123}
   _isExternalFunc: 0
   _externalFunctionName: 
   CharacterNameKey: 
@@ -1287,8 +1551,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 402.3968
-    y: 586.7999
+    x: 833.5973
+    y: 620.4001
     width: 190
     height: 135
   IsDragging: 1
@@ -1317,8 +1581,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 1481.6036
-    y: 349.199
+    x: 1912.8035
+    y: 382.79904
     width: 190
     height: 135
   IsDragging: 0
@@ -1347,8 +1611,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 403.1961
-    y: 307.59927
+    x: 834.3966
+    y: 341.19925
     width: 190
     height: 135
   IsDragging: 1
@@ -1362,6 +1626,43 @@ MonoBehaviour:
     slotName: 1
   ParentNodes:
   - {fileID: -3457635952620897369}
+--- !u!114 &8259750367630351123
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: DialogNodeBaseSystem::cherrydev.SentenceNode
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 4003.9998
+    y: 363.59988
+    width: 190
+    height: 300
+  IsDragging: 1
+  IsSelected: 0
+  automaticSkip: 0
+  ChildNode: {fileID: 7027068137044908688}
+  _sentence:
+    CharacterName: 
+    Text: "Elle a r\xE9cup\xE9r\xE9 un morceau de leur chair ? C'est impressionant
+      !"
+    CharacterSprite: {fileID: 0}
+    CharacterData: {fileID: 11400000, guid: e5c897c26a297814f9bd24ce66295ca9, type: 2}
+    expression: 3
+  ParentNodes:
+  - {fileID: 1177366215817841274}
+  _isExternalFunc: 0
+  _externalFunctionName: 
+  CharacterNameKey: 
+  SentenceTextKey: 
+  hasInitialized: 1
 --- !u!114 &8378730349896703205
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1377,8 +1678,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 1408.7997
-    y: 211.59958
+    x: 1839.9993
+    y: 245.19955
     width: 190
     height: 135
   IsDragging: 0
@@ -1407,8 +1708,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -2539.1948
-    y: 270.79922
+    x: -2107.99
+    y: 304.3992
     width: 190
     height: 135
   IsDragging: 1
@@ -1437,8 +1738,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 3372.0078
-    y: 5.1998367
+    x: 3803.2058
+    y: 38.799805
     width: 200
     height: 300
   IsDragging: 1
@@ -1473,8 +1774,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -988.7977
-    y: 168.39973
+    x: -557.59827
+    y: 201.99976
     width: 190
     height: 135
   IsDragging: 1
@@ -1503,8 +1804,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 1203.1987
-    y: 181.19965
+    x: 1634.3992
+    y: 214.79962
     width: 200
     height: 300
   IsDragging: 1
@@ -1519,6 +1820,42 @@ MonoBehaviour:
     expression: 1
   ParentNodes:
   - {fileID: 4199021956312415207}
+  _isExternalFunc: 0
+  _externalFunctionName: 
+  CharacterNameKey: 
+  SentenceTextKey: 
+  hasInitialized: 1
+--- !u!114 &8753666753658127478
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: DialogNodeBaseSystem::cherrydev.SentenceNode
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 4585.5996
+    y: 362.7999
+    width: 190
+    height: 300
+  IsDragging: 1
+  IsSelected: 0
+  automaticSkip: 0
+  ChildNode: {fileID: -2885616019620745299}
+  _sentence:
+    CharacterName: 
+    Text: "Oui r\xE9pugnant... Sur ce"
+    CharacterSprite: {fileID: 0}
+    CharacterData: {fileID: 11400000, guid: 78964f7cb196e3d4d84fd25597ae7a7a, type: 2}
+    expression: 4
+  ParentNodes:
+  - {fileID: -1874458963532271442}
   _isExternalFunc: 0
   _externalFunctionName: 
   CharacterNameKey: 
@@ -1539,8 +1876,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 3762.4087
-    y: 78.79996
+    x: 4193.6064
+    y: 112.39994
     width: 190
     height: 135
   IsDragging: 1
