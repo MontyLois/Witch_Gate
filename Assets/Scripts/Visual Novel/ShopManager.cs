@@ -50,6 +50,11 @@ namespace WitchGate.Prototype
 
         public void EndDay()
         {
+            DialogsController.ValidateReadDialog();
+            CardDropZone.gameObject.SetActive(false);
+            GameController.ChangeContext(EncounterContext.FromVinylShopToCity);
+            
+            //là dans l'idéal faudrait que je joue des dialogues de mise au point des soeurs
             ShowMap();
         }
 
@@ -64,7 +69,7 @@ namespace WitchGate.Prototype
 
             foreach (var characterData in characterDatas)
             {
-                var dialog = DialogsController.GetNextDialogForSpecificEntity(characterData);
+                var dialog = DialogsController.GetDialogForSpecificEntity(characterData);
                 if(dialog)
                     customersDialogNodeGraphs.Add(dialog);
             }
@@ -91,7 +96,7 @@ namespace WitchGate.Prototype
                 currentTestimonyphase.Run();
                 //retrieve the current dialog for this client
                 DialogNodeGraph dialogNodeGraph =
-                    DialogsController.GetNextDialogForSpecificEntity(customers[currentClientIndex]);
+                    DialogsController.GetDialogForSpecificEntity(customers[currentClientIndex]);
                 if (dialogNodeGraph is not null)
                 {
                     dialogBehaviour.StartDialog(dialogNodeGraph);
@@ -105,12 +110,10 @@ namespace WitchGate.Prototype
             }
             else
             {
-                CardDropZone.gameObject.SetActive(false);
-                GameController.ChangeContext(EncounterContext.FromVinylShopToCity);
-                ShowMap();
+                EndDay();
             }
         }
-
+        
         private void ShowCloseButton()
         {
             CloseButton.SetActive(true);

@@ -34,6 +34,8 @@ namespace WitchGate.Prototype
             StartBattle();
         }
 
+        
+        //Would be great to bind it to some dialog and be happy
         private void StartBattle()
         {
             BattleController.StartBattle(enemyProfile);

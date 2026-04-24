@@ -27,6 +27,22 @@ namespace WitchGate.Mission.Dialogs
             return dialogNodeGraph;
         }
 
+        public DialogNodeGraph GetCurrentDialog()
+        {
+            DialogNodeGraph dialogNodeGraph = null;
+            if (dialogContextualizedData.DialogBehaviours.Count > 0 
+                && dialogContextualizedData.DialogBehaviours.Count > currentDialogIndex)
+            {
+                dialogNodeGraph = dialogContextualizedData.DialogBehaviours[currentDialogIndex];
+            }
+            return dialogNodeGraph;
+        }
+
+        public void NextDialog()
+        {
+            currentDialogIndex++;
+        }
+
         public bool CheckContext(CharacterData characterData, EncounterContext encounterContext, int investigationStage)
         {
             if (characterData == dialogContextualizedData.CharacterData 

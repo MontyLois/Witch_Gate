@@ -1,4 +1,5 @@
 using UnityEngine;
+using WitchGate.Controllers;
 
 namespace WitchGate.Mission.Data
 {
@@ -6,7 +7,7 @@ namespace WitchGate.Mission.Data
     public class PlaceData : ScriptableObject
     {
         [field: SerializeField]
-        public string id { get; private set; }
+        public Location Location { get; private set; }
         [field: SerializeField]
         public string displayName { get; private set; }
     }
