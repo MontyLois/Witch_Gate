@@ -4,7 +4,7 @@ using UnityEngine;
 using WitchGate.Controllers;
 using WitchGate.Mission;
 
-namespace WitchGate.Gameplay.Phase
+namespace WitchGate.Gameplay.Explo.Phase
 {
     public class ExplorationPhase : IPhase
     {
@@ -22,6 +22,7 @@ namespace WitchGate.Gameplay.Phase
         public async Awaitable OnBegin()
         {
             IsReady = false;
+            await GetAllEncounter();
         }
 
         public async Awaitable Execute()
@@ -32,23 +33,35 @@ namespace WitchGate.Gameplay.Phase
 
         public async Awaitable OnEnd()
         {
-            
+            await ClearAllEncounter();
         }
 
-        private void GetAllEncounter()
+        private async Awaitable GetAllEncounter()
         {
             List<ExplorationEncounter> explorationEncounters =
                 ExplorationEncounterController.GetAllCurrentExplorationEncounter(Location);
+            Debug.Log("nb of encounters : "+explorationEncounters.Count);
             foreach (var explorationEncounter in explorationEncounters)
             {
                 ExplorationEncounters.Add(explorationEncounter.explorationEncounter.CharacterData, explorationEncounter);
+                await SceneController.Instance.TryAddMEncounterScene(explorationEncounter.explorationEncounter);
             }
         }
 
-        private void ValidateEncounterForCharacter(CharacterData characterData)
+        private async Awaitable ClearAllEncounter()
+        {
+            foreach (var explorationEncounter in ExplorationEncounters)
+            {
+                await SceneController.Instance.RemoveEncounterScene(explorationEncounter.Value.explorationEncounter);
+            }
+            ExplorationEncounters.Clear();
+        }
+
+        private async Awaitable ValidateEncounterForCharacter(CharacterData characterData)
         {
             if (ExplorationEncounters.ContainsKey(characterData))
             {
+                await SceneController.Instance.RemoveEncounterScene(ExplorationEncounters[characterData].explorationEncounter);
                 ExplorationEncounters.Remove(characterData);
             }
         }
@@ -67,9 +80,11 @@ namespace WitchGate.Gameplay.Phase
         /*
          * End the exploration phase, get to next day and yay
          */
-        public void ReturnToTheShopAndSkipToNextDay()
+        public async Awaitable ReturnToTheShopAndSkipToNextDay()
         {
             GameController.ChangeContext(EncounterContext.FromCityToVinylShop);
+            await SceneController.Instance.UnloadLocationScene();
+            await SceneController.Instance.LoadGameMode(GameMode.VisualNovel);
             GameController.ChangeDay();
             SetReady();
         }

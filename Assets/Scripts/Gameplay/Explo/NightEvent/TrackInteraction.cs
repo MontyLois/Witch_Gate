@@ -6,7 +6,7 @@ using UnityEngine.Playables;
 
 namespace WitchGate.Prototype
 {
-    public class Track : MonoBehaviour, IInteractable
+    public class TrackInteraction : MonoBehaviour, IInteractable
     {
         [field: SerializeField] private GameObject vfx;
         [field: SerializeField] private GameObject nextTrackStep;

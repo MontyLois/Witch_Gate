@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 144d6dbbc32a4f0286be16996f803667, type: 3}
-  m_Name: MissionScene
+  m_Name: Shu
   m_EditorClassIdentifier: WitchGate.Core::WitchGate.Controllers.SceneData
-  <SceneName>k__BackingField: 
-  <GameMode>k__BackingField: 0
+  sceneAsset: {fileID: 102900000, guid: 6dbbc9058aae79c4aaf50ebca0b6e6e4, type: 3}
+  <ScenePath>k__BackingField: Assets/Scenes/Missions/Stage1_MarketPlace_Shu.unity

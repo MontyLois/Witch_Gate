@@ -33,6 +33,7 @@ namespace WitchGate.Controllers
             
             PlanningController.Load();
             DialogsController.Load();
+            ExplorationEncounterController.Load();
         }
         
         
@@ -58,6 +59,5 @@ namespace WitchGate.Controllers
             InvestigationChanged?.Invoke(Investigation.CurrentStage);
         }
         
-      
     }
 }

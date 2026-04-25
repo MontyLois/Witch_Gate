@@ -1,6 +1,8 @@
 using System;
 using Helteix.Singletons.MonoSingletons;
 using UnityEngine;
+using UnityEngine.Serialization;
+using WitchGate.Controllers;
 using WitchGate.Gameplay.Controller;
 
 namespace WitchGate.Gameplay
@@ -9,10 +11,16 @@ namespace WitchGate.Gameplay
     {
 
         [field: SerializeField] public PlayerManager playerManager { get; private set; }
-
-        public void Start()
+        [field: SerializeField]
+        private Location location;
+        
+        private void Start()
         {
-            
+            if (ExplorationGameplayController.phase is null)
+            {
+                GameController.ChangeLocation(location);
+                ExplorationGameplayController.StartPhase(location);
+            }
         }
 
         public void LockPlayerMovement()
@@ -24,5 +32,8 @@ namespace WitchGate.Gameplay
         {
             PlayerManager.Instance.Body.setCanMove(true);
         }
+
+        
+
     }
 }

@@ -104,6 +104,8 @@ namespace WitchGate.Gameplay.Battles
         private bool PlayerDefeated() => GetBattleWich(Witch.Elaris).CurrentHealth <= 0 &&
                                          GetBattleWich(Witch.Velmora).CurrentHealth <= 0;
 
+        public bool Win() => EnemiesDefeated();
+
         async Awaitable IPhase.OnEnd()
         {
             TargetRegistry.ClearRegistry();

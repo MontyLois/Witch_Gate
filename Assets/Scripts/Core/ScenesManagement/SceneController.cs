@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.Pool;
 using UnityEngine.SceneManagement;
 using WitchGate.Controllers.LocationLayouts;
+using WitchGate.Mission.Data;
 
 namespace WitchGate.Controllers
 {
@@ -14,8 +15,11 @@ namespace WitchGate.Controllers
         public SceneData currentGameModeScene { get; private set; } //Loaded GameMode Scene
         [field: SerializeField]
         public SceneData currentLocationScene { get; private set; } //Loaded Location Scene
-        private List<EncounterSceneData> encounterScene; //Active encounter scenes
-        private List<EncounterSceneData> loadedEncounterScene; //All loaded encounter scenes
+        
+        private List<ExplorationEncounterContextualizedData> encounterScene; //Active encounter scenes
+        private List<ExplorationEncounterContextualizedData> loadedEncounterScene; //All loaded encounter scenes
+        
+        private List<SceneData> encounterExplorationScenes; //Active encounter scenes
        
         //Data of all GameModeLayout for each GameMode
         private static Dictionary<GameMode, GameModeLayoutData> gameModeLayouts; 
@@ -38,8 +42,8 @@ namespace WitchGate.Controllers
             base.OnAwake();
             gameModeLayouts = new Dictionary<GameMode, GameModeLayoutData>();
             locationLayouts = new Dictionary<Location, LocationLayoutData>();
-            encounterScene = new List<EncounterSceneData>();
-            loadedEncounterScene = new List<EncounterSceneData>();
+            encounterScene = new List<ExplorationEncounterContextualizedData>();
+            loadedEncounterScene = new List<ExplorationEncounterContextualizedData>();
             LoadGameModeLayouts();
             LoadLocationLayouts();
         }
@@ -104,10 +108,10 @@ namespace WitchGate.Controllers
 
         public async Awaitable LoadLocation(Location location)
         {
-            Debug.Log("Are we really in the same location ? Is that how it is ?");
+            /*Debug.Log("Are we really in the same location ? Is that how it is ?");
             if (location == currentLocation)
                 return;
-            Debug.Log("we are changing location");
+            Debug.Log("we are changing location");*/
             if (locationLayouts.TryGetValue(location, out var locationLayout))
             {
                 Debug.Log("we are in location "+ location);
@@ -123,12 +127,25 @@ namespace WitchGate.Controllers
             }
         }
         
+        public async Awaitable UnloadLocationScene()
+        {
+            if(currentLocationScene is not null)
+                await  SceneManager.UnloadSceneAsync(currentLocationScene.ScenePath);
+            using (ListPool<ExplorationEncounterContextualizedData>.Get(out List<ExplorationEncounterContextualizedData> encounters))
+            {
+                encounters.AddRange(loadedEncounterScene);
+                foreach (var encounter in encounters)
+                    await UnloadEncounterScene(encounter);
+            }
+            loadedEncounterScene.Clear();
+        }
+        
         
         private async Awaitable HandleEncounterScene()
         {
             foreach (var scene in encounterScene)
             {
-                if (scene.SceneLocation == currentLocation)
+                if (scene.Location == currentLocation)
                     LoadEncounterScene(scene);
                 else
                     UnloadEncounterScene(scene);
@@ -136,54 +153,41 @@ namespace WitchGate.Controllers
         }
         
 
-        private async Awaitable LoadEncounterScene(EncounterSceneData encounterSceneData)
+        private async Awaitable LoadEncounterScene(ExplorationEncounterContextualizedData encounterSceneData)
         {
             if (!loadedEncounterScene.Contains(encounterSceneData))
             {
-                await SceneManager.LoadSceneAsync(encounterSceneData.MissionScene.ScenePath, LoadSceneMode.Additive);
+                await SceneManager.LoadSceneAsync(encounterSceneData.EncounterScene.ScenePath, LoadSceneMode.Additive);
                 loadedEncounterScene.Add(encounterSceneData);
             }
         }
 
-        private async Awaitable UnloadEncounterScene(EncounterSceneData encounterSceneData)
+        private async Awaitable UnloadEncounterScene(ExplorationEncounterContextualizedData encounterSceneData)
         {
             if (loadedEncounterScene.Contains(encounterSceneData))
             {
-                await SceneManager.UnloadSceneAsync(encounterSceneData.MissionScene.ScenePath);
+                await SceneManager.UnloadSceneAsync(encounterSceneData.EncounterScene.ScenePath);
                 loadedEncounterScene.Remove(encounterSceneData);
             }
         }
         
-        public async Awaitable RemoveEncounterScene(EncounterSceneData encounterSceneData)
+        public async Awaitable RemoveEncounterScene(ExplorationEncounterContextualizedData encounterSceneData)
         {
             if (encounterScene.Contains(encounterSceneData))
             {
-                if (encounterSceneData.SceneLocation == currentLocation)
+                if (encounterSceneData.Location == currentLocation)
                     await UnloadEncounterScene(encounterSceneData);
                 encounterScene.Remove(encounterSceneData);
             }
         }
         
-        public bool TryAddMEncounterScene(EncounterSceneData data)
+        public async Awaitable TryAddMEncounterScene(ExplorationEncounterContextualizedData data)
         {
             if (encounterScene.Contains(data))
-                return false;
+                return;
             encounterScene.Add(data);
-            if (data.SceneLocation == currentLocation) 
-                LoadEncounterScene(data);
-            return true;
-        }
-
-        public async Awaitable UnloadLocationScene()
-        {
-            if(currentLocationScene is not null)
-                await  SceneManager.UnloadSceneAsync(currentLocationScene.ScenePath);
-            foreach (var lEncounterSceneData in loadedEncounterScene)
-            {
-                await UnloadEncounterScene(lEncounterSceneData);
-            }
-            loadedEncounterScene.Clear();
+            if (data.Location == currentLocation) 
+                await LoadEncounterScene(data);
         }
     }
-    
 }

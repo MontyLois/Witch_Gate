@@ -1,9 +1,9 @@
-using System.Collections;
 using UnityEngine;
 using WitchGate.Controllers;
-using WitchGate.Controllers.LocationLayouts;
+using WitchGate.Gameplay.Explo.Phase;
+using WitchGate.Mission;
 
-namespace WitchGate.VisualNovel.Visual_Novel.Map
+namespace WitchGate.Gameplay.Explo.Map
 {
     public class MapSelection : MonoBehaviour
     {
@@ -22,6 +22,8 @@ namespace WitchGate.VisualNovel.Visual_Novel.Map
         {
             if (!isLocked)
             {
+                GameController.ChangeLocation(Location);
+                ExplorationGameplayController.StartPhase(Location);
                 SceneController.Instance.LoadLocation(Location);
                 SceneController.Instance.LoadGameMode(GameMode.Exploration);
             }

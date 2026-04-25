@@ -63,7 +63,7 @@ namespace WitchGate
             //encounters
             PlanningDatas = Resources.LoadAll<PlanningData>("Plannings");
             DialogContextualizedDatas = Resources.LoadAll<DialogContextualizedData>("VN/Dialogues");
-            ExplorationEncounterContextualizedDatas = Resources.LoadAll<ExplorationEncounterContextualizedData>("");
+            ExplorationEncounterContextualizedDatas = Resources.LoadAll<ExplorationEncounterContextualizedData>("Exploration");
         }
 
 
