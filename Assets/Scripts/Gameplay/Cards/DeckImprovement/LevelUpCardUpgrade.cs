@@ -25,7 +25,7 @@ namespace WitchGate.Cards
             return playerProfile.GetRandomCardProfile(SelectedWitch);
         }
 
-        public void OnPointerEnter(PointerEventData eventData)
+        public override void OnPointerEnter(PointerEventData eventData)
         {
             //base.OnPointerEnter(eventData);
             if (card is null)

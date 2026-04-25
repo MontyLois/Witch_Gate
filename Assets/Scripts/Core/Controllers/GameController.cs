@@ -16,6 +16,7 @@ namespace WitchGate.Controllers
         [Header("GameState")]
         public static int CurrentDay { get; private set; }
         public static EncounterContext CurrentContext  { get; private set; }
+        public static Location CurrentLocation  { get; private set; }
         public static Investigation Investigation { get; private set; }
 
         public static event Action<int> DayChanged;
@@ -32,6 +33,7 @@ namespace WitchGate.Controllers
             
             PlanningController.Load();
             DialogsController.Load();
+            ExplorationEncounterController.Load();
         }
         
         
@@ -46,12 +48,16 @@ namespace WitchGate.Controllers
             CurrentContext = encounterContext;
         }
 
+        public static void ChangeLocation(Location location)
+        {
+            CurrentLocation = location;
+        }
+
         public static void ProgressInvestigation()
         {
             Investigation.Progress();
             InvestigationChanged?.Invoke(Investigation.CurrentStage);
         }
         
-      
     }
 }

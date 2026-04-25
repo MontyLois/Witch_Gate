@@ -30,12 +30,24 @@ namespace WitchGate
         [Header("Encounters : dialogs and plannings")]
         public PlanningData[] PlanningDatas { get; private set; }
         public DialogContextualizedData[] DialogContextualizedDatas { get; private set; }
+        public ExplorationEncounterContextualizedData[] ExplorationEncounterContextualizedDatas { get; private set; }
         
 
         public GameDatabase()
         {
+            //scene management
             GameModeLayouts = Resources.LoadAll<GameModeLayoutData>("SceneManagment/GameModeLayouts");
             LocationLayouts = Resources.LoadAll<LocationLayoutData>("SceneManagment/LocationLayouts");
+            
+            //characters ID
+            CharacterData[] cD = Resources.LoadAll<CharacterData>("Characters/IDs");
+            this.characters = new Dictionary<string, CharacterData>();
+            for (int i = 0; i < cD.Length; i++)
+            {
+                characters.TryAdd(cD[i].id, cD[i]);
+            }
+            
+            //cards and decks
             CardData[] c = Resources.LoadAll<CardData>("Cards/Datas");
             cards = new Dictionary<string, CardData>(c.Length);
             for (int i = 0; i < c.Length; i++)
@@ -43,21 +55,15 @@ namespace WitchGate
                 var data = c[i];
                 cards.TryAdd(data.ID, data);
             }
-
-            CharacterData[] cD = Resources.LoadAll<CharacterData>("Characters/IDs");
-            this.characters = new Dictionary<string, CharacterData>();
-            for (int i = 0; i < cD.Length; i++)
-            {
-                characters.TryAdd(cD[i].id, cD[i]);
-            }
-
-            PlanningDatas = Resources.LoadAll<PlanningData>("Plannings");
-            DialogContextualizedDatas = Resources.LoadAll<DialogContextualizedData>("VN/Dialogues");
-
             //Sisters decks
             BattleWitchProfileData Elaris = Resources.Load<BattleWitchProfileData>("Cards/BattleProfiles/Witches/Elaris");
             BattleWitchProfileData Velmora = Resources.Load<BattleWitchProfileData>("Cards/BattleProfiles/Witches/Velmora");
             PlayerProfile = new PlayerProfile(Velmora, Elaris);
+            
+            //encounters
+            PlanningDatas = Resources.LoadAll<PlanningData>("Plannings");
+            DialogContextualizedDatas = Resources.LoadAll<DialogContextualizedData>("VN/Dialogues");
+            ExplorationEncounterContextualizedDatas = Resources.LoadAll<ExplorationEncounterContextualizedData>("Exploration");
         }
 
 

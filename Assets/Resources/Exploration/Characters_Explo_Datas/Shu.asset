@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Shu
   m_EditorClassIdentifier: WitchGate.Core::WitchGate.Mission.Data.CharacterExplorationData
   <CharacterData>k__BackingField: {fileID: 11400000, guid: 36cd925630610c64284b4c1c7cbe1b04, type: 2}
-  <prefab>k__BackingField: {fileID: 2903461116021431580, guid: a05579431314fe642b70434e4c555902, type: 3}
-  <PlaceData>k__BackingField: {fileID: 11400000, guid: f675caa75bb8ef348a53c5cdd1272281, type: 2}
+  <Location>k__BackingField: 2
+  <InvestigationStage>k__BackingField: 0
+  <EncounterScene>k__BackingField: {fileID: 11400000, guid: f9645377e9b72cd4abd88f9190c32474, type: 2}

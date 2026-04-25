@@ -117,6 +117,15 @@ namespace WitchGate.Gameplay.Controller
                 OnInteractable?.Invoke(false);
             }
         }
+        private void OnTriggerStay(Collider other)
+        {
+            IInteractable item = other.transform.GetComponent<IInteractable>();
+            if (item == interactable)
+            {
+                interactable = item;
+                OnInteractable?.Invoke(true);
+            }
+        }
         
         public void Interact(InputAction.CallbackContext context)
         {
@@ -125,11 +134,8 @@ namespace WitchGate.Gameplay.Controller
                 Debug.Log("we interact");
                 interactable.Interact();
                 OnInteract?.Invoke();
-                
-                /*
                 interactable = null;
                 OnInteractable?.Invoke(false);
-                */
             }
         }
     }

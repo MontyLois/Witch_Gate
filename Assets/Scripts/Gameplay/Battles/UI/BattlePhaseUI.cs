@@ -15,6 +15,7 @@ namespace WitchGate.Gameplay.Battles.UI
         [field : SerializeField] public BattleEntityUI ElarisUI { get; private set; }
         
         [field : SerializeField] public GameObject RewardUI { get; private set; }
+        [field : SerializeField] public GameObject LooseUI { get; private set; }
         
         protected override void OnPhaseBegins(BattlePhase phase)
         {
@@ -33,12 +34,22 @@ namespace WitchGate.Gameplay.Battles.UI
             VelmoraUI.Disconnect();
             ElarisUI.Disconnect();
             
-            RewardUI.SetActive(true);
+            if(phase.Win())
+                RewardUI.SetActive(true);
+            else 
+                LooseUI.SetActive(true);
         }
 
         public void OnQuitFight()
         {
+            SceneController.Instance.LoadLocation(GameController.CurrentLocation);
             SceneController.Instance.LoadGameModeAsync(GameMode.Exploration);
+        }
+
+        public void OnLooseFight()
+        {
+            ExplorationGameplayController.RestartPhase();
+            OnQuitFight();
         }
     }
 }
