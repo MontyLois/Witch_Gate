@@ -506,7 +506,7 @@ MonoBehaviour:
   ChildNode: {fileID: 2748961151694793899}
   _sentence:
     CharacterName: 
-    Text: "Tiens ! Tu as \xE7a qui es calme et bien dans ta vibe !"
+    Text: "Tiens ! Tu as \xE7a qui est calme et bien dans ta vibe !"
     CharacterSprite: {fileID: 0}
     CharacterData: {fileID: 11400000, guid: e5c897c26a297814f9bd24ce66295ca9, type: 2}
     expression: 1
@@ -656,7 +656,7 @@ MonoBehaviour:
     CharacterData: {fileID: 11400000, guid: e5c897c26a297814f9bd24ce66295ca9, type: 2}
     expression: 1
   ParentNodes:
-  - {fileID: -1773582129954298848}
+  - {fileID: 5908129000967714007}
   _isExternalFunc: 0
   _externalFunctionName: 
   CharacterNameKey: 
@@ -717,7 +717,8 @@ MonoBehaviour:
   ChildNode: {fileID: 4260806866883149105}
   _sentence:
     CharacterName: 
-    Text: "Voici <bounce>  Abiga\xEBlle ! </> Occupes toi d'elle !"
+    Text: "Voici <bounce> <color=\"purple\">Abiga\xEBlle ! </color></> Occupes toi
+      d'elle !"
     CharacterSprite: {fileID: 0}
     CharacterData: {fileID: 11400000, guid: f76c2a6ccc23d354c9ec8e55ebcbff8f, type: 2}
     expression: 1
@@ -1025,8 +1026,8 @@ MonoBehaviour:
   ChildNode: {fileID: -627685437716102544}
   _sentence:
     CharacterName: 
-    Text: "Mes amies m'ont dit que quelque chose... euh peut-\xEAtre <incr> quelqu'un
-      r\xF4de... </>"
+    Text: "Mes amies m'ont dit que quelque chose... euh peut-\xEAtre <incr a*1> <color=\"yellow\">quelqu'un
+      r\xF4de... </color></>"
     CharacterSprite: {fileID: 0}
     CharacterData: {fileID: 11400000, guid: 4f59aac53de14b04ebea0ad618a25c9f, type: 2}
     expression: 2
@@ -1195,7 +1196,6 @@ MonoBehaviour:
   - {fileID: -7883886808549964137}
   - {fileID: -6691612808215445188}
   - {fileID: 9213921289228837570}
-  - {fileID: -1773582129954298848}
   - {fileID: -3095409471996047215}
   - {fileID: -4709500418839186658}
   - {fileID: 2741206623399793745}
@@ -1444,7 +1444,7 @@ MonoBehaviour:
   ChildNode: {fileID: 8377001906072905231}
   _sentence:
     CharacterName: 
-    Text: "Oh ! J'ai h\xE2te de l'essayer ! Je reviendrais te dire ce que j'en penses
+    Text: "Oh ! J'ai h\xE2te de l'essayer ! Je reviendrai te dire ce que j'en pense
       !"
     CharacterSprite: {fileID: 0}
     CharacterData: {fileID: 11400000, guid: 4f59aac53de14b04ebea0ad618a25c9f, type: 2}
@@ -1584,6 +1584,42 @@ MonoBehaviour:
     expression: 0
   ParentNodes:
   - {fileID: -5111695931918977643}
+  _isExternalFunc: 0
+  _externalFunctionName: 
+  CharacterNameKey: 
+  SentenceTextKey: 
+  hasInitialized: 1
+--- !u!114 &5908129000967714007
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: DialogNodeBaseSystem::cherrydev.SentenceNode
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 286.40045
+    y: 55.600037
+    width: 200
+    height: 300
+  IsDragging: 1
+  IsSelected: 0
+  automaticSkip: 0
+  ChildNode: {fileID: -4709500418839186658}
+  _sentence:
+    CharacterName: 
+    Text: "D\xE9sol\xE9e, il est carr\xE9ment en rupture de stock !"
+    CharacterSprite: {fileID: 0}
+    CharacterData: {fileID: 11400000, guid: e5c897c26a297814f9bd24ce66295ca9, type: 2}
+    expression: 0
+  ParentNodes:
+  - {fileID: 9213921289228837570}
   _isExternalFunc: 0
   _externalFunctionName: 
   CharacterNameKey: 
@@ -1775,7 +1811,7 @@ MonoBehaviour:
   ChildNode: {fileID: -4339313463527345053}
   _sentence:
     CharacterName: 
-    Text: Essaie de rester calme et acceuillante d'accord?
+    Text: Essaie de rester calme et acceuillante, d'accord?
     CharacterSprite: {fileID: 0}
     CharacterData: {fileID: 11400000, guid: f76c2a6ccc23d354c9ec8e55ebcbff8f, type: 2}
     expression: 0
@@ -1841,8 +1877,8 @@ MonoBehaviour:
   ChildNode: {fileID: -2853575278235574985}
   _sentence:
     CharacterName: 
-    Text: "Je veux bien essayer quelque chose de nouveau tant que \xE7a reste <bounce>
-      calme..."
+    Text: "Je veux bien essayer quelque chose de nouveau tant que \xE7a reste<bounce><color=\"purple\">
+      calme... </color>"
     CharacterSprite: {fileID: 0}
     CharacterData: {fileID: 11400000, guid: 4f59aac53de14b04ebea0ad618a25c9f, type: 2}
     expression: 1
@@ -1878,8 +1914,8 @@ MonoBehaviour:
   ChildNode: {fileID: 2137158680241251265}
   _sentence:
     CharacterName: 
-    Text: "Oui... Avec tout ce qui se passe.. Mes amies disent que <incr> quelque
-      chose r\xF4de... </>"
+    Text: "C'est juste que j'ai entendu que quelque chose... euh peut-\xEAtre <incr
+      a*1> <color=\"yellow\">quelqu'un r\xF4de... </color></>"
     CharacterSprite: {fileID: 0}
     CharacterData: {fileID: 11400000, guid: 4f59aac53de14b04ebea0ad618a25c9f, type: 2}
     expression: 2
@@ -2021,7 +2057,7 @@ MonoBehaviour:
   ParentNodes:
   - {fileID: -6691612808215445188}
   ChildNodes:
-  - {fileID: -1773582129954298848}
+  - {fileID: 5908129000967714007}
   - {fileID: -3095409471996047215}
   nextNodeIndex: 0
   hasInitialized: 1
