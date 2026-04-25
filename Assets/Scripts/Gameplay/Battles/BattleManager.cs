@@ -16,7 +16,6 @@ namespace WitchGate.Gameplay.Battles
         {
             if (BattleController.phase is null)
             {
-                GameController.ChangeLocation(Location.City_1);
                 BattleController.StartBattle(enemyProfile);
             }
         }

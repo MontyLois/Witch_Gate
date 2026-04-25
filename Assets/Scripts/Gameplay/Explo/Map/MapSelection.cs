@@ -22,7 +22,6 @@ namespace WitchGate.Gameplay.Explo.Map
         {
             if (!isLocked)
             {
-                GameController.ChangeLocation(Location);
                 ExplorationGameplayController.StartPhase(Location);
                 SceneController.Instance.LoadLocation(Location);
                 SceneController.Instance.LoadGameMode(GameMode.Exploration);

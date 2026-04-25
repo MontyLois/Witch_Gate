@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Shop
   m_EditorClassIdentifier: WitchGate.Core::WitchGate.Controllers.LocationLayouts.LocationLayoutData
   <Location>k__BackingField: 1
-  <LocationScene>k__BackingField: {fileID: 11400000, guid: 3c977c628b1158c47970b122e8bda2be, type: 2}
+  <LocationScene>k__BackingField: {fileID: 11400000, guid: 0b118e47f8d14b74090b2802e574c36c, type: 2}

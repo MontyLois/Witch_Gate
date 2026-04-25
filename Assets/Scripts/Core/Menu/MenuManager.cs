@@ -8,6 +8,7 @@ namespace WitchGate
         public void StartGame()
         {
             SceneController.Instance.LoadGameMode(GameMode.VisualNovel);
+            SceneController.Instance.LoadLocation(Location.Shop);
         }
 
         public void QuitGame()
@@ -18,6 +19,7 @@ namespace WitchGate
         public void MainMenu()
         {
             SceneController.Instance.LoadGameMode(GameMode.None);
+            SceneController.Instance.LoadLocation(Location.Default);
         }
     }
 }

@@ -27,7 +27,8 @@ namespace WitchGate.Controllers
         
         //Data of all LocationLayout for each Location
         private static Dictionary<Location, LocationLayoutData> locationLayouts; 
-        private Location currentLocation;
+        public Location currentLocation{ get; private set; }
+        public Location lastLocation { get; private set; }
 
         public event Action<Location> OnGameLocationChanged;
         
@@ -112,10 +113,11 @@ namespace WitchGate.Controllers
             if (location == currentLocation)
                 return;
             Debug.Log("we are changing location");*/
+            lastLocation = currentLocation;
+            currentLocation = location;
             if (locationLayouts.TryGetValue(location, out var locationLayout))
             {
                 Debug.Log("we are in location "+ location);
-                currentLocation = location;
                 if(currentLocationScene is not null)
                     await  SceneManager.UnloadSceneAsync(currentLocationScene.ScenePath);
             

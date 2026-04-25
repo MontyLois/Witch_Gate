@@ -12,26 +12,32 @@ EditorBuildSettings:
     path: Assets/Scenes/Menue/MainMenu.unity
     guid: b47d4f23cb53e5f49b621e20cdcd423b
   - enabled: 1
-    path: Assets/Scenes/GameMode/Day_Shop.unity
-    guid: f56dccd6348089c49bc40290ef1ce0d1
-  - enabled: 1
-    path: Assets/Scenes/GameMode/Night_Fight.unity
-    guid: 5251d5c7830bf4e4e8a7b80426488976
-  - enabled: 1
     path: Assets/Scenes/Tests/LaunchBattle.unity
     guid: 7052463112fb85847b5b567172bcb33b
   - enabled: 1
-    path: Assets/Scenes/Transitions/STransition_Fight.unity
-    guid: bac7795d9a9e906469eec6b9fcb41841
+    path: Assets/Scenes/GameMode/Scene_GameMode_Shop.unity
+    guid: f56dccd6348089c49bc40290ef1ce0d1
   - enabled: 1
     path: Assets/Scenes/GameMode/Scene_GameMode_Explo.unity
     guid: 01e358256a3d2ad41b46a5dc6b7255c1
+  - enabled: 1
+    path: Assets/Scenes/GameMode/Scene_GameMode_Fight.unity
+    guid: 5251d5c7830bf4e4e8a7b80426488976
+  - enabled: 1
+    path: Assets/Scenes/Transitions/STransition_Fight.unity
+    guid: bac7795d9a9e906469eec6b9fcb41841
   - enabled: 1
     path: Assets/Scenes/City Night/Zone_Market_Fontain.unity
     guid: 131de1b5aca91924f9078b9bd2196f8f
   - enabled: 1
     path: Assets/Scenes/City Night/Zone_Church_Graveyard.unity
     guid: 49f75661346b4114288497cb591a7aeb
+  - enabled: 1
+    path: Assets/Scenes/Location/Scene_Location_Shop.unity
+    guid: bccd821b9df7257489c6197abf7a9bb8
+  - enabled: 1
+    path: Assets/Scenes/Location/Scene_Location_Fight_1.unity
+    guid: 6a408b036bb606a46bf6d84159c9bd5f
   - enabled: 1
     path: Assets/Scenes/Missions/Stage1_MarketPlace_Voidrath.unity
     guid: 9980a23ac22efe844aac1c0fac3d9164

@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Fight_1
   m_EditorClassIdentifier: WitchGate.Core::WitchGate.Controllers.LocationLayouts.LocationLayoutData
   <Location>k__BackingField: 3
-  <LocationScene>k__BackingField: {fileID: 11400000, guid: 0c142ab0ec26b1349828ce02d661d7db, type: 2}
+  <LocationScene>k__BackingField: {fileID: 11400000, guid: 1942905f869ae5d4cb3e6a9694cf025f, type: 2}

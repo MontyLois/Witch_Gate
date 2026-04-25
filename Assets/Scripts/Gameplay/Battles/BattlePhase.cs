@@ -57,7 +57,7 @@ namespace WitchGate.Gameplay.Battles
 
         async Awaitable IPhase.OnBegin()
         {
-            await SceneController.Instance.UnloadLocationScene();
+            await SceneController.Instance.LoadLocation(Location.Fight_1);
             await SceneController.Instance.LoadGameMode(GameMode.Fight);
         }
 

@@ -42,7 +42,7 @@ namespace WitchGate.Gameplay.Battles.UI
 
         public void OnQuitFight()
         {
-            SceneController.Instance.LoadLocation(GameController.CurrentLocation);
+            SceneController.Instance.LoadLocation(SceneController.Instance.lastLocation);
             SceneController.Instance.LoadGameModeAsync(GameMode.Exploration);
         }
 

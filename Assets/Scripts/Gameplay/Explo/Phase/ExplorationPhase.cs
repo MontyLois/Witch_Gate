@@ -83,7 +83,7 @@ namespace WitchGate.Gameplay.Explo.Phase
         public async Awaitable ReturnToTheShopAndSkipToNextDay()
         {
             GameController.ChangeContext(EncounterContext.FromCityToVinylShop);
-            await SceneController.Instance.UnloadLocationScene();
+            await SceneController.Instance.LoadLocation(Location.Shop);
             await SceneController.Instance.LoadGameMode(GameMode.VisualNovel);
             GameController.ChangeDay();
             SetReady();

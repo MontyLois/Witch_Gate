@@ -18,7 +18,6 @@ namespace WitchGate.Gameplay
         {
             if (ExplorationGameplayController.phase is null)
             {
-                GameController.ChangeLocation(location);
                 ExplorationGameplayController.StartPhase(location);
             }
         }
@@ -33,7 +32,10 @@ namespace WitchGate.Gameplay
             PlayerManager.Instance.Body.setCanMove(true);
         }
 
-        
+        public void ReturnToTheShop()
+        {
+            ExplorationGameplayController.phase.ReturnToTheShopAndSkipToNextDay();
+        }
 
     }
 }
