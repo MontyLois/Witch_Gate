@@ -15,8 +15,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 18.863037
-    y: 34.733315
+    x: -4637.133
+    y: 251.53323
     width: 200
     height: 300
   IsDragging: 1
@@ -51,8 +51,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 2140.462
-    y: 41.933235
+    x: -2515.5405
+    y: 258.73312
     width: 200
     height: 300
   IsDragging: 1
@@ -87,8 +87,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 5356.464
-    y: -35.66668
+    x: 700.4646
+    y: 181.13322
     width: 200
     height: 300
   IsDragging: 1
@@ -123,8 +123,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 3644.4531
-    y: -26.066765
+    x: -1011.54626
+    y: 190.73314
     width: 200
     height: 300
   IsDragging: 0
@@ -159,8 +159,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -962.33276
-    y: 3.0000458
+    x: -5511.12
+    y: 237.39996
     width: 190
     height: 135
   IsDragging: 1
@@ -189,16 +189,16 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -480.34155
-    y: 250.73364
+    x: -5113.9365
+    y: 466.73367
     width: 190
     height: 135
   IsDragging: 1
   IsSelected: 0
   automaticSkip: 0
   Answers:
-  - Salut !
-  - Sup...
+  - "\xCAtre acceuillante"
+  - "\xCAtre informelle"
   AnswerKeys: []
   ParentNodes:
   - {fileID: -5649971758605191825}
@@ -222,8 +222,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -1865.1372
-    y: 153.93369
+    x: -6521.128
+    y: 370.7336
     width: 200
     height: 300
   IsDragging: 1
@@ -258,8 +258,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 222.86255
-    y: 357.13544
+    x: -4433.1357
+    y: 573.93555
     width: 200
     height: 300
   IsDragging: 1
@@ -280,6 +280,42 @@ MonoBehaviour:
   CharacterNameKey: 
   SentenceTextKey: 
   hasInitialized: 1
+--- !u!114 &-7451674647579756612
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: DialogNodeBaseSystem::cherrydev.SentenceNode
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: -3823.1978
+    y: 435.59995
+    width: 200
+    height: 300
+  IsDragging: 1
+  IsSelected: 0
+  automaticSkip: 0
+  ChildNode: {fileID: -4248536558554561293}
+  _sentence:
+    CharacterName: 
+    Text: Ouais, pas d'album de Tessa en vue..
+    CharacterSprite: {fileID: 0}
+    CharacterData: {fileID: 0}
+    expression: 0
+  ParentNodes:
+  - {fileID: -6691612808215445188}
+  _isExternalFunc: 0
+  _externalFunctionName: 
+  CharacterNameKey: 
+  SentenceTextKey: 
+  hasInitialized: 1
 --- !u!114 &-7114812368025924058
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -295,8 +331,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -1669.1389
-    y: 153.93369
+    x: -6325.129
+    y: 370.7336
     width: 200
     height: 300
   IsDragging: 1
@@ -332,14 +368,14 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 698.86206
-    y: 225.93372
+    x: -4027.5352
+    y: 435.53372
     width: 200
     height: 300
   IsDragging: 1
   IsSelected: 0
   automaticSkip: 0
-  ChildNode: {fileID: 9213921289228837570}
+  ChildNode: {fileID: -7451674647579756612}
   _sentence:
     CharacterName: 
     Text: "Je me souviens pas de l'avoir vu r\xE9cemment... Je vais v\xE9rifier \xE7a...
@@ -370,8 +406,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -937.1428
-    y: 301.9339
+    x: -5539.5312
+    y: 595.53394
     width: 190
     height: 135
   IsDragging: 1
@@ -400,8 +436,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -206.73755
-    y: 148.33316
+    x: -4862.7334
+    y: 365.1331
     width: 190
     height: 135
   IsDragging: 1
@@ -430,8 +466,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 4548.458
-    y: 417.9348
+    x: -107.54071
+    y: 634.73486
     width: 190
     height: 135
   IsDragging: 1
@@ -460,8 +496,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 1343.6587
-    y: 410.7353
+    x: -3150.7422
+    y: 609.1355
     width: 200
     height: 300
   IsDragging: 1
@@ -496,8 +532,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 2969.2554
-    y: -26.066765
+    x: -1686.7444
+    y: 190.73314
     width: 200
     height: 300
   IsDragging: 1
@@ -532,8 +568,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -750.73926
-    y: 153.13333
+    x: -5333.133
+    y: 378.7333
     width: 200
     height: 300
   IsDragging: 1
@@ -568,8 +604,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 1581.2593
-    y: 412.3355
+    x: -2914.7422
+    y: 609.13574
     width: 200
     height: 300
   IsDragging: 1
@@ -604,8 +640,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -2286.9458
-    y: 138.33374
+    x: -6942.9365
+    y: 355.1337
     width: 200
     height: 300
   IsDragging: 1
@@ -641,8 +677,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 1347.6577
-    y: 37.933266
+    x: -3308.3423
+    y: 254.73318
     width: 200
     height: 300
   IsDragging: 1
@@ -656,7 +692,7 @@ MonoBehaviour:
     CharacterData: {fileID: 11400000, guid: e5c897c26a297814f9bd24ce66295ca9, type: 2}
     expression: 1
   ParentNodes:
-  - {fileID: 5908129000967714007}
+  - {fileID: -4248536558554561293}
   _isExternalFunc: 0
   _externalFunctionName: 
   CharacterNameKey: 
@@ -677,8 +713,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -2068.3345
-    y: 220.33337
+    x: -6724.323
+    y: 437.1334
     width: 190
     height: 135
   IsDragging: 1
@@ -707,8 +743,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -1268.3408
-    y: 153.93338
+    x: -5924.33
+    y: 370.7333
     width: 200
     height: 300
   IsDragging: 1
@@ -729,6 +765,39 @@ MonoBehaviour:
   CharacterNameKey: 
   SentenceTextKey: 
   hasInitialized: 1
+--- !u!114 &-4248536558554561293
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1717f3c6dba9fa40844ddacac301510, type: 3}
+  m_Name: Answer Node
+  m_EditorClassIdentifier: DialogNodeBaseSystem::cherrydev.AnswerNode
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: -3604.7983
+    y: 447.59995
+    width: 190
+    height: 135
+  IsDragging: 1
+  IsSelected: 0
+  automaticSkip: 0
+  Answers:
+  - "D\xE9sol\xE9e ma belle..."
+  - Tant pis pour toi
+  AnswerKeys: []
+  ParentNodes:
+  - {fileID: -7451674647579756612}
+  ChildNodes:
+  - {fileID: -4709500418839186658}
+  - {fileID: -3095409471996047215}
+  nextNodeIndex: 0
+  hasInitialized: 1
 --- !u!114 &-3342736730826568719
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -744,8 +813,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 440.4602
-    y: 206.73322
+    x: -4215.538
+    y: 423.53323
     width: 190
     height: 135
   IsDragging: 1
@@ -774,8 +843,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 1130.0593
-    y: 406.73547
+    x: -3351.539
+    y: 605.93567
     width: 200
     height: 300
   IsDragging: 1
@@ -789,7 +858,7 @@ MonoBehaviour:
     CharacterData: {fileID: 11400000, guid: e5c897c26a297814f9bd24ce66295ca9, type: 2}
     expression: 2
   ParentNodes:
-  - {fileID: 9213921289228837570}
+  - {fileID: -4248536558554561293}
   _isExternalFunc: 0
   _externalFunctionName: 
   CharacterNameKey: 
@@ -810,8 +879,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 1946.8643
-    y: 69.93335
+    x: -2709.1382
+    y: 286.73322
     width: 190
     height: 135
   IsDragging: 1
@@ -840,8 +909,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 3220.4546
-    y: 346.73553
+    x: -1435.5461
+    y: 563.5356
     width: 200
     height: 300
   IsDragging: 1
@@ -876,8 +945,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 3861.2563
-    y: -24.466698
+    x: -794.74335
+    y: 192.3332
     width: 200
     height: 300
   IsDragging: 1
@@ -912,8 +981,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 3459.6553
-    y: 345.13556
+    x: -1196.345
+    y: 561.9356
     width: 200
     height: 300
   IsDragging: 1
@@ -928,42 +997,6 @@ MonoBehaviour:
     expression: 0
   ParentNodes:
   - {fileID: -2698759218770637819}
-  _isExternalFunc: 0
-  _externalFunctionName: 
-  CharacterNameKey: 
-  SentenceTextKey: 
-  hasInitialized: 1
---- !u!114 &-1773582129954298848
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
-  m_Name: Sentence Node
-  m_EditorClassIdentifier: DialogNodeBaseSystem::cherrydev.SentenceNode
-  NodeGraph: {fileID: 11400000}
-  Rect:
-    serializedVersion: 2
-    x: 1130.8601
-    y: 37.933266
-    width: 200
-    height: 300
-  IsDragging: 1
-  IsSelected: 0
-  automaticSkip: 0
-  ChildNode: {fileID: -4709500418839186658}
-  _sentence:
-    CharacterName: 
-    Text: "D\xE9sol\xE9e il est carr\xE9ment en rupture de stock ! "
-    CharacterSprite: {fileID: 0}
-    CharacterData: {fileID: 11400000, guid: e5c897c26a297814f9bd24ce66295ca9, type: 2}
-    expression: 0
-  ParentNodes:
-  - {fileID: 9213921289228837570}
   _isExternalFunc: 0
   _externalFunctionName: 
   CharacterNameKey: 
@@ -984,8 +1017,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 2673.2563
-    y: 240.33356
+    x: -1982.7441
+    y: 457.13358
     width: 240
     height: 160
   IsDragging: 1
@@ -994,7 +1027,7 @@ MonoBehaviour:
   _variableName: interactiveChoiceValue
   _conditionType: 0
   _boolTargetValue: 0
-  _intTargetValue: 1
+  _intTargetValue: 2
   _floatTargetValue: 0
   _stringTargetValue: 
   ParentNodes:
@@ -1016,8 +1049,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 4070.8628
-    y: -29.266685
+    x: -585.137
+    y: 187.53322
     width: 200
     height: 300
   IsDragging: 1
@@ -1053,8 +1086,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 5631.675
-    y: 52.333443
+    x: 975.6795
+    y: 269.13336
     width: 190
     height: 135
   IsDragging: 1
@@ -1083,8 +1116,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 4278.061
-    y: -26.866722
+    x: -377.93784
+    y: 189.93318
     width: 200
     height: 300
   IsDragging: 1
@@ -1119,8 +1152,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 4748.465
-    y: 312.33423
+    x: 92.46387
+    y: 529.1342
     width: 200
     height: 300
   IsDragging: 1
@@ -1155,8 +1188,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 2449.2593
-    y: 341.13464
+    x: -2206.7432
+    y: 557.9345
     width: 190
     height: 80
   IsDragging: 1
@@ -1195,7 +1228,6 @@ MonoBehaviour:
   - {fileID: 3979867950755898032}
   - {fileID: -7883886808549964137}
   - {fileID: -6691612808215445188}
-  - {fileID: 9213921289228837570}
   - {fileID: -3095409471996047215}
   - {fileID: -4709500418839186658}
   - {fileID: 2741206623399793745}
@@ -1237,6 +1269,8 @@ MonoBehaviour:
   - {fileID: -2853575278235574985}
   - {fileID: -4706995809431313432}
   - {fileID: -8110296846523906499}
+  - {fileID: -7451674647579756612}
+  - {fileID: -4248536558554561293}
   VariablesConfig: {fileID: 11400000, guid: be7857d1de2bf534fa9cb6e533ad0217, type: 2}
   _localizationTableName: 
   _characterNamesLocalizationName: 
@@ -1258,8 +1292,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 4345.265
-    y: 413.9355
+    x: -310.73386
+    y: 630.7356
     width: 190
     height: 135
   IsDragging: 1
@@ -1288,8 +1322,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 4135.662
-    y: 334.73517
+    x: -520.33673
+    y: 551.5351
     width: 200
     height: 300
   IsDragging: 1
@@ -1324,8 +1358,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 3917.2612
-    y: 334.73517
+    x: -738.7387
+    y: 551.5351
     width: 200
     height: 300
   IsDragging: 1
@@ -1360,8 +1394,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 4498.8657
-    y: -25.266777
+    x: -157.13351
+    y: 191.53313
     width: 200
     height: 300
   IsDragging: 1
@@ -1397,8 +1431,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 1545.2598
-    y: 36.33329
+    x: -3110.7412
+    y: 253.13321
     width: 200
     height: 300
   IsDragging: 1
@@ -1434,8 +1468,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 3210.0552
-    y: -22.866722
+    x: -1445.9456
+    y: 193.93318
     width: 200
     height: 300
   IsDragging: 0
@@ -1471,8 +1505,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 218.06323
-    y: 39.533363
+    x: -4437.9355
+    y: 256.33328
     width: 200
     height: 300
   IsDragging: 1
@@ -1507,8 +1541,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -1063.5422
-    y: 149.13364
+    x: -5719.5312
+    y: 365.93356
     width: 190
     height: 135
   IsDragging: 1
@@ -1537,8 +1571,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -2512.3457
-    y: 229.93372
+    x: -7168.336
+    y: 446.73373
     width: 190
     height: 135
   IsDragging: 1
@@ -1567,11 +1601,11 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 1806.8623
-    y: 411.53522
+    x: -2697.9404
+    y: 616.33545
     width: 200
     height: 300
-  IsDragging: 0
+  IsDragging: 1
   IsSelected: 0
   automaticSkip: 0
   ChildNode: {fileID: -323201491785937535}
@@ -1584,42 +1618,6 @@ MonoBehaviour:
     expression: 0
   ParentNodes:
   - {fileID: -5111695931918977643}
-  _isExternalFunc: 0
-  _externalFunctionName: 
-  CharacterNameKey: 
-  SentenceTextKey: 
-  hasInitialized: 1
---- !u!114 &5908129000967714007
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
-  m_Name: Sentence Node
-  m_EditorClassIdentifier: DialogNodeBaseSystem::cherrydev.SentenceNode
-  NodeGraph: {fileID: 11400000}
-  Rect:
-    serializedVersion: 2
-    x: 286.40045
-    y: 55.600037
-    width: 200
-    height: 300
-  IsDragging: 1
-  IsSelected: 0
-  automaticSkip: 0
-  ChildNode: {fileID: -4709500418839186658}
-  _sentence:
-    CharacterName: 
-    Text: "D\xE9sol\xE9e, il est carr\xE9ment en rupture de stock !"
-    CharacterSprite: {fileID: 0}
-    CharacterData: {fileID: 11400000, guid: e5c897c26a297814f9bd24ce66295ca9, type: 2}
-    expression: 0
-  ParentNodes:
-  - {fileID: 9213921289228837570}
   _isExternalFunc: 0
   _externalFunctionName: 
   CharacterNameKey: 
@@ -1640,8 +1638,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 4943.6655
-    y: 68.33325
+    x: 287.66504
+    y: 285.13312
     width: 190
     height: 135
   IsDragging: 1
@@ -1670,8 +1668,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 4722.8633
-    y: -30.066673
+    x: 66.862305
+    y: 186.73323
     width: 200
     height: 300
   IsDragging: 1
@@ -1706,8 +1704,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 22.062256
-    y: 360.33514
+    x: -4633.9336
+    y: 577.13525
     width: 200
     height: 300
   IsDragging: 1
@@ -1742,8 +1740,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -2740.3394
-    y: 232.33386
+    x: -7396.33
+    y: 449.13388
     width: 190
     height: 135
   IsDragging: 1
@@ -1771,8 +1769,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 5146.0605
-    y: 71.53339
+    x: 490.06018
+    y: 288.33325
     width: 190
     height: 135
   IsDragging: 1
@@ -1801,8 +1799,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -1472.3374
-    y: 154.73355
+    x: -6128.327
+    y: 371.53348
     width: 200
     height: 300
   IsDragging: 1
@@ -1837,8 +1835,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -183.53247
-    y: 378.73413
+    x: -4839.5283
+    y: 595.53406
     width: 190
     height: 135
   IsDragging: 1
@@ -1867,8 +1865,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 1747.6606
-    y: 29.933296
+    x: -2909.142
+    y: 247.53319
     width: 200
     height: 300
   IsDragging: 1
@@ -1878,7 +1876,7 @@ MonoBehaviour:
   _sentence:
     CharacterName: 
     Text: "Je veux bien essayer quelque chose de nouveau tant que \xE7a reste<bounce><color=\"purple\">
-      calme... </color>"
+      calme et r\xE9confortant... </color>"
     CharacterSprite: {fileID: 0}
     CharacterData: {fileID: 11400000, guid: 4f59aac53de14b04ebea0ad618a25c9f, type: 2}
     expression: 1
@@ -1904,8 +1902,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 3699.6548
-    y: 341.1352
+    x: -956.34564
+    y: 557.9351
     width: 200
     height: 300
   IsDragging: 1
@@ -1941,8 +1939,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 3425.2544
-    y: -25.266777
+    x: -1230.7456
+    y: 191.53313
     width: 200
     height: 300
   IsDragging: 0
@@ -1977,8 +1975,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 2975.6553
-    y: 340.33502
+    x: -1680.345
+    y: 557.13495
     width: 200
     height: 300
   IsDragging: 1
@@ -2013,8 +2011,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 5014.8613
-    y: 420.33478
+    x: 358.86194
+    y: 637.135
     width: 190
     height: 135
   IsDragging: 1
@@ -2028,36 +2026,3 @@ MonoBehaviour:
     slotName: 0
   ParentNodes:
   - {fileID: -576304989451155242}
---- !u!114 &9213921289228837570
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e1717f3c6dba9fa40844ddacac301510, type: 3}
-  m_Name: Answer Node
-  m_EditorClassIdentifier: DialogNodeBaseSystem::cherrydev.AnswerNode
-  NodeGraph: {fileID: 11400000}
-  Rect:
-    serializedVersion: 2
-    x: 911.66235
-    y: 267.53375
-    width: 190
-    height: 135
-  IsDragging: 1
-  IsSelected: 0
-  automaticSkip: 0
-  Answers:
-  - "Ah... D\xE9sol\xE9e..."
-  - "Non d\xE9so."
-  AnswerKeys: []
-  ParentNodes:
-  - {fileID: -6691612808215445188}
-  ChildNodes:
-  - {fileID: 5908129000967714007}
-  - {fileID: -3095409471996047215}
-  nextNodeIndex: 0
-  hasInitialized: 1
