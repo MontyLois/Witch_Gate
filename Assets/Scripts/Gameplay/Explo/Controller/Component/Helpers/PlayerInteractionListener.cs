@@ -1,6 +1,6 @@
 using System;
 
-namespace WitchGate.Gameplay.Controller.Component
+namespace WitchGate.Gameplay.Explo.Controller.Component.Helpers
 {
     public class PlayerInteractionListener
     {

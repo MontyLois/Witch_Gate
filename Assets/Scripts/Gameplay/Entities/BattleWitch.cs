@@ -3,14 +3,11 @@ using Helteix.Cards;
 using Helteix.Cards.Collections;
 using UnityEngine;
 using UnityEngine.Pool;
-using WitchGate.Cards;
 using WitchGate.Controllers;
-using WitchGate.Gameplay.Battles.Entities;
 using WitchGate.Gameplay.Cards;
-using WitchGate.Gameplay.Entities;
-using WitchGate.Players;
+using WitchGate.Profiles;
 
-namespace WitchGate.Gameplay.Battles
+namespace WitchGate.Gameplay.Entities
 {
     public class BattleWitch : BattleEntity
     {

@@ -1,6 +1,7 @@
 using cherrydev;
 using UnityEngine;
-using WitchGate.Mission.Data;
+using WitchGate.Mission.Plannings.Data.PlanningCondition;
+using WitchGate.Mission.Plannings.Data.PlanningFormulas;
 
 namespace WitchGate.Mission.Plannings.Data
 {

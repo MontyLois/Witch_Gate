@@ -1,17 +1,13 @@
-using System;
-using System.Threading.Tasks;
 using Helteix.Cards.UI.Physical;
 using Helteix.Cards.UI.Physical.Components;
-using UnityEngine;
-using UnityEngine.UI;
-using WitchGate.Gameplay.Cards;
 using TMPro;
+using UnityEngine;
 using UnityEngine.EventSystems;
-using WitchGate.Cards;
-using WitchGate.Gameplay.Cards.UI;
+using UnityEngine.UI;
+using WitchGate.Cards.UI;
 using WitchGate.Utilities;
 
-namespace WitchGate.Gameplay
+namespace WitchGate.Gameplay.Cards.UI
 {
     public class WitchGameCardUI : CardUI<IGameCard>, ICardAnimator, ICardPointerHoverHandler
     {

@@ -1,8 +1,8 @@
 using cherrydev;
 using UnityEngine;
-using WitchGate.Controllers;
+using WitchGate.ScenesManagement.Scenes;
 
-namespace WitchGate.Mission.Data
+namespace WitchGate.Mission.ExplorationEncounters.Data
 {
     [CreateAssetMenu(fileName = "ExplorationEncounterContextualizedData", menuName = "WitchGate/Characters/ExplorationEncounter", order = 0)]
     public class ExplorationEncounterContextualizedData : ScriptableObject

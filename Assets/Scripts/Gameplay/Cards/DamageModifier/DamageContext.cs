@@ -1,6 +1,6 @@
-using WitchGate.Gameplay.Battles.Entities.Interface;
+using WitchGate.Gameplay.Entities.Interface;
 
-namespace WitchGate.Gameplay.Battles.Entities
+namespace WitchGate.Gameplay.Cards.DamageModifier
 {
     public class DamageContext
     {

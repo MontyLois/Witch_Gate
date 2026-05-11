@@ -1,7 +1,7 @@
 using DG.Tweening;
 using UnityEngine;
 
-namespace WitchGate.Gameplay
+namespace WitchGate.Gameplay.Explo
 {
     public class Character_Target : MonoBehaviour
     {

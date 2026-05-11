@@ -3,12 +3,14 @@ using cherrydev;
 using WitchGate.Controllers;
 using UnityEngine;
 using WitchGate.Cards;
-using WitchGate.Controllers.LocationLayouts;
-using WitchGate.Gameplay.Entities;
 using WitchGate.Mission;
-using WitchGate.Mission.Data;
+using WitchGate.Mission.Dialogs.Data;
+using WitchGate.Mission.ExplorationEncounters.Data;
 using WitchGate.Mission.Plannings.Data;
-using WitchGate.Players;
+using WitchGate.Profiles;
+using WitchGate.Profiles.Data;
+using WitchGate.ScenesManagement.GameModeLayouts;
+using WitchGate.ScenesManagement.LocationLayouts;
 
 namespace WitchGate
 {

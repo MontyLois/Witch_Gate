@@ -1,7 +1,7 @@
-using System.Collections.Generic;
 using UnityEngine;
+using WitchGate.ScenesManagement.Scenes;
 
-namespace WitchGate.Controllers
+namespace WitchGate.ScenesManagement.GameModeLayouts
 {
     [CreateAssetMenu(fileName = "newGameModeLayout", menuName = "WitchGate/SceneManagement/GameModeLayout", order = 0)]
     public class GameModeLayoutData : ScriptableObject

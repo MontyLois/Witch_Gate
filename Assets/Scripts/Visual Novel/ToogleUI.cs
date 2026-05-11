@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace WitchGate.Prototype
+namespace WitchGate.VisualNovel.Visual_Novel
 {
     public class ToogleUI : MonoBehaviour
     {

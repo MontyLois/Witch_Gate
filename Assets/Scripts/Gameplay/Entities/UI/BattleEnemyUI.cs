@@ -1,8 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
-using WitchGate.Gameplay.Battles.Entities;
 
-namespace WitchGate.Gameplay.Battles.UI
+namespace WitchGate.Gameplay.Entities.UI
 {
     public class BattleEnemyUI : BattleEntityUI
     {

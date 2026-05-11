@@ -1,7 +1,6 @@
-using System;
 using UnityEngine;
 
-namespace WitchGate.Mission.Plannings.Data
+namespace WitchGate.Mission.Plannings.Data.PlanningFormulas
 {
     public abstract class PlanningFormulaData : ScriptableObject
     {

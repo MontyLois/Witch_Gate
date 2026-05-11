@@ -3,10 +3,8 @@ using Helteix.Cards.UI.Physical;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using WitchGate.Controllers;
-using WitchGate.Prototype;
-using WitchGate.VisualNovel.Visual_Novel.Cards.UI;
 
-namespace WitchGate.VisualNovel.Visual_Novel.Cards
+namespace WitchGate.VisualNovel.Visual_Novel.Cards.UI
 {
     public class VNHandUI : PhysicalCardCollectionUI<VNCard>, IPhaseListener<TestimonyPhase>
     {

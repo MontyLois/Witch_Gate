@@ -1,24 +1,11 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using Helteix.Cards;
-using Helteix.Cards.Collections;
-using Helteix.Cards.UI.Physical;
-using Helteix.Cards.UI.Physical.Components;
 using UnityEngine;
 using UnityEngine.EventSystems;
-using UnityEngine.XR;
-using WitchGate.Cards.Collections;
-using WitchGate.Cards.UI;
+using WitchGate.Cards;
 using WitchGate.Controllers;
-using WitchGate.Gameplay;
-using WitchGate.Gameplay.Battles.UI;
-using WitchGate.Gameplay.Cards;
-using WitchGate.Gameplay.Cards.Effects;
 using WitchGate.Gameplay.Cards.UI;
-using WitchGate.Players;
+using WitchGate.Profiles;
 
-namespace WitchGate.Cards
+namespace WitchGate.Gameplay.Cards.DeckImprovement
 {
     public abstract class DeckImprovement : MonoBehaviour, IDeckImprovement<CardProfile>,
         IPointerEnterHandler, IPointerExitHandler

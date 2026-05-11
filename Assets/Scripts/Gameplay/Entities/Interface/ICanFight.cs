@@ -1,6 +1,7 @@
 using System.Collections.Generic;
+using WitchGate.Gameplay.Cards.DamageModifier;
 
-namespace WitchGate.Gameplay.Battles.Entities.Interface
+namespace WitchGate.Gameplay.Entities.Interface
 {
     public interface ICanFight
     {

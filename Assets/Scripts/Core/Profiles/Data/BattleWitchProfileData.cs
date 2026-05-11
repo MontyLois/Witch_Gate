@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace WitchGate.Gameplay.Entities
+namespace WitchGate.Profiles.Data
 {
     [CreateAssetMenu(fileName = "BattleWitchProfile", menuName = "WitchGate/Decks/Profiles/BattleWitchProfile", order = 0)]
     public class BattleWitchProfileData : BattleProfile

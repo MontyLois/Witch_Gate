@@ -1,10 +1,10 @@
 using System;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using WitchGate.Prototype;
+using WitchGate.Gameplay.Explo.Controller.Component;
+using WitchGate.Gameplay.Explo.NightEvent;
 
-namespace WitchGate.Gameplay.Controller
+namespace WitchGate.Gameplay.Explo.Controller
 {
     [DefaultExecutionOrder(100)]
     public class PlayerBody : PlayerComponent

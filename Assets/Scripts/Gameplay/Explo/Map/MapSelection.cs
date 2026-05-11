@@ -2,6 +2,7 @@ using UnityEngine;
 using WitchGate.Controllers;
 using WitchGate.Gameplay.Explo.Phase;
 using WitchGate.Mission;
+using WitchGate.ScenesManagement;
 
 namespace WitchGate.Gameplay.Explo.Map
 {

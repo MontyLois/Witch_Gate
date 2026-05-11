@@ -1,13 +1,8 @@
 using System.Linq;
-using Helteix.Cards.UI.Physical;
-using Helteix.Cards.UI.Physical.Components;
-using UnityEngine;
 using UnityEngine.EventSystems;
-using WitchGate.Cards.UI;
-using WitchGate.Controllers;
-using WitchGate.Players;
+using WitchGate.Cards;
 
-namespace WitchGate.Cards
+namespace WitchGate.Gameplay.Cards.DeckImprovement
 {
     public class LevelUpCardUpgrade : DeckImprovement
     {

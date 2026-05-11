@@ -1,8 +1,7 @@
-using System;
 using cherrydev;
 using UnityEngine;
 
-namespace WitchGate.Prototype
+namespace WitchGate.Gameplay.Explo.NightEvent
 {
     public class CharacterDialog : MonoBehaviour, IInteractable
     {

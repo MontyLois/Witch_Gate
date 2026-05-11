@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Pool;
 using WitchGate.Controllers;
+using WitchGate.Gameplay.Battles.Actions.Interface;
 using WitchGate.Gameplay.Battles.Timelines;
 
 namespace WitchGate.Gameplay.Battles.TurnPhases

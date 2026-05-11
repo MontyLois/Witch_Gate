@@ -1,7 +1,7 @@
 using UnityEngine;
-using WitchGate.Controllers;
+using WitchGate.ScenesManagement;
 
-namespace WitchGate
+namespace WitchGate.Menu
 {
     public class MenuManager : MonoBehaviour
     {

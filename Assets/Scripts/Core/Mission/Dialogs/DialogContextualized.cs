@@ -1,6 +1,7 @@
 using cherrydev;
 using UnityEngine;
 using WitchGate.Controllers;
+using WitchGate.Mission.Dialogs.Data;
 
 namespace WitchGate.Mission.Dialogs
 {

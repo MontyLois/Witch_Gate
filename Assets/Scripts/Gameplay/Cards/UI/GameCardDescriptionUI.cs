@@ -1,13 +1,9 @@
-using System;
-using Helteix.Cards;
-using Helteix.Cards.UI.Physical;
 using Helteix.Cards.UI.Physical.Components;
 using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
-using WitchGate.Cards;
 
-namespace WitchGate
+namespace WitchGate.Gameplay.Cards.UI
 {
     public class GameCardDescriptionUI : CardUIComponent<IGameCard>, ICardPointerHoverHandler
     {

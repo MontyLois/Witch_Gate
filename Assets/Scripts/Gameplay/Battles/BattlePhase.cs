@@ -8,12 +8,12 @@ using UnityEngine.Pool;
 using UnityEngine.SceneManagement;
 using WitchGate.Cards;
 using WitchGate.Controllers;
-using WitchGate.Gameplay.Battles.Entities;
-using WitchGate.Gameplay.Battles.Entities.Interface;
 using WitchGate.Gameplay.Battles.Timelines;
 using WitchGate.Gameplay.Battles.TurnPhases;
 using WitchGate.Gameplay.Cards;
-using WitchGate.Players;
+using WitchGate.Gameplay.Entities;
+using WitchGate.Gameplay.Entities.Interface;
+using WitchGate.ScenesManagement;
 
 namespace WitchGate.Gameplay.Battles
 {

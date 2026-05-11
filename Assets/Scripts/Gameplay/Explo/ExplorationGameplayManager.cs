@@ -1,11 +1,8 @@
-using System;
 using Helteix.Singletons.MonoSingletons;
 using UnityEngine;
-using UnityEngine.Serialization;
-using WitchGate.Controllers;
-using WitchGate.Gameplay.Controller;
+using WitchGate.Gameplay.Explo.Controller;
 
-namespace WitchGate.Gameplay
+namespace WitchGate.Gameplay.Explo
 {
     public class ExplorationGameplayManager : MonoSingleton<ExplorationGameplayManager>
     {

@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using Helteix.Tools.UI;
 using UnityEngine.Pool;
+using WitchGate.Gameplay.Battles.Actions.Interface;
 using WitchGate.Gameplay.Battles.TurnPhases;
 
 namespace WitchGate.Gameplay.Battles.Timelines

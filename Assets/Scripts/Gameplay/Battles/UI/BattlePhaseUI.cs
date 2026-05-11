@@ -2,7 +2,9 @@ using System;
 using UnityEngine;
 using UnityEngine.UI;
 using WitchGate.Controllers;
-using WitchGate.Gameplay.Battles.Entities;
+using WitchGate.Gameplay.Entities.UI;
+using WitchGate.Gameplay.Explo;
+using WitchGate.ScenesManagement;
 
 namespace WitchGate.Gameplay.Battles.UI
 {

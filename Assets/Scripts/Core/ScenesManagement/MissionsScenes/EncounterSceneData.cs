@@ -1,7 +1,8 @@
 using cherrydev;
 using UnityEngine;
+using WitchGate.ScenesManagement.Scenes;
 
-namespace WitchGate.Controllers
+namespace WitchGate.ScenesManagement.MissionsScenes
 {
     [CreateAssetMenu(fileName = "newEncounter", menuName = "WitchGate/SceneManagement/Encounter", order = 0)]
     public class EncounterSceneData : ScriptableObject

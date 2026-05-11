@@ -4,12 +4,10 @@ using Helteix.Cards.UI.Physical;
 using Helteix.Cards.UI.Physical.Drag;
 using UnityEngine;
 using UnityEngine.EventSystems;
-using WitchGate.Cards;
 using WitchGate.Controllers;
-using WitchGate.Gameplay.Battles.TurnPhases;
-using WitchGate.Gameplay.Cards;
+using WitchGate.Gameplay.Battles;
 
-namespace WitchGate.Gameplay.Battles.UI
+namespace WitchGate.Gameplay.Cards.UI
 {
     public class WitchPlayedHandUI : PhysicalCardCollectionUI<IGameCard>, 
         IPhaseListener<BattlePhase>,

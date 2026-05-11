@@ -1,6 +1,7 @@
 using UnityEngine;
+using WitchGate.ScenesManagement.Scenes;
 
-namespace WitchGate.Controllers.LocationLayouts
+namespace WitchGate.ScenesManagement.LocationLayouts
 {
     [CreateAssetMenu(fileName = "newLocationLayoutData", menuName = "WitchGate/SceneManagement/LocationLayout", order = 0)]
     public class LocationLayoutData : ScriptableObject

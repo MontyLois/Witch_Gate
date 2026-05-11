@@ -1,13 +1,9 @@
-using System;
 using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
 using WitchGate.Cards;
-using WitchGate.Cards.UI;
-using WitchGate.Players;
-using WitchGate.Prototype;
+using WitchGate.Gameplay.Cards.DeckImprovement;
 
-namespace WitchGate.Gameplay
+namespace WitchGate.Gameplay.Explo.NightEvent.ShuShop
 {
     public class DeckAugments : CharacterDialog
     {

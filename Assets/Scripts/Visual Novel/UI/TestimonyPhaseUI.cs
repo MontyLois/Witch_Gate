@@ -2,7 +2,7 @@ using UnityEngine;
 using WitchGate.Controllers;
 using WitchGate.VisualNovel.Visual_Novel.Cards.UI;
 
-namespace WitchGate.Prototype.UI
+namespace WitchGate.VisualNovel.Visual_Novel.UI
 {
     public class TestimonyPhaseUI : MonoPhaseListener<TestimonyPhase>
     {

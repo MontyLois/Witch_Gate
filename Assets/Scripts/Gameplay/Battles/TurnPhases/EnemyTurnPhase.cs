@@ -2,7 +2,9 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using Helteix.Cards;
 using UnityEngine;
-using WitchGate.Gameplay.Battles.Entities;
+using WitchGate.Gameplay.Battles.Actions;
+using WitchGate.Gameplay.Battles.Actions.Interface;
+using WitchGate.Gameplay.Entities;
 
 namespace WitchGate.Gameplay.Battles.TurnPhases
 {

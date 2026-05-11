@@ -3,6 +3,8 @@ using cherrydev;
 using UnityEngine;
 using WitchGate.Controllers;
 using WitchGate.Mission;
+using WitchGate.Mission.ExplorationEncounters;
+using WitchGate.ScenesManagement;
 
 namespace WitchGate.Gameplay.Explo.Phase
 {

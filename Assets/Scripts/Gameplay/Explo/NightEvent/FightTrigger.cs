@@ -1,16 +1,10 @@
-using System;
 using System.Collections;
 using UnityEngine;
-using UnityEngine.SceneManagement;
-using WitchGate.Controllers;
-using WitchGate.Gameplay;
 using WitchGate.Gameplay.Battles;
-using WitchGate.Gameplay.Battles.Entities;
-using WitchGate.Gameplay.Controller;
 using WitchGate.Gameplay.Entities;
-using WitchGate.Players;
+using WitchGate.Profiles.Data;
 
-namespace WitchGate.Prototype
+namespace WitchGate.Gameplay.Explo.NightEvent
 {
     public class FightTrigger : MonoBehaviour
     {

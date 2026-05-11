@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 using UnityEngine;
 using WitchGate.Cards;
 using WitchGate.Controllers;
-using WitchGate.Gameplay.Battles.Entities.Interface;
+using WitchGate.Gameplay.Battles.Actions;
 using WitchGate.Gameplay.Cards;
 
 namespace WitchGate.Gameplay.Battles.TurnPhases

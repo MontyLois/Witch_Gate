@@ -5,9 +5,8 @@ using UnityEditor.UIElements;
 using UnityEngine;
 using UnityEngine.UIElements;
 using WitchGate.Cards;
-using WitchGate.Players;
 
-namespace WitchGate.Editor
+namespace WitchGate.Editor.Editor
 {
     [CustomPropertyDrawer(typeof(CardProfile))]
     public class CardProfileDrawer : PropertyDrawer

@@ -1,10 +1,8 @@
-using System;
 using Unity.Cinemachine;
 using UnityEngine;
 using UnityEngine.Playables;
 
-
-namespace WitchGate.Prototype
+namespace WitchGate.Gameplay.Explo.NightEvent
 {
     public class TrackInteraction : MonoBehaviour, IInteractable
     {

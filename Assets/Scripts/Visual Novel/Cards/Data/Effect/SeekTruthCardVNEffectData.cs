@@ -1,7 +1,7 @@
 using TMPro;
 using UnityEngine;
 
-namespace WitchGate.Gameplay.Cards.Effects
+namespace WitchGate.VisualNovel.Visual_Novel.Cards.Data.Effect
 {
     [CreateAssetMenu(fileName = "NewSeekTruthEffect", menuName = "WitchGate/Decks/Cards/Effects/VN/SeekTruth", order = 0)]
     public class SeekTruthCardVNEffectData : CardVNEffectData

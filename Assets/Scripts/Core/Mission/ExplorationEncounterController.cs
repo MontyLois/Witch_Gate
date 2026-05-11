@@ -2,7 +2,9 @@ using System;
 using System.Collections.Generic;
 using cherrydev;
 using WitchGate.Controllers;
-using WitchGate.Mission.Data;
+using WitchGate.Mission.ExplorationEncounters;
+using WitchGate.Mission.ExplorationEncounters.Data;
+using WitchGate.ScenesManagement.Scenes;
 
 namespace WitchGate.Mission
 {

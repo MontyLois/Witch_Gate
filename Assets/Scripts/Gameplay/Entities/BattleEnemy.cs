@@ -4,13 +4,12 @@ using Helteix.Cards;
 using Helteix.Cards.Collections;
 using UnityEngine;
 using UnityEngine.Pool;
-using WitchGate.Cards;
 using WitchGate.Gameplay.Cards;
-using WitchGate.Gameplay.Entities;
-using WitchGate.Players;
+using WitchGate.Gameplay.Entities.Interface;
+using WitchGate.Profiles.Data;
 using Random = UnityEngine.Random;
 
-namespace WitchGate.Gameplay.Battles.Entities
+namespace WitchGate.Gameplay.Entities
 {
     public class BattleEnemy : BattleEntity, IBattleEnemy
     {

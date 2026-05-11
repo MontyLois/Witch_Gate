@@ -1,7 +1,6 @@
 using UnityEngine;
-using UnityEngine.EventSystems;
 
-namespace WitchGate.Prototype
+namespace WitchGate.Prototype.Prototype.Shop
 {
     public class DeckUI : MonoBehaviour
     {

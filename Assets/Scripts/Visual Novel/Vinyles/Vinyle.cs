@@ -1,11 +1,10 @@
 using System;
 using UnityEngine;
 using UnityEngine.EventSystems;
-using WitchGate.Prototype.Enums;
 using WitchGate.Sound;
 using WitchGate.VisualNovel.Visual_Novel.Enums;
 
-namespace WitchGate.Prototype.Vinyles
+namespace WitchGate.VisualNovel.Visual_Novel.Vinyles
 {
     public class Vinyle : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     {

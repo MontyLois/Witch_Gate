@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using cherrydev;
 using UnityEngine;
 
-namespace WitchGate.Mission
+namespace WitchGate.Mission.Dialogs.Data
 {
     [CreateAssetMenu(fileName = "DialogContextualized", menuName = "WitchGate/Mission/DialogContextualized", order = 0)]
     public class DialogContextualizedData : ScriptableObject

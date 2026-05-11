@@ -1,7 +1,8 @@
 using System;
 using UnityEngine;
+using WitchGate.Cards;
 
-namespace WitchGate.Players
+namespace WitchGate.Profiles
 {
     [Serializable]
     public struct EnemyProfile

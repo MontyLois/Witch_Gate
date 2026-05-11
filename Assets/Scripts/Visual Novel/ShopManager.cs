@@ -1,18 +1,14 @@
-using System;
-using System.Collections;
 using System.Collections.Generic;
 using cherrydev;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using WitchGate.Controllers;
-using Helteix.Singletons.MonoSingletons;
-using UnityEngine.EventSystems;
+using WitchGate.Mission;
 using WitchGate.Mission.Dialogs;
 using WitchGate.Mission.Plannings;
-using WitchGate.Prototype.Vinyles;
 using WitchGate.VisualNovel.Visual_Novel.Cards.UI;
+using WitchGate.VisualNovel.Visual_Novel.Vinyles;
 
-namespace WitchGate.Prototype
+namespace WitchGate.VisualNovel.Visual_Novel
 {
     public class ShopManager : MonoBehaviour
     {

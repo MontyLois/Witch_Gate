@@ -1,6 +1,4 @@
 using UnityEngine;
-using WitchGate.Gameplay.Battles.Entities;
-using WitchGate.Gameplay.Battles.Entities.Interface;
 
 namespace WitchGate.Gameplay.Cards.DamageModifier
 {

@@ -1,10 +1,9 @@
 using System;
 using System.Collections.Generic;
-using UnityEngine;
 using WitchGate.Cards;
-using WitchGate.Gameplay.Entities;
+using WitchGate.Profiles.Data;
 
-namespace WitchGate.Players
+namespace WitchGate.Profiles
 {
     [Serializable]
     public class PlayerProfile

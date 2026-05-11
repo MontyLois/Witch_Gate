@@ -1,8 +1,8 @@
 using UnityEngine;
-using WitchGate.Gameplay.Controller;
-using WitchGate.Gameplay.Controller.Component;
+using WitchGate.Gameplay.Explo.Controller.Component;
+using WitchGate.Gameplay.Explo.Controller.Component.Helpers;
 
-namespace WitchGate.Prototype
+namespace WitchGate.Gameplay.Explo.NightEvent
 {
     public class InteractionUI : PlayerComponent
     {

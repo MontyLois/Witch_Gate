@@ -1,10 +1,9 @@
 using System;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using WitchGate.Cards;
 
-namespace WitchGate.Gameplay.Cards.Effects
+namespace WitchGate.VisualNovel.Visual_Novel.Cards.Data.Effect
 {
     public abstract class CardVNEffectData : ScriptableObject
     {

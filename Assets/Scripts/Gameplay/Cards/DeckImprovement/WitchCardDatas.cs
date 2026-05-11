@@ -1,6 +1,7 @@
 using UnityEngine;
+using WitchGate.Cards;
 
-namespace WitchGate.Cards
+namespace WitchGate.Gameplay.Cards.DeckImprovement
 {
     [System.Serializable]
     public class WitchCardDatas

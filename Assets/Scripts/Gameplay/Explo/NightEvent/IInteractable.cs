@@ -1,4 +1,4 @@
-namespace WitchGate.Prototype
+namespace WitchGate.Gameplay.Explo.NightEvent
 {
     public interface IInteractable
     {

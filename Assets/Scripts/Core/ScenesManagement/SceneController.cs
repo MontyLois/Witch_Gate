@@ -4,10 +4,13 @@ using Helteix.Singletons.MonoSingletons;
 using UnityEngine;
 using UnityEngine.Pool;
 using UnityEngine.SceneManagement;
-using WitchGate.Controllers.LocationLayouts;
-using WitchGate.Mission.Data;
+using WitchGate.Controllers;
+using WitchGate.Mission.ExplorationEncounters.Data;
+using WitchGate.ScenesManagement.GameModeLayouts;
+using WitchGate.ScenesManagement.LocationLayouts;
+using WitchGate.ScenesManagement.Scenes;
 
-namespace WitchGate.Controllers
+namespace WitchGate.ScenesManagement
 {
     public class SceneController : MonoSingleton<SceneController>
     {

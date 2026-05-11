@@ -1,8 +1,7 @@
 using UnityEditor;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
-namespace WitchGate.Controllers
+namespace WitchGate.ScenesManagement.Scenes
 {
         [CreateAssetMenu(fileName = "NewScene", menuName = "WitchGate/SceneManagement/Scene", order = 0)]
         public class SceneData : ScriptableObject

@@ -1,12 +1,11 @@
 using System;
-using System.Linq;
 using cherrydev;
 using UnityEngine;
 using WitchGate.Cards.Collections;
 using WitchGate.Controllers;
 using WitchGate.VisualNovel.Visual_Novel.Cards;
 
-namespace WitchGate.Prototype
+namespace WitchGate.VisualNovel.Visual_Novel
 {
     public class TestimonyPhase : IPhase
     {

@@ -1,6 +1,6 @@
 using WitchGate.Controllers;
-using WitchGate.Gameplay.Battles.Entities;
 using WitchGate.Gameplay.Entities;
+using WitchGate.Profiles.Data;
 
 namespace WitchGate.Gameplay.Battles
 {

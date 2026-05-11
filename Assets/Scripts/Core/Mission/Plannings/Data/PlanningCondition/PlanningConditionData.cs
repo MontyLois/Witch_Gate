@@ -1,13 +1,12 @@
 using UnityEngine;
-using WitchGate.Mission.Plannings.PlanningsCondition;
 
-namespace WitchGate.Mission.Plannings.Data
+namespace WitchGate.Mission.Plannings.Data.PlanningCondition
 {
     public abstract class PlanningConditionData : ScriptableObject
     {
         protected bool isConditionValid;
         public bool IsConditionValid => isConditionValid;
 
-        public abstract PlanningCondition InitCondition();
+        public abstract PlanningsCondition.PlanningCondition InitCondition();
     }
 }

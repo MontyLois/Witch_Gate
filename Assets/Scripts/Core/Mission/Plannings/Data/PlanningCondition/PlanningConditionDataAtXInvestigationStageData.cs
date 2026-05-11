@@ -1,7 +1,7 @@
 using UnityEngine;
 using WitchGate.Mission.Plannings.PlanningsCondition;
 
-namespace WitchGate.Mission.Plannings.Data
+namespace WitchGate.Mission.Plannings.Data.PlanningCondition
 {
     [CreateAssetMenu(fileName = "PC_AtXInvestigationStage_", menuName = "WitchGate/Planning/PlanningConditions/AtXInvestigationStage", order = 0)]
     public class PlanningConditionDataAtXInvestigationStageData : PlanningConditionData
@@ -9,7 +9,7 @@ namespace WitchGate.Mission.Plannings.Data
         [field: SerializeField]
         public int X { get; private set; }
 
-        public override PlanningCondition InitCondition()
+        public override PlanningsCondition.PlanningCondition InitCondition()
         {
             return new PlanningConditionDataAtXInvestigationStage(X);
         }

@@ -1,11 +1,9 @@
-using System;
 using System.Collections.Generic;
 using UnityEngine;
 using WitchGate.Cards;
-using WitchGate.Gameplay.Entities;
-using Random = System.Random;
+using WitchGate.Profiles.Data;
 
-namespace WitchGate.Players
+namespace WitchGate.Profiles
 {
     public class WitchProfile
     {

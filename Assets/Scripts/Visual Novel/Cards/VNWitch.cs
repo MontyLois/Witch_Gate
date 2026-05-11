@@ -2,7 +2,7 @@ using Helteix.Cards;
 using Helteix.Cards.Collections;
 using UnityEngine;
 using WitchGate.Controllers;
-using WitchGate.Players;
+using WitchGate.Profiles;
 
 namespace WitchGate.VisualNovel.Visual_Novel.Cards
 {

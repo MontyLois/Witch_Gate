@@ -1,7 +1,7 @@
-using System;
 using UnityEngine;
+using WitchGate.Gameplay.Explo.Controller.Component.Helpers;
 
-namespace WitchGate.Gameplay.Controller.Component
+namespace WitchGate.Gameplay.Explo.Controller.Component
 {
     public class PlayerVFXVisiblityHandler : PlayerComponent
     {

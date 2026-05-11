@@ -1,8 +1,7 @@
-using System;
 using Helteix.Singletons.MonoSingletons;
 using UnityEngine;
 
-namespace WitchGate.Gameplay.Controller
+namespace WitchGate.Gameplay.Explo.Controller
 {
     public class PlayerManager : MonoSingleton<PlayerManager>
     {

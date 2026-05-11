@@ -1,9 +1,8 @@
-using System;
 using TMPro;
 using UnityEngine;
 using WitchGate.Cards.Collections;
 
-namespace WitchGate.Gameplay.Cards.UI
+namespace WitchGate.Cards.UI
 {
     public class DescriptionUI : MonoBehaviour
     {

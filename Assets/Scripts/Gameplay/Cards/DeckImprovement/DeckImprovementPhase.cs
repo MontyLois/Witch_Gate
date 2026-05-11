@@ -1,11 +1,9 @@
 using System;
-using Helteix.Cards;
-using Helteix.Cards.UI.Physical;
 using UnityEngine;
+using WitchGate.Cards;
 using WitchGate.Controllers;
-using WitchGate.Players;
 
-namespace WitchGate.Cards
+namespace WitchGate.Gameplay.Cards.DeckImprovement
 {
     public class DeckImprovementPhase : IPhase
     {

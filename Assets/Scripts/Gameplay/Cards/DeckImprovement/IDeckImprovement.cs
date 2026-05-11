@@ -1,9 +1,4 @@
-using Helteix.Cards.UI.Physical.Components;
-using UnityEngine;
-using WitchGate.Cards.UI;
-using WitchGate.Gameplay;
-
-namespace WitchGate.Cards
+namespace WitchGate.Gameplay.Cards.DeckImprovement
 {
     public interface IDeckImprovement
     {

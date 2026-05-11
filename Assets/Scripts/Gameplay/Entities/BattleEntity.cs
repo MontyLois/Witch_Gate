@@ -2,10 +2,10 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Pool;
-using UnityEngine.XR;
-using WitchGate.Gameplay.Battles.Entities.Interface;
+using WitchGate.Gameplay.Cards.DamageModifier;
+using WitchGate.Gameplay.Entities.Interface;
 
-namespace WitchGate.Gameplay.Battles.Entities
+namespace WitchGate.Gameplay.Entities
 {
     public abstract class BattleEntity : ICanFight
     {

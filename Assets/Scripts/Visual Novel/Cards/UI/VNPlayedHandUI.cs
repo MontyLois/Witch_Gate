@@ -3,7 +3,6 @@ using Helteix.Cards.UI.Physical.Drag;
 using TMPro;
 using UnityEngine;
 using WitchGate.Controllers;
-using WitchGate.Prototype;
 
 namespace WitchGate.VisualNovel.Visual_Novel.Cards.UI
 {

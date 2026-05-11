@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-namespace WitchGate.Gameplay
+namespace WitchGate.Gameplay.Explo
 {
     public class Character_Explor_Depth : MonoBehaviour
     {

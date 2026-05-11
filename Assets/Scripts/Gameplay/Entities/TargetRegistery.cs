@@ -1,7 +1,7 @@
 using System.Collections.Generic;
-using WitchGate.Gameplay.Battles.Entities.Interface;
+using WitchGate.Gameplay.Entities.Interface;
 
-namespace WitchGate.Gameplay.Battles.Entities
+namespace WitchGate.Gameplay.Entities
 {
     public static class TargetRegistry
     {

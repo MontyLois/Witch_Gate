@@ -1,7 +1,7 @@
 using System;
 using WitchGate.Cards.Collections;
 
-namespace WitchGate.Gameplay.Cards.UI
+namespace WitchGate.Cards.UI
 {
     public static class UIManager
     {

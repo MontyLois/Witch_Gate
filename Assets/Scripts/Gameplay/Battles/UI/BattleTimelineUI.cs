@@ -1,15 +1,10 @@
-using System;
 using System.Text;
 using Helteix.Tools.UI;
-using UnityEngine;
-using UnityEngine.Pool;
 using WitchGate.Controllers;
-using WitchGate.Gameplay.Battles;
+using WitchGate.Gameplay.Battles.Actions.Interface;
 using WitchGate.Gameplay.Battles.Timelines;
-using WitchGate.Gameplay.Battles.TurnPhases;
-using WitchGate.Gameplay.Battles.UI;
 
-namespace WitchGate.Gameplay
+namespace WitchGate.Gameplay.Battles.UI
 {
     public class BattleTimelineUI : UIList<ITurnAction, TurnActionUI>, IPhaseListener<BattlePhase>
     {

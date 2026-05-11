@@ -1,7 +1,7 @@
 using cherrydev;
 using WitchGate.Controllers;
-using WitchGate.Mission.Data;
 using WitchGate.Mission.Plannings.Data;
+using WitchGate.Mission.Plannings.Data.PlanningFormulas;
 using WitchGate.Mission.Plannings.PlanningsCondition;
 
 namespace WitchGate.Mission.Plannings

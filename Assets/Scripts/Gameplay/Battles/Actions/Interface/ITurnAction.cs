@@ -1,8 +1,7 @@
 using UnityEngine;
-using WitchGate.Cards;
 using WitchGate.Gameplay.Cards;
 
-namespace WitchGate.Gameplay.Battles.TurnPhases
+namespace WitchGate.Gameplay.Battles.Actions.Interface
 {
     public interface ITurnAction
     {

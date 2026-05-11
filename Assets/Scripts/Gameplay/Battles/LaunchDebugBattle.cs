@@ -1,9 +1,8 @@
 using System;
 using UnityEngine;
 using WitchGate.Controllers;
-using WitchGate.Gameplay.Battles.Entities;
 using WitchGate.Gameplay.Entities;
-using WitchGate.Players;
+using WitchGate.Profiles.Data;
 
 namespace WitchGate.Gameplay.Battles
 {

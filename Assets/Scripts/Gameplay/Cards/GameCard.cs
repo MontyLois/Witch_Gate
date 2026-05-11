@@ -6,9 +6,8 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using WitchGate.Cards;
 using WitchGate.Controllers;
-using WitchGate.Gameplay.Battles.Entities.Interface;
 using WitchGate.Gameplay.Cards.Effects;
-using WitchGate.Players;
+using WitchGate.Gameplay.Entities.Interface;
 
 namespace WitchGate.Gameplay.Cards
 {

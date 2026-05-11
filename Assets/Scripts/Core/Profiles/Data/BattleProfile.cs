@@ -1,7 +1,7 @@
 using UnityEngine;
-using WitchGate.Players;
+using WitchGate.Cards;
 
-namespace WitchGate.Gameplay.Entities
+namespace WitchGate.Profiles.Data
 {
     [CreateAssetMenu(fileName = "BattleProfile", menuName = "WitchGate/Decks/Profiles/BattleProfile", order = 0)]
     public class BattleProfile : ScriptableObject

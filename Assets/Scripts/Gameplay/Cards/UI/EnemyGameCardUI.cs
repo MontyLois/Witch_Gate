@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using WitchGate.Cards;
+using WitchGate.Cards.UI;
 
 namespace WitchGate.Gameplay.Cards.UI
 {

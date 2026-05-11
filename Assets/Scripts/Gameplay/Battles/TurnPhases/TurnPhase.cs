@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 using WitchGate.Controllers;
-using WitchGate.Gameplay.Battles.Entities.Interface;
 
 namespace WitchGate.Gameplay.Battles.TurnPhases
 {

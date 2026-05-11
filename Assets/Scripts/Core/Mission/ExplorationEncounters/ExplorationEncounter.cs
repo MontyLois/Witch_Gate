@@ -1,8 +1,9 @@
 using cherrydev;
 using WitchGate.Controllers;
-using WitchGate.Mission.Data;
+using WitchGate.Mission.ExplorationEncounters.Data;
+using WitchGate.ScenesManagement.Scenes;
 
-namespace WitchGate.Mission
+namespace WitchGate.Mission.ExplorationEncounters
 {
     public class ExplorationEncounter
     {

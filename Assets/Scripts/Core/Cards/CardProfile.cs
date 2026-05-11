@@ -1,11 +1,9 @@
 using System;
-using Unity.Properties;
 using UnityEngine;
 using UnityEngine.Serialization;
-using WitchGate.Cards;
 using WitchGate.Controllers;
 
-namespace WitchGate.Players
+namespace WitchGate.Cards
 {
     [Serializable]
     public class CardProfile

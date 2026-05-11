@@ -1,13 +1,11 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
-using WitchGate.Cards;
-using WitchGate.Gameplay.Battles.Entities;
-using WitchGate.Gameplay.Battles.Entities.Interface;
+using WitchGate.Gameplay.Battles.Actions.Interface;
 using WitchGate.Gameplay.Cards;
-using WitchGate.Players;
+using WitchGate.Gameplay.Entities.Interface;
 
-namespace WitchGate.Gameplay.Battles.TurnPhases
+namespace WitchGate.Gameplay.Battles.Actions
 {
     public class EnemyAction : ITurnAction
     {

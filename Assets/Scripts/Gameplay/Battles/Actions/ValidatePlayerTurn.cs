@@ -1,7 +1,7 @@
-using UnityEngine;
 using WitchGate.Controllers;
+using WitchGate.Gameplay.Battles.TurnPhases;
 
-namespace WitchGate.Gameplay.Battles.TurnPhases
+namespace WitchGate.Gameplay.Battles.Actions
 {
     public class ValidatePlayerTurn : MonoPhaseListener<PlayerTurnPhase>
     {

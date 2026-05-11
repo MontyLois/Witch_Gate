@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace WitchGate.Mission.Plannings.Data
+namespace WitchGate.Mission.Plannings.Data.PlanningFormulas
 {
     [CreateAssetMenu(fileName = "PF_FirstXDaysOfYDays_", menuName = "WitchGate/Planning/PlanningFormula/FirstXDaysOfYDays", order = 0)]
     public class PlanningFormulaDataFirstXDaysOfYDays : PlanningFormulaData

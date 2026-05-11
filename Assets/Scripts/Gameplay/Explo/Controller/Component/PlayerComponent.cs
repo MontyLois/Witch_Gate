@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace WitchGate.Gameplay.Controller
+namespace WitchGate.Gameplay.Explo.Controller.Component
 {
     public abstract class PlayerComponent : MonoBehaviour
     {

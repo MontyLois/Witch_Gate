@@ -1,4 +1,4 @@
-namespace WitchGate.Gameplay.Battles
+namespace WitchGate.Gameplay.Entities.Interface
 {
     public interface IBattleEnemy
     {

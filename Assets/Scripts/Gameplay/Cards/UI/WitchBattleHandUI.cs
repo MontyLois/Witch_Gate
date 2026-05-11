@@ -1,13 +1,12 @@
 using DG.Tweening;
-using Helteix.Cards;
 using Helteix.Cards.UI.Physical;
 using UnityEngine;
 using UnityEngine.EventSystems;
-using WitchGate.Cards;
 using WitchGate.Controllers;
-using WitchGate.Gameplay.Cards;
+using WitchGate.Gameplay.Battles;
+using WitchGate.Gameplay.Entities;
 
-namespace WitchGate.Gameplay.Battles.UI
+namespace WitchGate.Gameplay.Cards.UI
 {
     public class WitchBattleHandUI : PhysicalCardCollectionUI<IGameCard>, IPhaseListener<BattlePhase>
     {

@@ -1,4 +1,4 @@
-namespace WitchGate.Cards
+namespace WitchGate.Cards.Collections
 {
     public enum CardRarity
     {

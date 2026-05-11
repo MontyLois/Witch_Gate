@@ -1,10 +1,8 @@
-using System;
 using DG.Tweening;
 using UnityEngine;
-using WitchGate.Gameplay.Controller;
-using WitchGate.Gameplay.Controller.Component;
+using WitchGate.Gameplay.Explo.Controller.Component.Helpers;
 
-namespace WitchGate.VFX
+namespace WitchGate.Gameplay.Explo.Controller.Component
 {
     public class PlayerVFXPositionHandler : PlayerComponent
     {

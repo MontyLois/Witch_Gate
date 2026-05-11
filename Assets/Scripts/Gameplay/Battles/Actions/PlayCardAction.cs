@@ -1,11 +1,9 @@
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Pool;
-using WitchGate.Cards;
-using WitchGate.Gameplay.Battles.Entities;
+using WitchGate.Gameplay.Battles.Actions.Interface;
 using WitchGate.Gameplay.Cards;
+using WitchGate.Gameplay.Entities;
 
-namespace WitchGate.Gameplay.Battles.TurnPhases
+namespace WitchGate.Gameplay.Battles.Actions
 {
     public class PlayCardAction : ITurnAction
     {

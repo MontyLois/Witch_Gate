@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using Helteix.Cards;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using WitchGate.Cards;
 using WitchGate.Cards.Collections;
-using WitchGate.Gameplay.Battles.Entities.Interface;
-using WitchGate.Gameplay.Cards;
+using WitchGate.Gameplay.Entities.Interface;
 
-namespace WitchGate.Cards
+namespace WitchGate.Gameplay.Cards
 {
     public interface IGameCard :ICard, IDescription
     {

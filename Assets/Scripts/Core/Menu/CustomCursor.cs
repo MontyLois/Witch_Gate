@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace WitchGate
+namespace WitchGate.Menu
 {
     public class CustomCursor : MonoBehaviour
     {

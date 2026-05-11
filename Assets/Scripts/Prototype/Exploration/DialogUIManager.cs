@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace WitchGate.Prototype
+namespace WitchGate.Prototype.Prototype.Exploration
 {
     public class DialogUIManager : MonoBehaviour
     {

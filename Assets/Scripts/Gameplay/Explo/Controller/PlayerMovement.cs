@@ -1,7 +1,8 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using WitchGate.Gameplay.Explo.Controller.Component;
 
-namespace WitchGate.Gameplay.Controller
+namespace WitchGate.Gameplay.Explo.Controller
 {
     public class PlayerMovement : PlayerComponent
     {

@@ -1,7 +1,7 @@
 using WitchGate.Controllers;
 using WitchGate.Gameplay.Explo.Phase;
 
-namespace WitchGate.Gameplay
+namespace WitchGate.Gameplay.Explo
 {
     public static class ExplorationGameplayController
     {

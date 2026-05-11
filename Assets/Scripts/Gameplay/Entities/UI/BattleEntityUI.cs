@@ -2,7 +2,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace WitchGate.Gameplay.Battles.Entities
+namespace WitchGate.Gameplay.Entities.UI
 {
     public class BattleEntityUI : MonoBehaviour
     {

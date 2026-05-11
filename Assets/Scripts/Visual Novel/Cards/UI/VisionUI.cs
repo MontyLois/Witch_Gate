@@ -4,8 +4,6 @@ using UnityEngine;
 using UnityEngine.UI;
 using WitchGate.Cards.Collections;
 using WitchGate.Controllers;
-using WitchGate.Gameplay.Cards.Effects;
-using WitchGate.Prototype;
 
 namespace WitchGate.VisualNovel.Visual_Novel.Cards.UI
 {

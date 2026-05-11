@@ -1,4 +1,4 @@
-namespace WitchGate.Gameplay.Battles.Entities
+namespace WitchGate.Gameplay.Entities
 {
     public enum Faction
     {

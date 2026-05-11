@@ -6,6 +6,8 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using WitchGate.Cards.Collections;
 using WitchGate.Controllers;
+using WitchGate.Gameplay.Battles.Actions;
+using WitchGate.Gameplay.Battles.Actions.Interface;
 using WitchGate.Gameplay.Battles.TurnPhases;
 using WitchGate.Gameplay.Cards.UI;
 

@@ -6,7 +6,7 @@ using UnityEngine;
 using WitchGate.Cards;
 using WitchGate.Cards.Collections;
 using WitchGate.Controllers;
-using WitchGate.Gameplay.Cards.Effects;
+using WitchGate.VisualNovel.Visual_Novel.Cards.Data.Effect;
 
 namespace WitchGate.VisualNovel.Visual_Novel.Cards
 {

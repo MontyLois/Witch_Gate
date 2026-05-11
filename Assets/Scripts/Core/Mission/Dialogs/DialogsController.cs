@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using cherrydev;
 using UnityEngine;
 using WitchGate.Controllers;
+using WitchGate.Mission.Dialogs.Data;
 using WitchGate.Mission.Plannings;
 
 namespace WitchGate.Mission.Dialogs

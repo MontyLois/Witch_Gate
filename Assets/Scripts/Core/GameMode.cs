@@ -1,4 +1,4 @@
-namespace WitchGate.Controllers
+namespace WitchGate
 {
     public enum GameMode
     {
