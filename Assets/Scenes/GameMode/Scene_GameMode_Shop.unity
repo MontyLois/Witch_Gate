@@ -736,7 +736,7 @@ MonoBehaviour:
   <VinyleNumber>k__BackingField: 3
   <MusicManager>k__BackingField: {fileID: 584387611}
   moods: 000000000900000006000000
-  vinyleMusic: {fileID: 8300000, guid: 430b805d0c776e14b97246c061779557, type: 3}
+  vinyleMusic: {fileID: 8300000, guid: 877eba7d683838043a276906333ec5e7, type: 3}
 --- !u!1 &181307348
 GameObject:
   m_ObjectHideFlags: 0
@@ -2584,7 +2584,7 @@ MonoBehaviour:
   <VinyleNumber>k__BackingField: 4
   <MusicManager>k__BackingField: {fileID: 584387611}
   moods: 04000000010000000a000000
-  vinyleMusic: {fileID: 8300000, guid: 178a095085ce19647b37578631a9b94c, type: 3}
+  vinyleMusic: {fileID: 8300000, guid: e44ec97de0f655c489f8d7a47fbfffb1, type: 3}
 --- !u!1 &943923683
 GameObject:
   m_ObjectHideFlags: 0
@@ -3686,7 +3686,7 @@ MonoBehaviour:
   <VinyleNumber>k__BackingField: 1
   <MusicManager>k__BackingField: {fileID: 584387611}
   moods: 010000000700000008000000
-  vinyleMusic: {fileID: 8300000, guid: 85f91c98d9b1c48419d9f8c772727e04, type: 3}
+  vinyleMusic: {fileID: 8300000, guid: 71d0fb8c1a3331040af7d05aa3aca11f, type: 3}
 --- !u!1 &1373547476
 GameObject:
   m_ObjectHideFlags: 0
@@ -4892,7 +4892,7 @@ MonoBehaviour:
   <VinyleNumber>k__BackingField: 2
   <MusicManager>k__BackingField: {fileID: 584387611}
   moods: 02000000030000000b000000
-  vinyleMusic: {fileID: 8300000, guid: 546e5582f2141c14497dbe3ef503449b, type: 3}
+  vinyleMusic: {fileID: 8300000, guid: f1e36df88ae7ecb42bd500da301b32ae, type: 3}
 --- !u!1 &2073705436
 GameObject:
   m_ObjectHideFlags: 0
@@ -5070,6 +5070,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5205112568727194904, guid: e23b17e5f5c5ec64d8db283fcfee8c16, type: 3}
+      propertyPath: m_Resource
+      value: 
+      objectReference: {fileID: 8300000, guid: 71d0fb8c1a3331040af7d05aa3aca11f, type: 3}
     - target: {fileID: 6627879219476305152, guid: e23b17e5f5c5ec64d8db283fcfee8c16, type: 3}
       propertyPath: m_LocalPosition.x
       value: 842.3183

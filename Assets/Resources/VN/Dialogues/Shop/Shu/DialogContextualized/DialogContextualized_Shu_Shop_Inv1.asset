@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: WitchGate.Core::WitchGate.Mission.DialogContextualizedData
   <CharacterData>k__BackingField: {fileID: 11400000, guid: 36cd925630610c64284b4c1c7cbe1b04, type: 2}
   <EncounterContext>k__BackingField: 1
-  <InvestigationStage>k__BackingField: 3
+  <InvestigationStage>k__BackingField: 0
   <DialogBehaviours>k__BackingField:
   - {fileID: 11400000, guid: d223d72b73fdd9a48948f54cc8f46544, type: 2}
