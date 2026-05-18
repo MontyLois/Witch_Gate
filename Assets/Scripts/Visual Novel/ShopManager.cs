@@ -27,6 +27,10 @@ namespace WitchGate.VisualNovel.Visual_Novel
         [SerializeField] private DialogBehaviour dialogBehaviour;
         [SerializeField] private DialogNodeGraph[] dialogGraph;
 
+        [field: SerializeField] public DialogNodeGraph NoMoreDialog { get; private set; }
+        private bool endOfDay = false;
+        private bool thereIsADialog = false;
+
         [SerializeField] private List<DialogNodeGraph> customersDialogNodeGraphs = new List<DialogNodeGraph>();
         [SerializeField] private List<CharacterData> customers = new List<CharacterData>();
 
@@ -37,6 +41,8 @@ namespace WitchGate.VisualNovel.Visual_Novel
 
         private void Start()
         {
+            endOfDay = false;
+            thereIsADialog = false;
             Hand.SetActive(true);
             getTodaysCustomers();
             dialogBehaviour.BindExternalFunction("InteractiveChoice", ChooseVinyl);
@@ -44,15 +50,6 @@ namespace WitchGate.VisualNovel.Visual_Novel
             NextClient();
         }
 
-        public void EndDay()
-        {
-            DialogsController.ValidateReadDialog();
-            CardDropZone.gameObject.SetActive(false);
-            GameController.ChangeContext(EncounterContext.FromVinylShopToCity);
-            
-            //là dans l'idéal faudrait que je joue des dialogues de mise au point des soeurs
-            ShowMap();
-        }
 
         /**
          * fill the dialogs list with dialogs of all present customers (via planning controller)
@@ -83,6 +80,11 @@ namespace WitchGate.VisualNovel.Visual_Novel
 
         public void NextClient()
         {
+            if (endOfDay)
+            {
+                ShowMap();
+            }
+            
             if(currentTestimonyphase is not null) 
                 currentTestimonyphase.SetReady();
            
@@ -95,19 +97,43 @@ namespace WitchGate.VisualNovel.Visual_Novel
                     DialogsController.GetDialogForSpecificEntity(customers[currentClientIndex]);
                 if (dialogNodeGraph is not null)
                 {
+                    thereIsADialog = true;
                     dialogBehaviour.StartDialog(dialogNodeGraph);
                     DialogueUI.SetActive(true);
                 }
                 else
                 {
-                    Debug.LogError("wtf c'est null");
+                    currentClientIndex++;
+                    NextClient();
+                    return;
                 }
                 currentClientIndex++;
             }
             else
             {
-                EndDay();
+                if (!endOfDay)
+                {
+                    endOfDay = true;
+                    EndDay();
+                }
             }
+        }
+        
+        public void EndDay()
+        {
+            DialogsController.ValidateReadDialog();
+            
+            if (!thereIsADialog)
+            {
+                dialogBehaviour.StartDialog(NoMoreDialog);
+            }
+            else
+            {
+                GameController.ChangeContext(EncounterContext.FromVinylShopToCity);
+                //là dans l'idéal faudrait que je joue des dialogues de mise au point des soeurs
+                ShowMap();
+            }
+            CardDropZone.gameObject.SetActive(false);
         }
         
         private void ShowCloseButton()

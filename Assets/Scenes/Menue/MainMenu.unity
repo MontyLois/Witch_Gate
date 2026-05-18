@@ -540,7 +540,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09d397f957ed4fbebfb94c808df5c4c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: WitchGate.Core::WitchGate.CustomCursor
-  cursorTexture: {fileID: 2800000, guid: b9ef6490ec8a1ec459bdf652f4c68fb2, type: 3}
+  cursorTexture: {fileID: 2800000, guid: 9c01a52d5313bff42af9b271b2695bc9, type: 3}
   hotSpot: {x: 0, y: 0}
   cursorMode: 1
 --- !u!1 &529973795

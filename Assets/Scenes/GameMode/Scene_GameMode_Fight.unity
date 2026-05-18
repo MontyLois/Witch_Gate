@@ -968,6 +968,67 @@ Transform:
   - {fileID: 719316355}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &190208176
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5205112568727194904, guid: e23b17e5f5c5ec64d8db283fcfee8c16, type: 3}
+      propertyPath: m_Resource
+      value: 
+      objectReference: {fileID: 8300000, guid: 178a095085ce19647b37578631a9b94c, type: 3}
+    - target: {fileID: 6627879219476305152, guid: e23b17e5f5c5ec64d8db283fcfee8c16, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 18.82028
+      objectReference: {fileID: 0}
+    - target: {fileID: 6627879219476305152, guid: e23b17e5f5c5ec64d8db283fcfee8c16, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6627879219476305152, guid: e23b17e5f5c5ec64d8db283fcfee8c16, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 3.30277
+      objectReference: {fileID: 0}
+    - target: {fileID: 6627879219476305152, guid: e23b17e5f5c5ec64d8db283fcfee8c16, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6627879219476305152, guid: e23b17e5f5c5ec64d8db283fcfee8c16, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6627879219476305152, guid: e23b17e5f5c5ec64d8db283fcfee8c16, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6627879219476305152, guid: e23b17e5f5c5ec64d8db283fcfee8c16, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6627879219476305152, guid: e23b17e5f5c5ec64d8db283fcfee8c16, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6627879219476305152, guid: e23b17e5f5c5ec64d8db283fcfee8c16, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6627879219476305152, guid: e23b17e5f5c5ec64d8db283fcfee8c16, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7467706162614559609, guid: e23b17e5f5c5ec64d8db283fcfee8c16, type: 3}
+      propertyPath: m_Name
+      value: MusicManager
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e23b17e5f5c5ec64d8db283fcfee8c16, type: 3}
 --- !u!1 &250814170
 GameObject:
   m_ObjectHideFlags: 0
@@ -2832,7 +2893,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: WitchGate.Core::WitchGate.Controllers.SceneController
   <currentGameModeScene>k__BackingField: {fileID: 11400000, guid: 0c142ab0ec26b1349828ce02d661d7db, type: 2}
-  <currentLocationScene>k__BackingField: {fileID: 0}
+  <currentLocationScene>k__BackingField: {fileID: 11400000, guid: 1942905f869ae5d4cb3e6a9694cf025f, type: 2}
 --- !u!4 &865600352
 Transform:
   m_ObjectHideFlags: 0
@@ -9269,3 +9330,4 @@ SceneRoots:
   - {fileID: 178496756}
   - {fileID: 337677100}
   - {fileID: 865600352}
+  - {fileID: 190208176}
