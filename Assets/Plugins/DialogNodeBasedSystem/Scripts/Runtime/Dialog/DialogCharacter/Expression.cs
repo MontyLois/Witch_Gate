@@ -7,6 +7,7 @@ namespace cherrydev
         Unhappy,
         Smiling,
         Sad,
-        Other
+        Other,
+        Shy
     }
 }

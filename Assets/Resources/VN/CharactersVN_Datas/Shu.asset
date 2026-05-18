@@ -14,13 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: WitchGate.Core::WitchGate.VisualNovel.Visual_Novel.Dialog.VNCharacterData
   expressions:
   - expression: 0
-    sprite: {fileID: 21300000, guid: 013a62e8bf91bb049858ba926a973cbe, type: 3}
+    sprite: {fileID: 21300000, guid: b2806243ca305f3409d1dcd7bae55a1e, type: 3}
   - expression: 1
-    sprite: {fileID: 21300000, guid: fc05a56d7343d1d449c54dc4b2afbaef, type: 3}
+    sprite: {fileID: 21300000, guid: 67a02d18664c7d34c8353eedd8a2cf26, type: 3}
   - expression: 2
-    sprite: {fileID: 21300000, guid: 21dea6ca4f8bd784393d133f85f4c517, type: 3}
+    sprite: {fileID: 21300000, guid: d68ca05f66660db4b8b4f1760c8a0411, type: 3}
   - expression: 3
-    sprite: {fileID: 21300000, guid: bdb58bac1dcd4b6448eaca9dc8187374, type: 3}
+    sprite: {fileID: 21300000, guid: 922d33893cb056044a0e53b07e5f19ea, type: 3}
   - expression: 4
-    sprite: {fileID: 21300000, guid: 61abf89d76bb10f47a0d12c762cae682, type: 3}
+    sprite: {fileID: 21300000, guid: 030db4af6b4069440b0464b0890248d5, type: 3}
   <CharacterData>k__BackingField: {fileID: 11400000, guid: 36cd925630610c64284b4c1c7cbe1b04, type: 2}

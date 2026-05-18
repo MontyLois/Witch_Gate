@@ -6,7 +6,8 @@
         "Helteix.Tools",
         "Helteix.Singletons.Runtime",
         "Unity.TextMeshPro",
-        "DialogNodeBaseSystem"
+        "DialogNodeBaseSystem",
+        "Unity.Cinemachine"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

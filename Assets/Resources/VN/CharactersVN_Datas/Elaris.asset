@@ -14,15 +14,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: WitchGate.Core::WitchGate.VisualNovel.Visual_Novel.Dialog.VNCharacterData
   expressions:
   - expression: 0
-    sprite: {fileID: 21300000, guid: a6abe7b67c277444eb533fcf20e924e4, type: 3}
+    sprite: {fileID: 21300000, guid: 429d4806f7d72ff448e305c68594f55f, type: 3}
   - expression: 1
-    sprite: {fileID: 21300000, guid: 5cd59dd9aff870447b2f95ac0808693c, type: 3}
+    sprite: {fileID: 21300000, guid: 4e161272bc27d7843b95f3e4c2a0e842, type: 3}
   - expression: 2
-    sprite: {fileID: 21300000, guid: baaf8a968d3df754f858477c130959f5, type: 3}
+    sprite: {fileID: 21300000, guid: 57f97b3daebaecd488d05ce324084c26, type: 3}
   - expression: 3
-    sprite: {fileID: 21300000, guid: d1633b0a6de9bac49824aadbd6e4cca1, type: 3}
+    sprite: {fileID: 21300000, guid: 417a26e47c96d424d8589e9b699be2cb, type: 3}
   - expression: 4
-    sprite: {fileID: 21300000, guid: 62e4821725c7aa64c94bfd75ea207c39, type: 3}
+    sprite: {fileID: 21300000, guid: 76fe7b726fe1cf044828820cd39c5d04, type: 3}
   - expression: 5
-    sprite: {fileID: 21300000, guid: 62e4821725c7aa64c94bfd75ea207c39, type: 3}
+    sprite: {fileID: 21300000, guid: 76fe7b726fe1cf044828820cd39c5d04, type: 3}
   <CharacterData>k__BackingField: {fileID: 11400000, guid: caa8bac8914f2c44ba47c0de6e8316d3, type: 2}
