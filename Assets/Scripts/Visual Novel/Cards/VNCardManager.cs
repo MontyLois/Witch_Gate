@@ -5,6 +5,7 @@ using WitchGate.Cards;
 using WitchGate.Cards.Collections;
 using WitchGate.VisualNovel.Visual_Novel.Cards.Data;
 using WitchGate.VisualNovel.Visual_Novel.Cards.Data.Effect;
+using WitchGate.VisualNovel.Visual_Novel.Visions.Data;
 
 namespace WitchGate.VisualNovel.Visual_Novel.Cards
 {

@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: WitchGate.VisualNovel::WitchGate.VisualNovel.Visual_Novel.Cards.Data.VisionCharacterData
   visions:
   - type: 0
-    sprite: {fileID: 21300000, guid: 89f93293af9b2d44b8a9eeabc6c37c7f, type: 3}
+    sprite: {fileID: 21300000, guid: 22dc0de40dc56bb4a97eccc810e54d90, type: 3}
   - type: 1
-    sprite: {fileID: 21300000, guid: 89f93293af9b2d44b8a9eeabc6c37c7f, type: 3}
+    sprite: {fileID: 21300000, guid: cca977f033d0f5e47b966ade1eba61dd, type: 3}
   - type: 2
-    sprite: {fileID: 21300000, guid: 89f93293af9b2d44b8a9eeabc6c37c7f, type: 3}
+    sprite: {fileID: 21300000, guid: b9525807706825046bfc98748858c99a, type: 3}
   <CharacterData>k__BackingField: {fileID: 11400000, guid: 863b140ab388f7045a04169733af3dff, type: 2}

@@ -1,12 +1,16 @@
 using System.Collections.Generic;
 using cherrydev;
 using UnityEngine;
+using WitchGate.Cards.Collections;
 using WitchGate.Controllers;
 using WitchGate.Mission;
 using WitchGate.Mission.Dialogs;
 using WitchGate.Mission.Plannings;
 using WitchGate.VisualNovel.Visual_Novel.Cards.UI;
+using WitchGate.VisualNovel.Visual_Novel.UI;
 using WitchGate.VisualNovel.Visual_Novel.Vinyles;
+using WitchGate.VisualNovel.Visual_Novel.Visions;
+using VisionUI = WitchGate.VisualNovel.Visual_Novel.Visions.VisionUI;
 
 namespace WitchGate.VisualNovel.Visual_Novel
 {
@@ -18,10 +22,14 @@ namespace WitchGate.VisualNovel.Visual_Novel
         [field: SerializeField] public GameObject CloseButton { get; private set; }
         [field: SerializeField] public GameObject DialogueUI { get; private set; }
         [field: SerializeField] public GameObject VinylePanel { get; private set; }
+        [field: SerializeField] public GameObject CardUI { get; private set; }
         
         [Header("Card")]
         [field: SerializeField] public VNPlayedHandUI CardDropZone { get; private set; }
         [field: SerializeField] public GameObject Hand { get; private set; }
+        
+        [Header("Vision")]
+        [field: SerializeField] public VisionUI Vision { get; private set; }
         
         [Header("Dialog")]
         [SerializeField] private DialogBehaviour dialogBehaviour;
@@ -30,6 +38,7 @@ namespace WitchGate.VisualNovel.Visual_Novel
         [field: SerializeField] public DialogNodeGraph NoMoreDialog { get; private set; }
         private bool endOfDay = false;
         private bool thereIsADialog = false;
+        [field: SerializeField] public CharacterData SistersData {get; private set;}
 
         [SerializeField] private List<DialogNodeGraph> customersDialogNodeGraphs = new List<DialogNodeGraph>();
         [SerializeField] private List<CharacterData> customers = new List<CharacterData>();
@@ -41,12 +50,14 @@ namespace WitchGate.VisualNovel.Visual_Novel
 
         private void Start()
         {
+            VisionController.Load();
             endOfDay = false;
             thereIsADialog = false;
             Hand.SetActive(true);
             getTodaysCustomers();
             dialogBehaviour.BindExternalFunction("InteractiveChoice", ChooseVinyl);
             dialogBehaviour.BindExternalFunction("NextPhase", ShowMap);
+            dialogBehaviour.BindExternalFunction("ChooseCard", ToogleCardPanel);
             NextClient();
         }
 
@@ -82,6 +93,7 @@ namespace WitchGate.VisualNovel.Visual_Novel
         {
             if (endOfDay)
             {
+                DialogsController.ValidateReadDialog();
                 ShowMap();
             }
             
@@ -92,11 +104,16 @@ namespace WitchGate.VisualNovel.Visual_Novel
             {
                 currentTestimonyphase = new TestimonyPhase(Witch.Elaris, customers[currentClientIndex]);
                 currentTestimonyphase.Run();
+                
+               
+                
                 //retrieve the current dialog for this client
                 DialogNodeGraph dialogNodeGraph =
                     DialogsController.GetDialogForSpecificEntity(customers[currentClientIndex]);
                 if (dialogNodeGraph is not null)
                 {
+                    Debug.Log("Who is the current customer ? "+customers[currentClientIndex]);
+                    currentClientData = customers[currentClientIndex];
                     thereIsADialog = true;
                     dialogBehaviour.StartDialog(dialogNodeGraph);
                     DialogueUI.SetActive(true);
@@ -121,8 +138,7 @@ namespace WitchGate.VisualNovel.Visual_Novel
         
         public void EndDay()
         {
-            DialogsController.ValidateReadDialog();
-            
+            CardDropZone.gameObject.SetActive(false);
             if (!thereIsADialog)
             {
                 dialogBehaviour.StartDialog(NoMoreDialog);
@@ -130,10 +146,17 @@ namespace WitchGate.VisualNovel.Visual_Novel
             else
             {
                 GameController.ChangeContext(EncounterContext.FromVinylShopToCity);
-                //là dans l'idéal faudrait que je joue des dialogues de mise au point des soeurs
-                ShowMap();
+                DialogNodeGraph dialogNodeGraph =
+                    DialogsController.GetDialogForSpecificEntity(SistersData);
+                if (dialogNodeGraph is not null)
+                {
+                    dialogBehaviour.StartDialog(DialogsController.GetDialogForSpecificEntity(SistersData));
+                }
+                else
+                {
+                    ShowMap();
+                }
             }
-            CardDropZone.gameObject.SetActive(false);
         }
         
         private void ShowCloseButton()
@@ -169,6 +192,24 @@ namespace WitchGate.VisualNovel.Visual_Novel
         public void ClickDebug()
         {
             Debug.Log("Click Debug");
+        }
+
+        public void ToogleCardPanel()
+        {
+            CardUI.SetActive(!CardUI.activeSelf);
+            DialogueUI.SetActive(!CardUI.activeSelf);
+        }
+        
+        public void ShowVision(int ct)
+        {
+            CardType cardType = (CardType)ct;
+            Debug.Log(currentClientData);
+            if (currentClientData is not null)
+            {
+                Vision.ShowVision(VisionController.GetVisionForSpecificEntity(currentClientData, cardType));
+            }
+            ToogleCardPanel();
+            dialogBehaviour.NextNode();
         }
         
     }

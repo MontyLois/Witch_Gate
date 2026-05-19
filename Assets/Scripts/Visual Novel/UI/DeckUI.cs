@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace WitchGate.Prototype.Prototype.Shop
+namespace WitchGate.VisualNovel.Visual_Novel.UI
 {
     public class DeckUI : MonoBehaviour
     {

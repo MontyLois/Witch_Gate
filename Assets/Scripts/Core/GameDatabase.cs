@@ -34,6 +34,7 @@ namespace WitchGate
         public DialogContextualizedData[] DialogContextualizedDatas { get; private set; }
         public ExplorationEncounterContextualizedData[] ExplorationEncounterContextualizedDatas { get; private set; }
         
+        
 
         public GameDatabase()
         {

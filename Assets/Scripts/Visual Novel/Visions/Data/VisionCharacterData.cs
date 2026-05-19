@@ -1,10 +1,9 @@
-using System;
 using System.Collections.Generic;
 using cherrydev;
 using UnityEngine;
 using WitchGate.Cards.Collections;
 
-namespace WitchGate.VisualNovel.Visual_Novel.Cards.Data
+namespace WitchGate.VisualNovel.Visual_Novel.Visions.Data
 {
     [CreateAssetMenu(fileName = "Visions", menuName = "WitchGate/VN/Vision", order = 0)]
     public class VisionCharacterData : ScriptableObject

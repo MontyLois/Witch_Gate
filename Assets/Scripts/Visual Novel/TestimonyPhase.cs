@@ -1,5 +1,6 @@
 using System;
 using cherrydev;
+using Helteix.Cards.Collections;
 using UnityEngine;
 using WitchGate.Cards.Collections;
 using WitchGate.Controllers;
@@ -15,11 +16,14 @@ namespace WitchGate.VisualNovel.Visual_Novel
         public bool IsReady { get; private set; }
 
         public Action<CharacterData, CardType> CardUsed;
+        public Hand<VNCard> PlayedHands { get; private set; }
 
         public TestimonyPhase(Witch witch, CharacterData currentClient)
         {
             VnWitch = new VNWitch(GameController.GameDatabase.PlayerProfile.WitchProfiles[witch]);
             CurrentClient = currentClient;
+            
+            PlayedHands = new Hand<VNCard>();
         }
         async Awaitable IPhase.OnBegin()
         {
@@ -46,7 +50,8 @@ namespace WitchGate.VisualNovel.Visual_Novel
 
         public void UseCard(VNCard card)
         {
-            card.Use();
+            Debug.Log("we are using the card");
+            //card.Use();
             VnWitch.Discard.TryAddCard(card);
             CardUsed?.Invoke(CurrentClient, card.Data.CardType);
         }

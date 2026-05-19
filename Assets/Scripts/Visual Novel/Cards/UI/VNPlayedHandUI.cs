@@ -1,20 +1,24 @@
+using Helteix.Cards.Collections;
 using Helteix.Cards.UI.Physical;
 using Helteix.Cards.UI.Physical.Drag;
 using TMPro;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using WitchGate.Controllers;
 
 namespace WitchGate.VisualNovel.Visual_Novel.Cards.UI
 {
-    public class VNPlayedHandUI : PhysicalCardCollectionUI<VNCard>, ICardDropTarget<VNCard>, IPhaseListener<TestimonyPhase>
+    public class VNPlayedHandUI : PhysicalCardCollectionUI<VNCard>,  ICardDropTarget<VNCard>, IPhaseListener<TestimonyPhase>
     {
 
         [field: SerializeField] public GameObject VisionUI { get; private set;}
         [field: SerializeField] public TMP_Text VisionText { get; private set;}
 
         private VNWitch vnWitch;
-        private TestimonyPhase phase;
         private int priority;
+        
+        private Hand<VNCard> hand;
+        private TestimonyPhase phase;
         
         private void OnEnable()
         {
@@ -61,12 +65,28 @@ namespace WitchGate.VisualNovel.Visual_Novel.Cards.UI
         {
             vnWitch = phase.VnWitch;
             this.phase = phase;
+            
+            hand = phase.PlayedHands;
+            Connect(hand);
         }
 
         public void OnPhaseEnds(TestimonyPhase phase)
         {
             vnWitch = null;
             this.phase = null;
+            Disconnect();
+        }
+        
+        protected override void DisconnectWithCurrent()
+        {
+            base.DisconnectWithCurrent();
+            hand = null;
+        }
+        
+        protected override void OnCardPointerDown(CardHolderUI holder, PointerEventData eventData)
+        {
+            base.OnCardPointerDown(holder, eventData);
+           
         }
     }
 }

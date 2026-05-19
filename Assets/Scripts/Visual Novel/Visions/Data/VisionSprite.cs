@@ -1,7 +1,7 @@
 using UnityEngine;
 using WitchGate.Cards.Collections;
 
-namespace WitchGate.VisualNovel.Visual_Novel.Cards.Data
+namespace WitchGate.VisualNovel.Visual_Novel.Visions.Data
 {
     [System.Serializable]
     public class VisionSprite

@@ -41,7 +41,8 @@ namespace WitchGate.VisualNovel.Visual_Novel.Cards.UI
 
         private void OnDisable()
         {
-            phase.CardUsed -= OnVision;
+            if (phase != null)
+                phase.CardUsed -= OnVision;
         }
     }
 }
